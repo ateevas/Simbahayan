@@ -1,0 +1,112 @@
+/*table css*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.navbar a {
+  color: black;
+  font-size: 35px;
+  font-family: "Trajan Pro", sans-serif;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.navbar span {
+  color: gold;
+}
+
+/*navigation bar*/
+
+.navigation-container {
+  display: flex;
+  justify-content: center;
+}
+.navigation {
+  width: 50%;
+}
+
+.navbar {
+  background-color: #f6fdca;
+}
+
+.form-parent {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.form-child {
+  margin-left: 50px;
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+}
+#btn-modal {
+  margin-right: 50px;
+}
+
+/*close button in modal*/
+.close {
+  border: none;
+  background-color: white;
+}
+
+.accordion {
+  margin: auto;
+
+  width: 70%;
+}
+
+.list-group {
+  margin: 10px;
+}
+.list-group li {
+  margin: 5px;
+}
+.accordion-body {
+  background-color: #f6fdca;
+}
+.list-group-item input {
+  float: right;
+  width: 50px;
+  text-align: center;
+}
+
+.button-wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-wrapper a {
+  width: 100px;
+  border-radius: 20px;
+}
+
+.header-num-wrapper {
+  width: 100%;
+  margin-right: 20px;
+}
+.header-num {
+  float: right;
+  width: 50px;
+}
+.header-num input {
+  text-align: center;
+  cursor: default;
+}

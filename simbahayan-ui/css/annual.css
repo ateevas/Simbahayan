@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.navbar a {
+  color: black;
+  font-size: 35px;
+  font-family: "Trajan Pro", sans-serif;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.navbar span {
+  color: gold;
+}
+
+/*navigation bar*/
+
+.navigation-container {
+  display: flex;
+  justify-content: center;
+}
+.navigation {
+  width: 50%;
+}
+
+/*submenu*/
+
+.content {
+  text-align: center;
+}
+.button {
+  width: 200px;
+}

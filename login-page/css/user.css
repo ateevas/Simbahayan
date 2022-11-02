@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+
+}
+/*
+body{
+
+    min-height: 100vh;
+  
+}
+
+.bg-image{
+    background-image: url(simbahayan-1.png);
+
+}
+*/
+
+body::before{
+
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(simbahayan-1.png);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(5px);
+    -moz-filter:blur(5px);
+    
+
+}
+
+
+
+.header{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: white;
+    
+}
+
+.inner_header{
+    width: 700px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color:white;
+    float: left;
+   
+}
+.simbahayan_container{
+    height: 100%;
+    display: table;
+    float: left;
+   margin-left: 100px;
+}
+
+.simbahayan_container h1{
+    
+    color:gold;
+    height: 100%;
+    display: table-cell;
+    font-size: 40px;
+    vertical-align: middle;
+    font-family: 'Trajan Pro', sans-serif;    
+    
+}
+
+.simbahayan_container h1 span{
+    font-weight: 200;
+    color: black;
+    font-family: 'Trajan Pro', sans-serif;
+                                                
+}
+
+.ustlogo{
+   position: absolute
+    ;
+
+}
+
+.simbahayan-logo{
+    position: absolute;
+    right: 10px;
+ 
+}
+
+.main-container{
+    position: relative;
+    color: black;
+    margin: auto;
+    width: 50%;
+    height: 70vh;
+    display: block;
+    text-align: center;
+    margin-top: 100px;
+    background: rgba(255, 251, 207, 0.534);
+    box-shadow: 0 20px 30px rgba(0,0,0,1);
+   
+ 
+}
+
+.inner-container{
+    background-color: gold;
+    background: transparent;
+    margin: auto;
+    width: 70%;
+    height: 70vh;
+    display: table;
+    text-align: center;
+    
+ 
+}
+
+.content-container{
+    
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  
+}
+
+
+.txt-field{
+    margin: 20px;
+
+   
+}
+
+.txt-field input{
+
+    text-align: center;
+    width: 70vh;
+    height: 6vh;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+   
+}
+input[type="submit"]{
+
+
+    width: 50%;
+    height: 50px;
+    border: solid black 1px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    background-color: lightgray;
+}
+
+.forget-pass{
+    position: relative;
+    background-color: none;
+
+
+}
+
+
+
+.content-container h1{
+
+    text-align: center;
+    margin: 20px;
+    font-family: 'Cardo', serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: black;
+
+    }
+
+.content-container input[type=button]{
+
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: gold;
+    outline: none;
+    border: none ;
+
+
+}
+
+
+#button1{
+
+    cursor: pointer;
+}
+#button1:hover{
+    transition: 0.3;
+    background-color: goldenrod;
+    cursor: pointer;
+}   
+
+#button2:hover{
+    transition: 0.3;
+    background-color: goldenrod;
+    cursor: pointer;
+}
+
+#button3:hover{
+    transition: 0.3;
+    background-color: goldenrod;
+    cursor: pointer;
+    transition: ease-in-out;
+}
+.submit{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 30px 0;
+    padding: 10px 30px;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    border:none;
+    /*box-shadow:inset 0 0 0 0 #6e6e6e;*/
+    background-color: rgba(255, 216, 10, 0.8);
+    transition: ease-out 0.3s;
+    outline: none;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+}
+.submit:hover{
+    box-shadow:inset 300px 0 0 0 orange;
+    cursor: pointer;
+    color: black;
+  }
+
+
