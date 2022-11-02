@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.navbar a {
+  color: black;
+  font-size: 35px;
+  font-family: "Trajan Pro", sans-serif;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.navbar span {
+  color: gold;
+}
+
+.welcome-container {
+  margin-left: 20px;
+}
+.welcome-context h1 {
+  color: black;
+
+  background-image: linear-gradient(to left, #000000c2, #f8ad00fd);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 50px;
+}
+
+.navigation-container {
+  display: flex;
+  justify-content: center;
+}
+.navigation {
+  width: 50%;
+}
+
+#icon {
+  color: black;
+  height: 0.5rem;
+  font-size: 1.75em;
+  cursor: pointer;
+}
+
+#icon:hover {
+  transition-delay: 0.2s;
+  transform: scale(1.5);
+}
+
+a {
+  text-align: right;
+  display: block;
+}

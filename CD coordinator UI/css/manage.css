@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*table css*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: whitesmoke;
+  min-height: 100vh;
+}
+
+.navbar a {
+  color: black;
+  font-size: 35px;
+  font-family: "Trajan Pro", sans-serif;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.navbar span {
+  color: gold;
+}
+
+/*navigation bar*/
+
+.navigation-container {
+  display: flex;
+  justify-content: center;
+}
+.navigation {
+  width: 50%;
+}
+
+.navbar {
+  background-color: #f6fdca;
+}
+tr:nth-child(even) {
+  background-color: #f6fdca;
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+.btn-wrapper {
+  width: 50%;
+}
+#modal {
+  display: inline-block;
+  float: right;
+  margin-right: 50px;
+}
+#close {
+  text-decoration: none;
+  border: none;
+  background-color: white;
+}
+.form-check input {
+  background-color: white;
+}
+.form-check input:checked {
+  background-color: lightgreen;
+}
+
+.close {
+  border: none;
+  background-color: white;
+}
+
+.save-wrapper {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+/*javascript html*/
+
+.col-6 span {
+  color: black;
+  font-size: 20px;
+}
+.col-4 button {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  margin: 5px;
+}
+/*javascript html*/
+
+.col-6 span {
+  color: black;
+  font-size: 20px;
+}
+.col-4 button {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  margin: 5px;
+}

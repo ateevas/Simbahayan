@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: whitesmoke;
+  min-height: 100vh;
+}
+
+/*navigation bar*/
+
+.navbar a {
+  color: black;
+  font-size: 35px;
+  font-family: "Trajan Pro", sans-serif;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.navbar span {
+  color: gold;
+}
+
+.navigation-container {
+  display: flex;
+  justify-content: center;
+}
+.navigation {
+  width: 50%;
+}
+
+/*profile container*/
+.inner_container {
+  width: 700px;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+/*//*/
+
+/*submenu*/
+
+.button {
+  text-align: center;
+}
+
+.button button:hover {
+  transition: 0.2s;
+  color: gray;
+}
+
+.contact_container button {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  margin: 20px;
+  border-radius: 20px;
+  background-color: gold;
+  border: none;
+  cursor: pointer;
+}
+
+.download {
+  display: flex;
+  justify-content: center;
+}
