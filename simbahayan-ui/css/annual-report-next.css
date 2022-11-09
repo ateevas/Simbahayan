@@ -13,6 +13,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 body {
   min-height: 100vh;
+  padding-bottom: 50px;
 }
 
 .navbar a {
@@ -101,7 +102,6 @@ body {
 .modal-footer button {
   width: 150px;
 }
-
 .header-num-wrapper {
   width: 100%;
   margin-right: 20px;
@@ -113,4 +113,12 @@ body {
 .header-num input {
   text-align: center;
   cursor: default;
+}
+.kra-1{
+  display: flex;
+  justify-content: center;
+}
+.kra-1{
+
+  font-weight: 500;
 }

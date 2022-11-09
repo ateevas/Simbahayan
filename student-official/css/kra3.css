@@ -70,7 +70,7 @@ body {
 .accordion {
   margin: auto;
 
-  width: 70%;
+  width: 80%;
 }
 
 .list-group {
@@ -84,7 +84,7 @@ body {
 }
 .list-group-item input {
   float: right;
-  width: 50px;
+  width: 40px;
   text-align: center;
 }
 
@@ -120,4 +120,12 @@ body {
 }
 .kra-1 {
   font-weight: 500;
+}
+
+.row h3 {
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.row {
 }

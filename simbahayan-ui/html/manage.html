@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage CD Coordinators</title>
+    <title>KRAs and KPIs</title>
     <link rel="stylesheet" href="/simbahayan-ui/css/manage.css" />
+  
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
@@ -18,7 +19,8 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
     crossorigin="anonymous"
   />
-
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   </head>
   <body>
     <nav class="navbar bg-secondary">
@@ -64,7 +66,8 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="/simbahayan-ui/html/annual.html">Annual Report Approval</a>
-              <a class="dropdown-item" href="/simbahayan-ui/html/kra.html">KRAs and KPIs Monitoring Sheet</a>
+              <a class="dropdown-item" href="/simbahayan-ui/html/kra-select.html">KRAs and KPIs Monitoring Sheet</a>
+              <a class="dropdown-item" href="/simbahayan-ui/html/download.html">Download KRAs and KPIs</a>
             </div>
           </li>
      
@@ -81,7 +84,7 @@
             Account
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="/simbahayan-ui/html/manage.html">Manage Community Development Coordinators</a>
+            <a class="dropdown-item" href="/simbahayan-ui/html/manage-edit.html">Manage Community Development Coordinators</a>
             <a class="dropdown-item" href="/simbahayan-ui/html/dashboard.html">Dashboard</a>
             <a class="dropdown-item" href="/simbahayan-ui/html/changepass.html">Change Password</a>
         
@@ -150,8 +153,7 @@
       </div>
       <div class="modal-body"><!----add content here-->
 
-
-         <div class=" container rounded-3  my-5 bg-white" style="height:auto;">
+        <div class=" container rounded-3  my-5 bg-white" style="height:auto;">
          
           <h5 class=" h1">Edit or Add Coordinators</h5> 
           <div>
@@ -174,11 +176,6 @@
    </div>
    <script src="/CD coordinator UI/js/add.js"></script>
 
-          
-
-
-
-
         <!----up to here-->
       </div>
       <div class="modal-footer">
@@ -200,13 +197,14 @@
       <tbody class="table-group-divider">
       <tr>
         <th scope="row"></th>
-        <!--Name/College--> <td>Name/College</td>
+        <!--Name--> <td>Name</td>
+         <!--Name--> <td>College</td>
         <!--IDnumber-->   <td>ID number</td>
         <!--Email-->   <td>Email</td>
-         <!--PassedKRA/KPI-->  <td>Time Passed</td>
-         <!--TimePassed-->  <td>Status</td>
-         <!--Status-->  <td>Manage</td>
-         <!--Manage-->  <td> </td>
+         <!--PassedKRA/KPI-->  <td>Passed KRA/KPI </td>
+         <!--TimePassed-->  <td>Time Passed</td>
+         <!--Status-->  <td>Status</td>
+      <td></td>
         
          
       </tr>
@@ -218,51 +216,109 @@
     <tbody class="table-group-divider">
       <tr>
         <th scope="row"><input type="checkbox"></th>
-       <!--Name/College--> <td>Mark</td>
-       <!--IDnumber-->   <td>Otto</td>
-       <!--Email-->   <td>@mdo</td>
-        <!--PassedKRA/KPI-->  <td>@mdo</td>
-        <!--TimePassed-->  <td>@mdo</td>
-        <!--Status-->  <td>@mdo</td>
+       <!--Name/College--> <td>Joshua Cabangal</td>
+       <!--College-->   <td>CICS</td>
+       <!--ID number-->   <td>2018108174</td>
+        <!--Email-->  <td>joshuacabangal@gmail.com</td>
+        <!--PassedKRA/KPI-->  <td>yes</td>
+        <td>8:15am</td>
+        <!--Status-->  <td id="status"><i  style="color: green;"class="bi bi-person-check-fill "></i></td>
         <td> <div class="form-check form-switch ">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
         </div></td>
       </tr>
       <tr>
         <th scope="row"><input type="checkbox"></th>
-      <!--Name/College--> <td>Mark</td>
-       <!--IDnumber-->   <td>Otto</td>
-       <!--Email-->   <td>@mdo</td>
-        <!--PassedKRA/KPI-->  <td>@mdo</td>
-        <!--TimePassed-->  <td>@mdo</td>
-        <!--Status-->  <td>@mdo</td>
-        <td> <div class="form-check form-switch">
+     <!--Name/College--> <td>Joshua Cabangal</td>
+       <!--College-->   <td>CICS</td>
+       <!--ID number-->   <td>2018108174</td>
+        <!--Email-->  <td>joshuacabangal@gmail.com</td>
+        <!--PassedKRA/KPI-->  <td>yes</td>
+        <td>8:15am</td>
+        <!--Status-->  <td id="status"><i style="color:red ;" class="bi bi-person-x-fill"></i></td>
+        <td> <div class="form-check form-switch ">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
         </div></td>
       </tr>
       <tr>
         <th scope="row"><input type="checkbox"></th>
-     <!--Name/College--> <td>Mark</td>
-       <!--IDnumber-->   <td>Otto</td>
-       <!--Email-->   <td>@mdo</td>
-        <!--PassedKRA/KPI-->  <td>@mdo</td>
-        <!--TimePassed-->  <td>@mdo</td>
-        <!--Status-->  <td>@mdo</td>
-        <td> <div class="form-check form-switch">
+    <!--Name/College--> <td>Joshua Cabangal</td>
+       <!--College-->   <td>CICS</td>
+       <!--ID number-->   <td>2018108174</td>
+        <!--Email-->  <td>joshuacabangal@gmail.com</td>
+        <!--PassedKRA/KPI-->  <td>yes</td>
+        <td>8:15am</td>
+        <!--Status-->  <td id="status"><i  style="color: green;"class="bi bi-person-check-fill "></i></td>
+        <td> <div class="form-check form-switch ">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
         </div></td>
       </tr>
      
-
      
     </tbody>
   </table>
+
+
+  <div class="save-wrapper">
+     <!-- Button trigger modal -->
+    <button
+    type="button"
+    class="btn btn-warning"
+    data-toggle="modal"
+    data-target="#approval"
+  >
+    Save
+  </button>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="approval"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">
+            Save Changes
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+    Are you sure you want to make changes?
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-dismiss="modal"
+          >
+            No
+          </button>
+          <button type="button" class="btn btn-warning">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
  
 
   
   
       <!---javascript bootstrap-->
+      
+      
       <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -289,6 +345,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+  
   </body>
 
   </html>

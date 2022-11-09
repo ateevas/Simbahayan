@@ -5,22 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Community Development Report</title>
-    <link rel="stylesheet" href="/student-offical/css/annual-report.css" />
+    <link rel="stylesheet" href="/student-official/css/kra2.css" />
+    <link rel="stylesheet" href="/js/add.js" />
+    <script src="/js/add.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
   </head>
   <body>
     <nav class="navbar bg-secondary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/student-offical/html/profile.html">
+        <a class="navbar-brand" href="/student-official/html/profile.html">
           <img
-            src="/student-offical/pictures/ustlogo.png"
+            src="/student-official/pictures/ustlogo.png"
             alt="Logo"
             width="70"
             height="70"
@@ -36,12 +38,12 @@
       <div class="navigation">
         <ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
           <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-offical/html/profile.html"
+            <a class="nav-link text-dark" href="/student-official/html/profile.html"
               >Profile <span class="sr-only"></span
             ></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-offical/html/annual-report.html"
+            <a class="nav-link text-dark" href="/student-official/html/kra-select.html"
               >Community Development Report <span class="sr-only"></span
             ></a>
           </li>
@@ -59,11 +61,11 @@
               Account
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/student-offical/html/changepass.html">Change Password</a>
+              <a class="dropdown-item" href="/student-official/html/changepass.html">Change Password</a>
             </div>
           </li>
           <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-offical/html/contact.html"
+            <a class="nav-link text-dark" href="/student-official/html/contact.html"
               >Contact <span class="sr-only"></span
             ></a>
           </li>
@@ -80,62 +82,12 @@
     </div>
     <!-----------------navigation bar end----------->
 
-    <div class="form-parent">
-      <div class="form-child">
-        <h3>Ministry of Urban Poor</h3>
-      </div>
-
-      <!-- Button trigger modal -->
-      <button
-        type="button"
-        class="btn btn-warning"
-        id="btn-modal"
-        data-toggle="modal"
-        data-target="#exampleModalCenter"
-      >
-        Change Community/Institution
-      </button>
-    </div>
     <hr />
 
     <div class="title-wrapper m-2">
       <h3>Community Development Report</h3>
     </div>
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModalCenter"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalCenterTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Select a Community/Institution</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <select class="form-select" aria-label="Default select example">
-              <option></option>
-              <option>College of Architecture</option>
-              <option>College of Arts and Letters</option>
-              <option>College of Commerce and Business Administration</option>
-              <option>College of Education</option>
-            </select>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <div class="kra-1">KRA 2: Thomasian engagement as agents of social transformation</div>
     <!------Accordion------------------------->
 
     <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -149,16 +101,18 @@
             aria-expanded="false"
             aria-controls="flush-collapseOne "
           >
-            Health and Wellness Development
+            Health for all (Health and wellness development)
+
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
               <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" />
+                <input class="form-control" type="number" placeholder="0" readonly />
               </div>
             </div>
             <!-----Number of DATA submitted------->
           </button>
         </h2>
+
         <div
           id="flush-collapseOne"
           class="accordion-collapse collapse"
@@ -167,44 +121,84 @@
         >
           <div class="accordion-body">
             <!-----------------accordion-list ----------------->
-            <ul class="list-group">
-              <li class="list-group-item">
-                No. of Communities Served
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Community Participants
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Projects
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Activities
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Students
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Faculty
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Admin
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Support Staff
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Alumni
-                <input placeholder="0" type="number" />
-              </li>
-            </ul>
+            <div class="container">
+              <div class="row">
+                <div class="col"><h3>Status No.</h3></div>
+                <div class="col"><h3>Target No.</h3></div>
+                <div class="w-100"></div>
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <!---Status no.-->
+                      No. of Projects under Institutional Development for Community Development
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      No. of Projects under Social Awareness and Advocacy
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      No. of Community engaged Researches conducted
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      No. of Service-Learning conducted
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      No. of Student Organizations
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      No. of Students
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <!---Target no.-->
+                      Status No. of Equitable and Inclusive Education Projects
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Target No. of Equitable and Inclusive Education Projects
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Status No. of Communities/ Institutions Served
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Target No. of Communities/ Institutions Served
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Status No. of Participants/ Members
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Target No. of Participants/ Members
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                  </ul>
+                </div>
+                <!----Targer No.-->
+              </div>
+            </div>
             <!-----------------accordion-list ----------------->
           </div>
         </div>
@@ -219,11 +213,12 @@
             aria-expanded="false"
             aria-controls="flush-collapseTwo"
           >
-            Equitable and Inclusive Education
+            Education for all (Equitable and inclusive education)
+
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
               <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" />
+                <input class="form-control" type="number" placeholder="0" readonly />
               </div>
             </div>
             <!-----Number of DATA submitted------->
@@ -239,40 +234,34 @@
             <!-----------------accordion-list ----------------->
             <ul class="list-group">
               <li class="list-group-item">
-                No. of Communities Served
-                <input placeholder="0" type="number" />
+                Status No. of Equitable and Inclusive Education Projects
+
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Community Participants
-                <input placeholder="0" type="number" />
+                Target No. of Equitable and Inclusive Education Projects
+
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Projects
-                <input placeholder="0" type="number" />
+                Status No. of Communities/ Institutions Served
+
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Activities
-                <input placeholder="0" type="number" />
+                Target No. of Communities/ Institutions Served
+
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Students
-                <input placeholder="0" type="number" />
+                Status No. of Participants/ Members
+
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Faculty
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Admin
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Support Staff
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Alumni
-                <input placeholder="0" type="number" />
+                Target No. of Participants/ Members
+
+                <input placeholder="0" type="number" readonly />
               </li>
             </ul>
             <!-----------------accordion-list ----------------->
@@ -289,11 +278,12 @@
             aria-expanded="false"
             aria-controls="flush-collapseThree"
           >
-            Leadership, Org dev and Good gov
+            Good governance for all (Leadership, organizational development, and good governance)
+
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
               <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" />
+                <input class="form-control" type="number" placeholder="0" readonly />
               </div>
             </div>
             <!-----Number of DATA submitted------->
@@ -309,40 +299,31 @@
             <!-----------------accordion-list ----------------->
             <ul class="list-group">
               <li class="list-group-item">
-                No. of Communities Served
-                <input placeholder="0" type="number" />
+                Status No. of Leadership, Organizational Development, and Good Governance Projects
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Community Participants
-                <input placeholder="0" type="number" />
+                Target No. of Leadership, Organizational Development, and Good Governance Projects
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Projects
-                <input placeholder="0" type="number" />
+                Status No. of Communities/ Institutions Served
+
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Activities
-                <input placeholder="0" type="number" />
+                Target No. of Communities/ Institutions Served
+
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Students
-                <input placeholder="0" type="number" />
+                Status No. of Participants/ Members
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Faculty
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Admin
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Support Staff
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Alumni
-                <input placeholder="0" type="number" />
+                Target No. of Participants/ Members
+
+                <input placeholder="0" type="number" readonly />
               </li>
             </ul>
             <!-----------------accordion-list ----------------->
@@ -359,11 +340,12 @@
             aria-expanded="false"
             aria-controls="flush-collapseFour"
           >
-            Equitable and Inclusive Education
+            Education for all (Equitable and inclusive education)
+
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
               <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" />
+                <input class="form-control" type="number" placeholder="0" readonly />
               </div>
             </div>
             <!-----Number of DATA submitted------->
@@ -379,49 +361,70 @@
             <!-----------------accordion-list ----------------->
             <ul class="list-group">
               <li class="list-group-item">
-                No. of Communities Served
-                <input placeholder="0" type="number" />
+                Status No. of Equitable and Inclusive Education Projects
+
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Community Participants
-                <input placeholder="0" type="number" />
+                Target No. of Equitable and Inclusive Education Projects
+
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Projects
-                <input placeholder="0" type="number" />
+                Status No. of Communities/ Institutions Served
+
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Activities
-                <input placeholder="0" type="number" />
+                Target No. of Communities/ Institutions Served
+
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Students
-                <input placeholder="0" type="number" />
+                Status No. of Participants/ Members
+                <input placeholder="0" type="number" readonly />
               </li>
               <li class="list-group-item">
-                No. of Faculty
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Admin
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Support Staff
-                <input placeholder="0" type="number" />
-              </li>
-              <li class="list-group-item">
-                No. of Alumni
-                <input placeholder="0" type="number" />
+                Target No. of Participants/ Members
+                <input placeholder="0" type="number" readonly />
               </li>
             </ul>
             <!-----------------accordion-list ----------------->
           </div>
         </div>
       </div>
+
       <div class="button-wrapper">
+        <a class="btn btn-dark" href="/student-official/html/kra2.html" role="button">Prev</a>
         <button type="button" class="btn btn-warning">Save</button>
-        <a class="btn btn-dark" href="/student-offical/html/annual-report-next.html" role="button">Next</a>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Submit</button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="approval"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">Are you sure you want to submit report?</div>
+              <div class="modal-footer d-flex justify-content-between">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-warning">Yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

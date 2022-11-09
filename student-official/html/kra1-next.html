@@ -4,23 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KRA 3</title>
-    <link rel="stylesheet" href="/CD coordinator UI/css/kra3.css" />
+    <title>Community Development Report</title>
+    <link rel="stylesheet" href="/student-official/css/kra2.css" />
+    <link rel="stylesheet" href="/js/add.js" />
+    <script src="/js/add.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
   </head>
   <body>
     <nav class="navbar bg-secondary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/CD coordinator UI/html/profile.html">
+        <a class="navbar-brand" href="/student-official/html/profile.html">
           <img
-            src="/CD coordinator UI/pictures/ustlogo.png"
+            src="/student-official/pictures/ustlogo.png"
             alt="Logo"
             width="70"
             height="70"
@@ -31,13 +33,18 @@
       </div>
     </nav>
 
-    <!---navigation bar--------------------------------->
+    <!--navigation bar---->
     <div class="navigation-container">
       <div class="navigation">
         <ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
           <li class="nav-item active">
-            <a class="nav-link text-dark" href="/CD coordinator UI/html/profile.html"
+            <a class="nav-link text-dark" href="/student-official/html/profile.html"
               >Profile <span class="sr-only"></span
+            ></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-dark" href="/student-official/html/kra-select.html"
+              >Community Development Report <span class="sr-only"></span
             ></a>
           </li>
 
@@ -51,32 +58,14 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              KRAs and KPIs
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/CD coordinator UI/html/annual.html">Annual Report Approval</a>
-              <a class="dropdown-item" href="/CD coordinator UI/html/kra-select.html">KRAs and KPIs Monitoring Sheet</a>
-              <a class="dropdown-item" href="/CD coordinator UI/html/download.html">Download KRAs and KPIs</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-dark"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
               Account
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/CD coordinator UI/html/changepass.html">Change Password</a>
+              <a class="dropdown-item" href="/student-official/html/changepass.html">Change Password</a>
             </div>
           </li>
           <li class="nav-item active">
-            <a class="nav-link text-dark" href="/CD coordinator UI/html/contact.html"
+            <a class="nav-link text-dark" href="/student-official/html/contact.html"
               >Contact <span class="sr-only"></span
             ></a>
           </li>
@@ -91,79 +80,14 @@
         </div>
       </div>
     </div>
-    <div class="form-parent">
-      <div class="form-child">
-        <h3>College of Engineering</h3>
-      </div>
+    <!-----------------navigation bar end----------->
 
-      <!-- Button trigger modal -->
-      <button
-        type="button"
-        class="btn btn-warning"
-        id="btn-modal"
-        data-toggle="modal"
-        data-target="#exampleModalCenter"
-      >
-        Change College
-      </button>
-    </div>
     <hr />
 
     <div class="title-wrapper m-2">
-      <h3>Annual Report</h3>
+      <h3>Community Development Report</h3>
     </div>
-
-    <div class="kra-1">KRA 3: Dynamic Community Development External Partnerships and Networks</div>
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModalCenter"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalCenterTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Select a College</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <select class="form-select" aria-label="Default select example">
-              <option>Faculty of Accountancy</option>
-              <option>Faculty of Architecture</option>
-              <option>Faculty of Arts and Letters</option>
-              <option>Faculty of Commerce and Business Administration</option>
-              <option>Faculty of Education</option>
-              <option>Facutly of Fine Arts and Design</option>
-              <option>Faculty of Information and Computing Sciences</option>
-              <option>Faculty of Nursing</option>
-              <option>Faculty of Rehabilataion Sciences</option>
-              <option>Faculty of Tourism and Hospitality Management</option>
-              <option>Faculty of Science</option>
-              <option>Faculty of Engineering</option>
-              <option>Ecclesiastical Faculties</option>
-              <option>Graduate School</option>
-              <option>Junior High School</option>
-              <option>Faculty Medicine and Surgery</option>
-              <option>Conservatory of Music</option>
-              <option>Institute of Physical Education and Athletics</option>
-              <option>Institute of Religion</option>
-              <option>Senior High School</option>
-              <option>NSTP</option>
-            </select>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="kra-1">KRA 1: Self-reliant, interdependent, and empowered partner communities and institutions</div>
 
     <!------Accordion------------------------->
 
@@ -178,7 +102,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseOne "
           >
-            People's Organizations
+            Cultural Life, Expression and Rootedness for all (Culture and heritage development)
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -207,12 +131,18 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      No. of MOU/MOA
+                      Status No. of Culture and Heritage Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      No. of Community Development and Advocacy Activities
+                      Status No. of Communities/ Institutions Served
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+
+                    <li class="list-group-item">
+                      Status No. of Participants/ Members
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -223,12 +153,19 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      No. of MOU/MOA
+                      Target No. of Culture and Heritage Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      No. of Community Development and Advocacy Activities
+                      Target No. of Communities/ Institutions Served
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+
+                    <li class="list-group-item">
+                      Target No. of Participants/ Members
+
                       <input placeholder="0" type="number" readonly />
                     </li>
                   </ul>
@@ -250,7 +187,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseTwo"
           >
-            Government Agencies or LGUs
+            Sports for all (Sports development)
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -278,12 +215,18 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of MOU/MOA
+                      Status No. of Sports Development Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Status No. of Community Development and Advocacy Activities
+                      Status No. of Communities/ Institutions Served
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+
+                    <li class="list-group-item">
+                      Status No. of Participants/ Members
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -294,12 +237,18 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of MOU/MOA
+                      Target No. of Sports Development Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Target No. of Community Development and Advocacy Activities
+                      Target No. of Communities/ Institutions Served
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+
+                    <li class="list-group-item">
+                      Target No. of Participants/ Members
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -322,7 +271,8 @@
             aria-expanded="false"
             aria-controls="flush-collapseThree"
           >
-            Non- Government Organizations
+            Environmental Justice for all (Environmental sustainability and action; disaster risk reduction and
+            management)
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -350,12 +300,17 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of MOU/MOA
+                      Status No. of Environmental Sustainability and Action Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Status No. of Community Development and Advocacy Activities
+                      Status No. of Communities/ Institutions Served
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Status No. of Participants/ Members
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -366,18 +321,24 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of MOU/MOA
+                      Target No. of Sustainability and Action Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Target No. of Community Development and Advocacy Activities
+                      Target No. of Communities/ Institutions Served
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+
+                    <li class="list-group-item">
+                      Target No. of Participants/ Members
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                   </ul>
                 </div>
-                <!----Targer No.-->
+                <!----Target No.-->
               </div>
             </div>
             <!-----------------accordion-list ----------------->
@@ -394,7 +355,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseFour"
           >
-            Basic Educational Institutions
+            Holistic Life for all (Family and household development)
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -422,12 +383,17 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of MOU/MOA
+                      Status No. of Family and Household Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Status No. of Community Development and Advocacy Activities
+                      Status No. of Communities/ Institutions Served
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Status No. of Participants/ Members
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -438,12 +404,17 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of MOU/MOA
+                      Target No. of Family and Household Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Target No. of Community Development and Advocacy Activities
+                      Target No. of Communities/ Institutions Served
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Target No. of Participants/ Members
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -456,10 +427,95 @@
           </div>
         </div>
       </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFive">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFive"
+            aria-expanded="false"
+            aria-controls="flush-collapseFive"
+          >
+            Community organizations formed
+
+            <!-----Number of DATA submitted------->
+            <div class="header-num-wrapper">
+              <div class="header-num">
+                <input class="form-control" type="number" placeholder="0" readonly />
+              </div>
+            </div>
+            <!-----Number of DATA submitted------->
+          </button>
+        </h2>
+        <div
+          id="flush-collapseFive"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingFive"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <!-----------------accordion-list ----------------->
+            <div class="container">
+              <div class="row">
+                <div class="col"><h3>Status No.</h3></div>
+                <div class="col"><h3>Target No.</h3></div>
+                <div class="w-100"></div>
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <!---Status no.-->
+                      Status No. of Community Organization Formed
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Status No. of Communities/ Institutions Served under each Community Organization Formed
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Status No. of Participants/ Members under each Community Organization Formed
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <!---Target no.-->
+                      Target No. of Community Organization Formed
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Target No. of Communities/ Institutions Served under each Community Organization Formed
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Target No. of Participants/ Members under each Community Organization Formed
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                  </ul>
+                </div>
+                <!----Targer No.-->
+              </div>
+            </div>
+            <!-----------------accordion-list ----------------->
+          </div>
+        </div>
+      </div>
+
       <div class="button-wrapper">
-        <a class="btn btn-warning" href="#" role="button">Edit</a>
+        <a class="btn btn-dark" href="/student-official/html/kra1.html" role="button">Prev</a>
+        <button type="button" class="btn btn-warning">Save</button>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Approve</button>
+        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Submit</button>
 
         <!-- Modal -->
         <div
@@ -473,12 +529,12 @@
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Annual Report Approval</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">Approve the Annual Report? It cannot be undone</div>
+              <div class="modal-body">Are you sure you want to submit report?</div>
               <div class="modal-footer d-flex justify-content-between">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                 <button type="button" class="btn btn-warning">Yes</button>
@@ -486,8 +542,6 @@
             </div>
           </div>
         </div>
-
-        <a class="btn btn-dark" href="/simbahayan-ui/html/annual-report.html" role="button">Prev</a>
       </div>
     </div>
 

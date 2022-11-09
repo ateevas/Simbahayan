@@ -29,22 +29,27 @@
   font-size: 50px;
 }
 
-.welcome-context span {
-  color: black;
-}
-
-.welcome-context p {
-  font-size: 25px;
-}
-.carousel-item img {
-  width: auto;
-  height: 500px;
-  max-height: 500px;
-}
 .navigation-container {
   display: flex;
   justify-content: center;
 }
 .navigation {
   width: 50%;
+}
+
+#icon {
+  color: black;
+  height: 0.5rem;
+  font-size: 1.75em;
+  cursor: pointer;
+}
+
+#icon:hover {
+  transition-delay: 0.2s;
+  transform: scale(1.5);
+}
+
+a {
+  text-align: right;
+  display: block;
 }
