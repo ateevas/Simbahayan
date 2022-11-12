@@ -5,32 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRA 1</title>
-    <link rel="stylesheet" href="/CD coordinator UI/css/kra3.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <?php 
+      include('../cdn/cdn.php');
+    ?>
   </head>
   <body>
-    <nav class="navbar bg-secondary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/CD coordinator UI/html/profile.html">
-          <img
-            src="/CD coordinator UI/pictures/ustlogo.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            class="d-inline-block align-text-middle"
-          />
-          <span>Simbahayan Portal</span>
-        </a>
-      </div>
-    </nav>
-
+    <?php 
+      include('../nav_master/nav.php');
+    ?>
     <!---navigation bar--------------------------------->
     <div class="navigation-container">
       <div class="navigation">
@@ -178,7 +160,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseOne "
           >
-            Cultural Life, Expression and Rootedness for all (Culture and heritage development)
+            Health for all (Health and wellness development)
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -207,7 +189,7 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of Culture and Heritage Projects
+                      Status No. of Health and Wellness Development Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -229,7 +211,7 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of Culture and Heritage Projects
+                      Target No. of Health and Wellness Development Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -263,7 +245,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseTwo"
           >
-            Sports for all (Sports development)
+            Education for all (Equitable and inclusive education)
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -291,7 +273,7 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of Sports Development Projects
+                      Status No. of Equitable and Inclusive Education Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -313,7 +295,7 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of Sports Development Projects
+                      Target No. of Equitable and Inclusive Education Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -347,8 +329,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseThree"
           >
-            Environmental Justice for all (Environmental sustainability and action; disaster risk reduction and
-            management)
+            Good governance for all (Leadership, organizational development, and good governance)
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -376,7 +357,7 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of Environmental Sustainability and Action Projects
+                      Status No. of Leadership, Organizational Development, and Good Governance Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -397,7 +378,7 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of Sustainability and Action Projects
+                      Target No. of Leadership, Organizational Development, and Good Governance Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -431,7 +412,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseFour"
           >
-            Holistic Life for all (Family and household development)
+            Economic justice for all (Employability and social enterprise)
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -459,7 +440,7 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of Family and Household Projects
+                      Status No. of Employability and Social Enterprise Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -480,7 +461,7 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of Family and Household Projects
+                      Target No. of Employability and Social Enterprise Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -514,7 +495,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseFive"
           >
-            Community organizations formed
+            Christ's love for all (Socio-pastoral ministry and evangelization)
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -542,17 +523,17 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of Community Organization Formed
+                      Status No. of Socio-Pastoral Ministry and Evangelization Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Status No. of Communities/ Institutions Served under each Community Organization Formed
+                      Status No. of Communities/ Institutions Served
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Status No. of Participants/ Members under each Community Organization Formed
+                      Status No. of Participants/ Members
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -563,17 +544,17 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of Community Organization Formed
+                      Target No. of Socio-Pastoral Ministry and Evangelization Projects
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Target No. of Communities/ Institutions Served under each Community Organization Formed
+                      Target No. of Communities/ Institutions Served
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Target No. of Participants/ Members under each Community Organization Formed
+                      Target No. of Participants/ Members
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -586,7 +567,6 @@
           </div>
         </div>
       </div>
-
       <div class="button-wrapper">
         <a class="btn btn-warning" href="#" role="button">Edit</a>
         <!-- Button trigger modal -->

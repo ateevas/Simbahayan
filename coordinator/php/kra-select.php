@@ -5,38 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRA SELECT</title>
-    <link rel="stylesheet" href="/student-offical/css/kra-select.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="http://fonts.cdnfonts.com/css/trajan-pro" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Libre+Baskerville&display=swap"
-      rel="stylesheet"
-    />
+    <?php 
+      include('../cdn/cdn.php');
+    ?>
   </head>
-
   <body>
-    <nav class="navbar bg-secondary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/student-offical/html/profile.html">
-          <img
-            src="/student-offical/pictures/ustlogo.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            class="d-inline-block align-text-middle"
-          />
-          <span>Simbahayan Portal</span>
-        </a>
-      </div>
-    </nav>
+    <?php 
+      include('../nav_master/nav.php');
+    ?>
     <!--navigation bar---->
     <div class="navigation-container">
       <div class="navigation">

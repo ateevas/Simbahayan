@@ -10,15 +10,9 @@
 		?>
 	</head>
 	<body>
-		<nav class="navbar bg-secondary">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="/coordinator/html/profile.html">
-					<img src="http://localhost/Simbahayan/coordinator/pictures/ustlogo.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-middle"
-					/>
-					<span>Simbahayan Portal</span>
-				</a>
-			</div>
-		</nav>
+		<?php 
+			include('../nav_master/nav.php');
+		?>
 		<!---navigation bar -->
 		<div class="navigation-container">
 			<div class="navigation">
