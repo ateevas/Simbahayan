@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage Comdev Coordinators</title>
-    <link rel="stylesheet" href="/simbahayan-ui/css/manage.css" />
+    <title>Manage Students</title>
+    <link rel="stylesheet" href="/CD coordinator UI//css/manage.css" />
   
     <link
     rel="stylesheet"
@@ -25,9 +25,9 @@
   <body>
     <nav class="navbar bg-secondary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/simbahayan-ui/html/profile.html">
+        <a class="navbar-brand" href="/CD coordinator UI//html/profile.html">
           <img
-            src="/simbahayan-ui/pictures/ustlogo.png"
+            src="/CD coordinator UI//pictures/ustlogo.png"
             alt="Logo"
             width="70"
             height="70"
@@ -49,53 +49,54 @@
         role="tablist"
       >
       <li class="nav-item active">
-        <a class="nav-link  text-dark" href="/simbahayan-ui/html/profile.html">Profile <span class="sr-only"></span></a>
+        <a class="nav-link text-dark" href="/CD coordinator UI/html/profile.html"
+          >Profile <span class="sr-only"></span
+        ></a>
       </li>
-  
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-dark"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              KRAs and KPIs
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/simbahayan-ui/html/annual.html">Annual Report Approval</a>
-              <a class="dropdown-item" href="/simbahayan-ui/html/kra-select.html">KRAs and KPIs Monitoring Sheet</a>
-              <a class="dropdown-item" href="/simbahayan-ui/html/download.html">Download KRAs and KPIs</a>
-            </div>
-          </li>
-     
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle text-dark"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Account
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="/simbahayan-ui/html/manage-edit.html">Manage Community Development Coordinators</a>
-            <a class="dropdown-item" href="/simbahayan-ui/html/dashboard.html">Dashboard</a>
-            <a class="dropdown-item" href="/simbahayan-ui/html/changepass.html">Change Password</a>
-        
-          </div>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link  text-dark" href="/simbahayan-ui/html/contact.html">Contact <span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link  text-dark" href="/login-page/html/login.html">Logout <span class="sr-only"></span></a>
-        </li>
+
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle text-dark"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          KRAs and KPIs
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/CD coordinator UI/html/annual.html">Annual Report Approval</a>
+          <a class="dropdown-item" href="/CD coordinator UI/html/kra-select.html">KRAs and KPIs Monitoring Sheet</a>
+          <a class="dropdown-item" href="/CD coordinator UI/html/download.html">Download KRAs and KPIs</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle text-dark"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Account
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/CD coordinator UI/html/changepass.html">Change Password</a>
+          <a class="dropdown-item" href="/CD coordinator UI/html/manage.html">Manage Students</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-dark" href="/CD coordinator UI/html/contact.html"
+          >Contact <span class="sr-only"></span
+        ></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-dark" href="/login-page/html/login.html">Logout <span class="sr-only"></span></a>
+      </li>
        
       </ul>
       <div class="tab-content" id="pills-tabContent">
@@ -127,7 +128,7 @@
     </div>
   </div>
 
-  <h1 class="display-5 mt-3">Manage Community Development Coordinators</h1>  
+  <h1 class="display-5 mt-3">Manage Students</h1>  
  
   <nav class="navbar ">
     <form class="form-inline w-50 p-2 ">
@@ -146,7 +147,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Add Coordinators</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Students</h5>
         <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true"><i class="bi bi-x-circle"></i></span>
         </button>
@@ -155,7 +156,7 @@
 
         <div class=" container rounded-3  my-5 bg-white" style="height:auto;">
          
-          <h5 class=" h1">Edit or Add Coordinators</h5> 
+          <h5 class=" h1">Edit or Add Students</h5> 
           <div>
       <div class="row">
               <div class=" col-8">
@@ -201,9 +202,9 @@
          <!--Name--> <td>College</td>
         <!--IDnumber-->   <td>ID number</td>
         <!--Email-->   <td>Email</td>
-         <!--PassedKRA/KPI-->  <td>Approved KRA/KPI </td>
-         <!--TimePassed-->  <td>Time Passed</td>
-         <!--Status-->  <td>Status</td>
+         <!--PassedKRA/KPI-->  <td>Passed KRA/KPI </td>
+         <!--TimePassed-->  <td>Date Passed</td>
+         <!--Status-->  <td></td>
       <td></td>
         
          
@@ -216,28 +217,15 @@
     <tbody class="table-group-divider">
       <tr>
         <th scope="row"><input type="checkbox"></th>
-       <!--Name/College--> <td>Joshua Cabangal</td>
+    <!--Name/College--> <td>Joshua Cabangal</td>
        <!--College-->   <td>CICS</td>
        <!--ID number-->   <td>2018108174</td>
         <!--Email-->  <td>joshuacabangal@gmail.com</td>
         <!--PassedKRA/KPI-->  <td>yes</td>
-        <td>8:15am</td>
-        <!--Status-->  <td id="status"><i  style="color: green;"class="bi bi-person-check-fill "></i></td>
+        <td>1/1/2022</td>
+        <!--Status-->  <td id="status"><a href="">View</a></i></td>
         <td> <div class="form-check form-switch ">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-        </div></td>
-      </tr>
-      <tr>
-        <th scope="row"><input type="checkbox"></th>
-     <!--Name/College--> <td>Joshua Cabangal</td>
-       <!--College-->   <td>CICS</td>
-       <!--ID number-->   <td>2018108174</td>
-        <!--Email-->  <td>joshuacabangal@gmail.com</td>
-        <!--PassedKRA/KPI-->  <td>yes</td>
-        <td>8:15am</td>
-        <!--Status-->  <td id="status"><i style="color:red ;" class="bi bi-person-x-fill"></i></td>
-        <td> <div class="form-check form-switch ">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+   
         </div></td>
       </tr>
       <tr>
@@ -247,10 +235,23 @@
        <!--ID number-->   <td>2018108174</td>
         <!--Email-->  <td>joshuacabangal@gmail.com</td>
         <!--PassedKRA/KPI-->  <td>yes</td>
-        <td>8:15am</td>
-        <!--Status-->  <td id="status"><i  style="color: green;"class="bi bi-person-check-fill "></i></td>
+        <td>1/1/2022</td>
+        <!--Status-->  <td id="status"><a href="">View</a></i></td>
         <td> <div class="form-check form-switch ">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+   
+        </div></td>
+      </tr>
+      <tr>
+        <th scope="row"><input type="checkbox"></th>
+    <!--Name/College--> <td>Joshua Cabangal</td>
+       <!--College-->   <td>CICS</td>
+       <!--ID number-->   <td>2018108174</td>
+        <!--Email-->  <td>joshuacabangal@gmail.com</td>
+        <!--PassedKRA/KPI-->  <td>yes</td>
+        <td>1/1/2022</td>
+        <!--Status-->  <td id="status"><a href="">View</a></i></td>
+        <td> <div class="form-check form-switch ">
+   
         </div></td>
       </tr>
      

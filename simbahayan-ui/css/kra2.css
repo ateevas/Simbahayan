@@ -124,8 +124,22 @@ body {
 
 .row h3 {
   font-weight: 400;
-  font-size: 25px;
+  font-size: 20px;
 }
 
-.row {
+.col-6 {
+  display: flex;
+  justify-content: center;
+}
+#ucdp {
+  display: block;
+  margin: 15px;
+}
+.col-6 input {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  width: 40px;
+  text-align: center;
+  height: 40px;
 }
