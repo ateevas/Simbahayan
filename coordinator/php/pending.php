@@ -10,10 +10,29 @@
     ?>
   </head>
   <body>
+<<<<<<< HEAD:coordinator/php/pending.php
     <?php 
       include('../nav_master/nav.php');
     ?>
     <!---navigation bar--------------------------------->
+=======
+    <nav class="navbar bg-secondary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/CD coordinator UI/html/profile.html">
+          <img
+            src="/CD coordinator UI/pictures/ustlogo.png"
+            alt="Logo"
+            width="70"
+            height="70"
+            class="d-inline-block align-text-middle"
+          />
+          <span>Simbahayan Portal</span>
+        </a>
+      </div>
+    </nav>
+
+    <!---navigation bar----------------->
+>>>>>>> e1d4db5663de5f39e362f8b1e31780846be4110c:coordinator/html/pending.html
     <div class="navigation-container">
       <div class="navigation">
         <ul
@@ -100,7 +119,7 @@
         </div>
       </div>
     </div>
-    <!-------------------navigation bar end----------->
+    <!---navigation bar end----------->
     <div class="contact_title">
       <div class="inner_container">
         <div class="contact_container">

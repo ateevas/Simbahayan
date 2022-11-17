@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/login-page/css/login.css" />
+		<?php 
+			include('../cdn/cdn.php');
+		?>
+  </head>
+  <body>
+    <div class="background-image">
+		<?php 
+			include('../nav_master/nav.php');
+		?>
+
+      <section
+        class="vh-100"
+        style="
+          background-image: url('http://localhost/simbahayan_portal/login-page/pictures/main.png');
+          background-size: cover;
+        "
+      >
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card shadow-2-strong" style="border-radius: 1rem">
+                <div class="card-body p-5 text-center">
+                  <h3 class="mb-5">Sign in</h3>
+
+                  <form method="post" action="">
+                    <div class="form-outline mb-4">
+                      <input name="email" type="email" id="email" class="form-control form-control-lg" />
+                      <label class="form-label" for="email">Email</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input
+                        name="password"
+                        type="password"
+                        id="password"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="password">Password</label>
+                    </div>
+
+                    <!-- Checkbox -->
+                    <div class="form-check d-flex justify-content-start mb-4">
+                      <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                      <label class="form-check-label" for="form1Example3"> Remember password </label>
+                    </div>
+
+                    <button class="btn btn-warning btn-lg btn-block" type="button" onclick="login(this)">Login</button>
+                  </form>
+
+                  <hr class="my-4" />
+                  <div class="register-wrapper">
+                    <h3>Don't Have an Account?</h3>
+                  </div>
+                  <div class="parent-here">
+                    <div class="here-wrapper">
+                      <a href="/login-page/register/html/register.html">Register Here</a>
+                    </div>
+                  </div>
+
+                  <div class="forgot-wrapper">
+                    <a href="/login-page/html/forgetpass.html">Forgot Password?</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"
+      ></script>
+
+      <script>
+        function login() {
+          var email = $("#email").val();
+          var password = $("#password").val();
+            
+          if (email !== "" && password !== ""  ) {
+            $.ajax({
+              url: "http://localhost/simbahayan_portal/simbahayan_backend/index.php",
+              type: "POST",
+              data: {
+                csrf_token: "{{ csrf_token() }}",
+                tag: "login",
+                email: email,
+                password: password,
+              },
+              complete: function (data) {
+                var res = JSON.parse(data.responseText); 
+                
+            switch(res['status']) {
+              case 'ok': // login success
+
+              switch (res['user_role']) {
+			    case 1: //student
+					window.location.href="https://www.google.com/";
+			    break;
+			    case 2: //cd
+					window.location.href="http://127.0.0.1:5500/CD%20coordinator%20UI/html/profile.html";
+			    break;
+			    case 3: //staff;
+					window.location.href="https://www.w3schools.com/";
+				break;
+}
+        
+          break;
+              case 'error_1': // mali password
+             	alert("email or password is incorrect");
+          break;
+              case 'error_2': // both mali
+             	alert("email or password is incorrect");
+           break;
+}
+              },
+            });
+          } else {
+            alert("input all missing fields");
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>

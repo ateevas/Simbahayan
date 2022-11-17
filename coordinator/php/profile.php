@@ -9,10 +9,29 @@
       include('../cdn/cdn.php');
     ?>
   </head>
+<<<<<<< HEAD
   <body>
     <?php 
       include('../nav_master/nav.php');
     ?>
+=======
+
+  <body>
+    <nav class="navbar bg-secondary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/CD coordinator UI/html/profile.html">
+          <img
+            src="/CD coordinator UI/pictures/ustlogo.png"
+            alt="Logo"
+            width="70"
+            height="70"
+            class="d-inline-block align-text-middle"
+          />
+          <span>Simbahayan Portal</span>
+        </a>
+      </div>
+    </nav>
+>>>>>>> e1d4db5663de5f39e362f8b1e31780846be4110c
     <!--navigation bar---->
     <div class="navigation-container">
     <div class="navigation">
