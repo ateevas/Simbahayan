@@ -4,33 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KRA 1</title>
-    <link rel="stylesheet" href="/CD coordinator UI/css/kra3.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <title>KRA 3</title>
+    <?php 
+      include('../cdn/cdn.php');
+    ?>
   </head>
   <body>
-    <nav class="navbar bg-secondary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/CD coordinator UI/html/profile.html">
-          <img
-            src="/CD coordinator UI/pictures/ustlogo.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            class="d-inline-block align-text-middle"
-          />
-          <span>Simbahayan Portal</span>
-        </a>
-      </div>
-    </nav>
-
+    <?php 
+      include('../nav_master/nav.php');
+    ?>
     <!---navigation bar--------------------------------->
     <div class="navigation-container">
       <div class="navigation">
@@ -114,7 +96,7 @@
       <h3>Annual Report</h3>
     </div>
 
-    <div class="kra-1">KRA 1: Self-reliant, interdependent, and empowered partner communities and institutions</div>
+    <div class="kra-1">KRA 3: Dynamic Community Development External Partnerships and Networks</div>
 
     <!-- Modal -->
     <div
@@ -179,7 +161,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseOne "
           >
-            Cultural Life, Expression and Rootedness for all (Culture and heritage development)
+            People's Organizations
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -208,18 +190,12 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of Culture and Heritage Projects
+                      No. of MOU/MOA
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Status No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-
-                    <li class="list-group-item">
-                      Status No. of Participants/ Members
+                      No. of Community Development and Advocacy Activities
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -230,19 +206,12 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of Culture and Heritage Projects
+                      No. of MOU/MOA
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Target No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-
-                    <li class="list-group-item">
-                      Target No. of Participants/ Members
-
+                      No. of Community Development and Advocacy Activities
                       <input placeholder="0" type="number" readonly />
                     </li>
                   </ul>
@@ -264,7 +233,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseTwo"
           >
-            Sports for all (Sports development)
+            Government Agencies or LGUs
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -292,18 +261,12 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of Sports Development Projects
+                      Status No. of MOU/MOA
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Status No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-
-                    <li class="list-group-item">
-                      Status No. of Participants/ Members
+                      Status No. of Community Development and Advocacy Activities
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -314,18 +277,12 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of Sports Development Projects
+                      Target No. of MOU/MOA
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Target No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-
-                    <li class="list-group-item">
-                      Target No. of Participants/ Members
+                      Target No. of Community Development and Advocacy Activities
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -348,8 +305,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseThree"
           >
-            Environmental Justice for all (Environmental sustainability and action; disaster risk reduction and
-            management)
+            Non- Government Organizations
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -377,17 +333,12 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of Environmental Sustainability and Action Projects
+                      Status No. of MOU/MOA
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Status No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Status No. of Participants/ Members
+                      Status No. of Community Development and Advocacy Activities
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -398,24 +349,18 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of Sustainability and Action Projects
+                      Target No. of MOU/MOA
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Target No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-
-                    <li class="list-group-item">
-                      Target No. of Participants/ Members
+                      Target No. of Community Development and Advocacy Activities
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                   </ul>
                 </div>
-                <!----Target No.-->
+                <!----Targer No.-->
               </div>
             </div>
             <!-----------------accordion-list ----------------->
@@ -432,7 +377,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseFour"
           >
-            Holistic Life for all (Family and household development)
+            Basic Educational Institutions
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -460,17 +405,12 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of Family and Household Projects
+                      Status No. of MOU/MOA
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Status No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Status No. of Participants/ Members
+                      Status No. of Community Development and Advocacy Activities
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -481,17 +421,12 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of Family and Household Projects
+                      Target No. of MOU/MOA
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Target No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Target No. of Participants/ Members
+                      Target No. of Community Development and Advocacy Activities
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -504,90 +439,6 @@
           </div>
         </div>
       </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingFive">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseFive"
-            aria-expanded="false"
-            aria-controls="flush-collapseFive"
-          >
-            Community organizations formed
-
-            <!-----Number of DATA submitted------->
-            <div class="header-num-wrapper">
-              <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" readonly />
-              </div>
-            </div>
-            <!-----Number of DATA submitted------->
-          </button>
-        </h2>
-        <div
-          id="flush-collapseFive"
-          class="accordion-collapse collapse"
-          aria-labelledby="flush-headingFive"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div class="accordion-body">
-            <!-----------------accordion-list ----------------->
-            <div class="container">
-              <div class="row">
-                <div class="col"><h3>Status No.</h3></div>
-                <div class="col"><h3>Target No.</h3></div>
-                <div class="w-100"></div>
-                <div class="col">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <!---Status no.-->
-                      Status No. of Community Organization Formed
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Status No. of Communities/ Institutions Served under each Community Organization Formed
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Status No. of Participants/ Members under each Community Organization Formed
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="col">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <!---Target no.-->
-                      Target No. of Community Organization Formed
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Target No. of Communities/ Institutions Served under each Community Organization Formed
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Target No. of Participants/ Members under each Community Organization Formed
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                  </ul>
-                </div>
-                <!----Targer No.-->
-              </div>
-            </div>
-            <!-----------------accordion-list ----------------->
-          </div>
-        </div>
-      </div>
-
       <div class="button-wrapper">
         <a class="btn btn-warning" href="#" role="button">Edit</a>
         <!-- Button trigger modal -->
@@ -619,7 +470,7 @@
           </div>
         </div>
 
-        <a class="btn btn-dark" href="/simbahayan-ui/html/annual-report.html" role="button">Prev</a>
+        <a class="btn btn-dark" href="/CD coordinator UI/html/kra3-next.html" role="button">Next</a>
       </div>
     </div>
 

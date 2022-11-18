@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRA SELECT</title>
+<<<<<<< HEAD:CD coordinator UI/html/kra-select.html
     <link rel="stylesheet" href="/CD coordinator UI/css/kra-select.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 
@@ -20,9 +21,14 @@
       href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Libre+Baskerville&display=swap"
       rel="stylesheet"
     />
+=======
+    <?php 
+      include('../cdn/cdn.php');
+    ?>
+>>>>>>> 0de7c8dd259124bf66343ad0b43aa4faf5dd6850:coordinator/php/kra-select.php
   </head>
-
   <body>
+<<<<<<< HEAD:CD coordinator UI/html/kra-select.html
     <nav class="navbar bg-secondary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/CD coordinator UI/html/profile.html">
@@ -37,6 +43,11 @@
         </a>
       </div>
     </nav>
+=======
+    <?php 
+      include('../nav_master/nav.php');
+    ?>
+>>>>>>> 0de7c8dd259124bf66343ad0b43aa4faf5dd6850:coordinator/php/kra-select.php
     <!--navigation bar---->
     <div class="navigation-container">
       <div class="navigation">

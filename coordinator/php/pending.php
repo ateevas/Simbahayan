@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRAs and KPIs</title>
-    <link rel="stylesheet" href="/CD coordinator UI/css/download.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <?php 
+      include('../cdn/cdn.php');
+    ?>
   </head>
   <body>
+<<<<<<< HEAD:coordinator/php/pending.php
+    <?php 
+      include('../nav_master/nav.php');
+    ?>
+    <!---navigation bar--------------------------------->
+=======
     <nav class="navbar bg-secondary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/CD coordinator UI/html/profile.html">
@@ -31,10 +31,15 @@
       </div>
     </nav>
 
-    <!---navigation bar--------------------------------->
+    <!---navigation bar----------------->
+>>>>>>> e1d4db5663de5f39e362f8b1e31780846be4110c:coordinator/html/pending.html
     <div class="navigation-container">
       <div class="navigation">
-        <ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
+        <ul
+          class="nav nav justify-content-center bg-warning mb-3 rounded mt-3"
+          id="pills-tab"
+          role="tablist"
+        >
           <li class="nav-item active">
             <a class="nav-link text-dark" href="/CD coordinator UI/html/profile.html"
               >Profile <span class="sr-only"></span
@@ -54,12 +59,13 @@
               KRAs and KPIs
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/CD coordinator UI/html/annual.html">Annual Report Approval</a>
+              <a class="dropdown-item" href="/CD coordinator UI/html/annual.html"
+                >Annual Report Approval</a
+              >
               <a class="dropdown-item" href="/CD coordinator UI/html/kra-select.html">KRAs and KPIs Monitoring Sheet</a>
               <a class="dropdown-item" href="/CD coordinator UI/html/download.html">Download KRAs and KPIs</a>
             </div>
           </li>
-
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle text-dark"
@@ -73,7 +79,11 @@
               Account
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/CD coordinator UI/html/changepass.html">Change Password</a>
+         
+        
+              <a class="dropdown-item" href="/CD coordinator UI/html/changepass.html"
+                >Change Password</a
+              >
               <a class="dropdown-item" href="/CD coordinator UI/html/manage.html">Manage Students</a>
             </div>
           </li>
@@ -83,29 +93,127 @@
             ></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link text-dark" href="/login-page/html/login.html">Logout <span class="sr-only"></span></a>
+            <a class="nav-link text-dark" href="/login-page/html/login.html"
+              >Logout <span class="sr-only"></span
+            ></a>
           </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
-          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
-          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
+          <div
+            class="tab-pane fade show active"
+            id="pills-home"
+            role="tabpanel"
+            aria-labelledby="pills-home-tab"
+          ></div>
+          <div
+            class="tab-pane fade"
+            id="pills-profile"
+            role="tabpanel"
+            aria-labelledby="pills-profile-tab"
+          ></div>
+          <div
+            class="tab-pane fade"
+            id="pills-contact"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab"
+          ></div>
         </div>
       </div>
     </div>
-    <!-------------------navigation bar end----------->
+    <!---navigation bar end----------->
     <div class="contact_title">
       <div class="inner_container">
         <div class="contact_container">
-          <h1>Download KRAs and KPIs</h1>
-          <hr />
+          <h1>Pending Annual Reports</h1>
           <br />
-          <div class="download">
-            <button type="button">Download KRAs and KPIs</button>
-          </div>
+          <br />
         </div>
       </div>
     </div>
+
+    <table class="table">
+      <thead>
+      <tbody class="table-group-divider">
+        <tr>
+          <th scope="row"></th>
+          <!--Name-->
+          <td>Name</td>
+           <!--College-->
+           <td>College</td>
+          <!--IDnumber-->
+          <td>ID number</td>
+          <!--Email-->
+          <td>Email</td>
+          <!--PassedKRA/KPI-->
+          <td>Time Passed</td>
+          <!--TimePassed-->
+          <td>Status</td>
+          <!--Status-->
+          <td>Manage</td>
+          <!--Manage-->
+          <td></td>
+        </tr>
+      </thead>
+      </tbody>
+  
+
+      <tbody class="table-group-divider">
+        <tr>
+          <th scope="row"><input type="checkbox" /></th>
+          <!--Name-->
+          <td>Joshua</td>
+          <!--College-->
+          <td>CICS</td>
+          <!--IDnumber-->
+          <td>Otto</td>
+          <!--Email-->
+          <td>@mdo</td>
+          <!--PassedKRA/KPI-->
+          <td>@mdo</td>
+          <!--TimePassed-->
+          <td>@mdo</td>
+          <!--Manage-->
+          <td><a href="#">View</a></td>
+          <td>...</td>
+        </tr>
+        <tr>
+          <th scope="row"><input type="checkbox" /></th>
+     <!--Name-->
+     <td>Joshua</td>
+     <!--College-->
+     <td>CICS</td>
+     <!--IDnumber-->
+     <td>Otto</td>
+     <!--Email-->
+     <td>joshuafujiyama.cabangal@ust.edu.ph</td>
+     <!--PassedKRA/KPI-->
+     <td>@mdo</td>
+     <!--TimePassed-->
+     <td>@mdo</td>
+     <!--Manage-->
+     <td><a href="#">View</a></td>
+     <td>...</td>
+        </tr>
+        <tr>
+          <th scope="row"><input type="checkbox" /></th>
+       <!--Name-->
+       <td>Joshua</td>
+       <!--College-->
+       <td>CICS</td>
+       <!--IDnumber-->
+       <td>Otto</td>
+       <!--Email-->
+       <td>@mdo</td>
+       <!--PassedKRA/KPI-->
+       <td>@mdo</td>
+       <!--TimePassed-->
+       <td>@mdo</td>
+       <!--Manage-->
+       <td><a href="#">View</a></td>
+       <td>...</td>
+        </tr>
+      </tbody>
+    </table>
 
     <!---javascript bootstrap-->
     <script
@@ -134,5 +242,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap-switch-button@1.1.0/dist/bootstrap-switch-button.min.js"></script>
   </body>
 </html>
