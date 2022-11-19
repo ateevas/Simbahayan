@@ -5,31 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Community Development Report</title>
-    <link rel="stylesheet" href="/student-official/css/kra2.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <?php 
+    	include('../cdn/cdn.php');
+    ?>
+
   </head>
   <body>
-    <nav class="navbar bg-secondary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/student-official/html/profile.html">
-          <img
-            src="/student-official/pictures/ustlogo.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            class="d-inline-block align-text-middle"
-          />
-          <span>Simbahayan Portal</span>
-        </a>
-      </div>
-    </nav>
+
+	<?php 
+		include('../nav_master/nav.php');
+	?>
 
     <!--navigation bar---->
     <div class="navigation-container">

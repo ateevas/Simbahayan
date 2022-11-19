@@ -5,39 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forget Password</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cardo&display=swap"
-      rel="stylesheet"
-    />
-    <link href="http://fonts.cdnfonts.com/css/trajan-pro" rel="stylesheet" />
-    <link rel="stylesheet" href="/login-page/css/forgetpass.css" />
+    <?php 
+    	include('../cdn/cdn.php');
+    ?>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
   </head>
   <body>
-    <nav class="navbar navbar-light bg-secondary justify-content-center">
-      <a class="navbar-brand" href="/login-page/html/forgetpass.html">
-        <img
-          src="/login-page/pictures/ustlogo.png"
-          width="70"
-          height="70"
-          class="d-inline-block align-top"
-          alt=""
-        />
-      </a>
-      <div class="wrapper">
-        <h2>UST Simbahayan Portal</h2>
-      </div>
-    </nav>
+	<?php 
+		include('../nav_master/nav.php');
+	?>
+  	
 
     <div class="forget-container">
       <div class="inner-pass">

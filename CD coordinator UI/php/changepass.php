@@ -5,32 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
-    <link rel = "stylesheet" type = "text/css" href = "/CD coordinator UI/css/changepass.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <?php 
+    	include('../cdn/cdn.php');
+    ?>
 
 </head>
 <body>
-
-  <nav class="navbar bg-secondary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/CD coordinator UI/html/profile.html">
-        <img
-          src="/CD coordinator UI/pictures/ustlogo.png"
-          alt="Logo"
-          width="70"
-          height="70"
-          class="d-inline-block align-text-middle"
-        />
-        <span>Simbahayan Portal</span>
-      </a>
-    </div>
-  </nav>
-            
+	<?php 
+		include('../nav_master/nav.php');
+	?>
+ 
 
 
     

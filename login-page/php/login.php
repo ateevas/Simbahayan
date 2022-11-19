@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login</title>
     <link rel="stylesheet" href="/login-page/css/login.css" />
+
 		<?php 
 			include('../cdn/cdn.php');
 		?>
+
   </head>
   <body>
     <div class="background-image">
+
 		<?php 
 			include('../nav_master/nav.php');
 		?>
@@ -18,7 +21,7 @@
       <section
         class="vh-100"
         style="
-          background-image: url('http://localhost/simbahayan_portal/login-page/pictures/main.png');
+          background-image: url('http://localhost/Simbahayan/login-page/pictures/main.png');
           background-size: cover;
         "
       >

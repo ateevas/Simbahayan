@@ -5,33 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Community Development Report</title>
-    <link rel="stylesheet" href="/student-official/css/kra3.css" />
-    <link rel="stylesheet" href="/js/add.js" />
-    <script src="/js/add.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+    <?php 
+    	include('../cdn/cdn.php');
+    ?>
+
   </head>
   <body>
-    <nav class="navbar bg-secondary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/student-official/html/profile.html">
-          <img
-            src="/student-official/pictures/ustlogo.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            class="d-inline-block align-text-middle"
-          />
-          <span>Simbahayan Portal</span>
-        </a>
-      </div>
-    </nav>
+
+	<?php 
+		include('../nav_master/nav.php');
+	?>
 
     <!--navigation bar---->
     <div class="navigation-container">
@@ -87,8 +71,7 @@
     <div class="title-wrapper m-2">
       <h3>Community Development Report</h3>
     </div>
-    <div class="kra-1">KRA 1: Self-reliant, interdependent, and empowered partner communities and institutions</div>
-
+    <div class="kra-1">KRA 2: Thomasian engagement as agents of social transformation</div>
     <!------Accordion------------------------->
 
     <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -100,9 +83,9 @@
             data-bs-toggle="collapse"
             data-bs-target="#flush-collapseOne"
             aria-expanded="false"
-            aria-controls="flush-collapseOne "
+            aria-controls="flush-collapseOne"
           >
-            Cultural Life, Expression and Rootedness for all (Culture and heritage development)
+            Number of participants in the projects under the UDCP
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -113,7 +96,6 @@
             <!-----Number of DATA submitted------->
           </button>
         </h2>
-
         <div
           id="flush-collapseOne"
           class="accordion-collapse collapse"
@@ -131,19 +113,32 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of Culture and Heritage Projects
+                      No. of Student Organizations
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Status No. of Communities/ Institutions Served
+                      No. of Students
 
                       <input placeholder="0" type="number" readonly />
                     </li>
-
                     <li class="list-group-item">
-                      Status No. of Participants/ Members
+                      No. of Faculty
 
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      No. of Administratiors
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      No. of Support Staff
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      No. of Alumni
                       <input placeholder="0" type="number" readonly />
                     </li>
                   </ul>
@@ -153,19 +148,32 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of Culture and Heritage Projects
+                      No. of Student Organizations
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Target No. of Communities/ Institutions Served
+                      No. of Students
 
                       <input placeholder="0" type="number" readonly />
                     </li>
-
                     <li class="list-group-item">
-                      Target No. of Participants/ Members
+                      No. of Faculty
 
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      No. of Administratiors
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      No. of Support Staff
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      No. of Alumni
                       <input placeholder="0" type="number" readonly />
                     </li>
                   </ul>
@@ -177,257 +185,6 @@
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingTwo">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseTwo"
-            aria-expanded="false"
-            aria-controls="flush-collapseTwo"
-          >
-            Sports for all (Sports development)
-
-            <!-----Number of DATA submitted------->
-            <div class="header-num-wrapper">
-              <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" readonly />
-              </div>
-            </div>
-            <!-----Number of DATA submitted------->
-          </button>
-        </h2>
-        <div
-          id="flush-collapseTwo"
-          class="accordion-collapse collapse"
-          aria-labelledby="flush-headingTwo"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div class="accordion-body">
-            <!-----------------accordion-list ----------------->
-            <div class="container">
-              <div class="row">
-                <div class="col"><h3>Status No.</h3></div>
-                <div class="col"><h3>Target No.</h3></div>
-                <div class="w-100"></div>
-                <div class="col">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <!---Status no.-->
-                      Status No. of Sports Development Projects
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Status No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-
-                    <li class="list-group-item">
-                      Status No. of Participants/ Members
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="col">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <!---Target no.-->
-                      Target No. of Sports Development Projects
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Target No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-
-                    <li class="list-group-item">
-                      Target No. of Participants/ Members
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                  </ul>
-                </div>
-                <!----Targer No.-->
-              </div>
-            </div>
-            <!-----------------accordion-list ----------------->
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingThree">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseThree"
-            aria-expanded="false"
-            aria-controls="flush-collapseThree"
-          >
-            Environmental Justice for all (Environmental sustainability and action; disaster risk reduction and
-            management)
-
-            <!-----Number of DATA submitted------->
-            <div class="header-num-wrapper">
-              <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" readonly />
-              </div>
-            </div>
-            <!-----Number of DATA submitted------->
-          </button>
-        </h2>
-        <div
-          id="flush-collapseThree"
-          class="accordion-collapse collapse"
-          aria-labelledby="flush-headingThree"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div class="accordion-body">
-            <!-----------------accordion-list ----------------->
-            <div class="container">
-              <div class="row">
-                <div class="col"><h3>Status No.</h3></div>
-                <div class="col"><h3>Target No.</h3></div>
-                <div class="w-100"></div>
-                <div class="col">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <!---Status no.-->
-                      Status No. of Environmental Sustainability and Action Projects
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Status No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Status No. of Participants/ Members
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="col">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <!---Target no.-->
-                      Target No. of Sustainability and Action Projects
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Target No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-
-                    <li class="list-group-item">
-                      Target No. of Participants/ Members
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                  </ul>
-                </div>
-                <!----Target No.-->
-              </div>
-            </div>
-            <!-----------------accordion-list ----------------->
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingFour">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseFour"
-            aria-expanded="false"
-            aria-controls="flush-collapseFour"
-          >
-            Holistic Life for all (Family and household development)
-
-            <!-----Number of DATA submitted------->
-            <div class="header-num-wrapper">
-              <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" readonly />
-              </div>
-            </div>
-            <!-----Number of DATA submitted------->
-          </button>
-        </h2>
-        <div
-          id="flush-collapseFour"
-          class="accordion-collapse collapse"
-          aria-labelledby="flush-headingFour"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div class="accordion-body">
-            <!-----------------accordion-list ----------------->
-            <div class="container">
-              <div class="row">
-                <div class="col"><h3>Status No.</h3></div>
-                <div class="col"><h3>Target No.</h3></div>
-                <div class="w-100"></div>
-                <div class="col">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <!---Status no.-->
-                      Status No. of Family and Household Projects
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Status No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Status No. of Participants/ Members
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="col">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <!---Target no.-->
-                      Target No. of Family and Household Projects
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Target No. of Communities/ Institutions Served
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Target No. of Participants/ Members
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                  </ul>
-                </div>
-                <!----Targer No.-->
-              </div>
-            </div>
-            <!-----------------accordion-list ----------------->
-          </div>
-        </div>
-      </div>
-
       <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingFive">
           <button
@@ -438,7 +195,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseFive"
           >
-            Community organizations formed
+            Research presentation in fora/ conference
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -466,17 +223,12 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      Status No. of Community Organization Formed
+                      No. of Research Presentation in Local Fora/ Conference
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Status No. of Communities/ Institutions Served under each Community Organization Formed
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Status No. of Participants/ Members under each Community Organization Formed
+                      No. of Research Presentation in International Fora/ Conference
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -487,17 +239,12 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      Target No. of Community Organization Formed
+                      No. of Research Presentation in Local Fora/ Conference
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      Target No. of Communities/ Institutions Served under each Community Organization Formed
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Target No. of Participants/ Members under each Community Organization Formed
+                      No. of Research Presentation in International Fora/ Conference
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -510,38 +257,81 @@
           </div>
         </div>
       </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSix">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSix"
+            aria-expanded="false"
+            aria-controls="flush-collapseSix"
+          >
+            Publications
 
-      <div class="button-wrapper">
-        <a class="btn btn-dark" href="/student-official/html/kra1.html" role="button">Prev</a>
-        <button type="button" class="btn btn-warning">Save</button>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Submit</button>
-
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="approval"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalCenterTitle"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">Are you sure you want to submit report?</div>
-              <div class="modal-footer d-flex justify-content-between">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                <button type="button" class="btn btn-warning">Yes</button>
+            <!-----Number of DATA submitted------->
+            <div class="header-num-wrapper">
+              <div class="header-num">
+                <input class="form-control" type="number" placeholder="0" readonly />
               </div>
             </div>
+            <!-----Number of DATA submitted------->
+          </button>
+        </h2>
+        <div
+          id="flush-collapseSix"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingSix"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <!-----------------accordion-list ----------------->
+            <div class="container">
+              <div class="row">
+                <div class="col"><h3>Status No.</h3></div>
+                <div class="col"><h3>Target No.</h3></div>
+                <div class="w-100"></div>
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <!---Status no.-->
+                      Status No. of Local Publications
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Status No. of International Publications
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <!---Target no.-->
+                      Target No. of Local Publications
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Target No. of International Publications
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                  </ul>
+                </div>
+                <!----Targer No.-->
+              </div>
+            </div>
+            <!-----------------accordion-list ----------------->
           </div>
         </div>
+      </div>
+      <div class="button-wrapper">
+        <button type="button" class="btn btn-warning">Save</button>
+        <a class="btn btn-dark" href="/student-official/html/kra2.html" role="button">Prev</a>
       </div>
     </div>
 

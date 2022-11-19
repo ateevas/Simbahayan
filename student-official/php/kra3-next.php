@@ -5,31 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Community Development Report</title>
-    <link rel="stylesheet" href="/student-official/css/kra2-next.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <?php 
+    	include('../cdn/cdn.php');
+    ?>
+
   </head>
   <body>
-    <nav class="navbar bg-secondary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/student-official/html/profile.html">
-          <img
-            src="/student-official/pictures/ustlogo.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            class="d-inline-block align-text-middle"
-          />
-          <span>Simbahayan Portal</span>
-        </a>
-      </div>
-    </nav>
+
+	<?php 
+		include('../nav_master/nav.php');
+	?>
 
     <!--navigation bar---->
     <div class="navigation-container">
@@ -85,7 +71,9 @@
     <div class="title-wrapper m-2">
       <h3>Community Development Report</h3>
     </div>
-    <div class="kra-1">KRA 2: Thomasian engagement as agents of social transformation</div>
+
+    <div class="kra-1">KRA 3: Dynamic Community Development External Partnerships and Networks</div>
+
     <!------Accordion------------------------->
 
     <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -97,9 +85,9 @@
             data-bs-toggle="collapse"
             data-bs-target="#flush-collapseOne"
             aria-expanded="false"
-            aria-controls="flush-collapseOne"
+            aria-controls="flush-collapseOne "
           >
-            Number of participants in the projects under the UDCP
+            Local Higher Educational Institutions
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -110,6 +98,7 @@
             <!-----Number of DATA submitted------->
           </button>
         </h2>
+
         <div
           id="flush-collapseOne"
           class="accordion-collapse collapse"
@@ -127,32 +116,13 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      No. of Student Organizations
+                      No. of MOU/MOA
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      No. of Students
+                      No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      No. of Faculty
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      No. of Administratiors
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      No. of Support Staff
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      No. of Alumni
                       <input placeholder="0" type="number" readonly />
                     </li>
                   </ul>
@@ -162,32 +132,12 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      No. of Student Organizations
+                      No. of MOU/MOA
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      No. of Students
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      No. of Faculty
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      No. of Administratiors
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      No. of Support Staff
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      No. of Alumni
+                      No. of Community Development and Advocacy Activities
                       <input placeholder="0" type="number" readonly />
                     </li>
                   </ul>
@@ -200,6 +150,223 @@
         </div>
       </div>
       <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
+            International Higher Educational Institutions
+
+            <!-----Number of DATA submitted------->
+            <div class="header-num-wrapper">
+              <div class="header-num">
+                <input class="form-control" type="number" placeholder="0" readonly />
+              </div>
+            </div>
+            <!-----Number of DATA submitted------->
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <!-----------------accordion-list ----------------->
+            <div class="container">
+              <div class="row">
+                <div class="col"><h3>Status No.</h3></div>
+                <div class="col"><h3>Target No.</h3></div>
+                <div class="w-100"></div>
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <!---Status no.-->
+                      Status No. of MOU/MOA
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Status No. of Community Development and Advocacy Activities
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <!---Target no.-->
+                      Target No. of MOU/MOA
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Target No. of Community Development and Advocacy Activities
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                  </ul>
+                </div>
+                <!----Targer No.-->
+              </div>
+            </div>
+            <!-----------------accordion-list ----------------->
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree"
+            aria-expanded="false"
+            aria-controls="flush-collapseThree"
+          >
+            Faith-based/Church-based Organizations
+
+            <!-----Number of DATA submitted------->
+            <div class="header-num-wrapper">
+              <div class="header-num">
+                <input class="form-control" type="number" placeholder="0" readonly />
+              </div>
+            </div>
+            <!-----Number of DATA submitted------->
+          </button>
+        </h2>
+        <div
+          id="flush-collapseThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <!-----------------accordion-list ----------------->
+            <div class="container">
+              <div class="row">
+                <div class="col"><h3>Status No.</h3></div>
+                <div class="col"><h3>Target No.</h3></div>
+                <div class="w-100"></div>
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <!---Status no.-->
+                      Status No. of MOU/MOA
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Status No. of Community Development and Advocacy Activities
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <!---Target no.-->
+                      Target No. of MOU/MOA
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Target No. of Community Development and Advocacy Activities
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                  </ul>
+                </div>
+                <!----Targer No.-->
+              </div>
+            </div>
+            <!-----------------accordion-list ----------------->
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour"
+            aria-expanded="false"
+            aria-controls="flush-collapseFour"
+          >
+            Professional/Business Organizations
+
+            <!-----Number of DATA submitted------->
+            <div class="header-num-wrapper">
+              <div class="header-num">
+                <input class="form-control" type="number" placeholder="0" readonly />
+              </div>
+            </div>
+            <!-----Number of DATA submitted------->
+          </button>
+        </h2>
+        <div
+          id="flush-collapseFour"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingFour"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <!-----------------accordion-list ----------------->
+            <div class="container">
+              <div class="row">
+                <div class="col"><h3>Status No.</h3></div>
+                <div class="col"><h3>Target No.</h3></div>
+                <div class="w-100"></div>
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <!---Status no.-->
+                      Status No. of MOU/MOA
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Status No. of Community Development and Advocacy Activities
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <!---Target no.-->
+                      Target No. of MOU/MOA
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                    <li class="list-group-item">
+                      Target No. of Community Development and Advocacy Activities
+
+                      <input placeholder="0" type="number" readonly />
+                    </li>
+                  </ul>
+                </div>
+                <!----Targer No.-->
+              </div>
+            </div>
+            <!-----------------accordion-list ----------------->
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingFive">
           <button
             class="accordion-button collapsed"
@@ -209,7 +376,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseFive"
           >
-            Research presentation in fora/ conference
+            Training/Course on Community Engagement and Organizing Offering
 
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
@@ -237,12 +404,12 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Status no.-->
-                      No. of Research Presentation in Local Fora/ Conference
+                      Status No. of Training/ Course
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      No. of Research Presentation in International Fora/ Conference
+                      Status No. of Participants
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -253,12 +420,12 @@
                   <ul class="list-group">
                     <li class="list-group-item">
                       <!---Target no.-->
-                      No. of Research Presentation in Local Fora/ Conference
+                      Status No. of Participants
 
                       <input placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
-                      No. of Research Presentation in International Fora/ Conference
+                      Target No. of Participants
 
                       <input placeholder="0" type="number" readonly />
                     </li>
@@ -271,81 +438,38 @@
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingSix">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseSix"
-            aria-expanded="false"
-            aria-controls="flush-collapseSix"
-          >
-            Publications
 
-            <!-----Number of DATA submitted------->
-            <div class="header-num-wrapper">
-              <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" readonly />
-              </div>
-            </div>
-            <!-----Number of DATA submitted------->
-          </button>
-        </h2>
-        <div
-          id="flush-collapseSix"
-          class="accordion-collapse collapse"
-          aria-labelledby="flush-headingSix"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div class="accordion-body">
-            <!-----------------accordion-list ----------------->
-            <div class="container">
-              <div class="row">
-                <div class="col"><h3>Status No.</h3></div>
-                <div class="col"><h3>Target No.</h3></div>
-                <div class="w-100"></div>
-                <div class="col">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <!---Status no.-->
-                      Status No. of Local Publications
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Status No. of International Publications
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="col">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <!---Target no.-->
-                      Target No. of Local Publications
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                    <li class="list-group-item">
-                      Target No. of International Publications
-
-                      <input placeholder="0" type="number" readonly />
-                    </li>
-                  </ul>
-                </div>
-                <!----Targer No.-->
-              </div>
-            </div>
-            <!-----------------accordion-list ----------------->
-          </div>
-        </div>
-      </div>
       <div class="button-wrapper">
+        <a class="btn btn-dark" href="/student-official/html/kra3.html" role="button">Prev</a>
         <button type="button" class="btn btn-warning">Save</button>
-        <a class="btn btn-dark" href="/student-official/html/kra2.html" role="button">Prev</a>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Submit</button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="approval"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">Are you sure you want to submit report?</div>
+              <div class="modal-footer d-flex justify-content-between">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-warning">Yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

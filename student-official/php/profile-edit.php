@@ -4,38 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Profile</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="/student-official/css/profile.css" />
-    <link rel="stylesheet" href="/student-official/js/profile.js" />
-    <link rel="stylesheet" href="/student-official/css/upload.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="http://fonts.cdnfonts.com/css/trajan-pro" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Libre+Baskerville&display=swap"
-      rel="stylesheet"
-    />
+
+    <?php 
+    	include('../cdn/cdn.php');
+    ?>
+
   </head>
   <body>
-    <nav class="navbar bg-secondary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/student-official/html/profile.html">
-          <img
-            src="/student-official/pictures/ustlogo.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            class="d-inline-block align-text-middle"
-          />
-          <span>Simbahayan Portal</span>
-        </a>
-      </div>
-    </nav>
+  	
+	<?php 
+		include('../nav_master/nav.php');
+	?>
+
     <!--navigation bar---->
     <div class="navigation-container">
       <div class="navigation">
@@ -96,15 +76,15 @@
             <div class="card-header">Profile Picture</div>
             <div class="card-body text-center">
               <!-- Profile picture image-->
-              <div id="display-image"></div>
-
+              <img
+                class="img-account-profile rounded-circle mb-2"
+                src="http://bootdey.com/img/Content/avatar/avatar1.png"
+                alt=""
+              />
               <!-- Profile picture help block-->
               <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
               <!-- Profile picture upload button-->
-
-              <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg" />
-
-              <!-----<button class="btn btn-warning" id="image-input" type="button">Upload new image</button> ---->
+              <button class="btn btn-warning" id="upload" type="button">Upload new image</button>
             </div>
           </div>
         </div>
@@ -125,7 +105,6 @@
                       type="text"
                       placeholder="Enter your first name"
                       value="Joshua"
-                      readonly
                     />
                   </div>
                   <!-- Form Group (last name)-->
@@ -137,7 +116,6 @@
                       type="text"
                       placeholder="Enter your last name"
                       value="Cabangal"
-                      readonly
                     />
                   </div>
                 </div>
@@ -152,7 +130,6 @@
                       type="text"
                       placeholder="Enter your Student Number"
                       value="201800000"
-                      readonly
                     />
                   </div>
                   <!-- Form Group (location)-->
@@ -164,7 +141,6 @@
                       type="text"
                       placeholder="Enter your College"
                       value="College of Information and Computing Sciences"
-                      readonly
                     />
                   </div>
                 </div>
@@ -177,7 +153,6 @@
                     type="email"
                     placeholder="Enter your email address"
                     value="joshuafujiyama.cabangal.cics@ust.edu.ph"
-                    readonly
                   />
                 </div>
                 <!-- Form Row-->
@@ -191,7 +166,6 @@
                       type="number"
                       placeholder="Enter your phone number"
                       value="555-123-4567"
-                      readonly
                     />
                   </div>
                   <!-- Form Group (birthday)-->
@@ -204,40 +178,13 @@
                       name="birthday"
                       placeholder="Enter your birthday"
                       value="06/10/1988"
-                      readonly
-                    />
-                  </div>
-                </div>
-                <!-- Form Row-->
-                <div class="row gx-3 mb-3">
-                  <!-- Form Group (Organiztion)-->
-                  <div class="col-md-6">
-                    <label class="small mb-1" for="inputOrg">Organization</label>
-                    <input
-                      class="form-control"
-                      id="org"
-                      type="text"
-                      placeholder="Enter your Organization"
-                      value=""
-                      readonly
-                    />
-                  </div>
-                  <!-- Form Group (Position)-->
-                  <div class="col-md-6">
-                    <label class="small mb-1" for="inputPosition">Position</label>
-                    <input
-                      class="form-control"
-                      id="inputPosition"
-                      type="text"
-                      placeholder="Enter your Position"
-                      value=""
-                      readonly
                     />
                   </div>
                 </div>
                 <!-- Save changes button-->
-                <a href="/student-offical/html/profile-edit.html">
-                  <button class="btn btn-warning" id="edit" type="button">Edit</button></a
+
+                <a href="/student-offical/html/profile.html">
+                  <button class="btn btn-warning" id="edit" type="button">Save Changes</button></a
                 >
               </form>
             </div>
@@ -274,6 +221,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="profile.js"></script>
-    <script src="upload.js"></script>
   </body>
 </html>

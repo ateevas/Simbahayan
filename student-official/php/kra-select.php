@@ -4,35 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Account</title>
-    <link rel="stylesheet" type="text/css" href="/student-official/css/changepass.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- CSS only -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <nav class="navbar bg-secondary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/student-official/html/profile.html">
-          <img
-            src="/student-official/pictures/ustlogo.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            class="d-inline-block align-text-middle"
-          />
-          <span>Simbahayan Portal</span>
-        </a>
-      </div>
-    </nav>
+    <title>KRA SELECT</title>
+
+    <?php 
+    	include('../cdn/cdn.php');
+    ?>
+
+
+</head>
+<body>
+
+
+	<?php 
+		include('../nav_master/nav.php');
+	?>
+
+
 
     <!--navigation bar---->
     <div class="navigation-container">
@@ -43,6 +30,7 @@
               >Profile <span class="sr-only"></span
             ></a>
           </li>
+
           <li class="nav-item active">
             <a class="nav-link text-dark" href="/student-official/html/kra-select.html"
               >Community Development Report <span class="sr-only"></span
@@ -83,38 +71,34 @@
     </div>
     <!-----------------navigation bar end----------->
 
-    <!-- form card change password -->
-    <div class="card card-outline-secondary">
-      <div class="card-header">
-        <h3 class="mb-0">Change Password</h3>
+    <div class="card-group">
+      <div class="card">
+        <img class="card-img-top" src="..." alt="" />
+        <div class="card-body">
+          <h5 class="card-title">KRA 1</h5>
+          <p class="card-text">Self-reliant, interdependent, and empowered partner communities and institutions</p>
+          <a href="/student-official/html/kra1.html"><i id="icon" class="bi bi-arrow-right-circle"></i></a>
+        </div>
       </div>
-      <div class="card-body">
-        <form class="form" role="form" autocomplete="off">
-          <div class="form-group">
-            <label for="inputPasswordOld">Current Password</label>
-            <input type="password" class="form-control" id="inputPasswordOld" required="" />
-          </div>
-          <div class="form-group">
-            <label for="inputPasswordNew">New Password</label>
-            <input type="password" class="form-control" id="inputPasswordNew" required="" />
-            <span class="form-text small text-muted">
-              The password must be 8-20 characters, and must <em>not</em> contain spaces.
-            </span>
-          </div>
-          <div class="form-group">
-            <label for="inputPasswordNewVerify">Verify</label>
-            <input type="password" class="form-control" id="inputPasswordNewVerify" required="" />
-            <span class="form-text small text-muted"> To confirm, type the new password again. </span>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-warning btn-lg float-right">Save</button>
-          </div>
-        </form>
+      <div class="card">
+        <img class="card-img-top" src="..." alt="" />
+        <div class="card-body">
+          <h5 class="card-title">KRA 2</h5>
+          <p class="card-text">Thomasian engagement as agents of social transformation</p>
+          <br />
+          <a href="/student-official/html/kra2.html"><i id="icon" class="bi bi-arrow-right-circle"></i></a>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="..." alt="" />
+        <div class="card-body">
+          <h5 class="card-title">KRA 3</h5>
+          <p class="card-text">Dynamic Community Development External Partnerships and Networks</p>
+          <a href="/student-official/html//kra3.html"><i id="icon" class="bi bi-arrow-right-circle"></i></a>
+        </div>
       </div>
     </div>
-    <!-- /form card change password -->
 
-    <!---javascript bootstrap-->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
