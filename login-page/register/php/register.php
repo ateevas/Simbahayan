@@ -85,7 +85,7 @@
                           type="radio"
                           name="inlineRadioOptions"
                           id="femaleGender"
-                          value="option1"
+                          value="0"
                         />
                         <label class="form-check-label" for="femaleGender">Female</label>
                       </div>
@@ -97,7 +97,7 @@
                           type="radio"
                           name="inlineRadioOptions"
                           id="maleGender"
-                          value="option2"
+                          value="1"
                         />
                         <label class="form-check-label" for="maleGender">Male</label>
                       </div>
@@ -107,7 +107,7 @@
                     <div class="form-group mb-4">
                       <label for="college">Select College</label>
                       <select id="col_selection" class="form-control" >
-                        <option value="1" >College of Accountancy</option>
+                        <option value="1">College of Accountancy</option>
                         <option value="2">College of Architecture</option>
                         <option value="3">College of Arts and Letters</option>
                         <option value="4">College of Commerce and Business Administration</option>
@@ -177,33 +177,49 @@ function inputReset(){
 </script>
 
 <script type="text/javascript"> 
-function inputSubmit(){
-  var fName = $('#fName').val();
-  var lName = $('#lName').val();
-  var uPass = $('#uPass').val();
-  var cPass = $('#cPass').val();
-  var emailAdd = $('#emailAdd').val();
-  var bDay = $('#bDay').val();
-  var femaleGender = $('input[name="inlineRadioOptions"]:checked').val();
-  var col_selection = $('#col_selection').val();
-  var id_num = $('#id_num').val();
-  var contact_num = $('#contact_num').val();
-  var oraganization = $('#oraganization').val();
-  var position = $('#position').val();
+  function inputSubmit(){
+    var fName = $('#fName').val();
+    var lName = $('#lName').val();
+    var emailAdd = $('#emailAdd').val();
+    var bDay = $('#bDay').val();
+    var gender = $('input[name="inlineRadioOptions"]:checked').val();
+    var col_selection = $('#col_selection').val();
+    var id_num = $('#id_num').val();
+    var contact_num = $('#contact_num').val();
+    var oraganization = $('#oraganization').val();
+    var position = $('#position').val();
 
-  alert(
-    "First Name: " + fName + "\n"
-    + "Last Name: " + lName + "\n"
-    + "Password: " + uPass + "\n"
-    + "Confirm Password: " + cPass + "\n"
-    + "Email Address: " + emailAdd + "\n"
-    + "Birthday: " + bDay + "\n"
-    + "Gender Option Selected: " + femaleGender + "\n" //Automatically selecting either Option1 or Option2 (female and male).
-    + "College Selected: " + col_selection + "\n"
-    + "ID Number: " + id_num + "\n"
-    + "Contact Number: " + contact_num + "\n"
-    + "Organization: " + oraganization + "\n"
-    + "Enter your position: " + position 
-    );
+    var uPass = $('#uPass').val();
+    var cPass = $('#cPass').val();
+    if(uPass == cPass) {
+        $.ajax({
+        url: url,
+        type: "POST",
+        data: {
+          csrf_token: "{{ csrf_token() }}",
+          tag: "register",
+          fname: fName,
+          lname: lName,
+          email: emailAdd,
+          bday: bDay,
+          gender: gender,
+          college: col_selection,
+          id_num: id_num,
+          contact: contact_num,
+          org: oraganization,
+          position: position,
+          password: uPass,
+        },
+        complete: function (response) {
+          var data = JSON.parse(response.responseText)
+          if(data['status'] == "ok"){
+            alert("successfully registered!");
+            window.location.href="http://localhost/Simbahayan/login-page/php/login.php";
+          }
+        }
+      })
+      } else {
+        alert("incorrect password");
+      }
 }
 </script>
