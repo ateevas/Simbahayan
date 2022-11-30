@@ -3,4 +3,6 @@
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="http://localhost/Simbahayan/coordinator/css/annual.css" />
 
-
+<script type="text/javascript">
+	var url = "http://localhost/Simbahayan/simbahayan_backend/index.php"
+</script>

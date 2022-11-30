@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login</title>
-    <link rel="stylesheet" href="/login-page/css/login.css" />
+    <link rel="stylesheet" href="../css/login.css" />
 
 		<?php 
 			include('../cdn/cdn.php');
@@ -63,12 +63,12 @@
                   </div>
                   <div class="parent-here">
                     <div class="here-wrapper">
-                      <a href="/login-page/register/html/register.html">Register Here</a>
+                      <a href="../register/php/register.php">Register Here</a>
                     </div>
                   </div>
 
                   <div class="forgot-wrapper">
-                    <a href="/login-page/html/forgetpass.html">Forgot Password?</a>
+                    <a href="/login-page/php/forgetpass.php">Forgot Password?</a>
                   </div>
                 </div>
               </div>
@@ -90,7 +90,7 @@
             
           if (email !== "" && password !== ""  ) {
             $.ajax({
-              url: "http://localhost/simbahayan_portal/simbahayan_backend/index.php",
+              url: url,
               type: "POST",
               data: {
                 csrf_token: "{{ csrf_token() }}",
@@ -103,18 +103,19 @@
                 
             switch(res['status']) {
               case 'ok': // login success
-
-              switch (res['user_role']) {
-			    case 1: //student
-					window.location.href="https://www.google.com/";
-			    break;
-			    case 2: //cd
-					window.location.href="http://127.0.0.1:5500/CD%20coordinator%20UI/html/profile.html";
-			    break;
-			    case 3: //staff;
-					window.location.href="https://www.w3schools.com/";
-				break;
-}
+                localStorage.setItem('user_id', res['id']);
+                localStorage.setItem('user_role', res['user_role']);
+                switch (res['user_role']) {
+          			    case 1: //student
+          					window.location.href="http://localhost/Simbahayan/student-official/php/profile.php";
+          			    break;
+          			    case 2: //cd
+          					window.location.href="http://127.0.0.1:5500/CD%20coordinator%20UI/html/profile.html";
+          			    break;
+          			    case 3: //staff;
+          					window.location.href="https://www.w3schools.com/";
+    				    break;
+              }
         
           break;
               case 'error_1': // mali password
