@@ -4,34 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Select</title>
-    <link rel="stylesheet" href="/select-role/css/select-role.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <?php 
+    	include('../cdn/cdn.php');
+    ?>
 
-    <link href="http://fonts.cdnfonts.com/css/trajan-pro" rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
   </head>
   <body>
-    <div class="background-image">
-      <!-- Image and text -->
-      <nav class="navbar navbar-light bg-light justify-content-center">
-        <a class="navbar-brand" href="/login-page/html/login.html">
-          <img
-            src="/login-page/pictures/ustlogo.png"
-            width="70"
-            height="70"
-            class="d-inline-block align-top"
-            alt=""
-          />
-        </a>
-        <div class="wrapper bg-light d-flex justify-content-between">
-          <h2>UST Simbahayan Portal</h2>
-        </div>
-      </nav>
+
+	<?php 
+		include('../nav_master/nav.php');
+	?>
 
       <section
         class="vh-100"
