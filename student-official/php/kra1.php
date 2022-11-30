@@ -116,18 +116,18 @@
                       <!---Status no.-->
                       Status No. of Health and Wellness Development Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="hs_HWDP" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Status No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="hs_CIS" placeholder="0" type="number" />
                     </li>
 
                     <li class="list-group-item">
                       Status No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="hs_PM" placeholder="0" type="number" />
                     </li>
                   </ul>
                 </div>
@@ -138,18 +138,18 @@
                       <!---Target no.-->
                       Target No. of Health and Wellness Development Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ht_HWDP" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
-                      Target No. of Communities/ Institutions Served
+                      Target  No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ht_CIS" placeholder="0" type="number" />
                     </li>
 
                     <li class="list-group-item">
                       Target No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ht_PM" placeholder="0" type="number" />
                     </li>
                   </ul>
                 </div>
@@ -200,18 +200,18 @@
                       <!---Status no.-->
                       Status No. of Equitable and Inclusive Education Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="es_EIEP" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Status No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="es_CIS" placeholder="0" type="number" />
                     </li>
 
                     <li class="list-group-item">
                       Status No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="es_PM" placeholder="0" type="number" />
                     </li>
                   </ul>
                 </div>
@@ -222,18 +222,18 @@
                       <!---Target no.-->
                       Target No. of Equitable and Inclusive Education Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="et_EIEP" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Target No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="et_CIS" placeholder="0" type="number" />
                     </li>
 
                     <li class="list-group-item">
                       Target No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="et_PM" placeholder="0" type="number" />
                     </li>
                   </ul>
                 </div>
@@ -284,17 +284,17 @@
                       <!---Status no.-->
                       Status No. of Leadership, Organizational Development, and Good Governance Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ggs_LODGGP" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Status No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ggs_CIS" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Status No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ggs_PM" placeholder="0" type="number" />
                     </li>
                   </ul>
                 </div>
@@ -305,18 +305,18 @@
                       <!---Target no.-->
                       Target No. of Leadership, Organizational Development, and Good Governance Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ggt_LODGGP" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Target No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ggt_CIS" placeholder="0" type="number" />
                     </li>
 
                     <li class="list-group-item">
                       Target No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ggt_PM" placeholder="0" type="number" />
                     </li>
                   </ul>
                 </div>
@@ -367,17 +367,17 @@
                       <!---Status no.-->
                       Status No. of Employability and Social Enterprise Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ejs_ESEP" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Status No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ejs_CIS" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Status No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ejs_PM" placeholder="0" type="number" />
                     </li>
                   </ul>
                 </div>
@@ -388,17 +388,17 @@
                       <!---Target no.-->
                       Target No. of Employability and Social Enterprise Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ejt_ESEP" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Target No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ejt_CIS" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Target No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ejt_PM" placeholder="0" type="number" />
                     </li>
                   </ul>
                 </div>
@@ -450,17 +450,17 @@
                       <!---Status no.-->
                       Status No. of Socio-Pastoral Ministry and Evangelization Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="cls_SPMEP" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Status No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="cls_CIS" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Status No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="cls_PM" placeholder="0" type="number" />
                     </li>
                   </ul>
                 </div>
@@ -471,17 +471,17 @@
                       <!---Target no.-->
                       Target No. of Socio-Pastoral Ministry and Evangelization Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="clt_SPMEP" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Target No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="clt_CIS" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Target No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="clt_PM" placeholder="0" type="number" />
                     </li>
                   </ul>
                 </div>
@@ -493,8 +493,8 @@
         </div>
       </div>
       <div class="button-wrapper">
-        <button type="button" class="btn btn-warning">Save</button>
-        <a class="btn btn-dark" href="/student-official/html/kra1-next.html" role="button">Next</a>
+        <button onclick="btnSave()" type="button" class="btn btn-warning">Save</button>
+        <a onclick="btnNext()" class="btn btn-dark" href="kra1-next.php" role="button">Next</a>
       </div>
     </div>
 
@@ -527,3 +527,101 @@
     ></script>
   </body>
 </html>
+
+
+<script type="text/javascript"> 
+function btnSave(){
+//----------------------- Healh for All -----------------------//
+  var hs_HWDP = $('#hs_HWDP').val();
+  var hs_CIS = $('#hs_CIS').val();
+  var hs_PM = $('#hs_PM').val();
+  var ht_HWDP = $('#ht_HWDP').val();
+  var ht_CIS = $('#ht_CIS').val();
+  var ht_PM = $('#ht_PM').val();
+//----------------------- Education for All -----------------------//
+  var es_EIEP = $('#es_EIEP').val();
+  var es_CIS = $('#es_CIS').val();
+  var es_PM = $('#es_PM').val();
+  var et_EIEP = $('#et_EIEP').val();
+  var et_CIS = $('#et_CIS').val();
+  var et_PM = $('#et_PM').val();
+//----------------------- Good Governance for All -----------------------//
+  var ggs_LODGGP = $('#ggs_LODGGP').val();
+  var ggs_CIS = $('#ggs_CIS').val();
+  var ggs_PM = $('#ggs_PM').val();
+  var ggt_LODGGP = $('#ggt_LODGGP').val();
+  var ggt_CIS = $('#ggt_CIS').val();
+  var ggt_PM = $('#ggt_PM').val();
+//----------------------- Economic Justice for All -----------------------//
+  var ejs_ESEP = $('#ejs_ESEP').val();
+  var ejs_CIS = $('#ejs_CIS').val();
+  var ejs_PM = $('#ejs_PM').val();
+  var ejt_ESEP = $('#ejt_ESEP').val();
+  var ejt_CIS = $('#ejt_CIS').val();
+  var ejt_PM = $('#ejt_PM').val();
+//----------------------- Christ Love for All -----------------------//
+  var cls_SPMEP = $('#cls_SPMEP').val();
+  var cls_CIS = $('#cls_CIS').val();
+  var cls_PM = $('#cls_PM').val();
+  var clt_SPMEP = $('#clt_SPMEP').val();
+  var clt_CIS = $('#clt_CIS').val();
+  var clt_PM = $('#clt_PM').val();
+
+
+  alert("Health for All " + "\n" 
+    + "Status No. of Health and Wellness Development Projects: " + hs_HWDP + "\n"
+    + "Status No. of Communities/ Institutions Served: " + hs_CIS + "\n"
+    + "Status No. of Participants/ Members: " + hs_PM + "\n"
+    + "Target No. of Health and Wellness Development Projects: " + ht_HWDP+ "\n"
+    + "Target No. of Communities/ Institutions Served: " + ht_CIS + "\n"
+    + "Target No. of Participants/ Members: " + ht_PM + "\n"
+
+    + "Education for All " + "\n" 
+    + "Status No. of Equitable and Inclusive Education Projects: " + es_EIEP + "\n"
+    + "Status No. of Communities/ Institutions Served: " + es_CIS + "\n"
+    + "Status No. of Participants/ Members: " + es_PM + "\n"
+    + "Target No. of Equitable and Inclusive Education Projects: " + et_EIEP + "\n"
+    + "Target No. of Communities/ Institutions Served: " + et_CIS + "\n"
+    + "Target No. of Participants/ Members: " + et_PM + "\n"
+
+    + "Good Governance for All " + "\n" 
+    + "Status No. of Leadership, Organizational Development, and Good Governance Projects: " + ggs_LODGGP + "\n"
+    + "Status No. of Communities/ Institutions Served: " + ggs_CIS + "\n"
+    + "Status No. of Participants/ Members: " + ggs_PM + "\n"
+    + "Target No. of Leadership, Organizational Development, and Good Governance Projects: " + ggt_LODGGP+ "\n"
+    + "Target No. of Communities/ Institutions Served: " + ggt_CIS + "\n"
+    + "Target No. of Participants/ Members: " + ggt_PM + "\n"
+
+    + "Economic Justice for All " + "\n" 
+    + "Status No. of Leadership, Organizational Development, and Good Governance Projects: " + ejs_ESEP + "\n"
+    + "Status No. of Communities/ Institutions Served: " + ejs_CIS + "\n"
+    + "Status No. of Participants/ Members: " + ejs_PM + "\n"
+    + "Target No. of Leadership, Organizational Development, and Good Governance Projects: " + ejt_ESEP + "\n"
+    + "Target No. of Communities/ Institutions Served: " + ejt_CIS + "\n"
+    + "Target No. of Participants/ Members: " + ejt_PM + "\n"
+
+    + "Christ Love for all" + "\n" 
+    + "Status No. of Socio-Pastoral Ministry and Evangelization Projects: " + cls_SPMEP + "\n"
+    + "Status No. of Communities/ Institutions Served: " + cls_CIS + "\n"
+    + "Status No. of Participants/ Members: " + cls_PM + "\n"
+    + "Target No. of Socio-Pastoral Ministry and Evangelization Projects: " + clt_SPMEP + "\n"
+    + "Target No. of Communities/ Institutions Served: " + clt_CIS + "\n"
+    + "Target No. of Participants/ Members: " + clt_PM );
+}
+
+</script>
+
+
+<script type="text/javascript"> 
+function btnNext(){
+
+
+/*alert(
+
+
+  );*/
+}
+
+
+
+</script>

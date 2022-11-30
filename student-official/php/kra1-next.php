@@ -496,7 +496,7 @@
       </div>
 
       <div class="button-wrapper">
-        <a class="btn btn-dark" href="/student-official/html/kra1.html" role="button">Prev</a>
+        <a class="btn btn-dark" href="kra1.php" role="button">Prev</a>
         <button type="button" class="btn btn-warning">Save</button>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Submit</button>
