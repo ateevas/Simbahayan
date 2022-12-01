@@ -19,7 +19,7 @@
 				<div class="card-body">
 					<h5 class="card-title">KRA 1</h5>
 					<p class="card-text">Self-reliant, interdependent, and empowered partner communities and institutions</p>
-					<a href="/student-official/html/kra1.html">Go</a>
+					<a href="../php/kra1.php">Go</a>
 				</div>
 			</div>
 			<div class="card">
