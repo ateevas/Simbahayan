@@ -17,57 +17,6 @@
 		include('../nav_master/nav.php');
 	?>
 
-    <!--navigation bar---->
-    <div class="navigation-container">
-      <div class="navigation">
-        <ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/profile.html"
-              >Profile <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/kra-select.html"
-              >Community Development Report <span class="sr-only"></span
-            ></a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-dark"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Account
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/student-official/html/changepass.html">Change Password</a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/contact.html"
-              >Contact <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/login-page/html/login.html">Logout <span class="sr-only"></span></a>
-          </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
-          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
-          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
-        </div>
-      </div>
-    </div>
-    <!-----------------navigation bar end----------->
-
-    <hr />
-
     <div class="title-wrapper m-2">
       <h3>Community Development Report</h3>
     </div>
@@ -116,12 +65,12 @@
                       <!---Status no.-->
                       No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="POs_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="POs_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -132,11 +81,11 @@
                       <!---Target no.-->
                       No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="POt_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Community Development and Advocacy Activities
-                      <input placeholder="0" type="number" readonly />
+                      <input id="POt_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -364,8 +313,8 @@
         </div>
       </div>
       <div class="button-wrapper">
-        <button type="button" class="btn btn-warning">Save</button>
-        <a class="btn btn-dark" href="/student-official/html/kra3-next.html" role="button">Next</a>
+        <button onclick="kra3_Savebtn()" type="button" class="btn btn-warning">Save</button>
+        <a class="btn btn-dark" href="kra3-next.php" role="button">Next</a>
       </div>
     </div>
 
@@ -398,3 +347,26 @@
     ></script>
   </body>
 </html>
+
+
+<script type="text/javascript">
+  function kra3_Savebtn(){
+    var POs_MM = $("#POs_MM").val();
+    var POs_CDAA = $("#POs_CDAA").val();
+
+    var POt_MM = $("#POt_MM").val();
+    var POt_CDAA = $("#POt_CDAA").val();
+
+
+    alert( POs_MM + "\n" 
+      + POs_CDAA + "\n" 
+      + POt_MM + "\n" 
+      + POt_CDAA
+
+
+      );
+  }
+
+
+
+</script>

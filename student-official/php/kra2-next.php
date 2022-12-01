@@ -17,57 +17,6 @@
 		include('../nav_master/nav.php');
 	?>
 
-    <!--navigation bar---->
-    <div class="navigation-container">
-      <div class="navigation">
-        <ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/profile.html"
-              >Profile <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/kra-select.html"
-              >Community Development Report <span class="sr-only"></span
-            ></a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-dark"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Account
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/student-official/html/changepass.html">Change Password</a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/contact.html"
-              >Contact <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/login-page/html/login.html">Logout <span class="sr-only"></span></a>
-          </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
-          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
-          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
-        </div>
-      </div>
-    </div>
-    <!-----------------navigation bar end----------->
-
-    <hr />
-
     <div class="title-wrapper m-2">
       <h3>Community Development Report</h3>
     </div>
@@ -115,31 +64,31 @@
                       <!---Status no.-->
                       No. of Student Organizations
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="UDCPs_NSO" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Students
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="UDCPs_NStu" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Faculty
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="UDCPs_NFac" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Administratiors
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="UDCPs_NAdmin" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Support Staff
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="UDCPs_NSS" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Alumni
-                      <input placeholder="0" type="number" readonly />
+                      <input id="UDCPs_NAlumni" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -150,31 +99,31 @@
                       <!---Target no.-->
                       No. of Student Organizations
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="UDCPt_NSO" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Students
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="UDCPt_NStu" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Faculty
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="UDCPt_NFac" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Administratiors
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="UDCPt_NAdmin" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Support Staff
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="UDCPt_NSS" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Alumni
-                      <input placeholder="0" type="number" readonly />
+                      <input id="UDCPt_NAlumni" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -225,12 +174,12 @@
                       <!---Status no.-->
                       No. of Research Presentation in Local Fora/ Conference
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="fcs_RPLFC" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Research Presentation in International Fora/ Conference
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="fcs_RPIFC" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -241,12 +190,12 @@
                       <!---Target no.-->
                       No. of Research Presentation in Local Fora/ Conference
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="fct_RPLFC" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Research Presentation in International Fora/ Conference
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="fct_RPIFC" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -297,12 +246,12 @@
                       <!---Status no.-->
                       Status No. of Local Publications
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ps_NLP" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of International Publications
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="ps_IP" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -313,12 +262,12 @@
                       <!---Target no.-->
                       Target No. of Local Publications
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="pt_NLP" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of International Publications
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="pt_IP" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -330,8 +279,8 @@
         </div>
       </div>
       <div class="button-wrapper">
-        <button type="button" class="btn btn-warning">Save</button>
-        <a class="btn btn-dark" href="/student-official/html/kra2.html" role="button">Prev</a>
+        <button onclick="kra2Next_Savebtn()" type="button" class="btn btn-warning">Save</button>
+        <a class="btn btn-dark" href="kra2.php" role="button">Prev</a>
       </div>
     </div>
 
@@ -364,3 +313,55 @@
     ></script>
   </body>
 </html>
+
+
+<script type="text/javascript">
+  function kra2Next_Savebtn(){
+// --------- Num. of Participants ---------
+    var UDCPs_NSO = $("#UDCPs_NSO").val(); //UDCP: Status No.
+    var UDCPs_NStu = $("#UDCPs_NStu").val();
+    var UDCPs_NFac = $("#UDCPs_NFac").val();
+    var UDCPs_NAdmin = $("#UDCPs_NAdmin").val();
+    var UDCPs_NSS = $("#UDCPs_NSS").val();
+    var UDCPs_NAlumni = $("#UDCPs_NAlumni").val();
+
+    var UDCPt_NSO = $("#UDCPt_NSO").val(); //UDCP: Target No.
+    var UDCPt_NStu = $("#UDCPt_NStu").val();
+    var UDCPt_NFac = $("#UDCPt_NFac").val();
+    var UDCPt_NAdmin = $("#UDCPt_NAdmin").val();
+    var UDCPt_NSS = $("#UDCPt_NSS").val();
+    var UDCPt_NAlumni = $("#UDCPt_NAlumni").val();   
+
+// --------- Research Presentation ---------
+    var fcs_RPLFC = $("#fcs_RPLFC").val(); //Fora/Conference: Status No.
+    var fcs_RPIFC = $("#fcs_RPIFC").val();
+
+    var fct_RPLFC = $("#fct_RPLFC").val(); //Fora/Conference: Target No.
+    var fct_RPIFC = $("#fct_RPIFC").val();
+
+// --------- Publications ---------
+
+    var ps_NLP = $("#ps_NLP").val(); //Publication: Status No.
+    var ps_IP = $("#ps_IP").val();
+
+    var pt_NLP = $("#pt_NLP").val(); //Publication: Target No.
+    var pt_IP = $("#pt_IP").val();
+
+
+
+    alert( "Status No." + "\n"
+      + "No. Students Org.: " + ps_NLP + "\n"
+      + "No. of Students: " + ps_IP + "\n"
+      + "No. of Faculty: " + pt_NLP + "\n"
+      + "No. of Administratiors: " + pt_IP + "\n"
+      + "No. of Support Staff: " + UDCPt_NSS + "\n"
+      + "No. of Alumni: " + UDCPt_NAlumni + "\n"
+
+
+
+      );
+  }
+
+
+
+</script>
