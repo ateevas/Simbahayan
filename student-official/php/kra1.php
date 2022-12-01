@@ -392,46 +392,24 @@
 			</div>
 			<div class="button-wrapper">
 				<button onclick="btnSave()" type="button" class="btn btn-warning">Save</button>
-				<a onclick="btnNext()" class="btn btn-dark" href="kra1-next.php" role="button">Next</a>
+				<button onclick="btnNext()" class="btn btn-dark" type="button">Next</button>
 			</div>
 		</div>
-		<!---javascript bootstrap-->
-		<script
-		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-		integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-		crossorigin="anonymous"
-		></script>
-		<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-		integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-		crossorigin="anonymous"
-		></script>
-		<script
-		src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"
-		></script>
-		<script
-		src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"
-		></script>
-		<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		crossorigin="anonymous"
-		></script>
 	</body>
 </html>
 <script type="text/javascript">
-function btnSave(){
-//----------------------- Healh for All -----------------------//
+function btnNext(){ 
+//----------------------- Health for All -----------------------//
 var hs_HWDP = $('#hs_HWDP').val();
 var hs_CIS = $('#hs_CIS').val();
 var hs_PM = $('#hs_PM').val();
 var ht_HWDP = $('#ht_HWDP').val();
 var ht_CIS = $('#ht_CIS').val();
 var ht_PM = $('#ht_PM').val();
+var hs_arr=[hs_HWDP, hs_CIS, hs_PM];
+var ht_arr=[ht_HWDP, ht_CIS, ht_PM];
+localStorage.setItem('hs_arr', hs_arr);
+localStorage.setItem('ht_arr', ht_arr);
 //----------------------- Education for All -----------------------//
 var es_EIEP = $('#es_EIEP').val();
 var es_CIS = $('#es_CIS').val();
@@ -439,6 +417,10 @@ var es_PM = $('#es_PM').val();
 var et_EIEP = $('#et_EIEP').val();
 var et_CIS = $('#et_CIS').val();
 var et_PM = $('#et_PM').val();
+var es_arr=[es_EIEP, es_CIS, es_PM];
+var et_arr=[et_EIEP, et_CIS, et_PM];
+localStorage.setItem('es_arr', es_arr);
+localStorage.setItem('et_arr', et_arr);
 //----------------------- Good Governance for All -----------------------//
 var ggs_LODGGP = $('#ggs_LODGGP').val();
 var ggs_CIS = $('#ggs_CIS').val();
@@ -446,6 +428,10 @@ var ggs_PM = $('#ggs_PM').val();
 var ggt_LODGGP = $('#ggt_LODGGP').val();
 var ggt_CIS = $('#ggt_CIS').val();
 var ggt_PM = $('#ggt_PM').val();
+var ggs_arr=[ggs_LODGGP, ggs_CIS, ggs_PM];
+var ggt_arr=[ggt_LODGGP, ggt_CIS, ggt_PM];
+localStorage.setItem('ggs_arr', ggs_arr);
+localStorage.setItem('ggt_arr', ggt_arr);
 //----------------------- Economic Justice for All -----------------------//
 var ejs_ESEP = $('#ejs_ESEP').val();
 var ejs_CIS = $('#ejs_CIS').val();
@@ -453,6 +439,10 @@ var ejs_PM = $('#ejs_PM').val();
 var ejt_ESEP = $('#ejt_ESEP').val();
 var ejt_CIS = $('#ejt_CIS').val();
 var ejt_PM = $('#ejt_PM').val();
+var ejs_arr=[ejs_ESEP, ejs_CIS, ejs_PM];
+var ejt_arr=[ejt_ESEP, ejt_CIS, ejt_PM];
+localStorage.setItem('ejs_arr', ejs_arr);
+localStorage.setItem('ejt_arr', ejt_arr);
 //----------------------- Christ Love for All -----------------------//
 var cls_SPMEP = $('#cls_SPMEP').val();
 var cls_CIS = $('#cls_CIS').val();
@@ -460,46 +450,10 @@ var cls_PM = $('#cls_PM').val();
 var clt_SPMEP = $('#clt_SPMEP').val();
 var clt_CIS = $('#clt_CIS').val();
 var clt_PM = $('#clt_PM').val();
-alert("Health for All " + "\n"
-+ "Status No. of Health and Wellness Development Projects: " + hs_HWDP + "\n"
-+ "Status No. of Communities/ Institutions Served: " + hs_CIS + "\n"
-+ "Status No. of Participants/ Members: " + hs_PM + "\n"
-+ "Target No. of Health and Wellness Development Projects: " + ht_HWDP+ "\n"
-+ "Target No. of Communities/ Institutions Served: " + ht_CIS + "\n"
-+ "Target No. of Participants/ Members: " + ht_PM + "\n"
-+ "Education for All " + "\n"
-+ "Status No. of Equitable and Inclusive Education Projects: " + es_EIEP + "\n"
-+ "Status No. of Communities/ Institutions Served: " + es_CIS + "\n"
-+ "Status No. of Participants/ Members: " + es_PM + "\n"
-+ "Target No. of Equitable and Inclusive Education Projects: " + et_EIEP + "\n"
-+ "Target No. of Communities/ Institutions Served: " + et_CIS + "\n"
-+ "Target No. of Participants/ Members: " + et_PM + "\n"
-+ "Good Governance for All " + "\n"
-+ "Status No. of Leadership, Organizational Development, and Good Governance Projects: " + ggs_LODGGP + "\n"
-+ "Status No. of Communities/ Institutions Served: " + ggs_CIS + "\n"
-+ "Status No. of Participants/ Members: " + ggs_PM + "\n"
-+ "Target No. of Leadership, Organizational Development, and Good Governance Projects: " + ggt_LODGGP+ "\n"
-+ "Target No. of Communities/ Institutions Served: " + ggt_CIS + "\n"
-+ "Target No. of Participants/ Members: " + ggt_PM + "\n"
-+ "Economic Justice for All " + "\n"
-+ "Status No. of Leadership, Organizational Development, and Good Governance Projects: " + ejs_ESEP + "\n"
-+ "Status No. of Communities/ Institutions Served: " + ejs_CIS + "\n"
-+ "Status No. of Participants/ Members: " + ejs_PM + "\n"
-+ "Target No. of Leadership, Organizational Development, and Good Governance Projects: " + ejt_ESEP + "\n"
-+ "Target No. of Communities/ Institutions Served: " + ejt_CIS + "\n"
-+ "Target No. of Participants/ Members: " + ejt_PM + "\n"
-+ "Christ Love for all" + "\n"
-+ "Status No. of Socio-Pastoral Ministry and Evangelization Projects: " + cls_SPMEP + "\n"
-+ "Status No. of Communities/ Institutions Served: " + cls_CIS + "\n"
-+ "Status No. of Participants/ Members: " + cls_PM + "\n"
-+ "Target No. of Socio-Pastoral Ministry and Evangelization Projects: " + clt_SPMEP + "\n"
-+ "Target No. of Communities/ Institutions Served: " + clt_CIS + "\n"
-+ "Target No. of Participants/ Members: " + clt_PM );
-}
-</script>
-<script type="text/javascript">
-function btnNext(){
-/*alert(
-);*/
+var cls_arr=[cls_SPMEP, cls_CIS, cls_PM];
+var clt_arr=[clt_SPMEP, clt_CIS, clt_PM];
+localStorage.setItem('cls_arr', cls_arr);
+localStorage.setItem('clt_arr', clt_arr);
+window.location.href="http://localhost/Simbahayan/student-official/php/kra1-next.php";
 }
 </script>
