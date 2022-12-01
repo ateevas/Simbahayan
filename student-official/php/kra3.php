@@ -136,12 +136,12 @@
                       <!---Status no.-->
                       Status No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="GAs_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="GAs_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -152,12 +152,12 @@
                       <!---Target no.-->
                       Target No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="GAt_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="GAt_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -208,12 +208,12 @@
                       <!---Status no.-->
                       Status No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="NGOs_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="NGOs_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -224,12 +224,12 @@
                       <!---Target no.-->
                       Target No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="NGOt_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="NGOt_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -280,12 +280,12 @@
                       <!---Status no.-->
                       Status No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="BEIs_MM" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Status No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="BEIs_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -296,12 +296,12 @@
                       <!---Target no.-->
                       Target No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="BEIt_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="BEIt_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -353,18 +353,27 @@
   function kra3_Savebtn(){
     var POs_MM = $("#POs_MM").val();
     var POs_CDAA = $("#POs_CDAA").val();
-
     var POt_MM = $("#POt_MM").val();
     var POt_CDAA = $("#POt_CDAA").val();
 
 
-    alert( POs_MM + "\n" 
-      + POs_CDAA + "\n" 
-      + POt_MM + "\n" 
-      + POt_CDAA
+    var GAs_MM = $("#GAs_MM").val();
+    var GAs_CDAA = $("#GAs_CDAA").val();
+    var GAt_MM = $("#GAt_MM").val();
+    var GAt_CDAA = $("#GAt_CDAA").val();
 
 
-      );
+    var NGOs_MM = $("#NGOs_MM").val();
+    var NGOs_CDAA = $("#NGOs_CDAA").val();
+    var NGOt_MM = $("#NGOt_MM").val();
+    var NGOt_CDAA = $("#NGOt_CDAA").val();
+
+
+    var BEIs_MM = $("#BEIs_MM").val();
+    var BEIs_CDAA = $("#BEIs_CDAA").val();
+    var BEIt_MM = $("#BEIt_MM").val();
+    var BEIt_CDAA = $("#BEIt_CDAA").val();
+
   }
 
 

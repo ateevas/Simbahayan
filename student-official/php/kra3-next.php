@@ -17,57 +17,6 @@
 		include('../nav_master/nav.php');
 	?>
 
-    <!--navigation bar---->
-    <div class="navigation-container">
-      <div class="navigation">
-        <ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/profile.html"
-              >Profile <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/kra-select.html"
-              >Community Development Report <span class="sr-only"></span
-            ></a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-dark"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Account
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/student-official/html/changepass.html">Change Password</a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/contact.html"
-              >Contact <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/login-page/html/login.html">Logout <span class="sr-only"></span></a>
-          </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
-          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
-          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
-        </div>
-      </div>
-    </div>
-    <!-----------------navigation bar end----------->
-
-    <hr />
-
     <div class="title-wrapper m-2">
       <h3>Community Development Report</h3>
     </div>
@@ -118,12 +67,12 @@
                       <!---Status no.-->
                       No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="LHEIs_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="LHEIs_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -134,11 +83,11 @@
                       <!---Target no.-->
                       No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="LHEIt_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Community Development and Advocacy Activities
-                      <input placeholder="0" type="number" readonly />
+                      <input id="LHEIt_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -189,12 +138,12 @@
                       <!---Status no.-->
                       Status No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="IHEIs_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="IHEIs_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -205,12 +154,12 @@
                       <!---Target no.-->
                       Target No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="IHEIt_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="IHEIt_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -261,12 +210,12 @@
                       <!---Status no.-->
                       Status No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="CBOs_MM" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Status No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="CBOs_CDAA" placeholder="0" type="number" />
                     </li>
                   </ul>
                 </div>
@@ -277,12 +226,12 @@
                       <!---Target no.-->
                       Target No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="CBOt_MM" placeholder="0" type="number"  />
                     </li>
                     <li class="list-group-item">
                       Target No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="CBOt_CDAA" placeholder="0" type="number"  />
                     </li>
                   </ul>
                 </div>
@@ -333,12 +282,12 @@
                       <!---Status no.-->
                       Status No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="PBOs_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="PBOs_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -349,12 +298,12 @@
                       <!---Target no.-->
                       Target No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="PBOt_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="PBOt_CDAA" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -406,12 +355,12 @@
                       <!---Status no.-->
                       Status No. of Training/ Course
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="TCCs_MM" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Participants
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="TCCs_CDAA" placeholder="0" type="number" />
                     </li>
                   </ul>
                 </div>
@@ -422,12 +371,12 @@
                       <!---Target no.-->
                       Status No. of Participants
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="TCCt_MM" placeholder="0" type="number" />
                     </li>
                     <li class="list-group-item">
                       Target No. of Participants
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="TCCt_CDAA" placeholder="0" type="number" />
                     </li>
                   </ul>
                 </div>
@@ -440,7 +389,7 @@
       </div>
 
       <div class="button-wrapper">
-        <a class="btn btn-dark" href="/student-official/html/kra3.html" role="button">Prev</a>
+        <a class="btn btn-dark" href="kra3.php" role="button">Prev</a>
         <button type="button" class="btn btn-warning">Save</button>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Submit</button>
@@ -465,7 +414,7 @@
               <div class="modal-body">Are you sure you want to submit report?</div>
               <div class="modal-footer d-flex justify-content-between">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                <button type="button" class="btn btn-warning">Yes</button>
+                <button onclick="kra3Next_yes()" type="button" class="btn btn-warning">Yes</button>
               </div>
             </div>
           </div>
@@ -502,3 +451,40 @@
     ></script>
   </body>
 </html>
+
+<script type="text/javascript">
+  function kra3Next_yes(){
+    var LHEIs_MM = $("#LHEIs_MM").val(); //Local Higher
+    var LHEIs_CDAA = $("#LHEIs_CDAA").val();
+    var LHEIt_MM = $("#LHEIt_MM").val();
+    var LHEIt_CDAA = $("#LHEIt_CDAA").val();
+
+
+    var IHEIs_MM = $("#IHEIs_MM").val(); //International Higher
+    var IHEIs_CDAA = $("#IHEIs_CDAA").val();
+    var IHEIt_MM = $("#IHEIt_MM").val();
+    var IHEIt_CDAA = $("#IHEIt_CDAA").val();
+
+
+    var CBOs_MM = $("#CBOs_MM").val(); //Faith based
+    var CBOs_CDAA = $("#CBOs_CDAA").val();
+    var CBOt_MM = $("#CBOt_MM").val();
+    var CBOt_CDAA = $("#CBOt_CDAA").val();
+
+
+    var PBOs_MM = $("#PBOs_MM").val();// Prof. Business org
+    var PBOs_CDAA = $("#PBOs_CDAA").val();
+    var PBOt_MM = $("#PBOt_MM").val();
+    var PBOt_CDAA = $("#PBOt_CDAA").val();
+
+
+    var TCCs_MM = $("#TCCs_MM").val(); //Training Courses
+    var TCCs_CDAA = $("#TCCs_CDAA").val();
+    var TCCt_MM = $("#TCCt_MM").val();
+    var TCCt_CDAA = $("#TCCt_CDAA").val();
+
+  }
+
+
+
+</script>
