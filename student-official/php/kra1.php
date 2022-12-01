@@ -17,57 +17,6 @@
 		include('../nav_master/nav.php');
 	?>
 
-    <!--navigation bar---->
-    <div class="navigation-container">
-      <div class="navigation">
-        <ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/profile.html"
-              >Profile <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/kra-select.html"
-              >Community Development Report <span class="sr-only"></span
-            ></a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-dark"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Account
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/student-official/html/changepass.html">Change Password</a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/contact.html"
-              >Contact <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/login-page/html/login.html">Logout <span class="sr-only"></span></a>
-          </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
-          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
-          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
-        </div>
-      </div>
-    </div>
-    <!-----------------navigation bar end----------->
-
-    <hr />
-
     <div class="title-wrapper m-2">
       <h3>Community Development Report</h3>
     </div>

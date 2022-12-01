@@ -17,57 +17,6 @@
 		include('../nav_master/nav.php');
 	?>
 
-    <!--navigation bar---->
-    <div class="navigation-container">
-      <div class="navigation">
-        <ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/profile.html"
-              >Profile <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/kra-select.html"
-              >Community Development Report <span class="sr-only"></span
-            ></a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-dark"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Account
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/student-official/html/changepass.html">Change Password</a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/contact.html"
-              >Contact <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/login-page/html/login.html">Logout <span class="sr-only"></span></a>
-          </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
-          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
-          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
-        </div>
-      </div>
-    </div>
-    <!-----------------navigation bar end----------->
-
-    <hr />
-
     <div class="title-wrapper m-2">
       <h3>Community Development Report</h3>
     </div>
@@ -117,18 +66,18 @@
                       <!---Status no.-->
                       Status No. of Culture and Heritage Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="cahds_CHP" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="cahds_CIS" placeholder="0" type="number"/>
                     </li>
 
                     <li class="list-group-item">
                       Status No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="cahds_PM" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -139,18 +88,18 @@
                       <!---Target no.-->
                       Target No. of Culture and Heritage Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="cahdt_CHP" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="cahdt_CIS" placeholder="0" type="number"/>
                     </li>
 
                     <li class="list-group-item">
                       Target No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="cahdt_PM" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -201,18 +150,18 @@
                       <!---Status no.-->
                       Status No. of Sports Development Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="sds_SDP" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="sds_CIS" placeholder="0" type="number"/>
                     </li>
 
                     <li class="list-group-item">
                       Status No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="sds_PM" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -223,18 +172,18 @@
                       <!---Target no.-->
                       Target No. of Sports Development Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="sdt_SDP" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="sdt_CIS" placeholder="0" type="number"/>
                     </li>
 
                     <li class="list-group-item">
                       Target No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="sdt_PM" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -286,17 +235,17 @@
                       <!---Status no.-->
                       Status No. of Environmental Sustainability and Action Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="drrms_ESAP" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="drrms_CIS" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="drrms_PM" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -307,18 +256,18 @@
                       <!---Target no.-->
                       Target No. of Sustainability and Action Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="drrmt_SAP" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="drrmt_CIS" placeholder="0" type="number"/>
                     </li>
 
                     <li class="list-group-item">
                       Target No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="drrmt_PM" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -369,17 +318,17 @@
                       <!---Status no.-->
                       Status No. of Family and Household Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="fhds_FHP" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="fhds_CIS" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="fhds_PM" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -390,17 +339,17 @@
                       <!---Target no.-->
                       Target No. of Family and Household Projects
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="fhdt_FHP" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Communities/ Institutions Served
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="fhdt_CIS" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Participants/ Members
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="fhdt_PM" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -452,17 +401,17 @@
                       <!---Status no.-->
                       Status No. of Community Organization Formed
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="cofs_COF" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Communities/ Institutions Served under each Community Organization Formed
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="cofs_CISCOF" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Participants/ Members under each Community Organization Formed
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="cofs_PMCOF" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -473,17 +422,17 @@
                       <!---Target no.-->
                       Target No. of Community Organization Formed
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="coft_COF" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Communities/ Institutions Served under each Community Organization Formed
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="coft_CISCOF" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Participants/ Members under each Community Organization Formed
 
-                      <input placeholder="0" type="number" readonly />
+                      <input id="coft_PMCOF" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -521,7 +470,7 @@
               <div class="modal-body">Are you sure you want to submit report?</div>
               <div class="modal-footer d-flex justify-content-between">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                <button type="button" class="btn btn-warning">Yes</button>
+                <button onclick="btnSubmit()" type="button" class="btn btn-warning">Yes</button>
               </div>
             </div>
           </div>
@@ -558,3 +507,45 @@
     ></script>
   </body>
 </html>
+
+<script type="text/javascript"> 
+function btnSubmit(){
+  var cahds_CHP = $('#cahds_CHP').val(); //Status & Target in Cultural Life
+  var cahds_CIS = $('#cahds_CIS').val();
+  var cahds_PM = $('#cahds_PM').val();
+  var cahdt_CHP = $('#cahdt_CHP').val();
+  var cahdt_CIS = $('#cahdt_CIS').val();
+  var cahdt_PM = $('#cahdt_PM').val();
+
+  var sds_SDP = $('#sds_SDP').val(); //Status & Target in Sports for all
+  var sds_CIS = $('#sds_CIS').val();
+  var sds_PM = $('#sds_PM').val();
+  var sdt_SDP = $('#sdt_SDP').val();
+  var sdt_CIS = $('#sdt_CIS').val();
+  var sdt_PM = $('#sdt_PM').val();
+
+  var drrms_ESAP = $('#drrms_ESAP').val(); //Status & Target in Environmental Justice
+  var drrms_CIS = $('#drrms_CIS').val();
+  var drrms_PM = $('#drrms_PM').val();
+  var drrmt_SAP = $('#drrmt_SAP').val();
+  var drrmt_CIS = $('#drrmt_CIS').val();
+  var drrmt_PM = $('#drrmt_PM').val();
+
+  var fhds_FHP = $('#fhds_FHP').val(); //Status & Target in Holistic Life 
+  var fhds_CIS = $('#fhds_CIS').val();
+  var fhds_PM = $('#fhds_PM').val();
+  var fhdt_FHP = $('#fhdt_FHP').val();
+  var fhdt_CIS = $('#fhdt_CIS').val();
+  var fhdt_PM = $('#fhdt_PM').val();
+
+  var cofs_COF = $('#cofs_COF').val(); //Status & Target in Community Organization
+  var cofs_CISCOF = $('#cofs_CISCOF').val();
+  var cofs_PMCOF = $('#cofs_PMCOF').val();
+  var coft_COF = $('#coft_COF').val();
+  var coft_CISCOF = $('#coft_CISCOF').val();
+  var coft_PMCOF = $('#coft_PMCOF').val();
+
+
+
+}
+</script>

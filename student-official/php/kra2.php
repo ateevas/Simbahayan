@@ -17,57 +17,6 @@
 		include('../nav_master/nav.php');
 	?>
 
-    <!--navigation bar---->
-    <div class="navigation-container">
-      <div class="navigation">
-        <ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/profile.html"
-              >Profile <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/kra-select.html"
-              >Community Development Report <span class="sr-only"></span
-            ></a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-dark"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Account
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/student-official/html/changepass.html">Change Password</a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/student-official/html/contact.html"
-              >Contact <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/login-page/html/login.html">Logout <span class="sr-only"></span></a>
-          </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
-          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
-          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
-        </div>
-      </div>
-    </div>
-    <!-----------------navigation bar end----------->
-
-    <hr />
-
     <div class="title-wrapper m-2">
       <h3>Community Development Report</h3>
     </div>
@@ -84,38 +33,36 @@
       <br />
       <!--UCDP Projects (Not Dropdown) -->
       <div class="row">
-        <div class="col-6 col-md-4" id="ucdp">
-          <h3>Projects under Institutional Development for Community Development</h3>
+        <div class="col-6 col-md-4" id="ucdp"><h3>Projects under Institutional Development for Community Development</h3>
         </div>
-
-        <div class="col-6 col-md-4"><input placeholder="0" type="number" readonly /></div>
-        <div class="col-6 col-md-3"><input placeholder="0" type="number" readonly /></div>
+        <div class="col-6 col-md-4"><input id="s_PUIDCD" placeholder="0" type="number"/></div>
+        <div class="col-6 col-md-3"><input id="t_PUIDCD" placeholder="0" type="number"/></div>
       </div>
-      <hr />
+      <hr/>
 
       <div class="row">
         <div class="col-6 col-md-4" id="ucdp"><h3>Projects under Social Awareness and Advocacy</h3></div>
-        <div class="col-6 col-md-4"><input placeholder="0" type="number" readonly /></div>
-        <div class="col-6 col-md-3"><input placeholder="0" type="number" readonly /></div>
+        <div class="col-6 col-md-4"><input id="s_PSAA" placeholder="0" type="number"/></div>
+        <div class="col-6 col-md-3"><input id="t_PSAA" placeholder="0" type="number"/></div>
       </div>
       <hr />
       <div class="row">
         <div class="col-6 col-md-4" id="ucdp"><h3>Projects Under Community-engaged research</h3></div>
-        <div class="col-6 col-md-4"><input placeholder="0" type="number" readonly /></div>
-        <div class="col-6 col-md-3"><input placeholder="0" type="number" readonly /></div>
+        <div class="col-6 col-md-4"><input id="s_PUCER" placeholder="0" type="number"/></div>
+        <div class="col-6 col-md-3"><input id="t_PUCER" placeholder="0" type="number" /></div>
       </div>
       <hr />
       <div class="row">
         <div class="col-6 col-md-4" id="ucdp"><h3>Projects Underservice-learning</h3></div>
-        <div class="col-6 col-md-4"><input placeholder="0" type="number" readonly /></div>
-        <div class="col-6 col-md-3"><input placeholder="0" type="number" readonly /></div>
+        <div class="col-6 col-md-4"><input id="s_PUL" placeholder="0" type="number"/></div>
+        <div class="col-6 col-md-3"><input id="t_PUL" placeholder="0" type="number"/></div>
       </div>
 
       <!-------->
 
       <div class="button-wrapper">
-        <button type="button" class="btn btn-warning">Save</button>
-        <a class="btn btn-dark" href="/student-official/html/kra2-next.html" role="button">Next</a>
+        <button onclick="kra2_Savebtn()" type="button" class="btn btn-warning">Save</button>
+        <a class="btn btn-dark" href="kra2-next.php" role="button">Next</a>
       </div>
     </div>
 
@@ -148,3 +95,34 @@
     ></script>
   </body>
 </html>
+
+
+<script type="text/javascript"> 
+function kra2_Savebtn(){
+  var s_PUIDCD = $('#s_PUIDCD').val(); //Institutional Development
+  var t_PUIDCD = $('#t_PUIDCD').val();
+
+  var s_PSAA = $('#s_PSAA').val(); //Social Awareness
+  var t_PSAA = $('#t_PSAA').val();
+
+  var s_PUCER = $('#s_PUCER').val(); //Community-engaged
+  var t_PUCER = $('#t_PUCER').val();
+
+  var s_PUL = $('#s_PUL').val(); //Underservice-learning
+  var t_PUL = $('#t_PUL').val();  
+
+  alert("1: " + s_PUIDCD + "\n"
+    + "2: " + t_PUIDCD + "\n"
+
+    + "3: " + s_PSAA + "\n"
+    + "4: " + t_PSAA + "\n"
+
+    + "5: " + s_PUCER + "\n"
+    + "6: " + t_PUCER + "\n"
+
+    + "7: " + s_PUL + "\n"
+    + "8: " + t_PUL + "\n"
+    );
+}
+
+</script>
