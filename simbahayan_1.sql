@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2022 at 02:14 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Generation Time: Dec 01, 2022 at 11:14 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,10 +31,82 @@ CREATE TABLE `kra1` (
   `id` int(11) NOT NULL,
   `kra_status` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `hfa_status` text NOT NULL,
-  `hfa_target` text NOT NULL,
-  `efa_status` text NOT NULL,
-  `efa_target` text NOT NULL
+  `hs_arr` text NOT NULL,
+  `ht_arr` text NOT NULL,
+  `es_arr` text NOT NULL,
+  `et_arr` text NOT NULL,
+  `ggs_arr` text NOT NULL,
+  `ggt_arr` text NOT NULL,
+  `ejs_arr` text NOT NULL,
+  `ejt_arr` text NOT NULL,
+  `cls_arr` text NOT NULL,
+  `clt_arr` text NOT NULL,
+  `cahds_arr` text NOT NULL,
+  `cahdt_arr` text NOT NULL,
+  `sds_arr` text NOT NULL,
+  `sdt_arr` text NOT NULL,
+  `drrms_arr` text NOT NULL,
+  `drrmt_arr` text NOT NULL,
+  `fhds_arr` text NOT NULL,
+  `fhdt_arr` text NOT NULL,
+  `cofs_arr` text NOT NULL,
+  `coft_arr` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kra2`
+--
+
+CREATE TABLE `kra2` (
+  `id` int(11) NOT NULL,
+  `kra_status` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `s_puidcd_arr` text NOT NULL,
+  `t_puidcd_arr` text NOT NULL,
+  `s_psaa_arr` text NOT NULL,
+  `t_psaa_arr` text NOT NULL,
+  `s_pucer_arr` text NOT NULL,
+  `t_pucer_arr` text NOT NULL,
+  `s_pul_arr` text NOT NULL,
+  `t_pul_arr` text NOT NULL,
+  `udcps_arr` text NOT NULL,
+  `udcpt_arr` text NOT NULL,
+  `fcs_arr` text NOT NULL,
+  `fct_arr` text NOT NULL,
+  `ps_arr` text NOT NULL,
+  `pc_arr` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kra3`
+--
+
+CREATE TABLE `kra3` (
+  `id` int(11) NOT NULL,
+  `kra_status` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `pos_arr` text NOT NULL,
+  `pot_arr` text NOT NULL,
+  `gas_arr` text NOT NULL,
+  `gat_arr` text NOT NULL,
+  `ngos_arr` text NOT NULL,
+  `ngot_arr` text NOT NULL,
+  `beis_arr` text NOT NULL,
+  `beit_arr` text NOT NULL,
+  `lheis_arr` text NOT NULL,
+  `lheit_arr` text NOT NULL,
+  `iheis_arr` text NOT NULL,
+  `iheit_arr` text NOT NULL,
+  `cbos_arr` text NOT NULL,
+  `cbot_arr` text NOT NULL,
+  `pbos_arr` text NOT NULL,
+  `pbot_arr` text NOT NULL,
+  `tccs_arr` text NOT NULL,
+  `tcct_arr` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -117,6 +189,18 @@ ALTER TABLE `kra1`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `kra2`
+--
+ALTER TABLE `kra2`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `kra3`
+--
+ALTER TABLE `kra3`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_colleges`
 --
 ALTER TABLE `tbl_colleges`
@@ -136,6 +220,18 @@ ALTER TABLE `tbl_users`
 -- AUTO_INCREMENT for table `kra1`
 --
 ALTER TABLE `kra1`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `kra2`
+--
+ALTER TABLE `kra2`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `kra3`
+--
+ALTER TABLE `kra3`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

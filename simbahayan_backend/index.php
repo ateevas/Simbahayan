@@ -24,42 +24,42 @@ switch ($tag) {
 			ejs_arr=?,
 			ejt_arr=?,
 			cls_arr=?,
-			clt_arr=?
-			cahds_arr=?
-			cahdt_arr=?
-			sds_arr=?
-			sdt_arr=?
-			drrms_arr=?
-			drrmt_arr=?
-			fhds_arr=?
-			fhdt_arr=?
-			cofs_arr=?
+			clt_arr=?,
+			cahds_arr=?,
+			cahdt_arr=?,
+			sds_arr=?,
+			sdt_arr=?,
+			drrms_arr=?,
+			drrmt_arr=?,
+			fhds_arr=?,
+			fhdt_arr=?,
+			cofs_arr=?,
 			coft_arr=?";
 
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute([
 			"0",
 			$_POST['user_id'],
-			$_POST['hs_arr'],
-			$_POST['ht_arr'],
-			$_POST['es_arr'],
-			$_POST['et_arr'],
-			$_POST['ggs_arr'],
-			$_POST['ggt_arr'],
-			$_POST['ejs_arr'],
-			$_POST['ejt_arr'],
-			$_POST['cls_arr'],
-			$_POST['clt_arr'],
-			$_POST['cahds_arr'],
-			$_POST['cahdt_arr'],
-			$_POST['sds_arr'],
-			$_POST['sdt_arr'],
-			$_POST['drrms_arr'],
-			$_POST['drrmt_arr'],
-			$_POST['fhds_arr'],
-			$_POST['fhdt_arr'],
-			$_POST['cofs_arr'],
-			$_POST['coft_arr'],
+			json_encode(array($_POST['hs_arr'])),
+			json_encode(array($_POST['ht_arr'])),
+			json_encode(array($_POST['es_arr'])),
+			json_encode(array($_POST['et_arr'])),
+			json_encode(array($_POST['ggs_arr'])),
+			json_encode(array($_POST['ggt_arr'])),
+			json_encode(array($_POST['ejs_arr'])),
+			json_encode(array($_POST['ejt_arr'])),
+			json_encode(array($_POST['cls_arr'])),
+			json_encode(array($_POST['clt_arr'])),
+			json_encode(array($_POST['cahds_arr'])),
+			json_encode(array($_POST['cahdt_arr'])),
+			json_encode(array($_POST['sds_arr'])),
+			json_encode(array($_POST['sdt_arr'])),
+			json_encode(array($_POST['drrms_arr'])),
+			json_encode(array($_POST['drrmt_arr'])),
+			json_encode(array($_POST['fhds_arr'])),
+			json_encode(array($_POST['fhdt_arr'])),
+			json_encode(array($_POST['cofs_arr'])),
+			json_encode(array($_POST['coft_arr'])),
 		])) {
 			echo json_encode([
 				"status" => "ok",

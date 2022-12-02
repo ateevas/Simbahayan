@@ -391,7 +391,6 @@
 				</div>
 			</div>
 			<div class="button-wrapper">
-				<button onclick="btnSave()" type="button" class="btn btn-warning">Save</button>
 				<button onclick="btnNext()" class="btn btn-dark" type="button">Next</button>
 			</div>
 		</div>

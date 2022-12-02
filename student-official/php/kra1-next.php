@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Community Development Report</title>
 		<?php
-		include('../cdn/cdn.php');
+			include('../cdn/cdn.php');
 		?>
 	</head>
 	<body>
@@ -394,7 +394,7 @@
 				<a class="btn btn-dark" href="kra1.php" role="button">Prev</a>
 				<button type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
 				<!-- Button trigger modal -->
-				<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Submit</button>
+<!-- 				<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Submit</button> -->
 				<!-- Modal -->
 				<div
 					class="modal fade"
@@ -517,7 +517,12 @@ $.ajax({
 		coft_arr: localStorage.getItem('coft_arr'),
 	},
 	complete: function (response) {
-		console.log(response.responseText);
+		var data = JSON.parse(response.responseText);
+		if(data['status'] == "ok") {
+			window.location.href="http://localhost/Simbahayan/student-official/php/kra2.php"
+		} else {
+			alert("Unknown error occured. Please try again.")
+		}
 	}
 })
 
