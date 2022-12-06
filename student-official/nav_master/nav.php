@@ -43,9 +43,28 @@
 				>Contact <span class="sr-only"></span></a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link text-dark" href="/login-page/html/login.html">Logout <span class="sr-only"></span></a>
+				<a class="nav-link text-dark" href="/login-page/html/login.html">Logout<span class="sr-only"></span></a>
+				<button onclick="clear_all()" >Logout</button>
 			</li>
 		</ul>
 
 	</div>
 </div>
+
+
+<script type="text/javascript">
+	function clear_all(){
+
+
+
+		alert(
+			"Cleared All"
+
+
+			);
+	}
+
+
+
+
+</script>

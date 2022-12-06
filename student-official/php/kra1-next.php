@@ -393,9 +393,7 @@
 			<div class="button-wrapper">
 				<a class="btn btn-dark" href="kra1.php" role="button">Prev</a>
 				<button type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
-				<!-- Button trigger modal -->
-<!-- 				<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Submit</button> -->
-				<!-- Modal -->
+
 				<div
 					class="modal fade"
 					id="approval"

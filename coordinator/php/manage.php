@@ -5,39 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manage Students</title>
-    <link rel="stylesheet" href="/CD coordinator UI//css/manage.css" />
-  
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-  />
- 
+    <?php 
+    include('../cdn/cdn.php');
+    ?>
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    crossorigin="anonymous"
-  />
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   </head>
   <body>
-    <nav class="navbar bg-secondary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/CD coordinator UI//html/profile.html">
-          <img
-            src="/CD coordinator UI//pictures/ustlogo.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            class="d-inline-block align-text-middle"
-          />
-          <span>Simbahayan Portal</span>
-        </a>
-      </div>
-    </nav>
-
+  	<?php 
+  	include('../nav_master/nav.php');
+  	?>
 
 
     <!---navigation bar--------------------------------->
@@ -223,7 +199,7 @@
         <!--Email-->  <td>joshuacabangal@gmail.com</td>
         <!--PassedKRA/KPI-->  <td>yes</td>
         <td>1/1/2022</td>
-        <!--Status-->  <td id="status"><a href="">View</a></i></td>
+        <!--Status-->  <td id="status"><a href="kra1.php">View</a></i></td>
         <td> <div class="form-check form-switch ">
    
         </div></td>

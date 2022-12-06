@@ -61,68 +61,54 @@
       <!-------->
 
       <div class="button-wrapper">
-        <button onclick="kra2_Savebtn()" type="button" class="btn btn-warning">Save</button>
-        <a class="btn btn-dark" href="kra2-next.php" role="button">Next</a>
+        <button onclick="kra2_Nextbtn()" type="button" class="btn btn-dark">Next</button>
+
       </div>
     </div>
 
-    <!---javascript bootstrap-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
 
 
 <script type="text/javascript"> 
-function kra2_Savebtn(){
+function kra2_Nextbtn(){
   var s_PUIDCD = $('#s_PUIDCD').val(); //Institutional Development
   var t_PUIDCD = $('#t_PUIDCD').val();
+  //array
+  var s_puidcd_arr=[s_PUIDCD];
+  var t_puidcd_arr=[t_PUIDCD];
+  localStorage.setItem('s_puidcd_arr', s_puidcd_arr);
+  localStorage.setItem('t_puidcd_arr', t_puidcd_arr);
+
 
   var s_PSAA = $('#s_PSAA').val(); //Social Awareness
   var t_PSAA = $('#t_PSAA').val();
+  //array
+  var s_psaa_arr=[s_PSAA];
+  var t_psaa_arr=[t_PSAA];
+  localStorage.setItem('s_psaa_arr', s_psaa_arr);
+  localStorage.setItem('t_psaa_arr', t_psaa_arr);
+
 
   var s_PUCER = $('#s_PUCER').val(); //Community-engaged
   var t_PUCER = $('#t_PUCER').val();
+  //array
+  var s_pucer_arr=[s_PUCER];
+  var t_pucer_arr=[t_PUCER];
+  localStorage.setItem('s_pucer_arr', s_pucer_arr);
+  localStorage.setItem('t_pucer_arr', t_pucer_arr);
+
 
   var s_PUL = $('#s_PUL').val(); //Underservice-learning
-  var t_PUL = $('#t_PUL').val();  
+  var t_PUL = $('#t_PUL').val(); 
+  //array 
+  var s_pul_arr=[s_PUL];
+  var t_pul_arr=[t_PUL];
+  localStorage.setItem('s_pul_arr', s_pul_arr);
+  localStorage.setItem('t_pul_arr', t_pul_arr);
 
-  alert("1: " + s_PUIDCD + "\n"
-    + "2: " + t_PUIDCD + "\n"
+  window.location.href="http://localhost/Simbahayan/student-official/php/kra2-next.php"
 
-    + "3: " + s_PSAA + "\n"
-    + "4: " + t_PSAA + "\n"
-
-    + "5: " + s_PUCER + "\n"
-    + "6: " + t_PUCER + "\n"
-
-    + "7: " + s_PUL + "\n"
-    + "8: " + t_PUL + "\n"
-    );
 }
 
 </script>

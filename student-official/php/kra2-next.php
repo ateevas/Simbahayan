@@ -284,33 +284,6 @@
       </div>
     </div>
 
-    <!---javascript bootstrap-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
 
@@ -330,7 +303,13 @@
     var UDCPt_NFac = $("#UDCPt_NFac").val();
     var UDCPt_NAdmin = $("#UDCPt_NAdmin").val();
     var UDCPt_NSS = $("#UDCPt_NSS").val();
-    var UDCPt_NAlumni = $("#UDCPt_NAlumni").val();   
+    var UDCPt_NAlumni = $("#UDCPt_NAlumni").val();
+    //array
+    var udcps_arr = [UDCPs_NSO,UDCPs_NStu,UDCPs_NFac,UDCPs_NAdmin,UDCPs_NSS,UDCPs_NAlumni];
+    var udcpt_arr = [UDCPt_NSO,UDCPt_NStu,UDCPt_NFac,UDCPt_NAdmin,UDCPt_NSS,UDCPt_NAlumni];
+    localStorage.setItem('udcps_arr', udcps_arr);
+    localStorage.setItem('udcpt_arr', udcpt_arr);
+
 
 // --------- Research Presentation ---------
     var fcs_RPLFC = $("#fcs_RPLFC").val(); //Fora/Conference: Status No.
@@ -338,30 +317,58 @@
 
     var fct_RPLFC = $("#fct_RPLFC").val(); //Fora/Conference: Target No.
     var fct_RPIFC = $("#fct_RPIFC").val();
+    //array
+    var fcs_arr = [fcs_RPLFC,fcs_RPIFC];
+    var fct_arr = [fct_RPLFC,fct_RPIFC];
+    localStorage.setItem('fcs_arr', fcs_arr);
+    localStorage.setItem('fct_arr', fct_arr);
+
 
 // --------- Publications ---------
-
     var ps_NLP = $("#ps_NLP").val(); //Publication: Status No.
     var ps_IP = $("#ps_IP").val();
 
     var pt_NLP = $("#pt_NLP").val(); //Publication: Target No.
     var pt_IP = $("#pt_IP").val();
+    //array
+    var ps_arr = [ps_NLP,ps_IP];
+    var pt_arr = [pt_NLP,pt_IP];
+    localStorage.setItem('ps_arr', ps_arr);
+    localStorage.setItem('pt_arr', pt_arr);
 
 
-
-    alert( "Status No." + "\n"
-      + "No. Students Org.: " + ps_NLP + "\n"
-      + "No. of Students: " + ps_IP + "\n"
-      + "No. of Faculty: " + pt_NLP + "\n"
-      + "No. of Administratiors: " + pt_IP + "\n"
-      + "No. of Support Staff: " + UDCPt_NSS + "\n"
-      + "No. of Alumni: " + UDCPt_NAlumni + "\n"
-
-
-
-      );
+$.ajax({
+  url: url,
+  type: "POST",
+  data: {
+    csrf_token: "{{ csrf_token() }}",
+    tag: "save_kra2", 
+    user_id: localStorage.getItem('user_id'),
+    s_puidcd_arr: localStorage.getItem('s_puidcd_arr'),
+    t_puidcd_arr: localStorage.getItem('t_puidcd_arr'),
+    s_psaa_arr: localStorage.getItem('s_psaa_arr'),
+    t_psaa_arr: localStorage.getItem('t_psaa_arr'),
+    s_pucer_arr: localStorage.getItem('s_pucer_arr'),
+    t_pucer_arr: localStorage.getItem('t_pucer_arr'),
+    s_pul_arr: localStorage.getItem('s_pul_arr'),
+    t_pul_arr: localStorage.getItem('t_pul_arr'),
+    udcps_arr: localStorage.getItem('udcps_arr'),
+    udcpt_arr: localStorage.getItem('udcpt_arr'),
+    fcs_arr: localStorage.getItem('fcs_arr'),
+    fct_arr: localStorage.getItem('fcs_arr'),
+    ps_arr: localStorage.getItem('ps_arr'),
+    pt_arr: localStorage.getItem('pt_arr') 
+  },
+  complete: function (response) {
+    console.log(response.responseText);
+    var data = JSON.parse(response.responseText);
+    if(data['status'] == "ok") {
+      window.location.href="http://localhost/Simbahayan/student-official/php/kra3.php" 
+    } else {
+      alert("Unknown error occured. Please try again.")
+    }
   }
+})
 
-
-
+  }
 </script>

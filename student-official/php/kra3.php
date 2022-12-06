@@ -313,48 +313,25 @@
         </div>
       </div>
       <div class="button-wrapper">
-        <button onclick="kra3_Savebtn()" type="button" class="btn btn-warning">Save</button>
-        <a class="btn btn-dark" href="kra3-next.php" role="button">Next</a>
+        <button onclick="kra3_Nextbtn()" type="button" class="btn btn-dark">Next</button>
       </div>
     </div>
-
-    <!---javascript bootstrap-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
 
 
 <script type="text/javascript">
-  function kra3_Savebtn(){
+  function kra3_Nextbtn(){
     var POs_MM = $("#POs_MM").val();
     var POs_CDAA = $("#POs_CDAA").val();
     var POt_MM = $("#POt_MM").val();
     var POt_CDAA = $("#POt_CDAA").val();
+
+    //array
+    var pos_arr = [POs_MM,POs_CDAA];
+    var pot_arr = [POt_MM,POt_CDAA];
+    localStorage.setItem('pos_arr', pos_arr);
+    localStorage.setItem('pot_arr', pot_arr);
 
 
     var GAs_MM = $("#GAs_MM").val();
@@ -362,11 +339,24 @@
     var GAt_MM = $("#GAt_MM").val();
     var GAt_CDAA = $("#GAt_CDAA").val();
 
+    //array
+    var gas_arr = [GAs_MM,GAs_CDAA];
+    var gat_arr = [GAt_MM,GAt_CDAA];
+    localStorage.setItem('gas_arr', gas_arr);
+    localStorage.setItem('gat_arr', gat_arr);
+
+
 
     var NGOs_MM = $("#NGOs_MM").val();
     var NGOs_CDAA = $("#NGOs_CDAA").val();
     var NGOt_MM = $("#NGOt_MM").val();
     var NGOt_CDAA = $("#NGOt_CDAA").val();
+
+    //array
+    var ngos_arr = [NGOs_MM,NGOs_CDAA];
+    var ngot_arr = [NGOt_MM,NGOt_CDAA];
+    localStorage.setItem('ngos_arr', ngos_arr);
+    localStorage.setItem('ngot_arr', ngot_arr);
 
 
     var BEIs_MM = $("#BEIs_MM").val();
@@ -374,8 +364,13 @@
     var BEIt_MM = $("#BEIt_MM").val();
     var BEIt_CDAA = $("#BEIt_CDAA").val();
 
+    //array
+    var beis_arr = [BEIs_MM,BEIs_CDAA];
+    var beit_arr = [BEIt_MM,BEIt_CDAA];
+    localStorage.setItem('beis_arr', beis_arr);
+    localStorage.setItem('beit_arr', beit_arr);
+
+      window.location.href="http://localhost/Simbahayan/student-official/php/kra3-next.php"
   }
-
-
 
 </script>

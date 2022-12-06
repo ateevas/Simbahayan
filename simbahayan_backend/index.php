@@ -11,6 +11,126 @@ if(isset($_POST["tag"])) {	//POST
 }
 
 switch ($tag) {
+case 'save_kra3':
+		$query="INSERT INTO kra3 SET
+		kra_status=?,
+		user_id=?,
+		pos_arr=?,
+		pot_arr=?,
+		gas_arr=?,
+		gat_arr=?,
+		ngos_arr=?,
+		ngot_arr=?,
+		beis_arr=?,
+		beit_arr=?,
+		lheis_arr=?,
+		lheit_arr=?,
+		iheis_arr=?,
+		iheit_arr=?,
+		cbos_arr=?,
+		cbot_arr=?,
+		pbos_arr=?,
+		pbot_arr=?,
+		tccs_arr=?,
+		tcct_arr=?"; 
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([
+			"0",
+			$_POST['user_id'],
+			json_encode(array($_POST['pos_arr'])), 
+			json_encode(array($_POST['pot_arr'])),
+			json_encode(array($_POST['gas_arr'])),
+			json_encode(array($_POST['gat_arr'])),
+			json_encode(array($_POST['ngos_arr'])),
+			json_encode(array($_POST['ngot_arr'])),
+			json_encode(array($_POST['beis_arr'])),
+			json_encode(array($_POST['beit_arr'])),
+			json_encode(array($_POST['lheis_arr'])),
+			json_encode(array($_POST['lheit_arr'])),
+			json_encode(array($_POST['iheis_arr'])),
+			json_encode(array($_POST['iheit_arr'])),
+			json_encode(array($_POST['cbos_arr'])),
+			json_encode(array($_POST['cbot_arr'])), 
+			json_encode(array($_POST['pbos_arr'])),
+			json_encode(array($_POST['pbot_arr'])), 
+			json_encode(array($_POST['tccs_arr'])),
+			json_encode(array($_POST['tcct_arr'])), 
+		])) {
+
+
+			$query="INSERT INTO tbl_kra_submission SET 
+			kra_status=?,
+			user_id=?,
+			kra1_sub=?,
+			kra2_sub=?,
+			kra3_sub=?
+			";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute(["1",$_POST['user_id'],"1","1","1"])) {
+
+			echo json_encode([
+				"status" => "ok",
+
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	} else{
+			echo json_encode([
+				"status" => "error"
+				]);
+	}
+	break;
+
+	case 'save_kra2':
+		$query="INSERT INTO kra2 SET
+			kra_status=?,
+			user_id=?,
+			s_puidcd_arr=?,
+			t_puidcd_arr=?,
+			s_psaa_arr=?,
+			t_psaa_arr=?,
+			s_pucer_arr=?,
+			t_pucer_arr=?,
+			s_pul_arr=?,
+			t_pul_arr=?,
+			udcps_arr=?,
+			udcpt_arr=?,
+			fcs_arr=?,
+			fct_arr=?,
+			ps_arr=?,
+			pt_arr=?"; 
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([
+			"0",
+			$_POST['user_id'],
+			json_encode(array($_POST['s_puidcd_arr'])), 
+			json_encode(array($_POST['t_puidcd_arr'])),
+			json_encode(array($_POST['s_psaa_arr'])),
+			json_encode(array($_POST['t_psaa_arr'])),
+			json_encode(array($_POST['s_pucer_arr'])),
+			json_encode(array($_POST['t_pucer_arr'])),
+			json_encode(array($_POST['s_pul_arr'])),
+			json_encode(array($_POST['t_pul_arr'])),
+			json_encode(array($_POST['udcps_arr'])),
+			json_encode(array($_POST['udcpt_arr'])),
+			json_encode(array($_POST['fcs_arr'])),
+			json_encode(array($_POST['fct_arr'])),
+			json_encode(array($_POST['ps_arr'])),
+			json_encode(array($_POST['pt_arr'])), 
+		])) {
+			echo json_encode([
+				"status" => "ok",
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+
 	case 'save_kra1':
 		$query="INSERT INTO kra1 SET
 			kra_status=?,

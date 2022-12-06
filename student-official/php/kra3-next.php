@@ -390,9 +390,8 @@
 
       <div class="button-wrapper">
         <a class="btn btn-dark" href="kra3.php" role="button">Prev</a>
-        <button type="button" class="btn btn-warning">Save</button>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Submit</button>
+        <button type="button" class="btn btn-warning" onclick="kra3Next_yes()" >Submit</button>
 
         <!-- Modal -->
         <div
@@ -414,41 +413,13 @@
               <div class="modal-body">Are you sure you want to submit report?</div>
               <div class="modal-footer d-flex justify-content-between">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                <button onclick="kra3Next_yes()" type="button" class="btn btn-warning">Yes</button>
+                <button type="button" class="btn btn-warning">Yes</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!---javascript bootstrap-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
 
@@ -459,11 +430,25 @@
     var LHEIt_MM = $("#LHEIt_MM").val();
     var LHEIt_CDAA = $("#LHEIt_CDAA").val();
 
+    //array
+    var lheis_arr = [LHEIs_MM,LHEIs_CDAA];
+    var lheit_arr = [LHEIt_MM,LHEIt_CDAA];
+    localStorage.setItem('lheis_arr', lheis_arr);
+    localStorage.setItem('lheit_arr', lheit_arr);
+
+
 
     var IHEIs_MM = $("#IHEIs_MM").val(); //International Higher
     var IHEIs_CDAA = $("#IHEIs_CDAA").val();
     var IHEIt_MM = $("#IHEIt_MM").val();
     var IHEIt_CDAA = $("#IHEIt_CDAA").val();
+
+    //array
+    var iheis_arr = [IHEIs_MM,IHEIs_CDAA];
+    var iheit_arr = [IHEIt_MM,IHEIt_CDAA];
+    localStorage.setItem('iheis_arr', iheis_arr);
+    localStorage.setItem('iheit_arr', iheit_arr);
+
 
 
     var CBOs_MM = $("#CBOs_MM").val(); //Faith based
@@ -471,11 +456,25 @@
     var CBOt_MM = $("#CBOt_MM").val();
     var CBOt_CDAA = $("#CBOt_CDAA").val();
 
+    //array
+    var cbos_arr = [CBOs_MM,CBOs_CDAA];
+    var cbot_arr = [CBOt_MM,CBOt_CDAA];
+    localStorage.setItem('cbos_arr', cbos_arr);
+    localStorage.setItem('cbot_arr', cbot_arr);
+
+
 
     var PBOs_MM = $("#PBOs_MM").val();// Prof. Business org
     var PBOs_CDAA = $("#PBOs_CDAA").val();
     var PBOt_MM = $("#PBOt_MM").val();
     var PBOt_CDAA = $("#PBOt_CDAA").val();
+
+    //array
+    var pbos_arr = [PBOs_MM,PBOs_CDAA];
+    var pbot_arr = [PBOt_MM,PBOt_CDAA];
+    localStorage.setItem('pbos_arr', pbos_arr);
+    localStorage.setItem('pbot_arr', pbot_arr);
+
 
 
     var TCCs_MM = $("#TCCs_MM").val(); //Training Courses
@@ -483,8 +482,51 @@
     var TCCt_MM = $("#TCCt_MM").val();
     var TCCt_CDAA = $("#TCCt_CDAA").val();
 
+    //array
+    var tccs_arr = [TCCs_MM,TCCs_CDAA];
+    var tcct_arr = [TCCt_MM,TCCt_CDAA];
+    localStorage.setItem('tccs_arr', tccs_arr);
+    localStorage.setItem('tcct_arr', tcct_arr);
+
+
+
+$.ajax({
+  url: url,
+  type: "POST",
+  data: {
+    csrf_token: "{{ csrf_token() }}",
+    tag: "save_kra3", 
+    user_id: localStorage.getItem('user_id'),
+    pos_arr: localStorage.getItem('pos_arr'),
+    pot_arr: localStorage.getItem('pot_arr'),
+    gas_arr: localStorage.getItem('gas_arr'),
+    gat_arr: localStorage.getItem('gat_arr'),
+    ngos_arr: localStorage.getItem('ngos_arr'),
+    ngot_arr: localStorage.getItem('ngot_arr'),
+    beis_arr: localStorage.getItem('beis_arr'),
+    beit_arr: localStorage.getItem('beit_arr'),
+    lheis_arr: localStorage.getItem('lheis_arr'),
+    lheit_arr: localStorage.getItem('lheit_arr'),
+    iheis_arr: localStorage.getItem('iheis_arr'),
+    iheit_arr: localStorage.getItem('iheit_arr'),
+    cbos_arr: localStorage.getItem('cbos_arr'),
+    cbot_arr: localStorage.getItem('cbot_arr'),
+    pbos_arr: localStorage.getItem('pbos_arr'),
+    pbot_arr: localStorage.getItem('pbot_arr'),
+    tccs_arr: localStorage.getItem('tccs_arr'),
+    tcct_arr: localStorage.getItem('tcct_arr')
+  },
+  complete: function (response) {
+    console.log(response.responseText);
+    var data = JSON.parse(response.responseText);
+    if(data['status'] == "ok") {
+      window.location.href="http://localhost/Simbahayan/student-official/php/profile.php" 
+    } else {
+      alert("Unknown error occured. Please try again.")
+    }
   }
+})
 
-
+  }
 
 </script>

@@ -28,7 +28,6 @@
 					<h5 class="card-title">KRA 2</h5>
 					<p class="card-text">Thomasian engagement as agents of social transformation</p>
 					<br />
-					<a href="/student-official/html/kra2.html">Go</a>
 				</div>
 			</div>
 			<div class="card">
@@ -36,7 +35,6 @@
 				<div class="card-body">
 					<h5 class="card-title">KRA 3</h5>
 					<p class="card-text">Dynamic Community Development External Partnerships and Networks</p>
-					<a href="/student-official/html//kra3.html">Go</a>
 				</div>
 			</div>
 		</div>
