@@ -426,18 +426,26 @@
 </html>
 <script type="text/javascript">
 function btnSave() {
-//Status & Target in Cultural Life
+//Status in Cultural Life
 var cahds_CHP = $('#cahds_CHP').val(); 
 var cahds_CIS = $('#cahds_CIS').val();
 var cahds_PM = $('#cahds_PM').val();
+//Target in Cultural Life
 var cahdt_CHP = $('#cahdt_CHP').val();
 var cahdt_CIS = $('#cahdt_CIS').val();
 var cahdt_PM = $('#cahdt_PM').val();
+
 //array
 var cahds_arr=[cahds_CHP, cahds_CIS, cahds_PM];
+
 var cahdt_arr=[cahdt_CHP, cahdt_CIS, cahdt_PM];
+
+
 localStorage.setItem('cahds_arr', cahds_arr);
 localStorage.setItem('cahdt_arr', cahdt_arr);
+
+
+
 //Status & Target in Sports for all
 var sds_SDP = $('#sds_SDP').val(); 
 var sds_CIS = $('#sds_CIS').val();

@@ -357,6 +357,15 @@
     var POt_CDAA = $("#POt_CDAA").val();
 
 
+    var pos_arr = [POs_MM,POs_CDAA];
+    var pot_arr = [POt_MM,POt_CDAA];
+    
+
+    // SETTING IT TO LOCAL STORAGE
+    localStorage.setItem("pos_arr", pos_arr);
+    localStorage.setItem("pot_arr", pot_arr);
+
+
     var GAs_MM = $("#GAs_MM").val();
     var GAs_CDAA = $("#GAs_CDAA").val();
     var GAt_MM = $("#GAt_MM").val();
