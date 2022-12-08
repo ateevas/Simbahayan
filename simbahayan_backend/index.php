@@ -11,6 +11,43 @@ if(isset($_POST["tag"])) {	//POST
 }
 
 switch ($tag) {
+	case 'submit_report':
+		$query="UPDATE tbl_kra_submission SET kra_status='2', coor_id=? WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['my_id'],$_GET['user_id']])) {
+			echo json_encode([
+				"status" => "ok"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'approve_kra3coordinator':
+		$query="UPDATE tbl_kra_submission SET kra3_sub='2' WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			echo json_encode([
+				"status" => "updated"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'get_kra3datafromuserid':
+		$query="SELECT * FROM kra3 WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
 	case 'approve_kra2coordinator':
 		$query="UPDATE tbl_kra_submission SET kra2_sub='2' WHERE user_id=?";
 		$stmt=$pdo->prepare($query);
@@ -84,7 +121,9 @@ switch ($tag) {
 						case '1':
 							$status="<span class='badge bg-success'>Submitted</span>";
 						break;
-						
+						case '2':
+							$status="<span class='badge bg-success'>Submitted to Simbahayan</span>";
+						break;
 						default:
 							$status="<span class='badge bg-success'>unknown</span>";
 						break;
@@ -203,7 +242,9 @@ switch ($tag) {
 			$_POST['tccs_arr'],
 			$_POST['tcct_arr'], 
 		])) {
-
+			echo json_encode([
+				"status" => "ok"
+				]);
 	} else{
 			echo json_encode([
 				"status" => "error"

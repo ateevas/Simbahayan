@@ -63,13 +63,13 @@
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
+						<h5 class="modal-title" id="exampleModalLongTitle">Annual Report</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">Are you sure you want to submit report?</div>
 					<div class="modal-footer d-flex justify-content-between">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-						<button type="button" class="btn btn-warning" onclick="submit_allkra()">Yes</button>
+						<button type="button" class="btn btn-warning" onclick="submit_report()">Yes</button>
 					</div>
 				</div>
 			</div>
@@ -78,6 +78,30 @@
 </html>
 <script type="text/javascript">
 	check_coordinatorsubmission();
+		function submit_report() {
+		let my_id = localStorage.getItem("user_id");
+		let user_id = localStorage.getItem("selected_user_id");
+		$.ajax({
+		  url: url,
+		  type: "GET",
+		  data: {
+		    csrf_token: "{{ csrf_token() }}",
+		    tag: "submit_report", 
+		    my_id: my_id,
+		    user_id: user_id,
+		  },
+		  complete: function (response) {
+		    var data = JSON.parse(response.responseText);
+		    if(data['status'] == "ok") {
+		    	alert('successfully updated!');
+		    	window.location.href="http://localhost/Simbahayan/coordinator/php/pending.php";
+		    } else {
+		    	alert('unknown error occured');
+		    	location.reload();
+		    }
+		  }
+		})
+	}
 	function check_coordinatorsubmission() {
 		let user_id = localStorage.getItem("selected_user_id");
 		$.ajax({
@@ -112,6 +136,12 @@
 				} else {
 					$('.kra3badge').addClass("bg-warning");
 					$('.kra3badge').html("Pending");
+				}
+
+				if(data[0]['kra_status'] == "1" && data[0]['kra1_sub'] == "2" && data[0]['kra2_sub'] == "2" && data[0]['kra3_sub'] == "2") {
+					$('#submit_button').removeClass("disabled");
+			    	$('#submit_button').removeAttr("disabled");
+			    	$('#submit_button').removeAttr("readonly");
 				}
 			}
 		})

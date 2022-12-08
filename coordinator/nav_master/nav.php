@@ -7,80 +7,59 @@
 		</a>
 	</div>
 </nav>
-
-
-
-    <!-- Navigation bar -->
+<!-- Navigation bar -->
 <div class="navigation-container">
-    <div class="navigation">
-    <ul
-      class="nav nav justify-content-center  bg-warning mb-3 rounded mt-3"
-      id="pills-tab"
-      role="tablist"
-    >
-    <li class="nav-item active">
-      <a class="nav-link  text-dark" href="profile.php">Profile <span class="sr-only"></span></a>
-    </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="annual.php" aria-expanded="false">
-            Annual Report Approval
-          </a>
-        </li>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle text-dark"
-          href="#"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Account
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-     
-          <a class="dropdown-item" href="changepass.php">Change Password</a>
-          <a class="dropdown-item" href="manage.php">Manage Students</a>
-      
-        </div>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link  text-dark" href="contact.php">Contact <span class="sr-only"></span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link  text-dark" href="login.php">Logout <span class="sr-only"></span></a>
-      </li>
-     
-    </ul>
-    <div class="tab-content" id="pills-tabContent">
-      <div
-        class="tab-pane fade show active"
-        id="pills-home"
-        role="tabpanel"
-        aria-labelledby="pills-home-tab"
-      >
-      
-      </div>
-      <div
-        class="tab-pane fade"
-        id="pills-profile"
-        role="tabpanel"
-        aria-labelledby="pills-profile-tab"
-      >
-      
-      </div>
-      <div
-        class="tab-pane fade"
-        id="pills-contact"
-        role="tabpanel"
-        aria-labelledby="pills-contact-tab"
-      >
-     
-      </div>
-    </div>
-  </div>
+	<div class="navigation">
+		<ul class="nav nav justify-content-center  bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
+			<li class="nav-item active">
+				<a class="nav-link  text-dark" href="profile.php">Profile <span class="sr-only"></span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link text-dark" href="annual.php" aria-expanded="false">
+					Annual Report Approval
+				</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Account
+				</a>
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<li><a class="dropdown-item" href="changepass.php">Change Password</a></li>
+					<li><a class="dropdown-item" href="manage.php">Manage Student</a></li>
+				</ul>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link  text-dark" href="contact.php">Contact <span class="sr-only"></span></a>
+			</li>
+			<li class="nav-item active">
+				<button data-bs-toggle="modal" data-bs-target="#logout_modal" class="btn btn-link text-dark" style="text-decoration: none; box-shadow: none;">Logout</button>
+			</li>
+		</ul>
+	</div>
 </div>
-  <!-- Navigation bar end S-->
+<!-- Navigation bar end S-->
+
+<!-- Modal -->
+<div class="modal fade" id="logout_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div>
+					<label for="message-text" class="col-form-label"><b>Are you sure you want to logout?</b></label>
+				</div>
+				<div class="d-flex justify-content-end">
+					<button type="button" class="btn btn-light mx-3" data-bs-dismiss="modal">No</button>
+					<button type="button" class="btn btn-danger" onclick="clear_all()">Yes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	function clear_all() {
+		localStorage.clear();
+		window.location.href="http://localhost/Simbahayan/login-page/php/login.php";
+	}
+</script>
