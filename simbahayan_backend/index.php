@@ -11,6 +11,102 @@ if(isset($_POST["tag"])) {	//POST
 }
 
 switch ($tag) {
+	case 'submit_report':
+		$query="UPDATE tbl_kra_submission SET kra_status='2', coor_id=? WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['my_id'],$_GET['user_id']])) {
+			echo json_encode([
+				"status" => "ok"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'approve_kra3coordinator':
+		$query="UPDATE tbl_kra_submission SET kra3_sub='2' WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			echo json_encode([
+				"status" => "updated"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'get_kra3datafromuserid':
+		$query="SELECT * FROM kra3 WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'approve_kra2coordinator':
+		$query="UPDATE tbl_kra_submission SET kra2_sub='2' WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			echo json_encode([
+				"status" => "updated"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'get_kra2datafromuserid':
+		$query="SELECT * FROM kra2 WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'check_coordinatorsubmission':
+		$query="SELECT * FROM tbl_kra_submission WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'approve_kra1coordinator':
+		$query="UPDATE tbl_kra_submission SET kra1_sub='2' WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			echo json_encode([
+				"status" => "updated"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'get_kra1datafromuserid':
+		$query="SELECT * FROM kra1 WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
 	case 'get_allsubmittedkra':
 		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_users.id_num, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college";
 		$stmt=$pdo->prepare($query);
@@ -25,7 +121,9 @@ switch ($tag) {
 						case '1':
 							$status="<span class='badge bg-success'>Submitted</span>";
 						break;
-						
+						case '2':
+							$status="<span class='badge bg-success'>Submitted to Simbahayan</span>";
+						break;
 						default:
 							$status="<span class='badge bg-success'>unknown</span>";
 						break;
@@ -125,26 +223,28 @@ switch ($tag) {
 		if($stmt->execute([
 			"0",
 			$_POST['user_id'],
-			json_encode(array($_POST['pos_arr'])), 
-			json_encode(array($_POST['pot_arr'])),
-			json_encode(array($_POST['gas_arr'])),
-			json_encode(array($_POST['gat_arr'])),
-			json_encode(array($_POST['ngos_arr'])),
-			json_encode(array($_POST['ngot_arr'])),
-			json_encode(array($_POST['beis_arr'])),
-			json_encode(array($_POST['beit_arr'])),
-			json_encode(array($_POST['lheis_arr'])),
-			json_encode(array($_POST['lheit_arr'])),
-			json_encode(array($_POST['iheis_arr'])),
-			json_encode(array($_POST['iheit_arr'])),
-			json_encode(array($_POST['cbos_arr'])),
-			json_encode(array($_POST['cbot_arr'])), 
-			json_encode(array($_POST['pbos_arr'])),
-			json_encode(array($_POST['pbot_arr'])), 
-			json_encode(array($_POST['tccs_arr'])),
-			json_encode(array($_POST['tcct_arr'])), 
+			$_POST['pos_arr'], 
+			$_POST['pot_arr'],
+			$_POST['gas_arr'],
+			$_POST['gat_arr'],
+			$_POST['ngos_arr'],
+			$_POST['ngot_arr'],
+			$_POST['beis_arr'],
+			$_POST['beit_arr'],
+			$_POST['lheis_arr'],
+			$_POST['lheit_arr'],
+			$_POST['iheis_arr'],
+			$_POST['iheit_arr'],
+			$_POST['cbos_arr'],
+			$_POST['cbot_arr'], 
+			$_POST['pbos_arr'],
+			$_POST['pbot_arr'], 
+			$_POST['tccs_arr'],
+			$_POST['tcct_arr'], 
 		])) {
-
+			echo json_encode([
+				"status" => "ok"
+				]);
 	} else{
 			echo json_encode([
 				"status" => "error"
@@ -174,20 +274,20 @@ switch ($tag) {
 		if($stmt->execute([
 			"0",
 			$_POST['user_id'],
-			json_encode(array($_POST['s_puidcd_arr'])), 
-			json_encode(array($_POST['t_puidcd_arr'])),
-			json_encode(array($_POST['s_psaa_arr'])),
-			json_encode(array($_POST['t_psaa_arr'])),
-			json_encode(array($_POST['s_pucer_arr'])),
-			json_encode(array($_POST['t_pucer_arr'])),
-			json_encode(array($_POST['s_pul_arr'])),
-			json_encode(array($_POST['t_pul_arr'])),
-			json_encode(array($_POST['udcps_arr'])),
-			json_encode(array($_POST['udcpt_arr'])),
-			json_encode(array($_POST['fcs_arr'])),
-			json_encode(array($_POST['fct_arr'])),
-			json_encode(array($_POST['ps_arr'])),
-			json_encode(array($_POST['pt_arr'])), 
+			$_POST['s_puidcd_arr'], 
+			$_POST['t_puidcd_arr'],
+			$_POST['s_psaa_arr'],
+			$_POST['t_psaa_arr'],
+			$_POST['s_pucer_arr'],
+			$_POST['t_pucer_arr'],
+			$_POST['s_pul_arr'],
+			$_POST['t_pul_arr'],
+			$_POST['udcps_arr'],
+			$_POST['udcpt_arr'],
+			$_POST['fcs_arr'],
+			$_POST['fct_arr'],
+			$_POST['ps_arr'],
+			$_POST['pt_arr'], 
 		])) {
 			echo json_encode([
 				"status" => "ok",
@@ -228,26 +328,26 @@ switch ($tag) {
 		if($stmt->execute([
 			"0",
 			$_POST['user_id'],
-			json_encode(array($_POST['hs_arr'])),
-			json_encode(array($_POST['ht_arr'])),
-			json_encode(array($_POST['es_arr'])),
-			json_encode(array($_POST['et_arr'])),
-			json_encode(array($_POST['ggs_arr'])),
-			json_encode(array($_POST['ggt_arr'])),
-			json_encode(array($_POST['ejs_arr'])),
-			json_encode(array($_POST['ejt_arr'])),
-			json_encode(array($_POST['cls_arr'])),
-			json_encode(array($_POST['clt_arr'])),
-			json_encode(array($_POST['cahds_arr'])),
-			json_encode(array($_POST['cahdt_arr'])),
-			json_encode(array($_POST['sds_arr'])),
-			json_encode(array($_POST['sdt_arr'])),
-			json_encode(array($_POST['drrms_arr'])),
-			json_encode(array($_POST['drrmt_arr'])),
-			json_encode(array($_POST['fhds_arr'])),
-			json_encode(array($_POST['fhdt_arr'])),
-			json_encode(array($_POST['cofs_arr'])),
-			json_encode(array($_POST['coft_arr'])),
+			$_POST['hs_arr'],
+			$_POST['ht_arr'],
+			$_POST['es_arr'],
+			$_POST['et_arr'],
+			$_POST['ggs_arr'],
+			$_POST['ggt_arr'],
+			$_POST['ejs_arr'],
+			$_POST['ejt_arr'],
+			$_POST['cls_arr'],
+			$_POST['clt_arr'],
+			$_POST['cahds_arr'],
+			$_POST['cahdt_arr'],
+			$_POST['sds_arr'],
+			$_POST['sdt_arr'],
+			$_POST['drrms_arr'],
+			$_POST['drrmt_arr'],
+			$_POST['fhds_arr'],
+			$_POST['fhdt_arr'],
+			$_POST['cofs_arr'],
+			$_POST['coft_arr']
 		])) {
 			echo json_encode([
 				"status" => "ok",

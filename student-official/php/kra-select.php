@@ -54,29 +54,29 @@
 		<div class="d-flex flex-row-reverse bd-highlight">
 			<button type="button" data-bs-toggle="modal" data-bs-target="#approval" id="submit_button" class="btn btn-warning disabled" disabled="disabled" readonly="true" >Submit</button>
 		</div>
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="approval"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalCenterTitle"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
-                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">Are you sure you want to submit report?</div>
-              <div class="modal-footer d-flex justify-content-between">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                <button type="button" class="btn btn-warning" onclick="submit_allkra()">Yes</button>
-              </div>
-            </div>
-          </div>
-        </div>
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="approval"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="exampleModalCenterTitle"
+			aria-hidden="true"
+			>
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">Are you sure you want to submit report?</div>
+					<div class="modal-footer d-flex justify-content-between">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+						<button type="button" class="btn btn-warning" onclick="submit_allkra()">Yes</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
 <script type="text/javascript">
@@ -101,11 +101,11 @@
 		    	$('.kra1badge').addClass("bg-warning");
 		    	$('.kra1badge').html("Not yet saved.");
 		    }
+		    
 		    if(data[0]['kra2'] != "0") {
 		    	$('.kra2badge').addClass("bg-success");
 		    	$('.kra2badge').html("Saved");
 		    } else {
-		    	alert("asasd")
 		    	$('.kra2badge').addClass("bg-warning");
 		    	$('.kra2badge').html("Not yet saved.");
 		    }

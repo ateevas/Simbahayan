@@ -1,74 +1,63 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Community Development Report</title>
-
-    <?php 
-    	include('../cdn/cdn.php');
-    ?>
-
-  </head>
-  <body>
-
-	<?php 
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Community Development Report</title>
+		<?php
+		include('../cdn/cdn.php');
+		?>
+	</head>
+	<body>
+		<?php
 		include('../nav_master/nav.php');
-	?>
-
-    <div class="title-wrapper m-2">
-      <h3>Community Development Report</h3>
-    </div>
-    <div class="kra-1">KRA 2: Thomasian engagement as agents of social transformation</div>
-    <!------Accordion------------------------->
-    <br />
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-      <!--Status and Target NO. -->
-      <div class="row">
-        <div class="col-6 col-md-4"></div>
-        <div class="col-6 col-md-4"><h4>Status No.</h4></div>
-        <div class="col-6 col-md-4"><h4>Target No.</h4></div>
-      </div>
-      <br />
-      <!--UCDP Projects (Not Dropdown) -->
-      <div class="row">
-        <div class="col-6 col-md-4" id="ucdp"><h3>Projects under Institutional Development for Community Development</h3>
-        </div>
-        <div class="col-6 col-md-4"><input id="s_PUIDCD" placeholder="0" type="number"/></div>
-        <div class="col-6 col-md-3"><input id="t_PUIDCD" placeholder="0" type="number"/></div>
-      </div>
-      <hr/>
-
-      <div class="row">
-        <div class="col-6 col-md-4" id="ucdp"><h3>Projects under Social Awareness and Advocacy</h3></div>
-        <div class="col-6 col-md-4"><input id="s_PSAA" placeholder="0" type="number"/></div>
-        <div class="col-6 col-md-3"><input id="t_PSAA" placeholder="0" type="number"/></div>
-      </div>
-      <hr />
-      <div class="row">
-        <div class="col-6 col-md-4" id="ucdp"><h3>Projects Under Community-engaged research</h3></div>
-        <div class="col-6 col-md-4"><input id="s_PUCER" placeholder="0" type="number"/></div>
-        <div class="col-6 col-md-3"><input id="t_PUCER" placeholder="0" type="number" /></div>
-      </div>
-      <hr />
-      <div class="row">
-        <div class="col-6 col-md-4" id="ucdp"><h3>Projects Underservice-learning</h3></div>
-        <div class="col-6 col-md-4"><input id="s_PUL" placeholder="0" type="number"/></div>
-        <div class="col-6 col-md-3"><input id="t_PUL" placeholder="0" type="number"/></div>
-      </div>
-
-      <!-------->
-
-      <div class="button-wrapper">
-        <button onclick="kra2_Nextbtn()" type="button" class="btn btn-dark">Next</button>
-
-      </div>
-    </div>
-
-  </body>
+		?>
+		<div class="title-wrapper m-2">
+			<h3>Community Development Report</h3>
+		</div>
+		<div class="kra-1">KRA 2: Thomasian engagement as agents of social transformation</div>
+		<!-- Accordion -->
+		<br />
+		<div class="accordion accordion-flush" id="accordionFlushExample">
+			<!--Status and Target NO. -->
+			<div class="row">
+				<div class="col-6 col-md-4"></div>
+				<div class="col-6 col-md-4"><h4>Status No.</h4></div>
+				<div class="col-6 col-md-4"><h4>Target No.</h4></div>
+			</div>
+			<br />
+			<!--UCDP Projects (Not Dropdown) -->
+			<div class="row">
+				<div class="col-6 col-md-4" id="ucdp"><h3>Projects under Institutional Development for Community Development</h3>
+				</div>
+				<div class="col-6 col-md-4"><input id="s_PUIDCD" placeholder="0" type="number"/></div>
+				<div class="col-6 col-md-3"><input id="t_PUIDCD" placeholder="0" type="number"/></div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="col-6 col-md-4" id="ucdp"><h3>Projects under Social Awareness and Advocacy</h3></div>
+				<div class="col-6 col-md-4"><input id="s_PSAA" placeholder="0" type="number"/></div>
+				<div class="col-6 col-md-3"><input id="t_PSAA" placeholder="0" type="number"/></div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="col-6 col-md-4" id="ucdp"><h3>Projects Under Community-engaged research</h3></div>
+				<div class="col-6 col-md-4"><input id="s_PUCER" placeholder="0" type="number"/></div>
+				<div class="col-6 col-md-3"><input id="t_PUCER" placeholder="0" type="number" /></div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="col-6 col-md-4" id="ucdp"><h3>Projects Underservice-learning</h3></div>
+				<div class="col-6 col-md-4"><input id="s_PUL" placeholder="0" type="number"/></div>
+				<div class="col-6 col-md-3"><input id="t_PUL" placeholder="0" type="number"/></div>
+			</div>
+			<div class="button-wrapper">
+				<button onclick="kra2_Nextbtn()" type="button" class="btn btn-dark">Next</button>
+			</div>
+		</div>
+	</body>
 </html>
-
 
 <script type="text/javascript"> 
 function kra2_Nextbtn(){

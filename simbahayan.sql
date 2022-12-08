@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2022 at 11:14 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 7.4.30
+-- Generation Time: Dec 08, 2022 at 03:09 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -53,6 +53,13 @@ CREATE TABLE `kra1` (
   `coft_arr` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `kra1`
+--
+
+INSERT INTO `kra1` (`id`, `kra_status`, `user_id`, `hs_arr`, `ht_arr`, `es_arr`, `et_arr`, `ggs_arr`, `ggt_arr`, `ejs_arr`, `ejt_arr`, `cls_arr`, `clt_arr`, `cahds_arr`, `cahdt_arr`, `sds_arr`, `sdt_arr`, `drrms_arr`, `drrmt_arr`, `fhds_arr`, `fhdt_arr`, `cofs_arr`, `coft_arr`) VALUES
+(6, 1, 11, '1,1,1', '1,1,1', '1,1,1', '1,1,1', '1,1,1', '1,1,1', '1,1,1', '1,1,1', '1,1,1', '1,1,1', '1,1,1', '1,1,1', ',,', ',,', '1,1,1', '1,1,1', '1,1,1', '1,1,1', '1,1,1', '1,1,1');
+
 -- --------------------------------------------------------
 
 --
@@ -76,8 +83,15 @@ CREATE TABLE `kra2` (
   `fcs_arr` text NOT NULL,
   `fct_arr` text NOT NULL,
   `ps_arr` text NOT NULL,
-  `pc_arr` text NOT NULL
+  `pt_arr` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kra2`
+--
+
+INSERT INTO `kra2` (`id`, `kra_status`, `user_id`, `s_puidcd_arr`, `t_puidcd_arr`, `s_psaa_arr`, `t_psaa_arr`, `s_pucer_arr`, `t_pucer_arr`, `s_pul_arr`, `t_pul_arr`, `udcps_arr`, `udcpt_arr`, `fcs_arr`, `fct_arr`, `ps_arr`, `pt_arr`) VALUES
+(13, 1, 11, '1', '1', '1', '1', '1', '1', '1', '1', '1,1,1,1,1,1', '1,1,1,1,1,1', '1,1', '1,1', '1,1', '1,1');
 
 -- --------------------------------------------------------
 
@@ -106,8 +120,15 @@ CREATE TABLE `kra3` (
   `pbos_arr` text NOT NULL,
   `pbot_arr` text NOT NULL,
   `tccs_arr` text NOT NULL,
-  `tcct_arr` date NOT NULL
+  `tcct_arr` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kra3`
+--
+
+INSERT INTO `kra3` (`id`, `kra_status`, `user_id`, `pos_arr`, `pot_arr`, `gas_arr`, `gat_arr`, `ngos_arr`, `ngot_arr`, `beis_arr`, `beit_arr`, `lheis_arr`, `lheit_arr`, `iheis_arr`, `iheit_arr`, `cbos_arr`, `cbot_arr`, `pbos_arr`, `pbot_arr`, `tccs_arr`, `tcct_arr`) VALUES
+(10, 1, 11, '1,1', '1,1', '1,1', '1,1', '1,1', '1,1', '1,1', '1,1', '1,1', '1,1', '1,1', '1,1', '1,1', '1,1', '1,1', '1,1', '1,1', '1,1');
 
 -- --------------------------------------------------------
 
@@ -147,6 +168,30 @@ INSERT INTO `tbl_colleges` (`id`, `college_name`, `date_added`) VALUES
 (19, 'Institute of Religion', '2022-11-30 17:00:35'),
 (20, 'Senior High School', '2022-11-30 17:00:35'),
 (21, 'NSTP', '2022-11-30 17:00:35');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_kra_submission`
+--
+
+CREATE TABLE `tbl_kra_submission` (
+  `id` int(11) NOT NULL,
+  `kra_status` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `coor_id` int(11) NOT NULL DEFAULT 0,
+  `kra1_sub` varchar(255) NOT NULL,
+  `kra2_sub` varchar(255) NOT NULL,
+  `kra3_sub` varchar(255) NOT NULL,
+  `date_submitted` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_kra_submission`
+--
+
+INSERT INTO `tbl_kra_submission` (`id`, `kra_status`, `user_id`, `coor_id`, `kra1_sub`, `kra2_sub`, `kra3_sub`, `date_submitted`) VALUES
+(4, 2, 11, 1, '2', '2', '2', '2022-12-08 16:20:58');
 
 -- --------------------------------------------------------
 
@@ -207,6 +252,12 @@ ALTER TABLE `tbl_colleges`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_kra_submission`
+--
+ALTER TABLE `tbl_kra_submission`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
@@ -220,25 +271,31 @@ ALTER TABLE `tbl_users`
 -- AUTO_INCREMENT for table `kra1`
 --
 ALTER TABLE `kra1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `kra2`
 --
 ALTER TABLE `kra2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `kra3`
 --
 ALTER TABLE `kra3`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tbl_colleges`
 --
 ALTER TABLE `tbl_colleges`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `tbl_kra_submission`
+--
+ALTER TABLE `tbl_kra_submission`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_users`

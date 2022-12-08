@@ -15,7 +15,7 @@
     <?php 
       include('../nav_master/nav.php');
     ?>
-
+    
     <div class="welcome-container">
       <div class="welcome-inner">
         <div class="welcome-context">
@@ -92,9 +92,7 @@
 </html>
 <script type="text/javascript">
   get_coordinatorinfo();
-  function goto_kra_select() {
 
-  }
   function get_coordinatorinfo() {
     let user_id=localStorage.getItem('user_id');
      $.ajax({
