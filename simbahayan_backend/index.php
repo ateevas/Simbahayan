@@ -11,6 +11,49 @@ if(isset($_POST["tag"])) {	//POST
 }
 
 switch ($tag) {
+	case 'get_allsubmittedkra':
+		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_users.id_num, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute()) {
+			if($stmt->rowCount() != 0) {
+				$datax=json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+				$datay=json_decode($datax, true);
+				$toecho="";
+				for ($i=0; $i < count($datay); $i++) {
+					$status="";
+					switch ($datay[$i]['kra_status']) {
+						case '1':
+							$status="<span class='badge bg-success'>Submitted</span>";
+						break;
+						
+						default:
+							$status="<span class='badge bg-success'>unknown</span>";
+						break;
+					}
+					$toecho.="<tr>
+						<td style='text-transform: capitalize;'>".$datay[$i]['fname']. " " . $datay[$i]['lname']."</td>
+						<td>".$datay[$i]['college_name']."</td>
+						<td>".$datay[$i]['id_num']."</td>
+						<td>".$datay[$i]['email']."</td>
+						<td>".date('F d, Y h:i a', strtotime($datay[$i]['date_submitted']))."</td>
+						<td>".$status."</td>
+						<td><button class='btn btn-link' data-user_id='".$datay[$i]['user_id']."' onclick='goto_kra_select(this)'>View</button></td>
+					</tr>";
+				}
+				echo $toecho;
+			} else {
+				$toecho="<tr>
+						<td style='text-transform: capitalize;' rowspan='6'>No data available</td>
+					</tr>";
+					echo $toecho;
+			}
+			
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
 	case 'check_krasubmission':
 		$query="SELECT COALESCE(sum(tbl_kra_submission.id), 0) as kra_submit, COALESCE(sum(kra1.id), 0) as kra1, COALESCE(sum(kra2.id), 0) as kra2, COALESCE(sum(kra3.id), 0) as kra3 FROM kra1 LEFT JOIN kra2 ON kra2.user_id=kra1.user_id LEFT JOIN kra3 ON kra3.user_id=kra1.user_id LEFT JOIN tbl_kra_submission ON tbl_kra_submission.user_id=kra1.user_id WHERE kra1.user_id=? LIMIT 1";
 		$stmt=$pdo->prepare($query);
