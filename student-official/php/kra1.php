@@ -375,7 +375,7 @@ var hs_PM = $('#hs_PM').val();
 var ht_HWDP = $('#ht_HWDP').val();
 var ht_CIS = $('#ht_CIS').val();
 var ht_PM = $('#ht_PM').val();
-var hs_arr=[hs_HWDP, hs_CIS, hs_PM];
+var hs_arr=new Array(hs_HWDP, hs_CIS, hs_PM);
 var ht_arr=[ht_HWDP, ht_CIS, ht_PM];
 localStorage.setItem('hs_arr', hs_arr);
 localStorage.setItem('ht_arr', ht_arr);

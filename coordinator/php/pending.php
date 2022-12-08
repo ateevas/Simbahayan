@@ -56,4 +56,8 @@ function get_allsubmittedkra() {
       }
     })
 }
+function goto_kra_select(obj){
+    localStorage.setItem('selected_user_id', $(obj).data('user_id'));
+    window.location.href="http://localhost/Simbahayan/coordinator/php/kra-select.php";
+}
 </script>
