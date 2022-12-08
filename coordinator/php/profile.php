@@ -4,57 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD:CD coordinator UI/html/profile.html
     <title>Profile</title>
-    <link rel="stylesheet" href="/CD coordinator UI/css/profile.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="http://fonts.cdnfonts.com/css/trajan-pro" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Libre+Baskerville&display=swap"
-      rel="stylesheet"
-    />
-=======
-    <title>KRAs and KPIs</title>
     <?php 
       include('../cdn/cdn.php');
     ?>
->>>>>>> 0de7c8dd259124bf66343ad0b43aa4faf5dd6850:coordinator/php/profile.php
+
   </head>
-<<<<<<< HEAD
   <body>
     <?php 
       include('../nav_master/nav.php');
     ?>
-=======
 
-  <body>
-    <nav class="navbar bg-secondary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/CD coordinator UI/html/profile.html">
-          <img
-            src="/CD coordinator UI/pictures/ustlogo.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            class="d-inline-block align-text-middle"
-          />
-          <span>Simbahayan Portal</span>
-        </a>
-      </div>
-    </nav>
->>>>>>> e1d4db5663de5f39e362f8b1e31780846be4110c
-    <!--navigation bar---->
+    <!-- Navigation bar -->
     <div class="navigation-container">
     <div class="navigation">
     <ul
@@ -140,7 +102,9 @@
     </div>
   </div>
 </div>
-  <!-----------------navigation bar end----------->
+  <!-- Navigation bar end S-->
+
+
     <div class="welcome-container">
       <div class="welcome-inner">
         <div class="welcome-context">
@@ -153,7 +117,7 @@
       </div>
     </div>
 
-    <!---bootstrap----->
+    <!-- bootstrap -->
 
     <div
       id="carouselExampleIndicators"
@@ -182,21 +146,20 @@
           aria-label="Slide 3"
         ></button>
       </div>
+
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="/CD coordinator UI/pictures/SIMBAHAYAN-20161208-Cagayan-Relief-06.jpg"
-            class="d-block w-100"
-            alt=""
-          />
+            src="../pictures/SIMBAHAYAN-20161208-Cagayan-Relief-06.jpg" class="d-block w-100" alt="..."/>
         </div>
         <div class="carousel-item">
-          <img src="/CD coordinator UI/pictures/image 6.png" class="d-block w-100" alt="..." />
+          <img src="../pictures/image 6.png" class="d-block w-100" alt="..." />
         </div>
         <div class="carousel-item">
-          <img src="/CD coordinator UI/pictures/image 7.png" class="d-block w-100" alt="..." />
+          <img src="../pictures/image 7.png" class="d-block w-100" alt="..." />
         </div>
       </div>
+      
       <button
         class="carousel-control-prev"
         type="button"

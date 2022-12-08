@@ -16,7 +16,7 @@
   	?>
 
 
-    <!---navigation bar--------------------------------->
+    <!-- navigation bar -->
     <div class="navigation-container">
       <div class="navigation">
       <ul
@@ -128,7 +128,7 @@
           <span aria-hidden="true"><i class="bi bi-x-circle"></i></span>
         </button>
       </div>
-      <div class="modal-body"><!----add content here-->
+      <div class="modal-body"><!-- add content here -->
 
         <div class=" container rounded-3  my-5 bg-white" style="height:auto;">
          
@@ -153,7 +153,7 @@
    </div>
    <script src="/CD coordinator UI/js/add.js"></script>
 
-        <!----up to here-->
+        <!-- up to here-->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -294,8 +294,6 @@
   
   
       <!---javascript bootstrap-->
-      
-      
       <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -324,5 +322,4 @@
     ></script>
   
   </body>
-
   </html>

@@ -5,11 +5,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Account</title>
+
 		<?php 
 			include('../cdn/cdn.php');
 		?>
+
 	</head>
 	<body>
+		
+		<?php 
+			include('../nav_master/nav.php');
+		?>
+
 		<!-- form card change password -->
 		<div class="card card-outline-secondary">
 			<div class="card-header ">

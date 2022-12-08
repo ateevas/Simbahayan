@@ -5,57 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRA SELECT</title>
-<<<<<<< HEAD:CD coordinator UI/html/kra-select.html
-    <link rel="stylesheet" href="/CD coordinator UI/css/kra-select.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="http://fonts.cdnfonts.com/css/trajan-pro" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Libre+Baskerville&display=swap"
-      rel="stylesheet"
-    />
-=======
     <?php 
       include('../cdn/cdn.php');
     ?>
->>>>>>> 0de7c8dd259124bf66343ad0b43aa4faf5dd6850:coordinator/php/kra-select.php
+
   </head>
   <body>
-<<<<<<< HEAD:CD coordinator UI/html/kra-select.html
-    <nav class="navbar bg-secondary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/CD coordinator UI/html/profile.html">
-          <img
-            src="/CD coordinator UI/pictures/ustlogo.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            class="d-inline-block align-text-middle"
-          />
-          <span>Simbahayan Portal</span>
-        </a>
-      </div>
-    </nav>
-=======
+
     <?php 
       include('../nav_master/nav.php');
     ?>
->>>>>>> 0de7c8dd259124bf66343ad0b43aa4faf5dd6850:coordinator/php/kra-select.php
-    <!--navigation bar---->
+
+    <!-- navigation bar -->
     <div class="navigation-container">
       <div class="navigation">
         <ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
           <li class="nav-item active">
             <a class="nav-link text-dark" href="/CD coordinator UI/html/profile.html"
-              >Profile <span class="sr-only"></span
-            ></a>
+              >Profile <span class="sr-only"></span></a>
           </li>
 
           <li class="nav-item dropdown">
@@ -109,7 +77,7 @@
         </div>
       </div>
     </div>
-    <!-----------------navigation bar end----------->
+    <!-- navigation bar end -->
 
     <div class="card-group">
       <div class="card">
@@ -138,32 +106,5 @@
         </div>
       </div>
     </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
