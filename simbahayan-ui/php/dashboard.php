@@ -6,48 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dash board</title>
 
+    <?php 
+      include('../cdn/cdn.php');
+    ?>
 
+</head>
+<body>
 
-
-    <link rel="stylesheet" href="/simbahayan-ui/css/dashboard.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- CSS only -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-
-
-
-
-  </head>
-  <body>
-
-
-
-
-
-    <nav class="navbar bg-secondary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="profile.html">
-          <img
-            src="ustlogo.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            class="d-inline-block align-text-middle"
-          />
-          <span>Simbahayan Portal</span>
-        </a>
-      </div>
-    </nav>
-
-
+  <?php 
+    include('../nav_master/nav.php');
+  ?>
 
 
 
@@ -66,24 +34,24 @@
         <div class="bg-white" id="sidebar-wrapper">
           <div class="list-group list-group-flush my-3">
             <a
-              href="/simbahayan-ui/html/dashboard.html"
+              href="dashboard.php"
               class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
               >Archives</a
             >
             <a
-              href="/simbahayan-ui/html/target.html"
+              href="target.php"
               class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
               >Target</a
             >
             <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Important</a>
             <a
-              href="/simbahayan-ui/html/profile.html"
+              href="profile.php"
               class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"
               >Back to Main Menu</a
             >
           </div>
         </div>
-        <!-- /#sidebar-wrapper -->
+        <!-- sidebar-wrapper -->
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -162,7 +130,7 @@
         </div>
       </div>
 
-      <!-- /#page-content-wrapper -->
+      <!-- page-content-wrapper -->
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
       <script>
@@ -173,6 +141,6 @@
           el.classList.toggle("toggled");
         };
       </script>
-    </body>
+
   </body>
 </html>
