@@ -21,7 +21,7 @@
       <h3>Community Development Report</h3>
     </div>
     <div class="kra-1">KRA 2: Thomasian engagement as agents of social transformation</div>
-    <!------Accordion------------------------->
+    <!-- Accordion -->
 
     <div class="accordion accordion-flush" id="accordionFlushExample">
       <div class="accordion-item">
@@ -36,13 +36,13 @@
           >
             Number of participants in the projects under the UDCP
 
-            <!-----Number of DATA submitted------->
+            <!--Number of DATA submitted -->
             <div class="header-num-wrapper">
               <div class="header-num">
                 <input class="form-control" type="number" placeholder="0" readonly />
               </div>
             </div>
-            <!-----Number of DATA submitted------->
+            <!-- Number of DATA submitted -->
           </button>
         </h2>
         <div
@@ -52,7 +52,7 @@
           data-bs-parent="#accordionFlushExample"
         >
           <div class="accordion-body">
-            <!-----------------accordion-list ----------------->
+            <!-- accordion-list -->
             <div class="container">
               <div class="row">
                 <div class="col"><h3>Status No.</h3></div>
@@ -61,7 +61,7 @@
                 <div class="col">
                   <ul class="list-group">
                     <li class="list-group-item">
-                      <!---Status no.-->
+                      <!-- Status no. -->
                       No. of Student Organizations
 
                       <input id="UDCPs_NSO" placeholder="0" type="number"/>
@@ -127,10 +127,10 @@
                     </li>
                   </ul>
                 </div>
-                <!----Targer No.-->
+                <!-- Targer No.-->
               </div>
             </div>
-            <!-----------------accordion-list ----------------->
+            <!-- accordion-list  -->
           </div>
         </div>
       </div>
@@ -146,13 +146,13 @@
           >
             Research presentation in fora/ conference
 
-            <!-----Number of DATA submitted------->
+            <!-- Number of DATA submitted -->
             <div class="header-num-wrapper">
               <div class="header-num">
                 <input class="form-control" type="number" placeholder="0" readonly />
               </div>
             </div>
-            <!-----Number of DATA submitted------->
+            <!-- Number of DATA submitted -->
           </button>
         </h2>
         <div
@@ -162,7 +162,7 @@
           data-bs-parent="#accordionFlushExample"
         >
           <div class="accordion-body">
-            <!-----------------accordion-list ----------------->
+            <!-- accordion-list -->
             <div class="container">
               <div class="row">
                 <div class="col"><h3>Status No.</h3></div>
@@ -199,10 +199,10 @@
                     </li>
                   </ul>
                 </div>
-                <!----Targer No.-->
+                <!-- Targer No.-->
               </div>
             </div>
-            <!-----------------accordion-list ----------------->
+            <!-- accordion-list  -->
           </div>
         </div>
       </div>
@@ -218,13 +218,13 @@
           >
             Publications
 
-            <!-----Number of DATA submitted------->
+            <!-- Number of DATA submitted -->
             <div class="header-num-wrapper">
               <div class="header-num">
                 <input class="form-control" type="number" placeholder="0" readonly />
               </div>
             </div>
-            <!-----Number of DATA submitted------->
+            <!--Number of DATA submitted -->
           </button>
         </h2>
         <div
@@ -234,7 +234,7 @@
           data-bs-parent="#accordionFlushExample"
         >
           <div class="accordion-body">
-            <!-----------------accordion-list ----------------->
+            <!-- accordion-list -->
             <div class="container">
               <div class="row">
                 <div class="col"><h3>Status No.</h3></div>
@@ -271,10 +271,10 @@
                     </li>
                   </ul>
                 </div>
-                <!----Targer No.-->
+                <!-- Targer No.-->
               </div>
             </div>
-            <!-----------------accordion-list ----------------->
+            <!-- accordion-list -->
           </div>
         </div>
       </div>
@@ -363,7 +363,8 @@ $.ajax({
     console.log(response.responseText);
     var data = JSON.parse(response.responseText);
     if(data['status'] == "ok") {
-      window.location.href="http://localhost/Simbahayan/student-official/php/kra3.php" 
+      alert("successfully saved!");
+      window.location.href="http://localhost/Simbahayan/student-official/php/kra-select.php"
     } else {
       alert("Unknown error occured. Please try again.")
     }

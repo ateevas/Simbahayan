@@ -11,7 +11,52 @@ if(isset($_POST["tag"])) {	//POST
 }
 
 switch ($tag) {
-case 'save_kra3':
+	case 'check_krasubmission':
+		$query="SELECT COALESCE(sum(tbl_kra_submission.id), 0) as kra_submit, COALESCE(sum(kra1.id), 0) as kra1, COALESCE(sum(kra2.id), 0) as kra2, COALESCE(sum(kra3.id), 0) as kra3 FROM kra1 LEFT JOIN kra2 ON kra2.user_id=kra1.user_id LEFT JOIN kra3 ON kra3.user_id=kra1.user_id LEFT JOIN tbl_kra_submission ON tbl_kra_submission.user_id=kra1.user_id WHERE kra1.user_id=? LIMIT 1";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_POST['user_id']])) {
+			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'submit_allkra':
+		$query="INSERT INTO tbl_kra_submission SET 
+			kra_status=?,
+			user_id=?,
+			kra1_sub=?,
+			kra2_sub=?,
+			kra3_sub=?
+			";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute(["1",$_GET['user_id'],"1","1","1"])) {
+
+			$queryx="UPDATE kra1
+				INNER JOIN kra2 ON kra2.user_id = kra1.user_id
+				INNER JOIN kra3 ON kra3.user_id = kra1.user_id
+			SET kra1.kra_status = '1',
+			    kra2.kra_status = '1',
+			    kra3.kra_status = '1'
+			WHERE kra1.user_id =?";
+					$stmtx=$pdo->prepare($queryx);
+					if($stmtx->execute([$_GET['user_id']])) {
+						echo json_encode([
+							"status" => "ok"
+						]);
+					} else {
+						echo json_encode([
+							"status" => "error"
+						]);
+					}
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'save_kra3':
 		$query="INSERT INTO kra3 SET
 		kra_status=?,
 		user_id=?,
@@ -57,26 +102,6 @@ case 'save_kra3':
 			json_encode(array($_POST['tcct_arr'])), 
 		])) {
 
-
-			$query="INSERT INTO tbl_kra_submission SET 
-			kra_status=?,
-			user_id=?,
-			kra1_sub=?,
-			kra2_sub=?,
-			kra3_sub=?
-			";
-		$stmt=$pdo->prepare($query);
-		if($stmt->execute(["1",$_POST['user_id'],"1","1","1"])) {
-
-			echo json_encode([
-				"status" => "ok",
-
-			]);
-		} else {
-			echo json_encode([
-				"status" => "error"
-			]);
-		}
 	} else{
 			echo json_encode([
 				"status" => "error"

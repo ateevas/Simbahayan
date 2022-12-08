@@ -32,12 +32,6 @@
 				>
 				Health for all (Health and wellness development)
 				<!-- Number of DATA submitted -->
-				<div class="header-num-wrapper">
-					<div class="header-num">
-						<input class="form-control" type="number" placeholder="0" readonly />
-					</div>
-				</div>
-				<!-- Number of DATA submitted -->
 				</button>
 				</h2>
 				<div
@@ -105,12 +99,6 @@
 				aria-controls="flush-collapseTwo"
 				>
 				Education for all (Equitable and inclusive education)
-				<!-- Number of DATA submitted -->
-				<div class="header-num-wrapper">
-					<div class="header-num">
-						<input class="form-control" type="number" placeholder="0" readonly />
-					</div>
-				</div>
 				<!-- Number of DATA submitted -->
 				</button>
 				</h2>
@@ -180,12 +168,6 @@
 				>
 				Good governance for all (Leadership, organizational development, and good governance)
 				<!-- Number of DATA submitted -->
-				<div class="header-num-wrapper">
-					<div class="header-num">
-						<input class="form-control" type="number" placeholder="0" readonly />
-					</div>
-				</div>
-				<!-- Number of DATA submitted -->
 				</button>
 				</h2>
 				<div
@@ -254,12 +236,6 @@
 				>
 				Economic justice for all (Employability and social enterprise)
 				<!-- Number of DATA submitted -->
-				<div class="header-num-wrapper">
-					<div class="header-num">
-						<input class="form-control" type="number" placeholder="0" readonly />
-					</div>
-				</div>
-				<!-- Number of DATA submitted -->
 				</button>
 				</h2>
 				<div
@@ -327,12 +303,6 @@
 				aria-controls="flush-collapseFive"
 				>
 				Christ's love for all (Socio-pastoral ministry and evangelization)
-				<!-- Number of DATA submitted -->
-				<div class="header-num-wrapper">
-					<div class="header-num">
-						<input class="form-control" type="number" placeholder="0" readonly />
-					</div>
-				</div>
 				<!-- Number of DATA submitted -->
 				</button>
 				</h2>

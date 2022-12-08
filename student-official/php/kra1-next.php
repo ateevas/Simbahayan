@@ -30,12 +30,6 @@
 				aria-controls="flush-collapseOne "
 				>
 				Cultural Life, Expression and Rootedness for all (Culture and heritage development)
-				<!-- Number of DATA submitted -->
-				<div class="header-num-wrapper">
-					<div class="header-num">
-						<input class="form-control" type="number" placeholder="0" readonly />
-					</div>
-				</div>
 				<!-- Number of DATA submitted-->
 				</button>
 				</h2>
@@ -104,12 +98,6 @@
 				aria-controls="flush-collapseTwo"
 				>
 				Sports for all (Sports development)
-				<!-- Number of DATA submitted -->
-				<div class="header-num-wrapper">
-					<div class="header-num">
-						<input class="form-control" type="number" placeholder="0" readonly />
-					</div>
-				</div>
 				<!-- Number of DATA submitted -->
 				</button>
 				</h2>
@@ -180,12 +168,6 @@
 				Environmental Justice for all (Environmental sustainability and action; disaster risk reduction and
 				management)
 				<!-- Number of DATA submitted -->
-				<div class="header-num-wrapper">
-					<div class="header-num">
-						<input class="form-control" type="number" placeholder="0" readonly />
-					</div>
-				</div>
-				<!-- Number of DATA submitted -->
 				</button>
 				</h2>
 				<div
@@ -253,12 +235,6 @@
 				aria-controls="flush-collapseFour"
 				>
 				Holistic Life for all (Family and household development)
-				<!-- Number of DATA submitted -->
-				<div class="header-num-wrapper">
-					<div class="header-num">
-						<input class="form-control" type="number" placeholder="0" readonly />
-					</div>
-				</div>
 				<!-- Number of DATA submitted -->
 				</button>
 				</h2>
@@ -328,12 +304,6 @@
 				>
 				Community organizations formed
 				<!-- Number of DATA submitted -->
-				<div class="header-num-wrapper">
-					<div class="header-num">
-						<input class="form-control" type="number" placeholder="0" readonly />
-					</div>
-				</div>
-				<!-- Number of DATA submitted -->
 				</button>
 				</h2>
 				<div
@@ -393,7 +363,6 @@
 			<div class="button-wrapper">
 				<a class="btn btn-dark" href="kra1.php" role="button">Prev</a>
 				<button type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
-
 				<div
 					class="modal fade"
 					id="approval"
@@ -525,7 +494,8 @@ $.ajax({
 	complete: function (response) {
 		var data = JSON.parse(response.responseText);
 		if(data['status'] == "ok") {
-			window.location.href="http://localhost/Simbahayan/student-official/php/kra2.php"
+			alert("successfully saved!");
+			window.location.href="http://localhost/Simbahayan/student-official/php/kra-select.php";
 		} else {
 			alert("Unknown error occured. Please try again.")
 		}

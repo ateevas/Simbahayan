@@ -391,33 +391,8 @@
       <div class="button-wrapper">
         <a class="btn btn-dark" href="kra3.php" role="button">Prev</a>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-warning" onclick="kra3Next_yes()" >Submit</button>
+        <button type="button" class="btn btn-warning" onclick="kra3Next_yes()" >Save</button>
 
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="approval"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalCenterTitle"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">Are you sure you want to submit report?</div>
-              <div class="modal-footer d-flex justify-content-between">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                <button type="button" class="btn btn-warning">Yes</button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </body>
@@ -520,7 +495,8 @@ $.ajax({
     console.log(response.responseText);
     var data = JSON.parse(response.responseText);
     if(data['status'] == "ok") {
-      window.location.href="http://localhost/Simbahayan/student-official/php/profile.php" 
+       alert("successfully saved!");
+      window.location.href="http://localhost/Simbahayan/student-official/php/kra-select.php"
     } else {
       alert("Unknown error occured. Please try again.")
     }

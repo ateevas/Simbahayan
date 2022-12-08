@@ -17,43 +17,32 @@
 		<?php 
 			include('../nav_master/nav.php');
 		?>
-
-      <section
-        class="vh-100"
-        style="
-          background-image: url('http://localhost/Simbahayan/login-page/pictures/main.png');
-          background-size: cover;
-        "
-      >
+      <section class="vh-100" style="background-image: url('http://localhost/Simbahayan/login-page/pictures/main.png'); background-size: cover;">
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
               <div class="card shadow-2-strong" style="border-radius: 1rem">
                 <div class="card-body p-5 text-center">
                   <h3 class="mb-5">Sign in</h3>
-
                   <form method="post" action="">
                     <div class="form-outline mb-4">
                       <input name="email" type="email" id="email" class="form-control form-control-lg" />
                       <label class="form-label" for="email">Email</label>
                     </div>
-
-                    <div class="form-outline mb-4">
-                      <input
-                        name="password"
-                        type="password"
-                        id="password"
-                        class="form-control form-control-lg"
-                      />
-                      <label class="form-label" for="password">Password</label>
-                    </div>
-
-                    <!-- Checkbox -->
-                    <div class="form-check d-flex justify-content-start mb-4">
-                      <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-                      <label class="form-check-label" for="form1Example3"> Remember password </label>
-                    </div>
-
+                      <div class="form-outline mb-4">
+                        <input
+                          name="password"
+                          type="password"
+                          id="password"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="password">Password</label>
+                      </div>
+                      <!-- Checkbox -->
+                      <div class="form-check d-flex justify-content-start mb-4">
+                        <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                        <label class="form-check-label" for="form1Example3"> Remember password </label>
+                      </div>
                     <button class="btn btn-warning btn-lg btn-block" type="button" onclick="login(this)">Login</button>
                   </form>
 
@@ -107,10 +96,10 @@
                 localStorage.setItem('user_role', res['user_role']);
                 switch (res['user_role']) {
           			    case 1: //student
-          					window.location.href="http://localhost/Simbahayan/student-official/php/profile.php";
+          					 window.location.href="http://localhost/Simbahayan/student-official/php/profile.php";
           			    break;
           			    case 2: //cd
-          					window.location.href="http://127.0.0.1:5500/CD%20coordinator%20UI/html/profile.html";
+          					window.location.href="http://localhost/Simbahayan/coordinator/php/profile.php";
           			    break;
           			    case 3: //staff;
           					window.location.href="https://www.w3schools.com/";
