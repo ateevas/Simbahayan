@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacts</title>
-    <link rel="stylesheet" type="text/css" href="/simbahayan-ui/css/contact.css" />
-  </head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 
+
+
+
+  <link rel="stylesheet" type="text/css" href="/simbahayan-ui/css/contact.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -16,7 +18,15 @@
     crossorigin="anonymous"
   />
 
+
+
+  </head>
   <body>
+
+
+
+
+
     <nav class="navbar bg-secondary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/simbahayan-ui/html/profile.html">
@@ -31,6 +41,11 @@
         </a>
       </div>
     </nav>
+
+
+
+
+
 
     <!---navigation bar--------------------------------->
     <div class="navigation-container">
@@ -99,6 +114,9 @@
     </div>
     <!-------------------navigation bar end----------->
 
+
+
+
     <div class="contact_title">
       <div class="inner_container">
         <div class="contact_container">
@@ -124,22 +142,21 @@
                   <p>simbahayan@ust.edu.ph</p>
                 </div>
               </div>
-
               <div class="facebook_container">
                 <div class="facebook_font">
                   <h2>Facebook</h2>
-                  <hr />
-
+                  <hr/>
                   <div class="facebook_details">
                     <p>https://www.facebook.com/USTSIMBAHAYAN</p>
-
-                    <br />
+                    <br/>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+
 
         <!---javascript bootstrap-->
         <script
@@ -168,9 +185,10 @@
           integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
           crossorigin="anonymous"
         ></script>
-
-        <body></body>
       </div>
     </div>
+
+
+
   </body>
 </html>

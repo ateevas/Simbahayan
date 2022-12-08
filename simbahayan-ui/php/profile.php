@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRAs and KPIs</title>
+
+
+
+
     <link rel="stylesheet" href="/simbahayan-ui/css/profile.css" />
     <link
       rel="stylesheet"
@@ -23,9 +27,15 @@
       href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Libre+Baskerville&display=swap"
       rel="stylesheet"
     />
-  </head>
 
+
+
+  </head>
   <body>
+
+
+
+
     <nav class="navbar bg-secondary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/simbahayan-ui/html/profile.html">
@@ -127,6 +137,11 @@
   </div>
 </div>
   <!-----------------navigation bar end----------->
+
+
+
+
+
     <div class="welcome-container">
       <div class="welcome-inner">
         <div class="welcome-context">
@@ -203,6 +218,10 @@
       </button>
     </div>
 
+
+
+
+
     <!---javascript bootstrap-->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -230,5 +249,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+
   </body>
 </html>

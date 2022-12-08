@@ -6,25 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dash board</title>
   
+
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="/simbahayan-ui/css/target.css">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+
+
 </head>
 <body>
     
+
+
+
     <div class="header">
         <div class="inner_header">
             <div class="simbahayan_container">
                 <h1>Simbahayan<span> Portal</span></h1>
-              
-
             </div>
 
             <div class="ustlogo">
                 
                 <img src="/simbahayan-ui/pictures/ustlogo.png" alt="" style="width:7-0px;height:70px;">
+
+
+
 
         
             </div>
@@ -37,9 +47,6 @@
 
             </div>
 
-       
-
-        
             </div>
         </div>
    
@@ -124,7 +131,9 @@
                 el.classList.toggle("toggled");
             };
         </script>
-          
+
+
+
+
     </body>
-    
     </html>

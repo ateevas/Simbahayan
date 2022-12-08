@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
+
+
+
+
     <link rel = "stylesheet" type = "text/css" href = "/simbahayan-ui/css/changepass.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -13,8 +17,14 @@
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
+
+
+
 </head>
 <body>
+
+
+
 
   <nav class="navbar bg-secondary">
     <div class="container-fluid">
@@ -30,10 +40,7 @@
       </a>
     </div>
   </nav>
-            
 
-
-    
   <!---navigation bar--------------------------------->
   <div class="navigation-container">
     <div class="navigation">
@@ -123,6 +130,10 @@
     <!-------------------navigation bar end----------->
 
 
+
+
+
+
          <!-- form card change password -->
          <div class="card card-outline-secondary">
           <div class="card-header ">
@@ -156,7 +167,15 @@
       </div>
       <!-- /form card change password -->
 
-                                 <!---javascript bootstrap-->
+
+
+
+
+
+
+
+
+<!---javascript bootstrap-->
     <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -183,14 +202,9 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"
   ></script>
-                           
-                                  
 
 
-                                
-                           
 
-                       
-    
+
 </body> 
 </html>

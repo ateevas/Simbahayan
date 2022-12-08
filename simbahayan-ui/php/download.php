@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRAs and KPIs</title>
+
+
+
+
     <link rel="stylesheet" href="/simbahayan-ui/css/download.css" />
     <link
 rel="stylesheet"
@@ -17,9 +21,18 @@ rel="stylesheet"
 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 crossorigin="anonymous"
 />
+
+
+
+
   
   </head>
   <body>
+
+
+
+
+
     <nav class="navbar bg-secondary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/simbahayan-ui/html/profile.html">
@@ -123,6 +136,12 @@ crossorigin="anonymous"
     </div>
   </div>
       <!-------------------navigation bar end----------->
+
+
+
+
+
+
     <div class="contact_title">
       <div class="inner_container">
         <div class="contact_container">
@@ -137,6 +156,12 @@ crossorigin="anonymous"
         </div>
       </div>
     </div>
+
+
+
+
+
+
 
      <!---javascript bootstrap-->
      <script
@@ -165,5 +190,15 @@ crossorigin="anonymous"
      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
      crossorigin="anonymous"
    ></script>
+
+
+
+
+
+
+
+
+
+
   </body>
 </html>

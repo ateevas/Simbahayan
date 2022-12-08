@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dash board</title>
+
+
+
+
     <link rel="stylesheet" href="/simbahayan-ui/css/dashboard.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
@@ -17,13 +21,22 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+
+
+
+
   </head>
   <body>
+
+
+
+
+
     <nav class="navbar bg-secondary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/simbahayan-ui/html/profile.html">
+        <a class="navbar-brand" href="profile.html">
           <img
-            src="/simbahayan-ui/pictures/ustlogo.png"
+            src="ustlogo.png"
             alt="Logo"
             width="70"
             height="70"
@@ -33,6 +46,11 @@
         </a>
       </div>
     </nav>
+
+
+
+
+
 
     <div class="title">
       <div class="inner_title">

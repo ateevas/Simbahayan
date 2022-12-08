@@ -15,10 +15,7 @@
     <?php 
       include('../nav_master/nav.php');
     ?>
-<<<<<<< HEAD
 
-=======
->>>>>>> 3af06dcf6fc126a31e4220ca798719627e342f39
     <div class="welcome-container">
       <div class="welcome-inner">
         <div class="welcome-context">

@@ -133,31 +133,31 @@
                       <!-- Status no.-->
                       No. of Student Organizations
 
-                      <input placeholder="0" type="number"/>
+                      <input id="UDCPs_NSO" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Students
 
-                      <input placeholder="0" type="number" />
+                      <input id="UDCPs_NStu" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Faculty
 
-                      <input placeholder="0" type="number"/>
+                      <input id="UDCPs_NFac" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Administratiors
 
-                      <input placeholder="0" type="number"/>
+                      <input id="UDCPs_NAdmin" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Support Staff
 
-                      <input placeholder="0" type="number"/>
+                      <input id="UDCPs_NSS" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Alumni
-                      <input placeholder="0" type="number"/>
+                      <input id="UDCPs_NAlumni" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -168,31 +168,31 @@
                       <!-- Target no. -->
                       No. of Student Organizations
 
-                      <input placeholder="0" type="number"/>
+                      <input id="UDCPt_NSO" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Students
 
-                      <input placeholder="0" type="number"/>
+                      <input id="UDCPt_NStu" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Faculty
 
-                      <input placeholder="0" type="number"/>
+                      <input id="UDCPt_NFac" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Administratiors
 
-                      <input placeholder="0" type="number"/>
+                      <input id="UDCPt_NAdmin" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Support Staff
 
-                      <input placeholder="0" type="number"/>
+                      <input id="UDCPt_NSS" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Alumni
-                      <input placeholder="0" type="number"/>
+                      <input id="UDCPt_NAlumni" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -242,12 +242,12 @@
                       <!-- Status no.-->
                       No. of Research Presentation in Local Fora/ Conference
 
-                      <input placeholder="0" type="number"/>
+                      <input id="fcs_RPLFC" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Research Presentation in International Fora/ Conference
 
-                      <input placeholder="0" type="number"/>
+                      <input id="fcs_RPIFC" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -258,12 +258,12 @@
                       <!-- Target no.-->
                       No. of Research Presentation in Local Fora/ Conference
 
-                      <input placeholder="0" type="number"/>
+                      <input id="fct_RPLFC" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       No. of Research Presentation in International Fora/ Conference
 
-                      <input placeholder="0" type="number"/>
+                      <input id="fct_RPIFC" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -313,12 +313,12 @@
                       <!-- Status no.-->
                       Status No. of Local Publications
 
-                      <input placeholder="0" type="number"/>
+                      <input id="ps_NLP" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Status No. of International Publications
 
-                      <input placeholder="0" type="number"/>
+                      <input id="ps_IP" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -329,12 +329,12 @@
                       <!-- Target no.-->
                       Target No. of Local Publications
 
-                      <input placeholder="0" type="number"/>
+                      <input id="pt_NLP" placeholder="0" type="number"/>
                     </li>
                     <li class="list-group-item">
                       Target No. of International Publications
 
-                      <input placeholder="0" type="number"/>
+                      <input id="pt_IP" placeholder="0" type="number"/>
                     </li>
                   </ul>
                 </div>
@@ -348,7 +348,7 @@
       <div class="button-wrapper">
         <a class="btn btn-warning" href="#" role="button">Edit</a>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Approve</button>
+        <button onclick="btnApprove()" type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Approve</button>
 
         <!-- Modal -->
         <div
@@ -381,3 +381,43 @@
     </div>
   </body>
 </html>
+
+<script type="text/javascript">
+  function btnApprove(){
+    // --------- Num. of Participants ---------
+    var UDCPs_NSO = $("#UDCPs_NSO").val(); //UDCP: Status No.
+    var UDCPs_NStu = $("#UDCPs_NStu").val();
+    var UDCPs_NFac = $("#UDCPs_NFac").val();
+    var UDCPs_NAdmin = $("#UDCPs_NAdmin").val();
+    var UDCPs_NSS = $("#UDCPs_NSS").val();
+    var UDCPs_NAlumni = $("#UDCPs_NAlumni").val();
+
+    var UDCPt_NSO = $("#UDCPt_NSO").val(); //UDCP: Target No.
+    var UDCPt_NStu = $("#UDCPt_NStu").val();
+    var UDCPt_NFac = $("#UDCPt_NFac").val();
+    var UDCPt_NAdmin = $("#UDCPt_NAdmin").val();
+    var UDCPt_NSS = $("#UDCPt_NSS").val();
+    var UDCPt_NAlumni = $("#UDCPt_NAlumni").val();
+
+// --------- Research Presentation ---------
+    var fcs_RPLFC = $("#fcs_RPLFC").val(); //Fora/Conference: Status No.
+    var fcs_RPIFC = $("#fcs_RPIFC").val();
+
+    var fct_RPLFC = $("#fct_RPLFC").val(); //Fora/Conference: Target No.
+    var fct_RPIFC = $("#fct_RPIFC").val();
+
+
+// --------- Publications ---------
+    var ps_NLP = $("#ps_NLP").val(); //Publication: Status No.
+    var ps_IP = $("#ps_IP").val();
+
+    var pt_NLP = $("#pt_NLP").val(); //Publication: Target No.
+    var pt_IP = $("#pt_IP").val();
+
+  }
+
+
+
+
+
+</script>
