@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRAs and KPIs</title>
+
+
+
+
     <link rel="stylesheet" href="/simbahayan-ui/css/annual.css" />
     <link coordinator
     rel="stylesheet"
@@ -17,9 +21,24 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
     crossorigin="anonymous"
   />
-  </head>
 
-    <body>
+
+
+
+
+    <?php 
+    	include('../cdn/cdn.php');
+    ?>
+
+</head>
+<body>
+	<?php 
+		include('../nav_master/nav.php');
+	?>
+
+
+
+
       <nav class="navbar bg-secondary">
         <div class="container-fluid">
           <a class="navbar-brand" href="/simbahayan-ui/html/profile.html">
@@ -34,6 +53,11 @@
           </a>
         </div>
       </nav>
+
+
+
+
+
       <!---navigation bar--------------------------------->
       <div class="navigation-container">
         <div class="navigation">
@@ -122,20 +146,25 @@
     </div>
         <!-------------------navigation bar end----------->
 
+
+
+
+
+
+
+
+
+
       <div class="content mt-3  container-sm justify-content-center ">
         <h5>        Please double check the Annual Report before submtting the KRAs and
           KPIs.</h5>
-        
           <h5 id="undone">Submitted forms cannot be undone.</h5>
-
-         
           <a class="btn btn-warning mt-3 justify-content-center rounded " href="/simbahayan-ui/html/pending.html" role="button">Annual Report Approval</a>
-      
-    
-     
         </div>
       </div>
     </div>
+
+
 
        <!---javascript bootstrap-->
        <script
@@ -164,6 +193,9 @@
        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
        crossorigin="anonymous"
      ></script>
-  </body>
 
+
+
+
+  </body>
 </html>

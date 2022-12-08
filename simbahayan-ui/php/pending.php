@@ -5,19 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRAs and KPIs</title>
+
+
+
+
     <link rel="stylesheet" href="/simbahayan-ui/css/pending.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
-    <link
+    <link 
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
+
+
+
+
   </head>
   <body>
+
+
     <nav class="navbar bg-secondary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/simbahayan-ui/html/profile.html">
@@ -123,6 +132,9 @@
       </div>
     </div>
     <!-------------------navigation bar end----------->
+
+
+
     <div class="contact_title">
       <div class="inner_container">
         <div class="contact_container">
@@ -217,6 +229,8 @@
       </tbody>
     </table>
 
+
+
     <!---javascript bootstrap-->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -245,5 +259,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap-switch-button@1.1.0/dist/bootstrap-switch-button.min.js"></script>
+
+
+
   </body>
 </html>

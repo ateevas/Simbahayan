@@ -134,12 +134,12 @@
                       <!-- Status no.-->
                       No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="POs_MM" placeholder="0" type="number" readonly/>
                     </li>
                     <li class="list-group-item">
                       No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number"  />
+                      <input id="POs_CDAA" placeholder="0" type="number"  readonly/>
                     </li>
                   </ul>
                 </div>
@@ -150,11 +150,11 @@
                       <!---Target no.-->
                       No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="POt_MM" placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
                       No. of Community Development and Advocacy Activities
-                      <input placeholder="0" type="number"  />
+                      <input id="POt_CDAA" placeholder="0" type="number" readonly />
                     </li>
                   </ul>
                 </div>
@@ -205,12 +205,12 @@
                       <!-- Status no.-->
                       Status No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="GAs_MM" placeholder="0" type="number" readonly  />
                     </li>
                     <li class="list-group-item">
                       Status No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number"  />
+                      <input id="GAs_CDAA" placeholder="0" type="number" readonly />
                     </li>
                   </ul>
                 </div>
@@ -221,12 +221,12 @@
                       <!-- Target no.-->
                       Target No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="GAt_MM" placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
                       Target No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number"  />
+                      <input id="GAt_CDAA" placeholder="0" type="number" readonly />
                     </li>
                   </ul>
                 </div>
@@ -277,12 +277,12 @@
                       <!---Status no.-->
                       Status No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="NGOs_MM" placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
                       Status No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number"  />
+                      <input id="NGOs_CDAA" placeholder="0" type="number" readonly />
                     </li>
                   </ul>
                 </div>
@@ -293,12 +293,12 @@
                       <!---Target no.-->
                       Target No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="NGOt_MM" placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
                       Target No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number"  />
+                      <input id="NGOt_CDAA" placeholder="0" type="number" readonly />
                     </li>
                   </ul>
                 </div>
@@ -349,12 +349,12 @@
                       <!---Status no.-->
                       Status No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="BEIs_MM" placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
                       Status No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number"  />
+                      <input id="BEIs_CDAA" placeholder="0" type="number" readonly />
                     </li>
                   </ul>
                 </div>
@@ -365,12 +365,12 @@
                       <!---Target no.-->
                       Target No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="BEIt_MM" placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
                       Target No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number"  />
+                      <input id="BEIt_CDAA" placeholder="0" type="number" readonly />
                     </li>
                   </ul>
                 </div>
@@ -384,7 +384,7 @@
       <div class="button-wrapper">
         <a class="btn btn-warning" href="#" role="button">Edit</a>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Approve</button>
+        <button onclick="btnApprove()" type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Approve</button>
 
         <!-- Modal -->
         <div
@@ -417,3 +417,37 @@
     </div>
   </body>
 </html>
+
+<script type="text/javascript">
+  function btnApprove(){
+    var POs_MM = $("#POs_MM").val();
+    var POs_CDAA = $("#POs_CDAA").val();
+    var POt_MM = $("#POt_MM").val();
+    var POt_CDAA = $("#POt_CDAA").val();
+
+
+
+    var GAs_MM = $("#GAs_MM").val();
+    var GAs_CDAA = $("#GAs_CDAA").val();
+    var GAt_MM = $("#GAt_MM").val();
+    var GAt_CDAA = $("#GAt_CDAA").val();
+
+   
+
+    var NGOs_MM = $("#NGOs_MM").val();
+    var NGOs_CDAA = $("#NGOs_CDAA").val();
+    var NGOt_MM = $("#NGOt_MM").val();
+    var NGOt_CDAA = $("#NGOt_CDAA").val();
+
+
+
+    var BEIs_MM = $("#BEIs_MM").val();
+    var BEIs_CDAA = $("#BEIs_CDAA").val();
+    var BEIt_MM = $("#BEIt_MM").val();
+    var BEIt_CDAA = $("#BEIt_CDAA").val();
+
+
+      window.location.href="http://localhost/Simbahayan/coordiantor/php/kra3-next.php"
+  }
+
+</script>

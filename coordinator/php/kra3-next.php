@@ -136,12 +136,12 @@
                       <!-- Status no.-->
                       No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="LHEIs_MM" placeholder="0" type="number" readonly/>
                     </li>
                     <li class="list-group-item">
                       No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number"  />
+                      <input id="LHEIs_CDAA" placeholder="0" type="number" readonly/>
                     </li>
                   </ul>
                 </div>
@@ -152,11 +152,11 @@
                       <!-- Target no.-->
                       No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="LHEIt_MM" placeholder="0" type="number" readonly/>
                     </li>
                     <li class="list-group-item">
                       No. of Community Development and Advocacy Activities
-                      <input placeholder="0" type="number"  />
+                      <input id="LHEIt_CDAA" placeholder="0" type="number" readonly/>
                     </li>
                   </ul>
                 </div>
@@ -207,12 +207,12 @@
                       <!---Status no.-->
                       Status No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="IHEIs_MM" placeholder="0" type="number" readonly/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number"  />
+                      <input id="IHEIs_CDAA" placeholder="0" type="number" readonly/>
                     </li>
                   </ul>
                 </div>
@@ -223,12 +223,12 @@
                       <!---Target no.-->
                       Target No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="IHEIt_MM" placeholder="0" type="number" readonly/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" />
+                      <input id="IHEIt_CDAA" placeholder="0" type="number" readonly/>
                     </li>
                   </ul>
                 </div>
@@ -279,12 +279,12 @@
                       <!---Status no.-->
                       Status No. of MOU/MOA
 
-                      <input placeholder="0" type="number"/>
+                      <input id="CBOs_MM" placeholder="0" type="number" readonly/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number"/>
+                      <input id="CBOs_CDAA" placeholder="0" type="number" readonly/>
                     </li>
                   </ul>
                 </div>
@@ -295,12 +295,12 @@
                       <!-- Target no.-->
                       Target No. of MOU/MOA
 
-                      <input placeholder="0" type="number"/>
+                      <input id="CBOt_MM" placeholder="0" type="number" readonly/>
                     </li>
                     <li class="list-group-item">
                       Target No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number"/>
+                      <input id="CBOt_CDAA" placeholder="0" type="number" readonly/>
                     </li>
                   </ul>
                 </div>
@@ -351,12 +351,12 @@
                       <!---Status no.-->
                       Status No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="PBOs_MM" placeholder="0" type="number" readonly/>
                     </li>
                     <li class="list-group-item">
                       Status No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number"  />
+                      <input id="PBOs_CDAA" placeholder="0" type="number" readonly />
                     </li>
                   </ul>
                 </div>
@@ -367,12 +367,12 @@
                       <!---Target no.-->
                       Target No. of MOU/MOA
 
-                      <input placeholder="0" type="number"  />
+                      <input id="PBOt_MM" placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
                       Target No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number"  />
+                      <input id="PBOt_CDAA" placeholder="0" type="number" readonly />
                     </li>
                   </ul>
                 </div>
@@ -424,12 +424,12 @@
                       <!---Status no.-->
                       Status No. of Training/ Course
 
-                      <input placeholder="0" type="number"  />
+                      <input id="TCCs_MM" placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
                       Status No. of Participants
 
-                      <input placeholder="0" type="number"  />
+                      <input id="TCCs_CDAA" placeholder="0" type="number" readonly />
                     </li>
                   </ul>
                 </div>
@@ -440,12 +440,12 @@
                       <!---Target no.-->
                       Status No. of Participants
 
-                      <input placeholder="0" type="number"  />
+                      <input id="TCCt_MM" placeholder="0" type="number" readonly />
                     </li>
                     <li class="list-group-item">
                       Target No. of Participants
 
-                      <input placeholder="0" type="number"  />
+                      <input id="TCCt_CDAA" placeholder="0" type="number" readonly />
                     </li>
                   </ul>
                 </div>
@@ -459,7 +459,7 @@
       <div class="button-wrapper">
         <a class="btn btn-warning" href="#" role="button">Edit</a>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Approve</button>
+        <button onclick="btnApprove()" type="button" class="btn btn-warning" data-toggle="modal" data-target="#approval">Approve</button>
 
         <!-- Modal -->
         <div
@@ -492,3 +492,35 @@
     </div>
   </body>
 </html>
+
+<script type="text/javascript">
+  function btnApprove(){
+    var LHEIs_MM = $("#LHEIs_MM").val(); //Local Higher
+    var LHEIs_CDAA = $("#LHEIs_CDAA").val();
+    var LHEIt_MM = $("#LHEIt_MM").val();
+    var LHEIt_CDAA = $("#LHEIt_CDAA").val();
+
+    var IHEIs_MM = $("#IHEIs_MM").val(); //International Higher
+    var IHEIs_CDAA = $("#IHEIs_CDAA").val();
+    var IHEIt_MM = $("#IHEIt_MM").val();
+    var IHEIt_CDAA = $("#IHEIt_CDAA").val();
+
+    var CBOs_MM = $("#CBOs_MM").val(); //Faith based
+    var CBOs_CDAA = $("#CBOs_CDAA").val();
+    var CBOt_MM = $("#CBOt_MM").val();
+    var CBOt_CDAA = $("#CBOt_CDAA").val();
+
+    var PBOs_MM = $("#PBOs_MM").val();// Prof. Business org
+    var PBOs_CDAA = $("#PBOs_CDAA").val();
+    var PBOt_MM = $("#PBOt_MM").val();
+    var PBOt_CDAA = $("#PBOt_CDAA").val();
+
+    var TCCs_MM = $("#TCCs_MM").val(); //Training Courses
+    var TCCs_CDAA = $("#TCCs_CDAA").val();
+    var TCCt_MM = $("#TCCt_MM").val();
+    var TCCt_CDAA = $("#TCCt_CDAA").val();
+
+
+  }
+
+</script>
