@@ -15,24 +15,18 @@
     <?php 
       include('../nav_master/nav.php');
     ?>
-
-
-
-
     <div class="welcome-container">
       <div class="welcome-inner">
         <div class="welcome-context">
           <h1>Welcome <span id='fname' style="text-transform: capitalize;"></span>!</h1>
-
-          <p>
-            You may now access the features of the UST Simbahayan Portal!
-          </p>
+            <p>
+              You may now access the features of the UST Simbahayan Portal!
+            </p>
         </div>
       </div>
     </div>
 
     <!-- bootstrap -->
-
     <div
       id="carouselExampleIndicators"
       class="carousel slide"
@@ -97,6 +91,9 @@
 </html>
 <script type="text/javascript">
   get_coordinatorinfo();
+  function goto_kra_select() {
+
+  }
   function get_coordinatorinfo() {
     let user_id=localStorage.getItem('user_id');
      $.ajax({
