@@ -17,67 +17,7 @@
       include('../nav_master/nav.php');
     ?>
 
-    <!-- navigation bar -->
-    <div class="navigation-container">
-      <div class="navigation">
-        <ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/CD coordinator UI/html/profile.html"
-              >Profile <span class="sr-only"></span
-            ></a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-dark"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              KRAs and KPIs
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/CD coordinator UI/html/annual.html">Annual Report Approval</a>
-              <a class="dropdown-item" href="/CD coordinator UI/html/kra-select.html">KRAs and KPIs Monitoring Sheet</a>
-              <a class="dropdown-item" href="/CD coordinator UI/html/download.html">Download KRAs and KPIs</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-dark"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Account
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/CD coordinator UI/html/changepass.html">Change Password</a>
-              <a class="dropdown-item" href="/CD coordinator UI/html/manage.html">Manage Students</a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/CD coordinator UI/html/contact.html"
-              >Contact <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="/login-page/html/login.html">Logout <span class="sr-only"></span></a>
-          </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
-          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
-          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
-        </div>
-      </div>
-    </div>
+ 
     <div class="form-parent">
       <div class="form-child">
         <h3>College of Engineering</h3>
@@ -170,7 +110,7 @@
             <!-- Number of DATA submitted -->
             <div class="header-num-wrapper">
               <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" readonly />
+
               </div>
             </div>
             <!-- Number of DATA submitted -->
@@ -242,7 +182,7 @@
             <!-----Number of DATA submitted------->
             <div class="header-num-wrapper">
               <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" readonly />
+
               </div>
             </div>
             <!-- Number of DATA submitted -->
@@ -314,7 +254,7 @@
             <!-- Number of DATA submitted -->
             <div class="header-num-wrapper">
               <div class="header-num">
-                <input class="form-control" type="number" placeholder="0"/>
+
               </div>
             </div>
             <!-- Number of DATA submitted -->
@@ -386,7 +326,7 @@
             <!-- Number of DATA submitted -->
             <div class="header-num-wrapper">
               <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" readonly />
+
               </div>
             </div>
             <!-- Number of DATA submitted -->
@@ -411,12 +351,12 @@
                       <!---Status no.-->
                       Status No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input placeholder="0" type="number"  />
                     </li>
                     <li class="list-group-item">
                       Status No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input placeholder="0" type="number"  />
                     </li>
                   </ul>
                 </div>
@@ -427,12 +367,12 @@
                       <!---Target no.-->
                       Target No. of MOU/MOA
 
-                      <input placeholder="0" type="number" readonly />
+                      <input placeholder="0" type="number"  />
                     </li>
                     <li class="list-group-item">
                       Target No. of Community Development and Advocacy Activities
 
-                      <input placeholder="0" type="number" readonly />
+                      <input placeholder="0" type="number"  />
                     </li>
                   </ul>
                 </div>
@@ -459,7 +399,7 @@
             <!-- Number of DATA submitted -->
             <div class="header-num-wrapper">
               <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" readonly />
+
               </div>
             </div>
             <!-- Number of DATA submitted -->
@@ -484,12 +424,12 @@
                       <!---Status no.-->
                       Status No. of Training/ Course
 
-                      <input placeholder="0" type="number" readonly />
+                      <input placeholder="0" type="number"  />
                     </li>
                     <li class="list-group-item">
                       Status No. of Participants
 
-                      <input placeholder="0" type="number" readonly />
+                      <input placeholder="0" type="number"  />
                     </li>
                   </ul>
                 </div>
@@ -500,12 +440,12 @@
                       <!---Target no.-->
                       Status No. of Participants
 
-                      <input placeholder="0" type="number" readonly />
+                      <input placeholder="0" type="number"  />
                     </li>
                     <li class="list-group-item">
                       Target No. of Participants
 
-                      <input placeholder="0" type="number" readonly />
+                      <input placeholder="0" type="number"  />
                     </li>
                   </ul>
                 </div>

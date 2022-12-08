@@ -39,7 +39,7 @@
             <!--Number of DATA submitted -->
             <div class="header-num-wrapper">
               <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" readonly />
+
               </div>
             </div>
             <!-- Number of DATA submitted -->
@@ -149,7 +149,7 @@
             <!-- Number of DATA submitted -->
             <div class="header-num-wrapper">
               <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" readonly />
+
               </div>
             </div>
             <!-- Number of DATA submitted -->
@@ -221,7 +221,7 @@
             <!-- Number of DATA submitted -->
             <div class="header-num-wrapper">
               <div class="header-num">
-                <input class="form-control" type="number" placeholder="0" readonly />
+
               </div>
             </div>
             <!--Number of DATA submitted -->

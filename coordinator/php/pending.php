@@ -16,6 +16,7 @@
     <?php 
       include('../nav_master/nav.php');
     ?>
+    
     <div class="contact_title">
       <div class="inner_container">
         <div class="contact_container">

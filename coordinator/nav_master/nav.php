@@ -1,6 +1,6 @@
 <nav class="navbar bg-secondary">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="/CD coordinator UI/html/profile.html">
+		<a class="navbar-brand" href="profile.php">
 			<img src="http://localhost/Simbahayan/coordinator/pictures/ustlogo.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-middle"
 			/>
 			<span>Simbahayan Portal</span>
@@ -19,11 +19,11 @@
       role="tablist"
     >
     <li class="nav-item active">
-      <a class="nav-link  text-dark" href="../php/profile.php">Profile <span class="sr-only"></span></a>
+      <a class="nav-link  text-dark" href="profile.php">Profile <span class="sr-only"></span></a>
     </li>
 
         <li class="nav-item">
-          <a class="nav-link text-dark" href="../php/annual.php" aria-expanded="false">
+          <a class="nav-link text-dark" href="annual.php" aria-expanded="false">
             Annual Report Approval
           </a>
         </li>
@@ -42,16 +42,16 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
      
-          <a class="dropdown-item" href="/CD coordinator UI/html/changepass.html">Change Password</a>
-          <a class="dropdown-item" href="/CD coordinator UI/html/manage.html">Manage Students</a>
+          <a class="dropdown-item" href="changepass.php">Change Password</a>
+          <a class="dropdown-item" href="manage.php">Manage Students</a>
       
         </div>
       </li>
       <li class="nav-item active">
-        <a class="nav-link  text-dark" href="/CD coordinator UI/html/contact.html">Contact <span class="sr-only"></span></a>
+        <a class="nav-link  text-dark" href="contact.php">Contact <span class="sr-only"></span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link  text-dark" href="/login-page/html/login.html">Logout <span class="sr-only"></span></a>
+        <a class="nav-link  text-dark" href="login.php">Logout <span class="sr-only"></span></a>
       </li>
      
     </ul>

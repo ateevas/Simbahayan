@@ -16,9 +16,6 @@
       include('../nav_master/nav.php');
     ?>
 
-
-
-
     <div class="welcome-container">
       <div class="welcome-inner">
         <div class="welcome-context">
