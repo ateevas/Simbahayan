@@ -11,6 +11,19 @@ if(isset($_POST["tag"])) {	//POST
 }
 
 switch ($tag) {
+	case 'approve_kra3simbahayan':
+		$query="UPDATE tbl_kra_submission SET kra3_sub='3' WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			echo json_encode([
+				"status" => "updated"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
 	case 'approve_kra2simbahayan':
 		$query="UPDATE tbl_kra_submission SET kra2_sub='3' WHERE user_id=?";
 		$stmt=$pdo->prepare($query);
@@ -30,6 +43,19 @@ switch ($tag) {
 		if($stmt->execute([$_GET['user_id']])) {
 			echo json_encode([
 				"status" => "updated"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'submit_reportsimbahayan':
+		$query="UPDATE tbl_kra_submission SET kra_status='3', coor_id=? WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['my_id'],$_GET['user_id']])) {
+			echo json_encode([
+				"status" => "ok"
 			]);
 		} else {
 			echo json_encode([
@@ -134,7 +160,7 @@ switch ($tag) {
 		}
 	break;
 	case 'get_allsubmittedkrasimbahayan':
-		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_users.id_num, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college";
+		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_users.id_num, tbl_users.organization, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college";
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute()) {
 			if($stmt->rowCount() != 0) {
@@ -168,6 +194,7 @@ switch ($tag) {
 					$toecho.="<tr>
 						<td style='text-transform: capitalize;'>".$datay[$i]['fname']. " " . $datay[$i]['lname']."</td>
 						<td style='text-transform: capitalize;'>".$coor_name."</td>
+						<td style='text-transform: capitalize;'>".$datay[$i]['organization']."</td>
 						<td>".$datay[$i]['college_name']."</td>
 						<td>".$datay[$i]['id_num']."</td>
 						<td>".$datay[$i]['email']."</td>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>KRA SELECT</title>
+		    <link rel="stylesheet" href="http://localhost/Simbahayan/simbahayan-ui/css/kra-select.css"/>
 		<?php
 			include('../cdn/cdn.php');
 		?>
@@ -50,7 +50,7 @@
 			</div>
 		</div>
 		<div class="d-flex flex-row-reverse bd-highlight mt-3">
-			<button type="button" data-bs-toggle="modal" data-bs-target="#approval" id="submit_button" class="btn btn-warning disabled" disabled="disabled" readonly="true" >Submit to Simbahayan</button>
+			<button type="button" data-bs-toggle="modal" data-bs-target="#approval" id="submit_button" class="btn btn-warning disabled" disabled="disabled" readonly="true" >Approve</button>
 		</div>
 		<!-- Modal -->
 		<div
@@ -67,67 +67,19 @@
 						<h5 class="modal-title" id="exampleModalLongTitle">Annual Report</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
-					<div class="modal-body">Are you sure you want to submit report?</div>
+					<div class="modal-body">Are you sure you want to approve this report? (this action cannot be undone, it will count the number of kra's & kpi's)</div>
 					<div class="modal-footer d-flex justify-content-between">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-						<button type="button" class="btn btn-warning" onclick="submit_report()">Yes</button>
+						<button type="button" class="btn btn-warning" onclick="submit_reportsimbahayan()">Yes</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
-=======
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KRA 1</title>
-    <link rel="stylesheet" href="http://localhost/Simbahayan/simbahayan-ui/css/kra-select.css"/>
-
-    <?php 
-      include('../cdn/cdn.php');
-    ?>
-
-  </head>
-  <body>
-
-  <?php 
-    include('../nav_master/nav.php');
-  ?>
-
-    <div class="card-group">
-      <div class="card">
-        <img class="card-img-top" src="..." alt="" />
-        <div class="card-body">
-          <h5 class="card-title">KRA 1</h5>
-          <p class="card-text">Self-reliant, interdependent, and empowered partner communities and institutions</p>
-          <a href="kra1.php"><i id="icon" class="bi bi-arrow-right-circle">Enter</i></a>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="..." alt="" />
-        <div class="card-body">
-          <h5 class="card-title">KRA 2</h5>
-          <p class="card-text">Thomasian engagement as agents of social transformation</p>
-          <br />
-          <a href="kra2.php"><i id="icon" class="bi bi-arrow-right-circle">Enter</i></a>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="..." alt="" />
-        <div class="card-body">
-          <h5 class="card-title">KRA 3</h5>
-          <p class="card-text">Dynamic Community Development External Partnerships and Networks</p>
-          <a href="kra3.php"><i id="icon" class="bi bi-arrow-right-circle">Enter</i></a>
-        </div>
-      </div>
-    </div>
-  </body>
->>>>>>> 4025b588e276cfe620d73e3bf5ee78c52f78c427
 </html>
 <script type="text/javascript">
 	check_coordinatorsubmission();
-		function submit_report() {
+	function submit_reportsimbahayan() {
 		let my_id = localStorage.getItem("user_id");
 		let user_id = localStorage.getItem("selected_user_id");
 		$.ajax({
@@ -135,7 +87,7 @@
 			type: "GET",
 			data: {
 				csrf_token: "{{ csrf_token() }}",
-				tag: "submit_report", 
+				tag: "submit_reportsimbahayan", 
 				my_id: my_id,
 				user_id: user_id,
 			},
@@ -143,7 +95,7 @@
 				var data = JSON.parse(response.responseText);
 				if(data['status'] == "ok") {
 					alert('successfully updated!');
-					window.location.href="http://localhost/Simbahayan/coordinator/php/pending.php";
+					window.location.href="http://localhost/Simbahayan/simbahayan-ui/php/dashboard.php";
 				} else {
 					alert('unknown error occured');
 					location.reload();
@@ -166,7 +118,7 @@
 				switch (data[0]['kra1_sub']) {
 					case '2':
 						$('.kra1badge').addClass("bg-success");
-						$('.kra1badge').html("CD Approved");
+						$('.kra1badge').html("Coordinator Approved");
 					break;
 					case '3':
 						$('.kra1badge').addClass("bg-success");
@@ -181,7 +133,7 @@
 				switch (data[0]['kra2_sub']) {
 					case '2':
 						$('.kra2badge').addClass("bg-success");
-						$('.kra2badge').html("CD Approved");
+						$('.kra2badge').html("Coordinator Approved");
 					break;
 					case '3':
 						$('.kra2badge').addClass("bg-success");
@@ -193,15 +145,22 @@
 					break;
 				}
 
-				if(data[0]['kra3_sub'] == "2") {
-					$('.kra3badge').addClass("bg-success");
-					$('.kra3badge').html("CD Approved");
-				} else {
-					$('.kra3badge').addClass("bg-warning");
-					$('.kra3badge').html("Pending");
+				switch (data[0]['kra3_sub']) {
+					case '2':
+						$('.kra3badge').addClass("bg-success");
+						$('.kra3badge').html("Coordinator Approved");
+					break;
+					case '3':
+						$('.kra3badge').addClass("bg-success");
+						$('.kra3badge').html("Simbahayan Approved");
+					break;
+					default:
+						$('.kra3badge').addClass("bg-warning");
+						$('.kra3badge').html("Pending");
+					break;
 				}
 
-				if(data[0]['kra_status'] == "1" && data[0]['kra1_sub'] == "2" && data[0]['kra2_sub'] == "2" && data[0]['kra3_sub'] == "2") {
+				if(data[0]['kra_status'] == "2" && data[0]['kra1_sub'] == "3" && data[0]['kra2_sub'] == "3" && data[0]['kra3_sub'] == "3") {
 					$('#submit_button').removeClass("disabled");
 					$('#submit_button').removeAttr("disabled");
 					$('#submit_button').removeAttr("readonly");
