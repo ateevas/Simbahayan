@@ -11,6 +11,75 @@ if(isset($_POST["tag"])) {	//POST
 }
 
 switch ($tag) {
+	case 'change_password':
+		$query="UPDATE tbl_users SET password=? WHERE id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['inputpass_new'],$_GET['user_id']])) {
+			echo json_encode([
+				"status" => "updated"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'get_mystudentlist':
+		$query="SELECT tbl_users.*, 
+		tbl_colleges.college_name, 
+		tbl_kra_submission.kra_status, 
+		tbl_kra_submission.date_submitted FROM tbl_users LEFT JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college LEFT JOIN tbl_kra_submission ON tbl_kra_submission.user_id=tbl_users.id WHERE tbl_users.college=? AND tbl_users.user_role='1'";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['college_id']])) {
+			if($stmt->rowCount() != 0) {
+				$datax=json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+				$datay=json_decode($datax, true);
+				$toecho="";
+				for ($i=0; $i < count($datay); $i++) {
+					$status="";
+					switch ($datay[$i]['kra_status']) {
+						case '1':
+							$status="<span class='badge bg-success'>Pending</span>";
+						break;
+						case '2':
+							$status="<span class='badge bg-success'>Submitted to Simbahayan</span>";
+						break;
+						case '3':
+							$status="<span class='badge bg-success'>Approved</span>";
+						break;
+						default:
+							$status="<span class='badge bg-warning'>unknown</span>";
+						break;
+					}
+					if ($datay[$i]['date_submitted'] == null) {
+						$date_submitted="not yet submitted";
+					} else {
+						$date_submitted=date('F d, Y h:i a', strtotime($datay[$i]['date_submitted']));
+					}
+					$toecho.="<tr>
+						<td style='text-transform: capitalize;'>".$datay[$i]['fname']. " " . $datay[$i]['lname']."</td>
+						<td style='text-transform: capitalize;'>".$datay[$i]['college_name']."</td>
+						<td style='text-transform: capitalize;'>".$datay[$i]['id_num']."</td>
+						<td style='text-transform: capitalize;'>".$datay[$i]['email']."</td>
+						<td>".$status."</td>
+						<td>".$date_submitted."</td>
+						<td><button class='btn btn-link' data-user_id='".$datay[$i]['id']."' onclick='goto_kra_select(this)'>View</button></td>
+					</tr>";
+				}
+				echo $toecho;
+			} else {
+				$toecho="<tr>
+						<td style='text-transform: capitalize;' rowspan='6'>No data available</td>
+					</tr>";
+					echo $toecho;
+			}
+			
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
 	case 'approve_kra3simbahayan':
 		$query="UPDATE tbl_kra_submission SET kra3_sub='3' WHERE user_id=?";
 		$stmt=$pdo->prepare($query);
@@ -51,7 +120,7 @@ switch ($tag) {
 		}
 	break;
 	case 'submit_reportsimbahayan':
-		$query="UPDATE tbl_kra_submission SET kra_status='3', coor_id=? WHERE user_id=?";
+		$query="UPDATE tbl_kra_submission SET kra_status='3', simb_id=? WHERE user_id=?";
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute([$_GET['my_id'],$_GET['user_id']])) {
 			echo json_encode([
@@ -596,7 +665,9 @@ switch ($tag) {
 					echo json_encode([
 						"status" => "ok",
 						"id" => $row['id'],
-						"user_role" => $row['user_role']
+						"user_role" => $row['user_role'],
+						"college" => $row['college'],
+						"password" => $row['password']
 				]);
 				} else {
 					echo json_encode([

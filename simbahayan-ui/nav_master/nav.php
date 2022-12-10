@@ -16,35 +16,16 @@
 	<div class="navigation">
 		<ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
 			<li class="nav-item active"><a class="nav-link text-dark" href="profile.php">Profile <span class="sr-only"></span></a></li>
+			<li class="nav-item active"><a class="nav-link text-dark" href="annual.php">Annual Report Approval <span class="sr-only"></span></a></li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-					KRAs and KPIs
-				</a>
-				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<li><a class="dropdown-item" href="annual.php">Annual Report Approval</a></li>
-					<li><a class="dropdown-item" href="kra-select.php">KRAs and KPIs Monitoring Sheet</a></li>
-					<li><a class="dropdown-item" href="download.php">Download KRAs and KPIs</a></li>
-				</ul>
-			</li>
-			<li class="nav-item dropdown">
-				<a
-					class="nav-link dropdown-toggle text-dark"
-					href="#"
-					id="navbarDropdownMenuLink"
-					role="button"
-					data-toggle="dropdown"
-					aria-haspopup="true"
-					aria-expanded="false"
-					>
 					Account
 				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					<a class="dropdown-item" href="manage-edit.php"
-					>Manage Community Development Coordinators</a
-					>
-					<a class="dropdown-item" href="dashboard.php">Dashboard</a>
-					<a class="dropdown-item" href="changepass.php">Change Password</a>
-				</div>
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<li><a class="dropdown-item" href="manage-edit.php">Manage Community Development Coordinators</a></li>
+					<li><a class="dropdown-item" href="dashboard.php">Dashboard</a></li>
+					<li><a class="dropdown-item" href="changepass.php">Change Password</a></li>
+				</ul>
 			</li>
 			<li class="nav-item active"><a class="nav-link text-dark" href="contact.php">Contact <span class="sr-only"></span></a></li>
 			<li class="nav-item active">

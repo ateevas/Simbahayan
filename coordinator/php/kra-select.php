@@ -115,28 +115,49 @@
 			},
 			complete: function (response) {
 				var data = JSON.parse(response.responseText);
-				if(data[0]['kra1_sub'] == "2") {
-					$('.kra1badge').addClass("bg-success");
-					$('.kra1badge').html("Approved");
-				} else {
-					$('.kra1badge').addClass("bg-warning");
-					$('.kra1badge').html("Pending");
+				switch (data[0]['kra1_sub']) {
+					case '2':
+						$('.kra1badge').addClass("bg-success");
+						$('.kra1badge').html("Coordinator Approved");
+					break;
+					case '3':
+						$('.kra1badge').addClass("bg-success");
+						$('.kra1badge').html("Simbahayan Approved");
+					break;
+					default:
+						$('.kra1badge').addClass("bg-warning");
+						$('.kra1badge').html("Pending");
+					break;
 				}
 
-				if(data[0]['kra2_sub'] == "2") {
-					$('.kra2badge').addClass("bg-success");
-					$('.kra2badge').html("Approved");
-				} else {
-					$('.kra2badge').addClass("bg-warning");
-					$('.kra2badge').html("Pending");
+				switch (data[0]['kra2_sub']) {
+					case '2':
+						$('.kra2badge').addClass("bg-success");
+						$('.kra2badge').html("Coordinator Approved");
+					break;
+					case '3':
+						$('.kra2badge').addClass("bg-success");
+						$('.kra2badge').html("Simbahayan Approved");
+					break;
+					default:
+						$('.kra2badge').addClass("bg-warning");
+						$('.kra2badge').html("Pending");
+					break;
 				}
 
-				if(data[0]['kra3_sub'] == "2") {
-					$('.kra3badge').addClass("bg-success");
-					$('.kra3badge').html("Approved");
-				} else {
-					$('.kra3badge').addClass("bg-warning");
-					$('.kra3badge').html("Pending");
+				switch (data[0]['kra3_sub']) {
+					case '2':
+						$('.kra3badge').addClass("bg-success");
+						$('.kra3badge').html("Coordinator Approved");
+					break;
+					case '3':
+						$('.kra3badge').addClass("bg-success");
+						$('.kra3badge').html("Simbahayan Approved");
+					break;
+					default:
+						$('.kra3badge').addClass("bg-warning");
+						$('.kra3badge').html("Pending");
+					break;
 				}
 
 				if(data[0]['kra_status'] == "1" && data[0]['kra1_sub'] == "2" && data[0]['kra2_sub'] == "2" && data[0]['kra3_sub'] == "2") {

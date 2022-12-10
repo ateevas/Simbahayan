@@ -94,6 +94,8 @@
               case 'ok': // login success
                 localStorage.setItem('user_id', res['id']);
                 localStorage.setItem('user_role', res['user_role']);
+                localStorage.setItem('college_id', res['college']);
+                localStorage.setItem('password', res['password']);
                 switch (res['user_role']) {
           			    case 1: //student
           					 window.location.href="http://localhost/Simbahayan/student-official/php/profile.php";
