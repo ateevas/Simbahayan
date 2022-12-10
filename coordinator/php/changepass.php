@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Account</title>
+		<link rel="stylesheet" href="http://localhost/Simbahayan/coordinator/css/changepass.css"/>
 
 		<?php 
 			include('../cdn/cdn.php');

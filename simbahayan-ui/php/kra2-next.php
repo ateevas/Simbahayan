@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRA 2</title>
+    <link rel="stylesheet" href="http://localhost/Simbahayan/simbahayan-ui/css/kra2.css"/>
 
 
     <?php 
@@ -381,7 +382,7 @@
             </div>
           </div>
         </div>
-        <a class="btn btn-dark" href="/simbahayan-ui/html/kra2.html" role="button">Prev</a>
+        <a class="btn btn-dark" href="kra2.php" role="button">Prev</a>
       </div>
     </div>
   </body>

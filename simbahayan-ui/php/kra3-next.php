@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRA 3</title>
+    <link rel="stylesheet" href="http://localhost/Simbahayan/simbahayan-ui/css/kra3.css"/>
 
     <?php 
       include('../cdn/cdn.php');
@@ -13,13 +14,9 @@
 </head>
 <body>
 
-  
   <?php 
     include('../nav_master/nav.php');
   ?>
-
-
-
 
     <div class="form-parent">
       <div class="form-child">
@@ -490,7 +487,7 @@
           </div>
         </div>
 
-        <a class="btn btn-dark" href="/simbahayan-ui/html/kra3.html" role="button">Prev</a>
+        <a class="btn btn-dark" href="kra3.php" role="button">Prev</a>
       </div>
     </div>
 

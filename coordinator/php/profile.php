@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
-
-    <?php 
+     <?php 
       include('../cdn/cdn.php');
     ?>
+
+    <link rel="stylesheet" href="http://localhost/Simbahayan/coordinator/css/profile.css"/>
+
 
   </head>
   <body>
@@ -59,7 +61,7 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="../pictures/SIMBAHAYAN-20161208-Cagayan-Relief-06.jpg" class="d-block w-100" alt="..."/>
+            src="../pictures/SIMBAHAYAN-20161208-Cagayan-Relief-06.jpg" class="d-block w-100" alt=""/>
         </div>
         <div class="carousel-item">
           <img src="../pictures/image 6.png" class="d-block w-100" alt="..." />

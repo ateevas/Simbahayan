@@ -5,6 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>KRA SELECT</title>
+		<link rel="stylesheet" href="http://localhost/Simbahayan/student-official/css/kra-select.css"/>
+
 		<?php
 		include('../cdn/cdn.php');
 		?>
@@ -22,7 +24,7 @@
 						<p class="card-text">Self-reliant, interdependent, and empowered partner communities and institutions</p>
 					</div>
 					<div class="mb-3">
-						<a href="../php/kra1.php">Go</a>
+						<a href="kra1.php">Go</a>
 					</div>
 				</div>
 			</div>
@@ -34,7 +36,7 @@
 						<p class="card-text">Thomasian engagement as agents of social transformation</p>
 					</div>
 					<div class="mb-3">
-						<a href="../php/kra2.php">Go</a>
+						<a href="kra2.php">Go</a>
 					</div>
 				</div>
 			</div>
@@ -46,7 +48,7 @@
 						<p class="card-text">Dynamic Community Development External Partnerships and Networks</p>
 					</div>
 					<div class="mb-3">
-						<a href="../php/kra3.php">Go</a>
+						<a href="kra3.php">Go</a>
 					</div>
 				</div>
 			</div>

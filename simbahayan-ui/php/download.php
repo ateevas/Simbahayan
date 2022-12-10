@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRAs and KPIs</title>
-
-
-
+    <link rel="stylesheet" href="http://localhost/Simbahayan/simbahayan-ui/css/download.css"/>
     <?php 
       include('../cdn/cdn.php');
     ?>
@@ -15,15 +13,9 @@
 </head>
 <body>
 
-
   <?php 
     include('../nav_master/nav.php');
   ?>
-
-
-
-
-
 
     <div class="contact_title">
       <div class="inner_container">
@@ -39,10 +31,6 @@
         </div>
       </div>
     </div>
-
-
-
-
 
   </body>
 </html>
