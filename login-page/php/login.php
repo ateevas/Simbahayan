@@ -102,7 +102,7 @@
           					window.location.href="http://localhost/Simbahayan/coordinator/php/profile.php";
           			    break;
           			    case 3: //staff;
-          					window.location.href="https://www.w3schools.com/";
+          					window.location.href="http://localhost/Simbahayan/simbahayan-ui/php/profile.php";
     				    break;
               }
         
