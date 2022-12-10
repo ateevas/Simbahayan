@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacts</title>
+    <link rel="stylesheet" href="http://localhost/Simbahayan/student-official/css/contact.css"/>
+
 
     <?php 
     	include('../cdn/cdn.php');
@@ -16,7 +18,6 @@
 	<?php 
 		include('../nav_master/nav.php');
 	?>
-
     <div class="contact_title">
       <div class="inner_container">
         <div class="contact_container">
@@ -50,7 +51,6 @@
 
                   <div class="facebook_details">
                     <p>https://www.facebook.com/USTSIMBAHAYAN</p>
-
                     <br />
                   </div>
                 </div>
@@ -58,8 +58,6 @@
             </div>
           </div>
         </div>
-
-        <body></body>
       </div>
     </div>
   </body>

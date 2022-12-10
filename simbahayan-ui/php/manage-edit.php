@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRAs and KPIs</title>
+    <link rel="stylesheet" href="http://localhost/Simbahayan/simbahayan-ui/css/manage.css"/>
     <?php 
       include('../cdn/cdn.php');
     ?>
@@ -155,7 +156,7 @@
 
   <div class="save-wrapper">
      <!-- Button trigger modal -->
-     <a href='/simbahayan-ui/html/manage.html'>Edit</a>
+     <a href='manage.php'>Edit</a>
 
   <!-- Modal -->
   <div

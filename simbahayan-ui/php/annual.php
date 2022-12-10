@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,3 +21,30 @@
 		</div>
 	</body>
 </html>
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KRAs and KPIs</title>
+    <link rel="stylesheet" href="http://localhost/Simbahayan/simbahayan-ui/css/annual.css"/>
+    <?php 
+    	include('../cdn/cdn.php');
+    ?>
+</head>
+<body>
+
+	<?php 
+		include('../nav_master/nav.php');
+	?>
+      <div class="content mt-3  container-sm justify-content-center ">
+        <h5>        Please double check the Annual Report before submtting the KRAs and
+          KPIs.</h5>
+          <h5 id="undone">Submitted forms cannot be undone.</h5>
+          <a class="btn btn-warning mt-3 justify-content-center rounded " href="pending.php" role="button">Annual Report Approval</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+>>>>>>> 4025b588e276cfe620d73e3bf5ee78c52f78c427

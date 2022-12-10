@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<<<<<<< HEAD
 	 <meta charset="UTF-8" />
 	 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	 <title>KRA 1</title>
+=======
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KRA 1</title>
+    <link rel="stylesheet" href="http://localhost/Simbahayan/coordinator/css/kra2.css"/>
+>>>>>>> 4025b588e276cfe620d73e3bf5ee78c52f78c427
 
 	 <?php 
 		include('../cdn/cdn.php');

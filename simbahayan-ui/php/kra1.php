@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KRA 1</title>
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="http://localhost/Simbahayan/simbahayan-ui/css/kra2.css"/>
+>>>>>>> 4025b588e276cfe620d73e3bf5ee78c52f78c427
 
     <?php 
       include('../cdn/cdn.php');
@@ -447,7 +451,11 @@
       </div>
       <div class="button-wrapper">
         <a class="btn btn-warning" href="#" role="button">Edit</a>
+<<<<<<< HEAD
         <a class="btn btn-warning" href="kra1-next.php" role="button">Next</a>
+=======
+        <a class="btn btn-dark" href="kra1-next.php" role="button">Next</a>
+>>>>>>> 4025b588e276cfe620d73e3bf5ee78c52f78c427
       </div>
     </div>
   </body>

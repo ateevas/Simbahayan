@@ -5,18 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
-
+    <link rel="stylesheet" href="http://localhost/Simbahayan/simbahayan-ui/css/changepass.css"/>
     <?php 
       include('../cdn/cdn.php');
     ?>
-
 </head>
 <body>
 
   <?php 
     include('../nav_master/nav.php');
   ?>
-
 
          <!-- form card change password -->
          <div class="card card-outline-secondary">
@@ -44,7 +42,7 @@
                           </span>
                   </div>
                   <div class="form-group">
-                      <button type="submit" class="btn btn-warning btn-lg float-right">Save</button>
+                      <button onclick="btnSubmit()" type="submit" class="btn btn-warning btn-lg float-right">Save</button>
                   </div>
               </form>
           </div>
@@ -53,3 +51,14 @@
 
 </body> 
 </html>
+
+<script type="text/javascript">
+  function btnSubmit(){
+
+    
+  }
+  
+
+
+
+</script>
