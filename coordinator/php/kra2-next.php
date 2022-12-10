@@ -273,7 +273,7 @@
 						</div>
 					</div>
 				</div>
-				<a class="btn btn-dark" href="kra1.php" role="button">Prev</a>
+				<a class="btn btn-dark" href="kra2.php" role="button">Prev</a>
 			</div>
 		</div>
 	</body>

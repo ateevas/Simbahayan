@@ -774,7 +774,7 @@ function get_kra3datafromuserid(){
             var final_kra310s=parseInt(pos_arr[0]) + parseInt(gas_arr[0]) + parseInt(ngos_arr[0]) + parseInt(beis_arr[0]) + parseInt(lheis_arr[0]) + parseInt(iheis_arr[0]) + parseInt(cbos_arr[0]) + parseInt(pbos_arr[0]);
             $('#kra310s').html(final_kra310s);
 
-            var final_kra310t=parseInt(pot_arr[0]) + parseInt(gat_arr[0]) + parseInt(ngot_arr[0]) + parseInt(beit_arr[0]) + parseInt(lheit_arr[0]) + parseInt(iheit_arr[0]) + parseInt(cbot_arr[0]) + parseInt(pbot_arr[0]);
+            var final_kra310t=parseInt(pot_arr[0]) + parseInt(gat_arr[0]) + parseInt(ngot_arr[0]) + parseInt(beit_arr[0]) + parseInt(lheit_rr[0]) + parseInt(iheit_arr[0]) + parseInt(cbot_arr[0]) + parseInt(pbot_arr[0]);
             $('#kra310t').html(final_kra310t);
 
             var final_kra311s=parseInt(pos_arr[1]) + parseInt(gas_arr[1]) + parseInt(ngos_arr[1]) + parseInt(beis_arr[1]) + parseInt(lheis_arr[1]) + parseInt(iheis_arr[1]) + parseInt(cbos_arr[1]) + parseInt(pbos_arr[1]);
