@@ -11,6 +11,164 @@ if(isset($_POST["tag"])) {	//POST
 }
 
 switch ($tag) {
+	case 'add_simbahayan':
+		$query="INSERT INTO tbl_users SET fname=?, lname=?, user_role=?, email=?, password=?, contact=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['fname'],$_GET['lname'],'3',$_GET['email'],"password",$_GET['contact']])) {
+			echo json_encode([
+				"status" => "inserted"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'get_simbahayanstaff':
+		$query="SELECT * FROM tbl_users WHERE user_role='3'";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute()) {
+			if($stmt->rowCount() != 0) {
+				$datax=json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+				$datay=json_decode($datax, true);
+				$toecho="";
+				for ($i=0; $i < count($datay); $i++) {
+					$toecho.="<tr>
+						<td style='text-transform: capitalize;'>".$datay[$i]['fname']. " " . $datay[$i]['lname']."</td>
+						<td>".$datay[$i]['email']."</td>
+						<td>".$datay[$i]['contact']."</td>
+					</tr>";
+				}
+				echo $toecho;
+			} else {
+				$toecho="<tr>
+						<td style='text-transform: capitalize;' rowspan='6'>No data available</td>
+					</tr>";
+					echo $toecho;
+			}
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'get_coordinators':
+		$query="SELECT tbl_users.*, tbl_colleges.college_name FROM tbl_users INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college WHERE tbl_users.user_role='2'";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute()) {
+			if($stmt->rowCount() != 0) {
+				$datax=json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+				$datay=json_decode($datax, true);
+				$toecho="";
+				for ($i=0; $i < count($datay); $i++) {
+					$toecho.="<tr>
+						<td style='text-transform: capitalize;'>".$datay[$i]['fname']. " " . $datay[$i]['lname']."</td>
+						<td>".$datay[$i]['college_name']."</td>
+						<td>".$datay[$i]['email']."</td>
+						<td>".$datay[$i]['contact']."</td>
+					</tr>";
+				}
+				echo $toecho;
+			} else {
+				$toecho="<tr>
+						<td style='text-transform: capitalize;' rowspan='6'>No data available</td>
+					</tr>";
+					echo $toecho;
+			}
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'add_coordinator':
+		$query="INSERT INTO tbl_users SET fname=?, lname=?, user_role=?, college=?, email=?, password=?, contact=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['fname'],$_GET['lname'],'2',$_GET['college'],$_GET['email'],"password",$_GET['contact']])) {
+			echo json_encode([
+				"status" => "inserted"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'save_alltargets':
+		$query="UPDATE tbl_kratargetcount SET target_hit=?, current_target=?, current_target3=?, kra1_target=?, kra2_target=?, kra3_target=? WHERE id='1'";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['target_hit'],$_GET['current_target'],$_GET['current_target3'],$_GET['kra1_target'],$_GET['kra2_target'],$_GET['kra3_target']])) {
+			echo json_encode([
+				"status" => "updated"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'get_targets':
+		$query="SELECT * FROM tbl_kratargetcount";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute()) {
+			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'get_finalapproved':
+		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_colleges.college_acronym, tbl_users.id_num, tbl_users.organization, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute()) {
+			if($stmt->rowCount() != 0) {
+				$datax=json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+				$datay=json_decode($datax, true);
+				$toecho="";
+				for ($i=0; $i < count($datay); $i++) {
+					$simb_name="";
+					$qx="SELECT * FROM tbl_users WHERE id=?";
+					$stmtx=$pdo->prepare($qx);
+					if($stmtx->execute([$datay[$i]['simb_id']])) {
+						$row=$stmtx->fetch(PDO::FETCH_ASSOC);
+						$simb_name=$row['fname'] . " " . $row['lname'];
+					} else {
+						echo json_encode([
+							"status" => "error2"
+						]);
+					}
+					$status="";
+					switch ($datay[$i]['kra_status']) {
+						case '1':
+							$status="<span class='badge bg-success'>Submitted</span>";
+						break;
+						case '2':
+							$status="<span class='badge bg-success'>Submitted to Simbahayan</span>";
+						break;
+						default:
+							$status="<span class='badge bg-success'>unknown</span>";
+						break;
+					}
+					$toecho.="<tr>
+						<td style='text-transform: capitalize;'><button class='btn btn-link' data-user_id='".$datay[$i]['user_id']."' onclick='generate_pdf(this)'>".$datay[$i]['college_acronym']."_".$datay[$i]['lname'].".pdf</button></td>
+						<td>".date('F d, Y h:i a', strtotime($datay[$i]['date_submitted']))."</td>
+						<td>".$simb_name."</td>
+					</tr>";
+				}
+				echo $toecho;
+			} else {
+				$toecho="<tr>
+						<td style='text-transform: capitalize;' rowspan='6'>No data available</td>
+					</tr>";
+					echo $toecho;
+			}
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
 	case 'change_password':
 		$query="UPDATE tbl_users SET password=? WHERE id=?";
 		$stmt=$pdo->prepare($query);
@@ -279,7 +437,6 @@ switch ($tag) {
 					</tr>";
 					echo $toecho;
 			}
-			
 		} else {
 			echo json_encode([
 				"status" => "error"
