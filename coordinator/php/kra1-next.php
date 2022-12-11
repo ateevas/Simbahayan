@@ -57,15 +57,15 @@
 										<li class="list-group-item">
 											<!---Status no.-->
 											Status No. of Culture and Heritage Projects
-											<input readonly id="cahds_CHP" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="cahds_CHP" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Status No. of Communities/ Institutions Served
-											<input readonly id="cahds_CIS" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="cahds_CIS" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Status No. of Participants/ Members
-											<input readonly id="cahds_PM" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="cahds_PM" placeholder="0" type="number"  />
 										</li>
 									</ul>
 								</div>
@@ -74,15 +74,15 @@
 										<li class="list-group-item">
 											<!---Target no.-->
 											Target No. of Culture and Heritage Projects
-											<input readonly id="cahdt_CHP" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="cahdt_CHP" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Target No. of Communities/ Institutions Served
-											<input readonly id="cahdt_CIS" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="cahdt_CIS" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Target No. of Participants/ Members
-											<input readonly id="cahdt_PM" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="cahdt_PM" placeholder="0" type="number"  />
 										</li>
 									</ul>
 								</div>
@@ -130,15 +130,15 @@
 										<li class="list-group-item">
 											<!---Status no.-->
 											Status No. of Sports Development Projects
-											<input readonly id="sds_SDP" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="sds_SDP" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Status No. of Communities/ Institutions Served
-											<input readonly id="sds_CIS" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="sds_CIS" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Status No. of Participants/ Members
-											<input readonly id="sds_PM" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="sds_PM" placeholder="0" type="number"  />
 										</li>
 									</ul>
 								</div>
@@ -147,15 +147,15 @@
 										<li class="list-group-item">
 											<!---Target no.-->
 											Target No. of Sports Development Projects
-											<input readonly id="sdt_SDP" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="sdt_SDP" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Target No. of Communities/ Institutions Served
-											<input readonly id="sdt_CIS" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="sdt_CIS" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Target No. of Participants/ Members
-											<input readonly id="sdt_PM" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="sdt_PM" placeholder="0" type="number"  />
 										</li>
 									</ul>
 								</div>
@@ -204,15 +204,15 @@
 										<li class="list-group-item">
 											<!---Status no.-->
 											Status No. of Environmental Sustainability and Action Projects
-											<input readonly id="drrms_ESAP" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="drrms_ESAP" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Status No. of Communities/ Institutions Served
-											<input readonly id="drrms_CIS" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="drrms_CIS" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Status No. of Participants/ Members
-											<input readonly id="drrms_PM" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="drrms_PM" placeholder="0" type="number"  />
 										</li>
 									</ul>
 								</div>
@@ -221,15 +221,15 @@
 										<li class="list-group-item">
 											<!---Target no.-->
 											Target No. of Sustainability and Action Projects
-											<input readonly id="drrmt_SAP" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="drrmt_SAP" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Target No. of Communities/ Institutions Served
-											<input readonly id="drrmt_CIS" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="drrmt_CIS" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Target No. of Participants/ Members
-											<input readonly id="drrmt_PM" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="drrmt_PM" placeholder="0" type="number"  />
 										</li>
 									</ul>
 								</div>
@@ -277,15 +277,15 @@
 										<li class="list-group-item">
 											<!---Status no.-->
 											Status No. of Family and Household Projects
-											<input readonly id="fhds_FHP" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="fhds_FHP" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Status No. of Communities/ Institutions Served
-											<input readonly id="fhds_CIS" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="fhds_CIS" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Status No. of Participants/ Members
-											<input readonly id="fhds_PM" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="fhds_PM" placeholder="0" type="number"  />
 										</li>
 									</ul>
 								</div>
@@ -294,15 +294,15 @@
 										<li class="list-group-item">
 											<!---Target no.-->
 											Target No. of Family and Household Projects
-											<input readonly id="fhdt_FHP" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="fhdt_FHP" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Target No. of Communities/ Institutions Served
-											<input readonly id="fhdt_CIS" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="fhdt_CIS" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Target No. of Participants/ Members
-											<input readonly id="fhdt_PM" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="fhdt_PM" placeholder="0" type="number"  />
 										</li>
 									</ul>
 								</div>
@@ -350,15 +350,15 @@
 										<li class="list-group-item">
 											<!-- Status no. -->
 											Status No. of Community Organization Formed
-											<input readonly id="cofs_COF" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="cofs_COF" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Status No. of Communities/ Institutions Served under each Community Organization Formed
-											<input readonly id="cofs_CISCOF" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="cofs_CISCOF" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Status No. of Participants/ Members under each Community Organization Formed
-											<input readonly id="cofs_PMCOF" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="cofs_PMCOF" placeholder="0" type="number"  />
 										</li>
 									</ul>
 								</div>
@@ -367,15 +367,15 @@
 										<li class="list-group-item">
 											<!-- Target no. -->
 											Target No. of Community Organization Formed
-											<input readonly id="coft_COF" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="coft_COF" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Target No. of Communities/ Institutions Served under each Community Organization Formed
-											<input readonly id="coft_CISCOF" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="coft_CISCOF" placeholder="0" type="number"  />
 										</li>
 										<li class="list-group-item">
 											Target No. of Participants/ Members under each Community Organization Formed
-											<input readonly id="coft_PMCOF" placeholder="0" type="number"  />
+											<input class="form-control input_number" readonly id="coft_PMCOF" placeholder="0" type="number"  />
 										</li>
 									</ul>
 								</div>
@@ -387,9 +387,10 @@
 				</div>
 			</div>
 			<div class="button-wrapper">
-				<a class="btn btn-warning" href="#" role="button">Edit</a>
+				<a class="btn btn-warning" id="edit_btn" onclick="edit_kra1()" href="#" role="button">Edit</a>
+		  		<a class="btn btn-warning" id="save_btn" style="display: none;" onclick="save_kra1()" href="#" role="button">Save</a>
 				<!-- Button trigger modal -->
-				<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#approval">Approve</button>
+				<button type="button" class="btn btn-warning approve" data-bs-toggle="modal" data-bs-target="#approval">Approve</button>
 				<!-- Modal -->
 				<div
 					class="modal fade"
@@ -419,6 +420,115 @@
 	</body>
 </html>
 <script type="text/javascript">
+	get_lock();
+	function get_lock() {
+		if(localStorage.getItem('edit_lock') == "1") {
+			$('#edit_btn').addClass("disabled");
+			$('#edit_btn').attr("disabled","disabled");
+			$('.approve').addClass("disabled");
+			$('.approve').attr("disabled","disabled");
+		}
+	}
+function save_kra1() {
+//Status in Cultural Life
+var cahds_CHP = $('#cahds_CHP').val(); 
+var cahds_CIS = $('#cahds_CIS').val();
+var cahds_PM = $('#cahds_PM').val();
+//Target in Cultural Life
+var cahdt_CHP = $('#cahdt_CHP').val();
+var cahdt_CIS = $('#cahdt_CIS').val();
+var cahdt_PM = $('#cahdt_PM').val();
+//array
+var cahds_arr=[cahds_CHP, cahds_CIS, cahds_PM];
+var cahdt_arr=[cahdt_CHP, cahdt_CIS, cahdt_PM];
+localStorage.setItem('cahds_arr', cahds_arr);
+localStorage.setItem('cahdt_arr', cahdt_arr);
+//Status & Target in Sports for all
+var sds_SDP = $('#sds_SDP').val(); 
+var sds_CIS = $('#sds_CIS').val();
+var sds_PM = $('#sds_PM').val();
+var sdt_SDP = $('#sdt_SDP').val();
+var sdt_CIS = $('#sdt_CIS').val();
+var sdt_PM = $('#sdt_PM').val();
+//array
+var sds_arr=[sds_SDP, sds_CIS, sds_PM];
+var sdt_arr=[sdt_SDP, sdt_CIS, sdt_PM];
+localStorage.setItem('sds_arr', sds_arr);
+localStorage.setItem('sdt_arr', sdt_arr);
+//Status & Target in Environmental Justice
+var drrms_ESAP = $('#drrms_ESAP').val(); 
+var drrms_CIS = $('#drrms_CIS').val();
+var drrms_PM = $('#drrms_PM').val();
+var drrmt_SAP = $('#drrmt_SAP').val();
+var drrmt_CIS = $('#drrmt_CIS').val();
+var drrmt_PM = $('#drrmt_PM').val();
+//array
+var drrms_arr=[drrms_ESAP, drrms_CIS, drrms_PM];
+var drrmt_arr=[drrmt_SAP, drrmt_CIS, drrmt_PM];
+localStorage.setItem('drrms_arr', drrms_arr);
+localStorage.setItem('drrmt_arr', drrmt_arr);
+//Status & Target in Holistic Life
+var fhds_FHP = $('#fhds_FHP').val(); 
+var fhds_CIS = $('#fhds_CIS').val();
+var fhds_PM = $('#fhds_PM').val();
+var fhdt_FHP = $('#fhdt_FHP').val();
+var fhdt_CIS = $('#fhdt_CIS').val();
+var fhdt_PM = $('#fhdt_PM').val();
+//array
+var fhds_arr=[fhds_FHP, fhds_CIS, fhds_PM];
+var fhdt_arr=[fhdt_FHP, fhdt_CIS, fhdt_PM];
+localStorage.setItem('fhds_arr', fhds_arr);
+localStorage.setItem('fhdt_arr', fhdt_arr);
+//Status & Target in Community Organization
+var cofs_COF = $('#cofs_COF').val(); 
+var cofs_CISCOF = $('#cofs_CISCOF').val();
+var cofs_PMCOF = $('#cofs_PMCOF').val();
+var coft_COF = $('#coft_COF').val();
+var coft_CISCOF = $('#coft_CISCOF').val();
+var coft_PMCOF = $('#coft_PMCOF').val();
+//array
+var cofs_arr=[cofs_COF, cofs_CISCOF, cofs_PMCOF];
+var coft_arr=[coft_COF, coft_CISCOF, coft_PMCOF];
+localStorage.setItem('cofs_arr', cofs_arr);
+localStorage.setItem('coft_arr', coft_arr);
+
+	let user_id = localStorage.getItem('selected_user_id');
+	$.ajax({
+		url: url,
+		type: "POST",
+		data: {
+			csrf_token: "{{ csrf_token() }}",
+			tag: "update2_kra1",
+			user_id: user_id,
+			cahds_arr: localStorage.getItem('cahds_arr'),
+			cahdt_arr: localStorage.getItem('cahdt_arr'),
+			sds_arr: localStorage.getItem('sds_arr'),
+			sdt_arr: localStorage.getItem('sdt_arr'),
+			drrms_arr: localStorage.getItem('drrms_arr'),
+			drrmt_arr: localStorage.getItem('drrmt_arr'),
+			fhds_arr: localStorage.getItem('fhds_arr'),
+			fhdt_arr: localStorage.getItem('fhdt_arr'),
+			cofs_arr: localStorage.getItem('cofs_arr'),
+			coft_arr: localStorage.getItem('coft_arr')
+		},
+		complete: function (response) {
+			var data = JSON.parse(response.responseText);
+			if(data['status'] == "ok") {
+				alert("successfully saved!");
+				location.reload();
+			} else {
+				alert("Unknown error occured. Please try again.")
+			}
+		}
+	})
+
+
+}
+function edit_kra1() {
+	$('.input_number').removeAttr('readonly');
+	$('#save_btn').show();
+	$('#edit_btn').hide();
+}
 function approve_kra1coordinator() {
 	let user_id=localStorage.getItem('selected_user_id');
 	 $.ajax({

@@ -56,11 +56,11 @@
 										<li class="list-group-item">
 											<!-- Status no.-->
 											No. of MOU/MOA
-											<input id="POs_MM" placeholder="0" type="number" readonly/>
+											<input class="form-control input_number" id="POs_MM" placeholder="0" type="number" readonly/>
 										</li>
 										<li class="list-group-item">
 											No. of Community Development and Advocacy Activities
-											<input id="POs_CDAA" placeholder="0" type="number"  readonly/>
+											<input class="form-control input_number" id="POs_CDAA" placeholder="0" type="number"  readonly/>
 										</li>
 									</ul>
 								</div>
@@ -69,11 +69,11 @@
 										<li class="list-group-item">
 											<!---Target no.-->
 											No. of MOU/MOA
-											<input id="POt_MM" placeholder="0" type="number" readonly />
+											<input class="form-control input_number" id="POt_MM" placeholder="0" type="number" readonly />
 										</li>
 										<li class="list-group-item">
 											No. of Community Development and Advocacy Activities
-											<input id="POt_CDAA" placeholder="0" type="number" readonly />
+											<input class="form-control input_number" id="POt_CDAA" placeholder="0" type="number" readonly />
 										</li>
 									</ul>
 								</div>
@@ -121,11 +121,11 @@
 										<li class="list-group-item">
 											<!-- Status no.-->
 											Status No. of MOU/MOA
-											<input id="GAs_MM" placeholder="0" type="number" readonly  />
+											<input class="form-control input_number" id="GAs_MM" placeholder="0" type="number" readonly  />
 										</li>
 										<li class="list-group-item">
 											Status No. of Community Development and Advocacy Activities
-											<input id="GAs_CDAA" placeholder="0" type="number" readonly />
+											<input class="form-control input_number" id="GAs_CDAA" placeholder="0" type="number" readonly />
 										</li>
 									</ul>
 								</div>
@@ -134,11 +134,11 @@
 										<li class="list-group-item">
 											<!-- Target no.-->
 											Target No. of MOU/MOA
-											<input id="GAt_MM" placeholder="0" type="number" readonly />
+											<input class="form-control input_number" id="GAt_MM" placeholder="0" type="number" readonly />
 										</li>
 										<li class="list-group-item">
 											Target No. of Community Development and Advocacy Activities
-											<input id="GAt_CDAA" placeholder="0" type="number" readonly />
+											<input class="form-control input_number" id="GAt_CDAA" placeholder="0" type="number" readonly />
 										</li>
 									</ul>
 								</div>
@@ -186,11 +186,11 @@
 										<li class="list-group-item">
 											<!---Status no.-->
 											Status No. of MOU/MOA
-											<input id="NGOs_MM" placeholder="0" type="number" readonly />
+											<input class="form-control input_number" id="NGOs_MM" placeholder="0" type="number" readonly />
 										</li>
 										<li class="list-group-item">
 											Status No. of Community Development and Advocacy Activities
-											<input id="NGOs_CDAA" placeholder="0" type="number" readonly />
+											<input class="form-control input_number" id="NGOs_CDAA" placeholder="0" type="number" readonly />
 										</li>
 									</ul>
 								</div>
@@ -199,11 +199,11 @@
 										<li class="list-group-item">
 											<!---Target no.-->
 											Target No. of MOU/MOA
-											<input id="NGOt_MM" placeholder="0" type="number" readonly />
+											<input class="form-control input_number" id="NGOt_MM" placeholder="0" type="number" readonly />
 										</li>
 										<li class="list-group-item">
 											Target No. of Community Development and Advocacy Activities
-											<input id="NGOt_CDAA" placeholder="0" type="number" readonly />
+											<input class="form-control input_number" id="NGOt_CDAA" placeholder="0" type="number" readonly />
 										</li>
 									</ul>
 								</div>
@@ -251,11 +251,11 @@
 										<li class="list-group-item">
 											<!---Status no.-->
 											Status No. of MOU/MOA
-											<input id="BEIs_MM" placeholder="0" type="number" readonly />
+											<input class="form-control input_number" id="BEIs_MM" placeholder="0" type="number" readonly />
 										</li>
 										<li class="list-group-item">
 											Status No. of Community Development and Advocacy Activities
-											<input id="BEIs_CDAA" placeholder="0" type="number" readonly />
+											<input class="form-control input_number" id="BEIs_CDAA" placeholder="0" type="number" readonly />
 										</li>
 									</ul>
 								</div>
@@ -264,11 +264,11 @@
 										<li class="list-group-item">
 											<!---Target no.-->
 											Target No. of MOU/MOA
-											<input id="BEIt_MM" placeholder="0" type="number" readonly />
+											<input class="form-control input_number" id="BEIt_MM" placeholder="0" type="number" readonly />
 										</li>
 										<li class="list-group-item">
 											Target No. of Community Development and Advocacy Activities
-											<input id="BEIt_CDAA" placeholder="0" type="number" readonly />
+											<input class="form-control input_number" id="BEIt_CDAA" placeholder="0" type="number" readonly />
 										</li>
 									</ul>
 								</div>
@@ -280,7 +280,8 @@
 				</div>
 			</div>
 			<div class="button-wrapper">
-	        <a class="btn btn-warning" href="#" role="button">Edit</a>
+	        <a class="btn btn-warning" id="edit_btn" onclick="edit_kra3()" href="#" role="button">Edit</a>
+		  	<a class="btn btn-warning" id="save_btn" style="display: none;" onclick="save_kra3()" href="#" role="button">Save</a>
 	        <a class="btn btn-warning" href="kra3-next.php" role="button">Next</a>
 	      </div>
 		</div>
@@ -288,6 +289,111 @@
 </html>
 
 <script type="text/javascript">
+		get_lock();
+	function get_lock() {
+		if(localStorage.getItem('edit_lock') == "1") {
+			$('#edit_btn').addClass("disabled");
+			$('#edit_btn').attr("disabled","disabled");
+			$('.approve').addClass("disabled");
+			$('.approve').attr("disabled","disabled");
+		}
+	}
+  get_kra3datafromuserid();
+  function save_kra3() {
+	var POs_MM = $("#POs_MM").val();
+	var POs_CDAA = $("#POs_CDAA").val();
+	var POt_MM = $("#POt_MM").val();
+	var POt_CDAA = $("#POt_CDAA").val();
+
+	//array
+	var pos_arr = [POs_MM,POs_CDAA];
+	var pot_arr = [POt_MM,POt_CDAA];
+
+	localStorage.setItem('pos_arr', pos_arr);
+	localStorage.setItem('pot_arr', pot_arr);
+
+
+	var pos_arr = [POs_MM,POs_CDAA];
+	var pot_arr = [POt_MM,POt_CDAA];
+
+
+	// SETTING IT TO LOCAL STORAGE
+	localStorage.setItem("pos_arr", pos_arr);
+	localStorage.setItem("pot_arr", pot_arr);
+
+
+	var GAs_MM = $("#GAs_MM").val();
+	var GAs_CDAA = $("#GAs_CDAA").val();
+	var GAt_MM = $("#GAt_MM").val();
+	var GAt_CDAA = $("#GAt_CDAA").val();
+
+	//array
+	var gas_arr = [GAs_MM,GAs_CDAA];
+	var gat_arr = [GAt_MM,GAt_CDAA];
+	localStorage.setItem('gas_arr', gas_arr);
+	localStorage.setItem('gat_arr', gat_arr);
+
+
+
+	var NGOs_MM = $("#NGOs_MM").val();
+	var NGOs_CDAA = $("#NGOs_CDAA").val();
+	var NGOt_MM = $("#NGOt_MM").val();
+	var NGOt_CDAA = $("#NGOt_CDAA").val();
+
+	//array
+	var ngos_arr = [NGOs_MM,NGOs_CDAA];
+	var ngot_arr = [NGOt_MM,NGOt_CDAA];
+	localStorage.setItem('ngos_arr', ngos_arr);
+	localStorage.setItem('ngot_arr', ngot_arr);
+
+
+	var BEIs_MM = $("#BEIs_MM").val();
+	var BEIs_CDAA = $("#BEIs_CDAA").val();
+	var BEIt_MM = $("#BEIt_MM").val();
+	var BEIt_CDAA = $("#BEIt_CDAA").val();
+
+	//array
+	var beis_arr = [BEIs_MM,BEIs_CDAA];
+	var beit_arr = [BEIt_MM,BEIt_CDAA];
+	localStorage.setItem('beis_arr', beis_arr);
+	localStorage.setItem('beit_arr', beit_arr);
+
+  let user_id = localStorage.getItem('selected_user_id');
+
+  $.ajax({
+  url: url,
+  type: "POST",
+  data: {
+	csrf_token: "{{ csrf_token() }}",
+	tag: "update1_kra3", 
+	user_id: user_id,
+	pos_arr: localStorage.getItem('pos_arr'),
+	pot_arr: localStorage.getItem('pot_arr'),
+	gas_arr: localStorage.getItem('gas_arr'),
+	gat_arr: localStorage.getItem('gat_arr'),
+	ngos_arr: localStorage.getItem('ngos_arr'),
+	ngot_arr: localStorage.getItem('ngot_arr'),
+	beis_arr: localStorage.getItem('beis_arr'),
+	beit_arr: localStorage.getItem('beit_arr')
+  },
+  complete: function (response) {
+	 console.log(response.responseText);
+	 var data = JSON.parse(response.responseText);
+	 if(data['status'] == "ok") {
+		alert("successfully saved!");
+		location.reload();
+	 } else {
+		alert("Unknown error occured. Please try again.")
+	 }
+  }
+})
+
+}
+function edit_kra3() {
+	$('.input_number').removeAttr('readonly');
+	$('#save_btn').show();
+	$('#edit_btn').hide();
+}
   get_kra3datafromuserid();
   function get_kra3datafromuserid(){
     let user_id = localStorage.getItem('selected_user_id');

@@ -39,10 +39,10 @@
                         <label class="form-label" for="password">Password</label>
                       </div>
                       <!-- Checkbox -->
-                      <div class="form-check d-flex justify-content-start mb-4">
+                    <!--   <div class="form-check d-flex justify-content-start mb-4">
                         <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
                         <label class="form-check-label" for="form1Example3"> Remember password </label>
-                      </div>
+                      </div> -->
                     <button class="btn btn-warning btn-lg btn-block" type="button" onclick="login(this)">Login</button>
                   </form>
 

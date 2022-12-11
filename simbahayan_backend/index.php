@@ -414,6 +414,9 @@ switch ($tag) {
 						case '2':
 							$status="<span class='badge bg-success'>Submitted to Simbahayan</span>";
 						break;
+						case '3':
+							$status="<span class='badge bg-success'>Approved</span>";
+						break;
 						default:
 							$status="<span class='badge bg-success'>unknown</span>";
 						break;
@@ -443,6 +446,202 @@ switch ($tag) {
 			]);
 		}
 	break;
+	case 'update2_kra3':
+		$query="UPDATE kra3 SET
+			lheis_arr=?,
+			lheit_arr=?,
+			iheis_arr=?,
+			iheit_arr=?,
+			cbos_arr=?,
+			cbot_arr=?,
+			pbos_arr=?,
+			pbot_arr=?,
+			tccs_arr=?,
+			tcct_arr=? WHERE user_id=?"; 
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([
+			$_POST['lheis_arr'],
+			$_POST['lheit_arr'],
+			$_POST['iheis_arr'],
+			$_POST['iheit_arr'],
+			$_POST['cbos_arr'],
+			$_POST['cbot_arr'], 
+			$_POST['pbos_arr'],
+			$_POST['pbot_arr'], 
+			$_POST['tccs_arr'],
+			$_POST['tcct_arr'],
+			$_POST['user_id']
+		])) {
+			echo json_encode([
+				"status" => "ok"
+				]);
+		} else{
+				echo json_encode([
+					"status" => "error"
+					]);
+		}
+	break;
+	case 'update1_kra3':
+		$query="UPDATE kra3 SET
+			pos_arr=?,
+			pot_arr=?,
+			gas_arr=?,
+			gat_arr=?,
+			ngos_arr=?,
+			ngot_arr=?,
+			beis_arr=?,
+			beit_arr=? WHERE user_id=?"; 
+			$stmt=$pdo->prepare($query);
+			if($stmt->execute([
+				$_POST['pos_arr'], 
+				$_POST['pot_arr'],
+				$_POST['gas_arr'],
+				$_POST['gat_arr'],
+				$_POST['ngos_arr'],
+				$_POST['ngot_arr'],
+				$_POST['beis_arr'],
+				$_POST['beit_arr'],
+				$_POST['user_id']
+			])) {
+				echo json_encode([
+					"status" => "ok"
+				]);
+		} else{
+				echo json_encode([
+					"status" => "error"
+				]);
+		}
+	break;
+	case 'update2_kra2':
+		$query="UPDATE kra2 SET
+			udcps_arr=?,
+			udcpt_arr=?,
+			fcs_arr=?,
+			fct_arr=?,
+			ps_arr=?,
+			pt_arr=? WHERE user_id=?"; 
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([
+			$_POST['udcps_arr'],
+			$_POST['udcpt_arr'],
+			$_POST['fcs_arr'],
+			$_POST['fct_arr'],
+			$_POST['ps_arr'],
+			$_POST['pt_arr'], 
+			$_POST['user_id']
+		])) {
+			echo json_encode([
+				"status" => "ok",
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'update1_kra2':
+		$query="UPDATE kra2 SET
+			s_puidcd_arr=?,
+			t_puidcd_arr=?,
+			s_psaa_arr=?,
+			t_psaa_arr=?,
+			s_pucer_arr=?,
+			t_pucer_arr=?,
+			s_pul_arr=?,
+			t_pul_arr=? WHERE user_id=?"; 
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([
+			$_POST['s_puidcd_arr'], 
+			$_POST['t_puidcd_arr'],
+			$_POST['s_psaa_arr'],
+			$_POST['t_psaa_arr'],
+			$_POST['s_pucer_arr'],
+			$_POST['t_pucer_arr'],
+			$_POST['s_pul_arr'],
+			$_POST['t_pul_arr'],
+			$_POST['user_id']
+		])) {
+			echo json_encode([
+				"status" => "ok",
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'update2_kra1':
+		$query="UPDATE kra1 SET
+			cahds_arr=?,
+			cahdt_arr=?,
+			sds_arr=?,
+			sdt_arr=?,
+			drrms_arr=?,
+			drrmt_arr=?,
+			fhds_arr=?,
+			fhdt_arr=?,
+			cofs_arr=?,
+			coft_arr=? WHERE user_id=?";
+
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([
+			$_POST['cahds_arr'],
+			$_POST['cahdt_arr'],
+			$_POST['sds_arr'],
+			$_POST['sdt_arr'],
+			$_POST['drrms_arr'],
+			$_POST['drrmt_arr'],
+			$_POST['fhds_arr'],
+			$_POST['fhdt_arr'],
+			$_POST['cofs_arr'],
+			$_POST['coft_arr'],
+			$_POST['user_id']
+		])) {
+			echo json_encode([
+				"status" => "ok",
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'update1_kra1':
+		$query="UPDATE kra1 SET
+			hs_arr=?,
+			ht_arr=?,
+			es_arr=?,
+			et_arr=?,
+			ggs_arr=?,
+			ggt_arr=?,
+			ejs_arr=?,
+			ejt_arr=?,
+			cls_arr=?,
+			clt_arr=? WHERE user_id=?";
+
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([
+			$_POST['hs_arr'],
+			$_POST['ht_arr'],
+			$_POST['es_arr'],
+			$_POST['et_arr'],
+			$_POST['ggs_arr'],
+			$_POST['ggt_arr'],
+			$_POST['ejs_arr'],
+			$_POST['ejt_arr'],
+			$_POST['cls_arr'],
+			$_POST['clt_arr'],
+			$_POST['user_id']
+		])) {
+			echo json_encode([
+				"status" => "ok",
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
 	case 'get_allsubmittedkra':
 		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_users.id_num, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college";
 		$stmt=$pdo->prepare($query);
@@ -459,6 +658,9 @@ switch ($tag) {
 						break;
 						case '2':
 							$status="<span class='badge bg-success'>Submitted to Simbahayan</span>";
+						break;
+						case '3':
+							$status="<span class='badge bg-success'>Approved</span>";
 						break;
 						default:
 							$status="<span class='badge bg-success'>unknown</span>";

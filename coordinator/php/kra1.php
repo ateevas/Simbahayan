@@ -68,18 +68,18 @@
 							 <!-- Status no.-->
 							 Status No. of Health and Wellness Development Projects
 
-							 <input id="hs_HWDP" placeholder="0" type="number" readonly  />
+							 <input class="form-control input_number" readonly id="hs_HWDP" placeholder="0" type="number" readonly  />
 						  </li>
 						  <li class="list-group-item">
 							 Status No. of Communities/ Institutions Served
 
-							 <input id="hs_CIS" placeholder="0" type="number" readonly  />
+							 <input class="form-control input_number" readonly id="hs_CIS" placeholder="0" type="number" readonly  />
 						  </li>
 
 						  <li class="list-group-item">
 							 Status No. of Participants/ Members
 
-							 <input id="hs_PM" placeholder="0" type="number" readonly  />
+							 <input class="form-control input_number" readonly id="hs_PM" placeholder="0" type="number" readonly  />
 						  </li>
 						</ul>
 					 </div>
@@ -90,18 +90,18 @@
 							 <!-- Target no.-->
 							 Target No. of Health and Wellness Development Projects
 
-							 <input id="ht_HWDP" placeholder="0" type="number" readonly  />
+							 <input class="form-control input_number" readonly id="ht_HWDP" placeholder="0" type="number" readonly  />
 						  </li>
 						  <li class="list-group-item">
 							 Target No. of Communities/ Institutions Served
 
-							 <input id="ht_CIS" placeholder="0" type="number" readonly  />
+							 <input class="form-control input_number" readonly id="ht_CIS" placeholder="0" type="number" readonly  />
 						  </li>
 
 						  <li class="list-group-item">
 							 Target No. of Participants/ Members
 
-							 <input id="ht_PM" placeholder="0" type="number" readonly  />
+							 <input class="form-control input_number" readonly id="ht_PM" placeholder="0" type="number" readonly  />
 						  </li>
 						</ul>
 					 </div>
@@ -152,18 +152,18 @@
 							 <!---Status no.-->
 							 Status No. of Equitable and Inclusive Education Projects
 
-							 <input id="es_EIEP" placeholder="0" type="number" readonly  />
+							 <input class="form-control input_number" readonly id="es_EIEP" placeholder="0" type="number" readonly  />
 						  </li>
 						  <li class="list-group-item">
 							 Status No. of Communities/ Institutions Served
 
-							 <input id="es_CIS" placeholder="0" type="number" readonly  />
+							 <input class="form-control input_number" readonly id="es_CIS" placeholder="0" type="number" readonly  />
 						  </li>
 
 						  <li class="list-group-item">
 							 Status No. of Participants/ Members
 
-							 <input id="es_PM" placeholder="0" type="number" readonly  />
+							 <input class="form-control input_number" readonly id="es_PM" placeholder="0" type="number" readonly  />
 						  </li>
 						</ul>
 					 </div>
@@ -174,18 +174,18 @@
 							 <!-- Target no. -->
 							 Target No. of Equitable and Inclusive Education Projects
 
-							 <input id="et_EIEP" placeholder="0" type="number" readonly  />
+							 <input class="form-control input_number" readonly id="et_EIEP" placeholder="0" type="number" readonly  />
 						  </li>
 						  <li class="list-group-item">
 							 Target No. of Communities/ Institutions Served
 
-							 <input id="et_CIS" placeholder="0" type="number" readonly  />
+							 <input class="form-control input_number" readonly id="et_CIS" placeholder="0" type="number" readonly  />
 						  </li>
 
 						  <li class="list-group-item">
 							 Target No. of Participants/ Members
 
-							 <input id="et_PM" placeholder="0" type="number" readonly  />
+							 <input class="form-control input_number" readonly id="et_PM" placeholder="0" type="number" readonly  />
 						  </li>
 						</ul>
 					 </div>
@@ -236,17 +236,17 @@
 							 <!-- Status no. -->
 							 Status No. of Leadership, Organizational Development, and Good Governance Projects
 
-							 <input id="ggs_LODGGP" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="ggs_LODGGP" placeholder="0" type="number"  />
 						  </li>
 						  <li class="list-group-item">
 							 Status No. of Communities/ Institutions Served
 
-							 <input id="ggs_CIS" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="ggs_CIS" placeholder="0" type="number"  />
 						  </li>
 						  <li class="list-group-item">
 							 Status No. of Participants/ Members
 
-							 <input id="ggs_PM" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="ggs_PM" placeholder="0" type="number"  />
 						  </li>
 						</ul>
 					 </div>
@@ -257,18 +257,18 @@
 							 <!-- Target no. -->
 							 Target No. of Leadership, Organizational Development, and Good Governance Projects
 
-							 <input id="ggt_LODGGP" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="ggt_LODGGP" placeholder="0" type="number"  />
 						  </li>
 						  <li class="list-group-item">
 							 Target No. of Communities/ Institutions Served
 
-							 <input id="ggt_CIS" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="ggt_CIS" placeholder="0" type="number"  />
 						  </li>
 
 						  <li class="list-group-item">
 							 Target No. of Participants/ Members
 
-							 <input id="ggt_PM" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="ggt_PM" placeholder="0" type="number"  />
 						  </li>
 						</ul>
 					 </div>
@@ -319,17 +319,17 @@
 							 <!-- Status no.-->
 							 Status No. of Employability and Social Enterprise Projects
 
-							 <input id="ejs_ESEP" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="ejs_ESEP" placeholder="0" type="number"  />
 						  </li>
 						  <li class="list-group-item">
 							 Status No. of Communities/ Institutions Served
 
-							 <input id="ejs_CIS" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="ejs_CIS" placeholder="0" type="number"  />
 						  </li>
 						  <li class="list-group-item">
 							 Status No. of Participants/ Members
 
-							 <input id="ejs_PM" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="ejs_PM" placeholder="0" type="number"  />
 						  </li>
 						</ul>
 					 </div>
@@ -340,17 +340,17 @@
 							 <!-- Target no.-->
 							 Target No. of Employability and Social Enterprise Projects
 
-							 <input id="ejt_ESEP" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="ejt_ESEP" placeholder="0" type="number"  />
 						  </li>
 						  <li class="list-group-item">
 							 Target No. of Communities/ Institutions Served
 
-							 <input id="ejt_CIS" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="ejt_CIS" placeholder="0" type="number"  />
 						  </li>
 						  <li class="list-group-item">
 							 Target No. of Participants/ Members
 
-							 <input id="ejt_PM" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="ejt_PM" placeholder="0" type="number"  />
 						  </li>
 						</ul>
 					 </div>
@@ -402,17 +402,17 @@
 							 <!---Status no.-->
 							 Status No. of Socio-Pastoral Ministry and Evangelization Projects
 
-							 <input id="cls_SPMEP" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="cls_SPMEP" placeholder="0" type="number"  />
 						  </li>
 						  <li class="list-group-item">
 							 Status No. of Communities/ Institutions Served
 
-							 <input id="cls_CIS" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="cls_CIS" placeholder="0" type="number"  />
 						  </li>
 						  <li class="list-group-item">
 							 Status No. of Participants/ Members
 
-							 <input id="cls_PM" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="cls_PM" placeholder="0" type="number"  />
 						  </li>
 						</ul>
 					 </div>
@@ -423,17 +423,17 @@
 							 <!-- Target no. -->
 							 Target No. of Socio-Pastoral Ministry and Evangelization Projects
 
-							 <input id="clt_SPMEP" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="clt_SPMEP" placeholder="0" type="number"  />
 						  </li>
 						  <li class="list-group-item">
 							 Target No. of Communities/ Institutions Served
 
-							 <input id="clt_CIS" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="clt_CIS" placeholder="0" type="number"  />
 						  </li>
 						  <li class="list-group-item">
 							 Target No. of Participants/ Members
 
-							 <input id="clt_PM" placeholder="0" type="number"  />
+							 <input class="form-control input_number" readonly id="clt_PM" placeholder="0" type="number"  />
 						  </li>
 						</ul>
 					 </div>
@@ -445,13 +445,117 @@
 		  </div>
 		</div>
 		<div class="button-wrapper">
-		  <a class="btn btn-warning" href="#" role="button">Edit</a>
+		  <a class="btn btn-warning" id="edit_btn" onclick="edit_kra1()" href="#" role="button">Edit</a>
+		  <a class="btn btn-warning" id="save_btn" style="display: none;" onclick="save_kra1()" href="#" role="button">Save</a>
 		  <a class="btn btn-warning" href="kra1-next.php" role="button">Next</a>
 		</div>
 	 </div>
   </body>
 </html>
 <script type="text/javascript">
+	get_lock();
+	function get_lock() {
+		if(localStorage.getItem('edit_lock') == "1") {
+			$('#edit_btn').addClass("disabled");
+			$('#edit_btn').attr("disabled","disabled");
+			$('.approve').addClass("disabled");
+			$('.approve').attr("disabled","disabled");
+		}
+	}
+function save_kra1() {
+	//----------------------- Health for All -----------------------//
+	var hs_HWDP = $('#hs_HWDP').val();
+	var hs_CIS = $('#hs_CIS').val();
+	var hs_PM = $('#hs_PM').val();
+	var ht_HWDP = $('#ht_HWDP').val();
+	var ht_CIS = $('#ht_CIS').val();
+	var ht_PM = $('#ht_PM').val();
+	var hs_arr=new Array(hs_HWDP, hs_CIS, hs_PM);
+	var ht_arr=[ht_HWDP, ht_CIS, ht_PM];
+	localStorage.setItem('hs_arr', hs_arr);
+	localStorage.setItem('ht_arr', ht_arr);
+	//----------------------- Education for All -----------------------//
+	var es_EIEP = $('#es_EIEP').val();
+	var es_CIS = $('#es_CIS').val();
+	var es_PM = $('#es_PM').val();
+	var et_EIEP = $('#et_EIEP').val();
+	var et_CIS = $('#et_CIS').val();
+	var et_PM = $('#et_PM').val();
+	var es_arr=[es_EIEP, es_CIS, es_PM];
+	var et_arr=[et_EIEP, et_CIS, et_PM];
+	localStorage.setItem('es_arr', es_arr);
+	localStorage.setItem('et_arr', et_arr);
+	//----------------------- Good Governance for All -----------------------//
+	var ggs_LODGGP = $('#ggs_LODGGP').val();
+	var ggs_CIS = $('#ggs_CIS').val();
+	var ggs_PM = $('#ggs_PM').val();
+	var ggt_LODGGP = $('#ggt_LODGGP').val();
+	var ggt_CIS = $('#ggt_CIS').val();
+	var ggt_PM = $('#ggt_PM').val();
+	var ggs_arr=[ggs_LODGGP, ggs_CIS, ggs_PM];
+	var ggt_arr=[ggt_LODGGP, ggt_CIS, ggt_PM];
+	localStorage.setItem('ggs_arr', ggs_arr);
+	localStorage.setItem('ggt_arr', ggt_arr);
+	//----------------------- Economic Justice for All -----------------------//
+	var ejs_ESEP = $('#ejs_ESEP').val();
+	var ejs_CIS = $('#ejs_CIS').val();
+	var ejs_PM = $('#ejs_PM').val();
+	var ejt_ESEP = $('#ejt_ESEP').val();
+	var ejt_CIS = $('#ejt_CIS').val();
+	var ejt_PM = $('#ejt_PM').val();
+	var ejs_arr=[ejs_ESEP, ejs_CIS, ejs_PM];
+	var ejt_arr=[ejt_ESEP, ejt_CIS, ejt_PM];
+	localStorage.setItem('ejs_arr', ejs_arr);
+	localStorage.setItem('ejt_arr', ejt_arr);
+	//----------------------- Christ Love for All -----------------------//
+	var cls_SPMEP = $('#cls_SPMEP').val();
+	var cls_CIS = $('#cls_CIS').val();
+	var cls_PM = $('#cls_PM').val();
+	var clt_SPMEP = $('#clt_SPMEP').val();
+	var clt_CIS = $('#clt_CIS').val();
+	var clt_PM = $('#clt_PM').val();
+	var cls_arr=[cls_SPMEP, cls_CIS, cls_PM];
+	var clt_arr=[clt_SPMEP, clt_CIS, clt_PM];
+	localStorage.setItem('cls_arr', cls_arr);
+	localStorage.setItem('clt_arr', clt_arr);
+
+	let user_id = localStorage.getItem('selected_user_id');
+	$.ajax({
+		url: url,
+		type: "POST",
+		data: {
+			csrf_token: "{{ csrf_token() }}",
+			tag: "update1_kra1",
+			user_id: user_id,
+			hs_arr: localStorage.getItem('hs_arr'),
+			ht_arr: localStorage.getItem('ht_arr'),
+			es_arr: localStorage.getItem('es_arr'),
+			et_arr: localStorage.getItem('et_arr'),
+			ggs_arr: localStorage.getItem('ggs_arr'),
+			ggt_arr: localStorage.getItem('ggt_arr'),
+			ejs_arr: localStorage.getItem('ejs_arr'),
+			ejt_arr: localStorage.getItem('ejt_arr'),
+			cls_arr: localStorage.getItem('cls_arr'),
+			clt_arr: localStorage.getItem('clt_arr')
+		},
+		complete: function (response) {
+			var data = JSON.parse(response.responseText);
+			if(data['status'] == "ok") {
+				alert("successfully saved!");
+				location.reload();
+			} else {
+				alert("Unknown error occured. Please try again.")
+			}
+		}
+	})
+
+
+}
+function edit_kra1() {
+	$('.input_number').removeAttr('readonly');
+	$('#save_btn').show();
+	$('#edit_btn').hide();
+}
 get_kra1datafromuserid();
   function get_kra1datafromuserid(){
 	 let user_id = localStorage.getItem('selected_user_id');

@@ -403,18 +403,11 @@ var cahds_PM = $('#cahds_PM').val();
 var cahdt_CHP = $('#cahdt_CHP').val();
 var cahdt_CIS = $('#cahdt_CIS').val();
 var cahdt_PM = $('#cahdt_PM').val();
-
 //array
 var cahds_arr=[cahds_CHP, cahds_CIS, cahds_PM];
-
 var cahdt_arr=[cahdt_CHP, cahdt_CIS, cahdt_PM];
-
-
 localStorage.setItem('cahds_arr', cahds_arr);
 localStorage.setItem('cahdt_arr', cahdt_arr);
-
-
-
 //Status & Target in Sports for all
 var sds_SDP = $('#sds_SDP').val(); 
 var sds_CIS = $('#sds_CIS').val();

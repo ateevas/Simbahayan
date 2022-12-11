@@ -56,27 +56,27 @@
 										<li class="list-group-item">
 											<!-- Status no.-->
 											No. of Student Organizations
-											<input id="UDCPs_NSO" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="UDCPs_NSO" readonly placeholder="0" type="number"/>
 										</li>
 										<li class="list-group-item">
 											No. of Students
-											<input id="UDCPs_NStu" readonly placeholder="0" type="number" />
+											<input class="form-control input_number" id="UDCPs_NStu" readonly placeholder="0" type="number" />
 										</li>
 										<li class="list-group-item">
 											No. of Faculty
-											<input id="UDCPs_NFac" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="UDCPs_NFac" readonly placeholder="0" type="number"/>
 										</li>
 										<li class="list-group-item">
 											No. of Administratiors
-											<input id="UDCPs_NAdmin" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="UDCPs_NAdmin" readonly placeholder="0" type="number"/>
 										</li>
 										<li class="list-group-item">
 											No. of Support Staff
-											<input id="UDCPs_NSS" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="UDCPs_NSS" readonly placeholder="0" type="number"/>
 										</li>
 										<li class="list-group-item">
 											No. of Alumni
-											<input id="UDCPs_NAlumni" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="UDCPs_NAlumni" readonly placeholder="0" type="number"/>
 										</li>
 									</ul>
 								</div>
@@ -85,27 +85,27 @@
 										<li class="list-group-item">
 											<!-- Target no. -->
 											No. of Student Organizations
-											<input id="UDCPt_NSO" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="UDCPt_NSO" readonly placeholder="0" type="number"/>
 										</li>
 										<li class="list-group-item">
 											No. of Students
-											<input id="UDCPt_NStu" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="UDCPt_NStu" readonly placeholder="0" type="number"/>
 										</li>
 										<li class="list-group-item">
 											No. of Faculty
-											<input id="UDCPt_NFac" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="UDCPt_NFac" readonly placeholder="0" type="number"/>
 										</li>
 										<li class="list-group-item">
 											No. of Administratiors
-											<input id="UDCPt_NAdmin" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="UDCPt_NAdmin" readonly placeholder="0" type="number"/>
 										</li>
 										<li class="list-group-item">
 											No. of Support Staff
-											<input id="UDCPt_NSS" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="UDCPt_NSS" readonly placeholder="0" type="number"/>
 										</li>
 										<li class="list-group-item">
 											No. of Alumni
-											<input id="UDCPt_NAlumni" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="UDCPt_NAlumni" readonly placeholder="0" type="number"/>
 										</li>
 									</ul>
 								</div>
@@ -153,11 +153,11 @@
 										<li class="list-group-item">
 											<!-- Status no.-->
 											No. of Research Presentation in Local Fora/ Conference
-											<input id="fcs_RPLFC" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="fcs_RPLFC" readonly placeholder="0" type="number"/>
 										</li>
 										<li class="list-group-item">
 											No. of Research Presentation in International Fora/ Conference
-											<input id="fcs_RPIFC" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="fcs_RPIFC" readonly placeholder="0" type="number"/>
 										</li>
 									</ul>
 								</div>
@@ -166,11 +166,11 @@
 										<li class="list-group-item">
 											<!-- Target no.-->
 											No. of Research Presentation in Local Fora/ Conference
-											<input id="fct_RPLFC" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="fct_RPLFC" readonly placeholder="0" type="number"/>
 										</li>
 										<li class="list-group-item">
 											No. of Research Presentation in International Fora/ Conference
-											<input id="fct_RPIFC" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="fct_RPIFC" readonly placeholder="0" type="number"/>
 										</li>
 									</ul>
 								</div>
@@ -218,11 +218,11 @@
 										<li class="list-group-item">
 											<!-- Status no.-->
 											Status No. of Local Publications
-											<input id="ps_NLP" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="ps_NLP" readonly placeholder="0" type="number"/>
 										</li>
 										<li class="list-group-item">
 											Status No. of International Publications
-											<input id="ps_IP" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="ps_IP" readonly placeholder="0" type="number"/>
 										</li>
 									</ul>
 								</div>
@@ -231,11 +231,11 @@
 										<li class="list-group-item">
 											<!-- Target no.-->
 											Target No. of Local Publications
-											<input id="pt_NLP" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="pt_NLP" readonly placeholder="0" type="number"/>
 										</li>
 										<li class="list-group-item">
 											Target No. of International Publications
-											<input id="pt_IP" readonly placeholder="0" type="number"/>
+											<input class="form-control input_number" id="pt_IP" readonly placeholder="0" type="number"/>
 										</li>
 									</ul>
 								</div>
@@ -247,9 +247,10 @@
 				</div>
 			</div>
 			<div class="button-wrapper">
-				<a class="btn btn-warning" href="#" role="button">Edit</a>
+				<a class="btn btn-warning" id="edit_btn" onclick="edit_kra2()" href="#" role="button">Edit</a>
+		  		<a class="btn btn-warning" id="save_btn" style="display: none;" onclick="save_kra2()" href="#" role="button">Save</a>
 				<!-- Button trigger modal -->
-				<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#approval">Approve</button>
+				<button type="button" class="btn btn-warning approve" data-bs-toggle="modal" data-bs-target="#approval">Approve</button>
 				<!-- Modal -->
 				<div
 					class="modal fade"
@@ -279,6 +280,95 @@
 	</body>
 </html>
 <script type="text/javascript">
+	get_lock();
+	function get_lock() {
+		if(localStorage.getItem('edit_lock') == "1") {
+			$('#edit_btn').addClass("disabled");
+			$('#edit_btn').attr("disabled","disabled");
+			$('.approve').addClass("disabled");
+			$('.approve').attr("disabled","disabled");
+		}
+	}
+function save_kra2() {
+// --------- Num. of Participants ---------
+	 var UDCPs_NSO = $("#UDCPs_NSO").val(); //UDCP: Status No.
+	 var UDCPs_NStu = $("#UDCPs_NStu").val();
+	 var UDCPs_NFac = $("#UDCPs_NFac").val();
+	 var UDCPs_NAdmin = $("#UDCPs_NAdmin").val();
+	 var UDCPs_NSS = $("#UDCPs_NSS").val();
+	 var UDCPs_NAlumni = $("#UDCPs_NAlumni").val();
+
+	 var UDCPt_NSO = $("#UDCPt_NSO").val(); //UDCP: Target No.
+	 var UDCPt_NStu = $("#UDCPt_NStu").val();
+	 var UDCPt_NFac = $("#UDCPt_NFac").val();
+	 var UDCPt_NAdmin = $("#UDCPt_NAdmin").val();
+	 var UDCPt_NSS = $("#UDCPt_NSS").val();
+	 var UDCPt_NAlumni = $("#UDCPt_NAlumni").val();
+	 //array
+	 var udcps_arr = [UDCPs_NSO,UDCPs_NStu,UDCPs_NFac,UDCPs_NAdmin,UDCPs_NSS,UDCPs_NAlumni];
+	 var udcpt_arr = [UDCPt_NSO,UDCPt_NStu,UDCPt_NFac,UDCPt_NAdmin,UDCPt_NSS,UDCPt_NAlumni];
+	 localStorage.setItem('udcps_arr', udcps_arr);
+	 localStorage.setItem('udcpt_arr', udcpt_arr);
+	 
+// --------- Research Presentation ---------
+	 var fcs_RPLFC = $("#fcs_RPLFC").val(); //Fora/Conference: Status No.
+	 var fcs_RPIFC = $("#fcs_RPIFC").val();
+
+	 var fct_RPLFC = $("#fct_RPLFC").val(); //Fora/Conference: Target No.
+	 var fct_RPIFC = $("#fct_RPIFC").val();
+	 //array
+	 var fcs_arr = [fcs_RPLFC,fcs_RPIFC];
+	 var fct_arr = [fct_RPLFC,fct_RPIFC];
+	 localStorage.setItem('fcs_arr', fcs_arr);
+	 localStorage.setItem('fct_arr', fct_arr);
+
+
+// --------- Publications ---------
+	 var ps_NLP = $("#ps_NLP").val(); //Publication: Status No.
+	 var ps_IP = $("#ps_IP").val();
+
+	 var pt_NLP = $("#pt_NLP").val(); //Publication: Target No.
+	 var pt_IP = $("#pt_IP").val();
+	 //array
+	 var ps_arr = [ps_NLP,ps_IP];
+	 var pt_arr = [pt_NLP,pt_IP];
+	 localStorage.setItem('ps_arr', ps_arr);
+	 localStorage.setItem('pt_arr', pt_arr);
+
+  let user_id = localStorage.getItem('selected_user_id');
+
+  $.ajax({
+  url: url,
+  type: "POST",
+  data: {
+	 csrf_token: "{{ csrf_token() }}",
+	 tag: "update2_kra2", 
+	 user_id: user_id,
+	 udcps_arr: localStorage.getItem('udcps_arr'),
+	 udcpt_arr: localStorage.getItem('udcpt_arr'),
+	 fcs_arr: localStorage.getItem('fcs_arr'),
+	 fct_arr: localStorage.getItem('fcs_arr'),
+	 ps_arr: localStorage.getItem('ps_arr'),
+	 pt_arr: localStorage.getItem('pt_arr') 
+  },
+  complete: function (response) {
+	 console.log(response.responseText);
+	 var data = JSON.parse(response.responseText);
+	 if(data['status'] == "ok") {
+		alert("successfully saved!");
+		location.reload();
+	 } else {
+		alert("Unknown error occured. Please try again.")
+	 }
+  }
+})
+
+}
+function edit_kra2() {
+	$('.input_number').removeAttr('readonly');
+	$('#save_btn').show();
+	$('#edit_btn').hide();
+}
 function approve_kra2simbahayan() {
 	let user_id=localStorage.getItem('selected_user_id');
 		$.ajax({

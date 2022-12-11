@@ -165,6 +165,13 @@
 			    	$('#submit_button').removeAttr("disabled");
 			    	$('#submit_button').removeAttr("readonly");
 				}
+				if(data[0]['kra_status'] == "2") {
+					localStorage.setItem("approve_lock", "1");
+					localStorage.setItem("edit_lock", "1");
+				} else {
+					localStorage.setItem("approve_lock", "0");
+					localStorage.setItem("edit_lock", "0");
+				}
 			}
 		})
 	}
