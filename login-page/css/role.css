@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.background-image {
+  background-image: url(http://localhost/Simbahayan/login-page/pictures/hdmain.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100vh;
+}
+
+.card-container {
+  margin-top: 100px;
+}
+
+.select-role-container {
+}
+
+.select-role {
+  background-color: gold;
+  justify-content: center;
+  display: flex;
+  font-family: "Trajan Pro", sans-serif;
+  height: 100px;
+  align-items: center;
+}
+.card-title {
+  font-family: "Trajan Pro", sans-serif;
+  justify-content: center;
+  display: flex;
+
+  font-size: 30px;
+}
+.card-title:hover,
+.card-title:active {
+  font-size: 200%;
+}
+
+.card-body {
+  background-color: gold;
+}
+
+.images {
+  justify-content: center;
+  display: flex;
+}
