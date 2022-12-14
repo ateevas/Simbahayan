@@ -1,6 +1,8 @@
-#button1 {
-	display: none;
-}
-#button2 {
-	display: none;
+@media print {
+    #button1 {
+    	display: none;
+    }
+    #button2 {
+    	display: none;
+    }
 }

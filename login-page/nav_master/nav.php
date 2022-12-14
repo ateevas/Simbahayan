@@ -1,35 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<style type="text/css">
+    @font-face {
+      font-family: "Trajan";
+      src: url("http://localhost/Simbahayan/login-page/php/nav_master/Trajan_Pro_Regular.ttf");
+    }   
+</style>
+<nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="http://localhost/Simbahayan/login-page/pictures/white.png" alt="" width="150" height="100"
-                class="d-inline-block align-text-top">
-        </a>
-        <a class="navbar-brand" href="#">
-            <img src="http://localhost/Simbahayan/login-page/pictures/ustlogo.png" alt="" width="150" height="150"
-                class="d-inline-block align-text-top">
-        </a>
-
-        simbahayan
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
+        <div class="d-flex flex-row bd-highlight mb-0">
+            <div class="mb-0 bd-highlight align-self-center">
+                <a class="navbar-brand" href="#">
+                    <img src="http://localhost/Simbahayan/login-page/pictures/white.png" alt="" width="170" height="100" class="d-inline-block align-text-top">
+                </a>
+            </div>
+            <div class="mb-0 bd-highlight align-self-center"><a class="navbar-brand" href="#"><img src="http://localhost/Simbahayan/login-page/pictures/ustlogo.png" alt="" width="150" height="150" class="d-inline-block align-text-top"></a></div>
+            <div class="mb-0 bd-highlight align-self-center">
+                <p class="navbar-specialtext1 mb-0">University of Santo Tomas</p>
+                <p class="navbar-specialtext2 mb-0 h1">Simbahayan</p>
+                <p class="navbar-specialtext1 mb-0">Community Development Office</p>
+            </div>
         </div>
+       
     </div>
 </nav>
