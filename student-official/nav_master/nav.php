@@ -13,7 +13,8 @@
         <ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3" id="pills-tab" role="tablist">
             <li class="nav-item active"><a class="nav-link text-dark" href="profile.php">Profile <span
                         class="sr-only"></span></a></li>
-            <li class="nav-item active"><a class="nav-link text-dark" href="kra-select.php">Community Development Report
+            <li class="nav-item active"><a class="nav-link text-dark" href="reports.php">KRA and KPI Monitoring
+                    Report
                     <span class="sr-only"></span></a></li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" role="button"

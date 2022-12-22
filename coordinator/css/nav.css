@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  margin-bottom: 10px;
+}
+.context {
+  font-family: "Trajan Pro", sans-serif;
+}
+.context-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.context p {
+  text-align: center;
+  margin-left: 10px;
+  color: white;
+}
+
+#simbahayan {
+  font-size: 22px;
+}
+#ust {
+  font-size: 9px;
+}
+
+#comdev {
+  font-size: 9px;
+}

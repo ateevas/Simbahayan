@@ -1,17 +1,40 @@
 <nav class="navbar bg-secondary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="profile.php">
+    <div class=" container-fluid mb-2 ">
+        <div class="d-flex flex-row bd-highlight mb-0 m-1">
 
-            <img src="http://localhost/Simbahayan/coordinator/pictures/ustlogo.png" alt="Logo" width="70" height="70"
-                class="d-inline-block align-text-middle" />
+            <div class="mb-0 bd-highlight align-self-center"><a class="navbar-brand" href="#"><img
+                        src="http://localhost/Simbahayan/coordinator/pictures/ustlogo.png" alt="" width="60" height="60"
+                        class="d-inline-block align-text-top"></a></div>
+            <div class="mb-0 bd-highlight align-self-center">
+                <a class="navbar-brand" href="#">
+                    <img src="http://localhost/Simbahayan/coordinator/pictures/white.png" alt="" width="100" height="60"
+                        class="d-inline-block align-text-top">
+                </a>
+            </div>
 
-        </a>
+
+            <div class="context-container">
+                <div class="context mb-0 bd-highlight align-self-center">
+                    <p class="navbar-specialtext1 mb-0" id="ust">University of Santo Tomas</p>
+                    <p class="navbar-specialtext2 mb-0 " id="simbahayan">Simbahayan</p>
+                    <p class="navbar-specialtext1 mb-0" id="comdev">Community Development Office</p>
+
+                </div>
+            </div>
+        </div>
+
     </div>
 </nav>
+
+
+<?php 
+		include('../cdn/cdn.php');
+	 ?>
+
 <!-- Navigation bar -->
 <div class="navigation-container">
     <div class="navigation">
-        <ul class="nav nav justify-content-center bg-warning mb-3 rounded mt-3 " id="pills-tab" role="tablist">
+        <ul class="itembar nav nav justify-content-end bg-warning mb-2  h-10  " id="pills-tab" role="tablist">
             <li class="nav-item active  ">
                 <a class="nav-link  text-dark" href="profile.php">Profile <span class="sr-only"></span></a>
             </li>
