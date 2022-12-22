@@ -10,6 +10,10 @@ var url = "http://localhost/Simbahayan/simbahayan_backend/index.php"
     crossorigin="anonymous"></script>
 <link rel="stylesheet" href="http://localhost/Simbahayan/login-page/css/login.css" />
 <link href="https://fonts.cdnfonts.com/css/trajan-pro" rel="stylesheet">
+<link rel="stylesheet" href="http://localhost/Simbahayan/login-page/css/nav.css">
+
+
+
 
 <script type="text/javascript">
 var url = "http://localhost/Simbahayan/simbahayan_backend/index.php"

@@ -27,7 +27,7 @@
             <div class="student-container">
                 <div class="student">
                     <div class="student-wrapper">
-                        <h2>Student</h2>
+                        <h2>Community Development Coordinator</h2>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="parent-here">
                                         <div class="here-wrapper">
-                                            <a href="../register/php/register.php">Register </a>
+                                            <a href="../register/php/cd-register.php">Register </a>
                                         </div>
                                     </div>
 

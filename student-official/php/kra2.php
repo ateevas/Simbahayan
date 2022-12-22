@@ -1,104 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Community Development Report</title>
-		<link rel="stylesheet" href="http://localhost/Simbahayan/student-official/css/kra2.css"/>
-		<?php
-		include('../cdn/cdn.php');
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Development Report</title>
+    <link rel="stylesheet" href="http://localhost/Simbahayan/student-official/css/kra2.css" />
+    <?php
+			include('../cdn/cdn.php');
 		?>
-	</head>
-	<body>
-		<?php
-		include('../nav_master/nav.php');
+</head>
+
+<body>
+    <?php
+			include('../nav_master/nav.php');
 		?>
-		<div class="title-wrapper m-2">
-			<h3>Community Development Report</h3>
-		</div>
-		<div class="kra-1">KRA 2: Thomasian engagement as agents of social transformation</div>
-		<!-- Accordion -->
-		<br />
-		<div class="accordion accordion-flush" id="accordionFlushExample">
-			<!--Status and Target NO. -->
-			<div class="row">
-				<div class="col-6 col-md-4"></div>
-				<div class="col-6 col-md-4"><h4>Status No.</h4></div>
-				<div class="col-6 col-md-4"><h4>Target No.</h4></div>
-			</div>
-			<br />
-			<!--UCDP Projects (Not Dropdown) -->
-			<div class="row">
-				<div class="col-6 col-md-4" id="ucdp"><h3>Projects under Institutional Development for Community Development</h3>
-				</div>
-				<div class="col-6 col-md-4"><input id="s_PUIDCD" placeholder="0" type="number"/></div>
-				<div class="col-6 col-md-3"><input id="t_PUIDCD" placeholder="0" type="number"/></div>
-			</div>
-			<hr/>
-			<div class="row">
-				<div class="col-6 col-md-4" id="ucdp"><h3>Projects under Social Awareness and Advocacy</h3></div>
-				<div class="col-6 col-md-4"><input id="s_PSAA" placeholder="0" type="number"/></div>
-				<div class="col-6 col-md-3"><input id="t_PSAA" placeholder="0" type="number"/></div>
-			</div>
-			<hr />
-			<div class="row">
-				<div class="col-6 col-md-4" id="ucdp"><h3>Projects Under Community-engaged research</h3></div>
-				<div class="col-6 col-md-4"><input id="s_PUCER" placeholder="0" type="number"/></div>
-				<div class="col-6 col-md-3"><input id="t_PUCER" placeholder="0" type="number" /></div>
-			</div>
-			<hr />
-			<div class="row">
-				<div class="col-6 col-md-4" id="ucdp"><h3>Projects Underservice-learning</h3></div>
-				<div class="col-6 col-md-4"><input id="s_PUL" placeholder="0" type="number"/></div>
-				<div class="col-6 col-md-3"><input id="t_PUL" placeholder="0" type="number"/></div>
-			</div>
-			<div class="button-wrapper">
-				<button onclick="kra2_Nextbtn()" type="button" class="btn btn-dark">Next</button>
-			</div>
-		</div>
-	</body>
+    <hr />
+    <div class="title-wrapper m-2">
+        <h3>Community Development Report</h3>
+    </div>
+    <div class="kra-1">KRA 2: Thomasian engagement as agents of social transformation</div>
+    <br>
+
+    <table class="table table-borderless w-50 table-sm mx-auto">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Number of Projects Under the University Community Development (UCDP), Particulary on the
+                    following:</th>
+                <th scope="col">Status</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>Institutional Development for Community Development</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>Social Awareness and Advocacy</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td> Community-Engaged Research</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td> Service-Learning</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+        </tbody>
+
+
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Number of Participants in the Projects Under the UCDP, Representing each of the
+                    following sectors:</th>
+                <th scope="col"></th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td> Student Organizations</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>Students</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>Faculty</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>Administrators</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>Support Staff</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+
+            <tr>
+                <th scope="row"></th>
+                <td>Alumni</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+
+
+
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Number of Research Presentations in Fora/Conferences</th>
+                    <th scope="col"></th>
+
+
+                </tr>
+            </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>Local</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>International</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Number of Publications</th>
+                    <th scope="col"></th>
+
+
+                </tr>
+            </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>Local</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>International</td>
+                <td><input type="number" value="0"></td>
+
+            </tr>
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+    <div class="button-container">
+        <div class="button-wrapper">
+            <button type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
+
+            <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Are you sure you want to submit report?</div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                            <button onclick="btnSubmit()" type="button" class="btn btn-warning">Yes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
 </html>
-
-<script type="text/javascript"> 
-function kra2_Nextbtn(){
-  var s_PUIDCD = $('#s_PUIDCD').val(); //Institutional Development
-  var t_PUIDCD = $('#t_PUIDCD').val();
-  //array
-  var s_puidcd_arr=[s_PUIDCD];
-  var t_puidcd_arr=[t_PUIDCD];
-  localStorage.setItem('s_puidcd_arr', s_puidcd_arr);
-  localStorage.setItem('t_puidcd_arr', t_puidcd_arr);
-
-
-  var s_PSAA = $('#s_PSAA').val(); //Social Awareness
-  var t_PSAA = $('#t_PSAA').val();
-  //array
-  var s_psaa_arr=[s_PSAA];
-  var t_psaa_arr=[t_PSAA];
-  localStorage.setItem('s_psaa_arr', s_psaa_arr);
-  localStorage.setItem('t_psaa_arr', t_psaa_arr);
-
-
-  var s_PUCER = $('#s_PUCER').val(); //Community-engaged
-  var t_PUCER = $('#t_PUCER').val();
-  //array
-  var s_pucer_arr=[s_PUCER];
-  var t_pucer_arr=[t_PUCER];
-  localStorage.setItem('s_pucer_arr', s_pucer_arr);
-  localStorage.setItem('t_pucer_arr', t_pucer_arr);
-
-
-  var s_PUL = $('#s_PUL').val(); //Underservice-learning
-  var t_PUL = $('#t_PUL').val(); 
-  //array 
-  var s_pul_arr=[s_PUL];
-  var t_pul_arr=[t_PUL];
-  localStorage.setItem('s_pul_arr', s_pul_arr);
-  localStorage.setItem('t_pul_arr', t_pul_arr);
-
-  window.location.href="http://localhost/Simbahayan/student-official/php/kra2-next.php"
-
+<script type="text/javascript">
+function btnNext() {
+    //----------------------- Health for All -----------------------//
+    var hs_HWDP = $('#hs_HWDP').val();
+    var hs_CIS = $('#hs_CIS').val();
+    var hs_PM = $('#hs_PM').val();
+    var ht_HWDP = $('#ht_HWDP').val();
+    var ht_CIS = $('#ht_CIS').val();
+    var ht_PM = $('#ht_PM').val();
+    var hs_arr = new Array(hs_HWDP, hs_CIS, hs_PM);
+    var ht_arr = [ht_HWDP, ht_CIS, ht_PM];
+    localStorage.setItem('hs_arr', hs_arr);
+    localStorage.setItem('ht_arr', ht_arr);
+    //----------------------- Education for All -----------------------//
+    var es_EIEP = $('#es_EIEP').val();
+    var es_CIS = $('#es_CIS').val();
+    var es_PM = $('#es_PM').val();
+    var et_EIEP = $('#et_EIEP').val();
+    var et_CIS = $('#et_CIS').val();
+    var et_PM = $('#et_PM').val();
+    var es_arr = [es_EIEP, es_CIS, es_PM];
+    var et_arr = [et_EIEP, et_CIS, et_PM];
+    localStorage.setItem('es_arr', es_arr);
+    localStorage.setItem('et_arr', et_arr);
+    //----------------------- Good Governance for All -----------------------//
+    var ggs_LODGGP = $('#ggs_LODGGP').val();
+    var ggs_CIS = $('#ggs_CIS').val();
+    var ggs_PM = $('#ggs_PM').val();
+    var ggt_LODGGP = $('#ggt_LODGGP').val();
+    var ggt_CIS = $('#ggt_CIS').val();
+    var ggt_PM = $('#ggt_PM').val();
+    var ggs_arr = [ggs_LODGGP, ggs_CIS, ggs_PM];
+    var ggt_arr = [ggt_LODGGP, ggt_CIS, ggt_PM];
+    localStorage.setItem('ggs_arr', ggs_arr);
+    localStorage.setItem('ggt_arr', ggt_arr);
+    //----------------------- Economic Justice for All -----------------------//
+    var ejs_ESEP = $('#ejs_ESEP').val();
+    var ejs_CIS = $('#ejs_CIS').val();
+    var ejs_PM = $('#ejs_PM').val();
+    var ejt_ESEP = $('#ejt_ESEP').val();
+    var ejt_CIS = $('#ejt_CIS').val();
+    var ejt_PM = $('#ejt_PM').val();
+    var ejs_arr = [ejs_ESEP, ejs_CIS, ejs_PM];
+    var ejt_arr = [ejt_ESEP, ejt_CIS, ejt_PM];
+    localStorage.setItem('ejs_arr', ejs_arr);
+    localStorage.setItem('ejt_arr', ejt_arr);
+    //----------------------- Christ Love for All -----------------------//
+    var cls_SPMEP = $('#cls_SPMEP').val();
+    var cls_CIS = $('#cls_CIS').val();
+    var cls_PM = $('#cls_PM').val();
+    var clt_SPMEP = $('#clt_SPMEP').val();
+    var clt_CIS = $('#clt_CIS').val();
+    var clt_PM = $('#clt_PM').val();
+    var cls_arr = [cls_SPMEP, cls_CIS, cls_PM];
+    var clt_arr = [clt_SPMEP, clt_CIS, clt_PM];
+    localStorage.setItem('cls_arr', cls_arr);
+    localStorage.setItem('clt_arr', clt_arr);
+    window.location.href = "http://localhost/Simbahayan/student-official/php/kra1-next.php";
 }
-
 </script>

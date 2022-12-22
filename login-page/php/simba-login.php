@@ -27,7 +27,7 @@
             <div class="student-container">
                 <div class="student">
                     <div class="student-wrapper">
-                        <h2>Student</h2>
+                        <h2>Simbahayan Staff</h2>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                             <div class="card shadow-2-strong" style="border-radius: 1rem">
                                 <div class="card-body p-5 text-center">
-                                    <h3 class="mb-5">Sign in</h3>
+                                    <h3 class="mb-5">Log in</h3>
                                     <form method="post" action="">
                                         <div class="form-outline mb-4">
                                             <input name="email" type="email" id="email"
@@ -62,9 +62,7 @@
                                     </form>
 
                                     <hr class="my-4" />
-                                    <div class="register-wrapper">
-                                        <h3>Don't Have an Account?</h3>
-                                    </div>
+
                                     <div class="parent-here">
                                         <div class="here-wrapper">
                                             <a href="../register/php/register.php">Register </a>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Community Development Report</title>
-    <link rel="stylesheet" href="http://localhost/Simbahayan/student-official/css/kra3.css" />
+    <link rel="stylesheet" href="http://localhost/Simbahayan/student-official/css/kra1.css" />
     <?php
 			include('../cdn/cdn.php');
 		?>
@@ -20,7 +20,7 @@
     <div class="title-wrapper m-2">
         <h3>Community Development Report</h3>
     </div>
-    <div class="kra-1">KRA 3: Dynamic Community Development External Partnerships and Networks</div>
+    <div class="kra-1">>KRA 3: Dynamic Community Development External Partnerships and Networks</div>
     <br>
 
     <table class="table table-borderless w-50 table-sm mx-auto">
@@ -149,9 +149,28 @@
 
             </tr>
 
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Number of Training/Course Offerings on Commnunity Engagement and Organizing</th>
+                    <th scope="col"><input type="number" value="0"></th>
 
-            <br>
 
+                </tr>
+            </thead>
+
+
+
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Number of Participants in Training/Course offereings on Community Engagement and
+                        Organizing</th>
+                    <th scope="col"><input type="number" value="0"></th>
+
+
+                </tr>
+            </thead>
 
 
 
@@ -162,7 +181,7 @@
     <div class="button-container">
         <div class="button-wrapper">
             <button type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
-
+            <a class="btn btn-dark" href="kra1-next.php" role="button">Next</a>
 
             <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                 aria-hidden="true">

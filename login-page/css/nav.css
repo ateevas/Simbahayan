@@ -1,0 +1,23 @@
+body {
+}
+
+.box {
+  margin-bottom: 10px;
+}
+.context {
+  font-family: "Trajan Pro", sans-serif;
+}
+.context p {
+  margin-left: 5px;
+}
+
+#simbahayan {
+  font-size: 20px;
+}
+#ust {
+  font-size: 13px;
+}
+
+#comdev {
+  font-size: 13px;
+}

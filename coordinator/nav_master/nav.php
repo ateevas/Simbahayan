@@ -16,7 +16,7 @@
                 <a class="nav-link  text-dark" href="profile.php">Profile <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="annual.php" aria-expanded="false">
+                <a class="nav-link text-dark" href="pending.php" aria-expanded="false">
                     Annual Report Approval
                 </a>
             </li>

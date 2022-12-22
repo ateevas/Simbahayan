@@ -36,45 +36,44 @@
                         <div class="card h-100">
 
                             <div class="card-body">
-                                <h5 class="card-title">Student</h5>
+                                <a href="http://localhost/Simbahayan/login-page/php/login.php">
+                                    <h5 class="card-title">Student</h5>
+                                </a>
                                 <div class="images">
                                     <img src="http://localhost/Simbahayan/login-page/pictures/student.png" alt=""
                                         width="150px" height="150px">
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <small class="text-muted"></small>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col">
                         <div class="card h-100">
-
                             <div class="card-body">
-                                <h5 class="card-title">CD Coordinator</h5>
+                                <a href="http://localhost/Simbahayan/login-page/php/cd-login.php">
+                                    <h5 class="card-title">CD Coordinator</h5>
+                                </a>
                                 <div class="images">
                                     <img src="http://localhost/Simbahayan/login-page/pictures/coordinator.png" alt=""
-                                        width="150px" height="150px">
+                                        width="140px" height="140px">
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <small class="text-muted"></small>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col">
                         <div class="card h-100">
 
                             <div class="card-body">
-                                <h5 class="card-title">Simbahayan Staff</h5>
+                                <a href="http://localhost/Simbahayan/login-page/php/simba-login.php">
+                                    <h5 class="card-title">Simbahayan Staff</h5>
+                                </a>
                                 <div class="images">
                                     <img src="http://localhost/Simbahayan/login-page/pictures/staff.png" alt=""
                                         width="150px" height="150px">
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <small class="text-muted"></small>
-                            </div>
+
                         </div>
                     </div>
                 </div>
