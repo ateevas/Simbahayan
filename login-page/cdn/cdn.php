@@ -13,8 +13,6 @@ var url = "http://localhost/Simbahayan/simbahayan_backend/index.php"
 <link rel="stylesheet" href="http://localhost/Simbahayan/login-page/css/nav.css">
 
 
-
-
 <script type="text/javascript">
 var url = "http://localhost/Simbahayan/simbahayan_backend/index.php"
 </script>

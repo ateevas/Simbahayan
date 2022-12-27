@@ -26,11 +26,6 @@
     </div>
 </nav>
 
-
-<?php 
-		include('../cdn/cdn.php');
-	 ?>
-
 <!-- Navigation bar -->
 <div class="navigation-container">
     <div class="navigation">

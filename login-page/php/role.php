@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login</title>
     <link rel="stylesheet" href="../css/role.css" />
+    <link rel="stylesheet" href="http://localhost/Simbahayan/login-page/css/role.css" />
 
     <?php 
 			include('../cdn/cdn.php');
