@@ -18,6 +18,7 @@
   text-align: center;
   margin-left: 10px;
   color: white;
+  font-size: 20px;
 }
 
 #simbahayan {
@@ -29,4 +30,19 @@
 
 #comdev {
   font-size: 9px;
+}
+.navigation {
+  width: 100%;
+}
+
+.navigation a,
+button {
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.navigation a:hover,
+button:hover {
+  background-color: gainsboro;
+  transition: 0.8s;
 }

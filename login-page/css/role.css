@@ -2,31 +2,24 @@
   margin: 0;
   padding: 0;
 }
-
-.background-image {
-  display: block;
-  position: relative;
-  height: 100vh;
+body,
+html {
+  height: 100%;
 }
 
-.background-image::after {
-  content: "";
+.background {
   background: url(http://localhost/Simbahayan/login-page/pictures/hdmain.jpg);
+  height: 100%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
 }
+
 .card-container {
   margin-top: 80px;
 }
-
 .select-role-container {
+  display: block;
 }
 
 .select-role {

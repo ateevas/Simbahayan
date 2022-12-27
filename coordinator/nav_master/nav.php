@@ -1,6 +1,6 @@
 <nav class="navbar bg-secondary">
     <div class=" container-fluid mb-2 ">
-        <div class="d-flex flex-row bd-highlight mb-0 m-1">
+        <div class="d-flex flex-row bd-highlight mb-0 ">
 
             <div class="mb-0 bd-highlight align-self-center"><a class="navbar-brand" href="#"><img
                         src="http://localhost/Simbahayan/coordinator/pictures/ustlogo.png" alt="" width="60" height="60"
@@ -34,7 +34,9 @@
 <!-- Navigation bar -->
 <div class="navigation-container">
     <div class="navigation">
-        <ul class="itembar nav nav justify-content-end bg-warning mb-2  h-10  " id="pills-tab" role="tablist">
+        <ul class="itembar nav nav justify-content-center
+        
+         bg-warning mb-2  h-10  " id="pills-tab" role="tablist">
             <li class="nav-item active  ">
                 <a class="nav-link  text-dark" href="profile.php">Profile <span class="sr-only"></span></a>
             </li>

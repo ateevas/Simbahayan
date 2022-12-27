@@ -1,0 +1,9 @@
+.nav-item a {
+  font-size: 20px;
+}
+.navbar a span {
+  font-family: "Trajan Pro", sans-serif;
+}
+.navbar a {
+  font-family: "Playfair Display", serif;
+}

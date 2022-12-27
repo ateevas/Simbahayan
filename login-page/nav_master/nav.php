@@ -6,16 +6,13 @@
 </style>
 <nav class="navbar navbar-light bg-light ">
     <div class=" container-fluid mb-2 ">
-        <div class="d-flex flex-row bd-highlight mb-0 m-4">
+        <div class="context d-flex flex-row bd-highlight mb-0 m-1 ">
 
             <div class="mb-0 bd-highlight align-self-center"><a class="navbar-brand" href="#"><img
-                        src="http://localhost/Simbahayan/login-page/pictures/ustlogo.png" alt="" width="60" height="60"
+                        src="http://localhost/Simbahayan/login-page/pictures/ustlogo.png" alt="" width="70" height="70"
                         class="d-inline-block align-text-top"></a></div>
             <div class="mb-0 bd-highlight align-self-center">
-                <a class="navbar-brand" href="#">
-                    <img src="http://localhost/Simbahayan/login-page/pictures/white.png" alt="" width="100" height="60"
-                        class="d-inline-block align-text-top">
-                </a>
+
             </div>
 
             <div class="context-container">
@@ -25,8 +22,23 @@
                     <p class="navbar-specialtext1 mb-0" id="comdev">Community Development Office</p>
 
                 </div>
+
+
+            </div>
+
+
+            <div class="logo">
+
+                <a class=" navbar-brand" href="#">
+                    <img src="http://localhost/Simbahayan/login-page/pictures/white.png" alt="" width="120" height="70"
+                        class="d-inline-block">
+                </a>
+
+
             </div>
         </div>
+
+    </div>
 
     </div>
 </nav>

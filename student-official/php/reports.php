@@ -16,13 +16,12 @@
     <?php 
       include('../nav_master/nav.php');
     ?>
-
+    <br>
     <div class="contact_title">
         <div class="inner_container">
             <div class="contact_container">
                 <h1>KRA and KPI Monitoring Report</h1>
-                <br />
-                <br />
+
             </div>
         </div>
     </div>
