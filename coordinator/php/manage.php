@@ -37,7 +37,7 @@
 </html>
 <script type="text/javascript">
 	get_mystudentlist();
-	function verify_user() {
+	function status_change(obj) {
 		swal({
 			title: "Are you sure?",
 			text: "You can change it right after the update.",
@@ -49,8 +49,38 @@
 			closeOnConfirm: false,
 			html: false
 			}, function(){
-				let user_id = localStorage.getItem('user_id');
-				let college_id = localStorage.getItem('college_id');
+				let user_id = $(obj).data('user_id');
+				let value = $(obj).data('value');
+				$.ajax({
+				  url: url,
+				  type: "GET",
+				  data: {
+				    csrf_token: "{{ csrf_token() }}",
+				    tag: "status_change", 
+				    user_id: user_id,
+				    value: value
+				  },
+				  complete: function (response) {
+				    location.reload();
+				  }
+				})
+			}
+		);
+	}
+	function verify_user(obj) {
+		swal({
+			title: "Are you sure?",
+			text: "You can change it right after the update.",
+			type: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#d9534f",
+			confirmButtonText: "Yes",
+			cancelButtonText: "No",
+			closeOnConfirm: false,
+			html: false
+			}, function(){
+				let user_id = $(obj).data('user_id');
+				let value = $(obj).data('value');
 				$.ajax({
 				  url: url,
 				  type: "GET",
@@ -58,11 +88,10 @@
 				    csrf_token: "{{ csrf_token() }}",
 				    tag: "verify_user", 
 				    user_id: user_id,
-				    college_id: college_id
+				    value: value
 				  },
 				  complete: function (response) {
-				    $('#tbody_data').html(response.responseText);
-				    $('#example').DataTable();
+				    location.reload();
 				  }
 				})
 			}

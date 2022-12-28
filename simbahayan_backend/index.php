@@ -11,6 +11,36 @@ if(isset($_POST["tag"])) {	//POST
 }
 
 switch ($tag) {
+	case 'status_change':
+		$user_id=$_GET['user_id'];
+		$value=$_GET['value'];
+		$query="UPDATE tbl_users SET user_status=? WHERE id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$value,$user_id])) {
+			echo json_encode([
+				"status" => "updated"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'verify_user':
+		$user_id=$_GET['user_id'];
+		$value=$_GET['value'];
+		$query="UPDATE tbl_users SET verification_status=? WHERE id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$value,$user_id])) {
+			echo json_encode([
+				"status" => "updated"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
 	case 'add_simbahayan':
 		$query="INSERT INTO tbl_users SET fname=?, lname=?, user_role=?, email=?, password=?, contact=?";
 		$stmt=$pdo->prepare($query);
@@ -195,10 +225,12 @@ switch ($tag) {
 				$toecho="";
 				for ($i=0; $i < count($datay); $i++) {
 					$user_status="";
+					$user_value="";
+					$user_label="";
 					$verify_value="";
 					$verify_label="";
 					$verification_status="";
-					switch ($datay[$i]['user_status']) {
+					switch ($datay[$i]['verification_status']) {
 						case '0':
 							$verification_status="<span class='badge bg-warning'>Unverified</span>";
 							$verify_value="1";
@@ -216,9 +248,13 @@ switch ($tag) {
 					switch ($datay[$i]['user_status']) {
 						case '0':
 							$user_status="<span class='badge bg-warning'>Inactive</span>";
+							$user_value="1";
+							$user_label="Active";
 						break;
 						case '1':
 							$user_status="<span class='badge bg-success'>Active</span>";
+							$user_value="0";
+							$user_label="Inactive";
 						break;
 						default:
 							$user_status="<span class='badge bg-warning'>unknown</span>";
@@ -242,8 +278,7 @@ switch ($tag) {
 							</button>
 							<ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
 								<li><a class='dropdown-item' onclick='verify_user(this)' data-user_id='".$datay[$i]['id']."' data-value='".$verify_value."' href='#'>".$verify_label."</a></li>
-								<li><a class='dropdown-item' href='#'></a></li>
-								<li><a class='dropdown-item' href='#'></a></li>
+								<li><a class='dropdown-item' onclick='status_change(this)' data-user_id='".$datay[$i]['id']."' data-value='".$user_value."' href='#'>".$user_label."</a></li>
 							</ul>
 						</td>
 					</tr>";

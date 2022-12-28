@@ -1,3 +1,8 @@
+<style type="text/css">
+    body {
+        overflow: hidden !important;
+    }
+</style>
 <nav class="navbar bg-secondary">
     <div class=" container-fluid mb-2 ">
         <div class="d-flex flex-row bd-highlight mb-0 ">
