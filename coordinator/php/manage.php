@@ -25,9 +25,9 @@
 					<th>College</th>
 					<th>ID number</th>
 					<th>Email</th>
-					<th>Passed KRA/KPI </th>
-					<th>Date Passed</th>
+					<th>Verification Status</th>
 					<th>User Status</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody id="tbody_data">
@@ -37,6 +37,37 @@
 </html>
 <script type="text/javascript">
 	get_mystudentlist();
+	function verify_user() {
+		swal({
+			title: "Are you sure?",
+			text: "You can change it right after the update.",
+			type: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#d9534f",
+			confirmButtonText: "Yes",
+			cancelButtonText: "No",
+			closeOnConfirm: false,
+			html: false
+			}, function(){
+				let user_id = localStorage.getItem('user_id');
+				let college_id = localStorage.getItem('college_id');
+				$.ajax({
+				  url: url,
+				  type: "GET",
+				  data: {
+				    csrf_token: "{{ csrf_token() }}",
+				    tag: "verify_user", 
+				    user_id: user_id,
+				    college_id: college_id
+				  },
+				  complete: function (response) {
+				    $('#tbody_data').html(response.responseText);
+				    $('#example').DataTable();
+				  }
+				})
+			}
+		);
+	}
 	function get_mystudentlist() {
 		let user_id = localStorage.getItem('user_id');
 		let college_id = localStorage.getItem('college_id');

@@ -185,7 +185,7 @@ switch ($tag) {
 	case 'get_mystudentlist':
 		$query="SELECT tbl_users.*, 
 		tbl_colleges.college_name, 
-		tbl_kra_submission.kra_status, 
+		tbl_kra_submission.kra_status,
 		tbl_kra_submission.date_submitted FROM tbl_users LEFT JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college LEFT JOIN tbl_kra_submission ON tbl_kra_submission.user_id=tbl_users.id WHERE tbl_users.college=? AND tbl_users.user_role='1'";
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute([$_GET['college_id']])) {
@@ -194,19 +194,34 @@ switch ($tag) {
 				$datay=json_decode($datax, true);
 				$toecho="";
 				for ($i=0; $i < count($datay); $i++) {
-					$status="";
-					switch ($datay[$i]['kra_status']) {
+					$user_status="";
+					$verify_value="";
+					$verify_label="";
+					$verification_status="";
+					switch ($datay[$i]['user_status']) {
+						case '0':
+							$verification_status="<span class='badge bg-warning'>Unverified</span>";
+							$verify_value="1";
+							$verify_label="Verify";
+						break;
 						case '1':
-							$status="<span class='badge bg-success'>Pending</span>";
-						break;
-						case '2':
-							$status="<span class='badge bg-success'>Submitted to Simbahayan</span>";
-						break;
-						case '3':
-							$status="<span class='badge bg-success'>Approved</span>";
+							$verification_status="<span class='badge bg-success'>Verified</span>";
+							$verify_value="0";
+							$verify_label="Unverify";
 						break;
 						default:
-							$status="<span class='badge bg-warning'>unknown</span>";
+							$verification_status="<span class='badge bg-warning'>unknown</span>";
+						break;
+					}
+					switch ($datay[$i]['user_status']) {
+						case '0':
+							$user_status="<span class='badge bg-warning'>Inactive</span>";
+						break;
+						case '1':
+							$user_status="<span class='badge bg-success'>Active</span>";
+						break;
+						default:
+							$user_status="<span class='badge bg-warning'>unknown</span>";
 						break;
 					}
 					if ($datay[$i]['date_submitted'] == null) {
@@ -215,13 +230,22 @@ switch ($tag) {
 						$date_submitted=date('F d, Y h:i a', strtotime($datay[$i]['date_submitted']));
 					}
 					$toecho.="<tr>
-						<td style='text-transform: capitalize;'>".$datay[$i]['fname']. " " . $datay[$i]['lname']."</td>
-						<td style='text-transform: capitalize;'>".$datay[$i]['college_name']."</td>
-						<td style='text-transform: capitalize;'>".$datay[$i]['id_num']."</td>
-						<td style='text-transform: capitalize;'>".$datay[$i]['email']."</td>
-						<td>".$status."</td>
-						<td>".$date_submitted."</td>
-						<td><button class='btn btn-link' data-user_id='".$datay[$i]['id']."' onclick='goto_kra_select(this)'>View</button></td>
+						<td valign='middle' style='text-transform: capitalize;'>".$datay[$i]['fname']. " " . $datay[$i]['lname']."</td>
+						<td valign='middle' style='text-transform: capitalize;'>".$datay[$i]['college_name']."</td>
+						<td valign='middle' style='text-transform: capitalize;'>".$datay[$i]['id_num']."</td>
+						<td valign='middle'>".$datay[$i]['email']."</td>
+						<td valign='middle'>".$verification_status."</td>
+						<td valign='middle'>".$user_status."</td>
+						<td valign='middle'>
+							<button class='btn btn-light text-primary btn-lg shadow-none' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false'>
+								<i class='fa-solid fa-ellipsis fa-fw'></i>
+							</button>
+							<ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
+								<li><a class='dropdown-item' onclick='verify_user(this)' data-user_id='".$datay[$i]['id']."' data-value='".$verify_value."' href='#'>".$verify_label."</a></li>
+								<li><a class='dropdown-item' href='#'></a></li>
+								<li><a class='dropdown-item' href='#'></a></li>
+							</ul>
+						</td>
 					</tr>";
 				}
 				echo $toecho;
