@@ -11,6 +11,21 @@ if(isset($_POST["tag"])) {	//POST
 }
 
 switch ($tag) {
+	case 'delete_student':
+		$user_id=$_GET['user_id'];
+		$value="2";
+		$query="UPDATE tbl_users SET user_status=? WHERE id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$value,$user_id])) {
+			echo json_encode([
+				"status" => "updated"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
 	case 'status_change':
 		$user_id=$_GET['user_id'];
 		$value=$_GET['value'];
@@ -1085,7 +1100,9 @@ switch ($tag) {
 						"id" => $row['id'],
 						"user_role" => $row['user_role'],
 						"college" => $row['college'],
-						"password" => $row['password']
+						"password" => $row['password'],
+						"user_verification" => $row['verification_status'],
+						"user_status" => $row['user_status']
 				]);
 				} else {
 					echo json_encode([

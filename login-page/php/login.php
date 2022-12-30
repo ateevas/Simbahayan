@@ -112,9 +112,16 @@
                                     localStorage.setItem('password', res['password']);
                                     switch (res['user_role']) {
                                         case 1: //student
-                                            window.location.href =
-                                                "http://localhost/Simbahayan/student-official/php/profile.php";
-                                            break;
+                                            if(res['user_verification'] == "0") {
+                                                alert("The account is not verified yet. Please contact the coordinator to verify your account.")
+                                            } else {
+                                                if(res['user_status'] == "0") {
+                                                    alert("The account is has set to inactive state. Please contact the coordinator to update your account.")
+                                                } else {
+                                                    window.location.href = "http://localhost/Simbahayan/student-official/php/profile.php";
+                                                }
+                                            }                                   
+                                        break;
                                         case 2: //cd
                                             window.location.href =
                                                 "http://localhost/Simbahayan/coordinator/php/profile.php";

@@ -1,6 +1,8 @@
-<?php
-		include('../cdn/cdn.php');
-		?>
+<style type="text/css">
+    body {
+        overflow: hidden !important;
+    }
+</style>
 <nav class="navbar bg-warning">
     <div class="container-fluid">
         <a class="navbar-brand" href="profile.php">
