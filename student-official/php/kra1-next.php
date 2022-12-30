@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="http://localhost/Simbahayan/student-official/css/kra1.css" />
 
     <?php
-			include('../cdn/cdn.php');
-		?>
+            include('../cdn/cdn.php');
+        ?>
 </head>
 
 <body>
     <?php
-		include('../nav_master/nav.php');
-		?>
+        include('../nav_master/nav.php');
+        ?>
+        <hr/>
     <div class="title-wrapper m-2">
         <h3>Community Development Report</h3>
     </div>
@@ -37,19 +38,19 @@
             <tr>
                 <th scope="row"></th>
                 <td>No. of Culture and Heritage Projects</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ceras_NCHP" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ceras_NCIS" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ceras_NPM" type="number" value="0"></td>
 
             </tr>
         </tbody>
@@ -68,19 +69,19 @@
             <tr>
                 <th scope="row"></th>
                 <td> No. of Sports Development Projects</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="sfas_NSDP" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="sfas_NCIS" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="sfas_NPM" type="number" value="0"></td>
 
             </tr>
 
@@ -100,19 +101,19 @@
             <tr>
                 <th scope="row"></th>
                 <td> No. of Environmental Sustainability and Action Projects</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ejas_NESAP" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ejas_NCIS" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ejas_NPM" type="number" value="0"></td>
 
             </tr>
 
@@ -131,19 +132,19 @@
             <tr>
                 <th scope="row"></th>
                 <td> No. of Family and Household Projects</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="hlas_NFHP" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="hlas_NCIS" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="hlas_NPM" type="number" value="0"></td>
 
             </tr>
 
@@ -179,69 +180,38 @@
 
 </html>
 <script type="text/javascript">
-function btnSave() {
-    //Status in Cultural Life
-    var cahds_CHP = $('#cahds_CHP').val();
-    var cahds_CIS = $('#cahds_CIS').val();
-    var cahds_PM = $('#cahds_PM').val();
-    //Target in Cultural Life
-    var cahdt_CHP = $('#cahdt_CHP').val();
-    var cahdt_CIS = $('#cahdt_CIS').val();
-    var cahdt_PM = $('#cahdt_PM').val();
+function btnSave() {   //-- Not attached to any "onlcick" --//
+//-- Cultural Life --//
+    var ceras_NCHP = $('#ceras_NCHP').val();
+    var ceras_NCIS = $('#ceras_NCIS').val();
+    var ceras_NPM = $('#ceras_NPM').val();
     //array
-    var cahds_arr = [cahds_CHP, cahds_CIS, cahds_PM];
-    var cahdt_arr = [cahdt_CHP, cahdt_CIS, cahdt_PM];
-    localStorage.setItem('cahds_arr', cahds_arr);
-    localStorage.setItem('cahdt_arr', cahdt_arr);
-    //Status & Target in Sports for all
-    var sds_SDP = $('#sds_SDP').val();
-    var sds_CIS = $('#sds_CIS').val();
-    var sds_PM = $('#sds_PM').val();
-    var sdt_SDP = $('#sdt_SDP').val();
-    var sdt_CIS = $('#sdt_CIS').val();
-    var sdt_PM = $('#sdt_PM').val();
-    //array
-    var sds_arr = [sds_SDP, sds_CIS, sds_PM];
-    var sdt_arr = [sdt_SDP, sdt_CIS, sdt_PM];
-    localStorage.setItem('sds_arr', sds_arr);
-    localStorage.setItem('sdt_arr', sdt_arr);
-    //Status & Target in Environmental Justice
-    var drrms_ESAP = $('#drrms_ESAP').val();
-    var drrms_CIS = $('#drrms_CIS').val();
-    var drrms_PM = $('#drrms_PM').val();
-    var drrmt_SAP = $('#drrmt_SAP').val();
-    var drrmt_CIS = $('#drrmt_CIS').val();
-    var drrmt_PM = $('#drrmt_PM').val();
-    //array
-    var drrms_arr = [drrms_ESAP, drrms_CIS, drrms_PM];
-    var drrmt_arr = [drrmt_SAP, drrmt_CIS, drrmt_PM];
-    localStorage.setItem('drrms_arr', drrms_arr);
-    localStorage.setItem('drrmt_arr', drrmt_arr);
-    //Status & Target in Holistic Life
-    var fhds_FHP = $('#fhds_FHP').val();
-    var fhds_CIS = $('#fhds_CIS').val();
-    var fhds_PM = $('#fhds_PM').val();
-    var fhdt_FHP = $('#fhdt_FHP').val();
-    var fhdt_CIS = $('#fhdt_CIS').val();
-    var fhdt_PM = $('#fhdt_PM').val();
-    //array
-    var fhds_arr = [fhds_FHP, fhds_CIS, fhds_PM];
-    var fhdt_arr = [fhdt_FHP, fhdt_CIS, fhdt_PM];
-    localStorage.setItem('fhds_arr', fhds_arr);
-    localStorage.setItem('fhdt_arr', fhdt_arr);
-    //Status & Target in Community Organization
-    var cofs_COF = $('#cofs_COF').val();
-    var cofs_CISCOF = $('#cofs_CISCOF').val();
-    var cofs_PMCOF = $('#cofs_PMCOF').val();
-    var coft_COF = $('#coft_COF').val();
-    var coft_CISCOF = $('#coft_CISCOF').val();
-    var coft_PMCOF = $('#coft_PMCOF').val();
-    //array
-    var cofs_arr = [cofs_COF, cofs_CISCOF, cofs_PMCOF];
-    var coft_arr = [coft_COF, coft_CISCOF, coft_PMCOF];
-    localStorage.setItem('cofs_arr', cofs_arr);
-    localStorage.setItem('coft_arr', coft_arr);
+    var ceras_arr = [ceras_NCHP, ceras_NCIS, ceras_NPM];
+    localStorage.setItem('ceras_arr', ceras_arr);
 
+//-- Sports for all --//
+    var sfas_NSDP = $('#sfas_NSDP').val();
+    var sfas_NCIS = $('#sfas_NCIS').val();
+    var sfas_NPM = $('#sfas_NPM').val();
+    //array
+    var sfas_arr = [sfas_NSDP, sfas_NCIS, sfas_NPM];
+    localStorage.setItem('sfas_arr', sfas_arr);
+
+//-- Environmental Justice for all --//
+    var ejas_NESAP = $('#ejas_NESAP').val();
+    var ejas_NCIS = $('#ejas_NCIS').val();
+    var ejas_NPM = $('#ejas_NPM').val();
+    //array
+    var ejas_arr = [ejas_NESAP, ejas_NCIS, ejas_NPM];
+    localStorage.setItem('ejas_arr', ejas_arr);
+
+//-- Holistic Life for all --//
+    var hlas_NFHP = $('#hlas_NFHP').val();
+    var hlas_NCIS = $('#hlas_NCIS').val();
+    var hlas_NPM = $('#hlas_NPM').val();
+    //array
+    var hlas_arr = [hlas_NFHP, hlas_NCIS, hlas_NPM];
+    localStorage.setItem('hlas_arr', hlas_arr);
 
     $.ajax({
         url: url,
@@ -250,26 +220,19 @@ function btnSave() {
             csrf_token: "{{ csrf_token() }}",
             tag: "save_kra1",
             user_id: localStorage.getItem('user_id'),
+
             hs_arr: localStorage.getItem('hs_arr'),
-            ht_arr: localStorage.getItem('ht_arr'),
             es_arr: localStorage.getItem('es_arr'),
-            et_arr: localStorage.getItem('et_arr'),
             ggs_arr: localStorage.getItem('ggs_arr'),
-            ggt_arr: localStorage.getItem('ggt_arr'),
             ejs_arr: localStorage.getItem('ejs_arr'),
-            ejt_arr: localStorage.getItem('ejt_arr'),
             cls_arr: localStorage.getItem('cls_arr'),
-            clt_arr: localStorage.getItem('clt_arr'),
-            cahds_arr: localStorage.getItem('cahds_arr'),
-            cahdt_arr: localStorage.getItem('cahdt_arr'),
-            sds_arr: localStorage.getItem('sds_arr'),
-            sdt_arr: localStorage.getItem('sdt_arr'),
-            drrms_arr: localStorage.getItem('drrms_arr'),
-            drrmt_arr: localStorage.getItem('drrmt_arr'),
-            fhds_arr: localStorage.getItem('fhds_arr'),
-            fhdt_arr: localStorage.getItem('fhdt_arr'),
-            cofs_arr: localStorage.getItem('cofs_arr'),
-            coft_arr: localStorage.getItem('coft_arr'),
+
+            efas_arr: localStorage.getItem('efas_arr'),
+            ceras_arr: localStorage.getItem('ceras_arr'),
+            sfas_arr: localStorage.getItem('sfas_arr'),
+            ejas_arr: localStorage.getItem('ejas_arr'),
+            hlas_arr: localStorage.getItem('hlas_arr')
+
         },
         complete: function(response) {
             var data = JSON.parse(response.responseText);

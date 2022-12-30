@@ -16,7 +16,7 @@
     <?php
 			include('../nav_master/nav.php');
 		?>
-    <hr />
+    <hr/>
     <div class="title-wrapper m-2">
         <h3>Community Development Report</h3>
     </div>
@@ -38,25 +38,25 @@
             <tr>
                 <th scope="row"></th>
                 <td>Institutional Development for Community Development</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="npus_IDCD" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Social Awareness and Advocacy</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="npus_SAA" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Community-Engaged Research</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="npus_CER" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Service-Learning</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="npus_SL" type="number" value="0"></td>
 
             </tr>
         </tbody>
@@ -76,38 +76,38 @@
             <tr>
                 <th scope="row"></th>
                 <td> Student Organizations</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nppus_SORG" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Students</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nppus_STU" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Faculty</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nppus_FAL" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Administrators</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nppus_ADM" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Support Staff</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nppus_SSTA" type="number" value="0"></td>
 
             </tr>
 
             <tr>
                 <th scope="row"></th>
                 <td>Alumni</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nppus_ALU" type="number" value="0"></td>
 
             </tr>
 
@@ -126,13 +126,13 @@
             <tr>
                 <th scope="row"></th>
                 <td>Local</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nrpfcs_LOC" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>International</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nrpfcs_INT" type="number" value="0"></td>
 
             </tr>
 
@@ -149,13 +149,13 @@
             <tr>
                 <th scope="row"></th>
                 <td>Local</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nps_LOC" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>International</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nps_INT" type="number" value="0"></td>
 
             </tr>
 
@@ -196,62 +196,66 @@
 
 </html>
 <script type="text/javascript">
-function btnNext() {
-    //----------------------- Health for All -----------------------//
-    var hs_HWDP = $('#hs_HWDP').val();
-    var hs_CIS = $('#hs_CIS').val();
-    var hs_PM = $('#hs_PM').val();
-    var ht_HWDP = $('#ht_HWDP').val();
-    var ht_CIS = $('#ht_CIS').val();
-    var ht_PM = $('#ht_PM').val();
-    var hs_arr = new Array(hs_HWDP, hs_CIS, hs_PM);
-    var ht_arr = [ht_HWDP, ht_CIS, ht_PM];
-    localStorage.setItem('hs_arr', hs_arr);
-    localStorage.setItem('ht_arr', ht_arr);
-    //----------------------- Education for All -----------------------//
-    var es_EIEP = $('#es_EIEP').val();
-    var es_CIS = $('#es_CIS').val();
-    var es_PM = $('#es_PM').val();
-    var et_EIEP = $('#et_EIEP').val();
-    var et_CIS = $('#et_CIS').val();
-    var et_PM = $('#et_PM').val();
-    var es_arr = [es_EIEP, es_CIS, es_PM];
-    var et_arr = [et_EIEP, et_CIS, et_PM];
-    localStorage.setItem('es_arr', es_arr);
-    localStorage.setItem('et_arr', et_arr);
-    //----------------------- Good Governance for All -----------------------//
-    var ggs_LODGGP = $('#ggs_LODGGP').val();
-    var ggs_CIS = $('#ggs_CIS').val();
-    var ggs_PM = $('#ggs_PM').val();
-    var ggt_LODGGP = $('#ggt_LODGGP').val();
-    var ggt_CIS = $('#ggt_CIS').val();
-    var ggt_PM = $('#ggt_PM').val();
-    var ggs_arr = [ggs_LODGGP, ggs_CIS, ggs_PM];
-    var ggt_arr = [ggt_LODGGP, ggt_CIS, ggt_PM];
-    localStorage.setItem('ggs_arr', ggs_arr);
-    localStorage.setItem('ggt_arr', ggt_arr);
-    //----------------------- Economic Justice for All -----------------------//
-    var ejs_ESEP = $('#ejs_ESEP').val();
-    var ejs_CIS = $('#ejs_CIS').val();
-    var ejs_PM = $('#ejs_PM').val();
-    var ejt_ESEP = $('#ejt_ESEP').val();
-    var ejt_CIS = $('#ejt_CIS').val();
-    var ejt_PM = $('#ejt_PM').val();
-    var ejs_arr = [ejs_ESEP, ejs_CIS, ejs_PM];
-    var ejt_arr = [ejt_ESEP, ejt_CIS, ejt_PM];
-    localStorage.setItem('ejs_arr', ejs_arr);
-    localStorage.setItem('ejt_arr', ejt_arr);
-    //----------------------- Christ Love for All -----------------------//
-    var cls_SPMEP = $('#cls_SPMEP').val();
-    var cls_CIS = $('#cls_CIS').val();
-    var cls_PM = $('#cls_PM').val();
-    var clt_SPMEP = $('#clt_SPMEP').val();
-    var clt_CIS = $('#clt_CIS').val();
-    var clt_PM = $('#clt_PM').val();
-    var cls_arr = [cls_SPMEP, cls_CIS, cls_PM];
-    var clt_arr = [clt_SPMEP, clt_CIS, clt_PM];
-    localStorage.setItem('cls_arr', cls_arr);
-    localStorage.setItem('clt_arr', clt_arr);
-    window.location.href = "http://localhost/Simbahayan/student-official/php/kra1-next.php";
+function btnNext() {  //-- Not attached to any "onlcick" --//
+
+//-- Number of Projects Under the UCDP --//
+
+    var npus_IDCD = $('#npus_IDCD').val();
+    var npus_SAA = $('#npus_SAA').val();
+    var npus_CER = $('#npus_CER').val();
+    var npus_SL = $('#npus_SL').val();
+    var npus_arr = new Array(npus_IDCD, npus_SAA, npus_CER, npus_SL);
+    localStorage.setItem('npus_arr', npus_arr);
+
+//-- Number of Participants in the Projects Under the UCDP --//
+
+    var nppus_SORG = $('#nppus_SORG').val();
+    var nppus_STU = $('#nppus_STU').val();
+    var nppus_FAL = $('#nppus_FAL').val();
+    var nppus_ADM = $('#nppus_ADM').val();
+    var nppus_SSTA = $('#nppus_SSTA').val();
+    var nppus_ALU = $('#nppus_ALU').val();
+    var nppus_arr = new Array(nppus_SORG, nppus_STU, nppus_FAL, nppus_ADM, nppus_SSTA, nppus_ALU);
+    localStorage.setItem('nppus_arr', nppus_arr);
+
+//-- Number of Research Presentations in Fora/Conferences --//
+
+    var nrpfcs_LOC = $('#nrpfcs_LOC').val();
+    var nrpfcs_INT = $('#nrpfcs_INT').val();
+    var nrpfcs_arr = new Array(nrpfcs_LOC, nrpfcs_INT);
+    localStorage.setItem('nrpfcs_arr', nrpfcs_arr);
+
+//-- Number of Publications --//
+
+    var nps_LOC = $('#nps_LOC').val();
+    var nps_INT = $('#nps_INT').val();
+    var nps_arr = new Array(nps_LOC, nps_INT);
+    localStorage.setItem('nps_arr', nps_arr);
+
+
+    $.ajax({
+        url: url,
+        type: "POST",
+        data: {
+            csrf_token: "{{ csrf_token() }}",
+            tag: "save_kra2",
+            user_id: localStorage.getItem('user_id'),
+
+            npus_arr: localStorage.getItem('npus_arr'),
+            nppus_arr: localStorage.getItem('nppus_arr'),
+            nrpfcs_arr: localStorage.getItem('nrpfcs_arr'),
+            nps_arr: localStorage.getItem('nps_arr')
+        },
+        complete: function(response) {
+            var data = JSON.parse(response.responseText);
+            if (data['status'] == "ok") {
+                alert("successfully saved!");
+                window.location.href = "http://localhost/Simbahayan/student-official/php/kra-select.php";
+            } else {
+                alert("Unknown error occured. Please try again.")
+            }
+        }
+    })
+
 }
 </script>

@@ -37,19 +37,19 @@
             <tr>
                 <th scope="row"></th>
                 <td> People's Organizations</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nmoas_PO" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Government Agencies or LGUs</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nmoas_LGU" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Non-Government Organizations</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nmoas_NGO" type="number" value="0"></td>
 
             </tr>
 
@@ -57,31 +57,31 @@
             <tr>
                 <th scope="row"></th>
                 <td> Basic Educational Institutions</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nmoas_BEI" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Local Higher Educational Institutions</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nmoas_LHEI" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>International Higher Educational Institutions</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nmoas_IHEI" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Faith-Based/Church-Based Organization</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nmoas_CBO" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Professional/Business Organizations</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="nmoas_PBO" type="number" value="0"></td>
 
             </tr>
         </tbody>
@@ -101,19 +101,19 @@
             <tr>
                 <th scope="row"></th>
                 <td> People's Organizations</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ncdaas_PO" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Government Agencies or LGUs</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ncdaas_LGU" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Non-Government Organizations</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ncdaas_NGO" type="number" value="0"></td>
 
             </tr>
 
@@ -121,31 +121,31 @@
             <tr>
                 <th scope="row"></th>
                 <td> Basic Educational Institutions</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ncdaas_BEI" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Local Higher Educational Institutions</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ncdaas_LHEI" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>International Higher Educational Institutions</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ncdaas_IHEI" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Faith-Based/Church-Based Organization</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ncdaas_CBO" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Professional/Business Organizations</td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ncdaas_PBO" type="number" value="0"></td>
 
             </tr>
 
@@ -189,62 +189,58 @@
 
 </html>
 <script type="text/javascript">
-function btnNext() {
-    //----------------------- Health for All -----------------------//
-    var hs_HWDP = $('#hs_HWDP').val();
-    var hs_CIS = $('#hs_CIS').val();
-    var hs_PM = $('#hs_PM').val();
-    var ht_HWDP = $('#ht_HWDP').val();
-    var ht_CIS = $('#ht_CIS').val();
-    var ht_PM = $('#ht_PM').val();
-    var hs_arr = new Array(hs_HWDP, hs_CIS, hs_PM);
-    var ht_arr = [ht_HWDP, ht_CIS, ht_PM];
-    localStorage.setItem('hs_arr', hs_arr);
-    localStorage.setItem('ht_arr', ht_arr);
-    //----------------------- Education for All -----------------------//
-    var es_EIEP = $('#es_EIEP').val();
-    var es_CIS = $('#es_CIS').val();
-    var es_PM = $('#es_PM').val();
-    var et_EIEP = $('#et_EIEP').val();
-    var et_CIS = $('#et_CIS').val();
-    var et_PM = $('#et_PM').val();
-    var es_arr = [es_EIEP, es_CIS, es_PM];
-    var et_arr = [et_EIEP, et_CIS, et_PM];
-    localStorage.setItem('es_arr', es_arr);
-    localStorage.setItem('et_arr', et_arr);
-    //----------------------- Good Governance for All -----------------------//
-    var ggs_LODGGP = $('#ggs_LODGGP').val();
-    var ggs_CIS = $('#ggs_CIS').val();
-    var ggs_PM = $('#ggs_PM').val();
-    var ggt_LODGGP = $('#ggt_LODGGP').val();
-    var ggt_CIS = $('#ggt_CIS').val();
-    var ggt_PM = $('#ggt_PM').val();
-    var ggs_arr = [ggs_LODGGP, ggs_CIS, ggs_PM];
-    var ggt_arr = [ggt_LODGGP, ggt_CIS, ggt_PM];
-    localStorage.setItem('ggs_arr', ggs_arr);
-    localStorage.setItem('ggt_arr', ggt_arr);
-    //----------------------- Economic Justice for All -----------------------//
-    var ejs_ESEP = $('#ejs_ESEP').val();
-    var ejs_CIS = $('#ejs_CIS').val();
-    var ejs_PM = $('#ejs_PM').val();
-    var ejt_ESEP = $('#ejt_ESEP').val();
-    var ejt_CIS = $('#ejt_CIS').val();
-    var ejt_PM = $('#ejt_PM').val();
-    var ejs_arr = [ejs_ESEP, ejs_CIS, ejs_PM];
-    var ejt_arr = [ejt_ESEP, ejt_CIS, ejt_PM];
-    localStorage.setItem('ejs_arr', ejs_arr);
-    localStorage.setItem('ejt_arr', ejt_arr);
-    //----------------------- Christ Love for All -----------------------//
-    var cls_SPMEP = $('#cls_SPMEP').val();
-    var cls_CIS = $('#cls_CIS').val();
-    var cls_PM = $('#cls_PM').val();
-    var clt_SPMEP = $('#clt_SPMEP').val();
-    var clt_CIS = $('#clt_CIS').val();
-    var clt_PM = $('#clt_PM').val();
-    var cls_arr = [cls_SPMEP, cls_CIS, cls_PM];
-    var clt_arr = [clt_SPMEP, clt_CIS, clt_PM];
-    localStorage.setItem('cls_arr', cls_arr);
-    localStorage.setItem('clt_arr', clt_arr);
-    window.location.href = "http://localhost/Simbahayan/student-official/php/kra1-next.php";
+function btnNext() { //-- Not attached to any "onlcick" --//
+
+    //-- Number of MOA/MOU --//
+
+    var nmoas_PO = $('#nmoas_PO').val();
+    var nmoas_LGU = $('#nmoas_LGU').val();
+    var nmoas_NGO = $('#nmoas_NGO').val();
+    var nmoas_BEI = $('#nmoas_BEI').val();
+    var nmoas_LHEI = $('#nmoas_LHEI').val();
+    var nmoas_IHEI = $('#nmoas_IHEI').val();
+    var nmoas_CBO = $('#nmoas_CBO').val();
+    var nmoas_PBO = $('#nmoas_PBO').val();  
+
+    var nmoas_arr = new Array(nmoas_PO, nmoas_LGU, nmoas_NGO, nmoas_BEI, nmoas_LHEI, nmoas_IHEI, nmoas_CBO, nmoas_PBO);
+    localStorage.setItem('nmoas_arr', nmoas_arr);
+
+    //-- Number of Community Development --//
+
+    var ncdaas_PO = $('#ncdaas_PO').val();
+    var ncdaas_LGU = $('#ncdaas_LGU').val();
+    var ncdaas_NGO = $('#ncdaas_NGO').val();
+    var ncdaas_BEI = $('#ncdaas_BEI').val();
+    var ncdaas_LHEI = $('#ncdaas_LHEI').val();
+    var ncdaas_IHEI = $('#ncdaas_IHEI').val();
+    var ncdaas_CBO = $('#ncdaas_CBO').val();
+    var ncdaas_PBO = $('#ncdaas_PBO').val();  
+
+    var ncdaas_arr = new Array(ncdaas_PO, ncdaas_LGU, ncdaas_NGO, ncdaas_BEI, ncdaas_LHEI, ncdaas_IHEI, ncdaas_CBO, ncdaas_PBO);
+    localStorage.setItem('ncdaas_arr', ncdaas_arr);
+
+
+    $.ajax({
+        url: url,
+        type: "POST",
+        data: {
+            csrf_token: "{{ csrf_token() }}",
+            tag: "save_kra3",
+            user_id: localStorage.getItem('user_id'),
+
+            nmoas_arr: localStorage.getItem('nmoas_arr'),
+            ncdaas_arr: localStorage.getItem('ncdaas_arr')
+        },
+        complete: function(response) {
+            var data = JSON.parse(response.responseText);
+            if (data['status'] == "ok") {
+                alert("successfully saved!");
+                window.location.href = "http://localhost/Simbahayan/student-official/php/kra-select.php";
+            } else {
+                alert("Unknown error occured. Please try again.")
+            }
+        }
+    })
+
 }
 </script>
