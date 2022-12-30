@@ -207,12 +207,6 @@
                 <td><input type="number" value="0"></td>
 
             </tr>
-
-
-
-
-
-
         </tbody>
     </table>
     <div class="button-container">

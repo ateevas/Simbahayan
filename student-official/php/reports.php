@@ -49,7 +49,7 @@
 			<div class="modal-body">
 				<div class="mb-3">
 					<label>School Year</label>
-					<input type="number" maxlength="4" class="form-control" placeholder="School Year" />
+					<input type="number" id="school_year" maxlength="4" class="form-control" placeholder="School Year" />
 				</div>
 			</div>
 			<div class="modal-footer">
@@ -64,13 +64,21 @@
 <script type="text/javascript">
 get_allstudentkra();
 
+function add_kra(){
+	var user_id = localStorage.getItem("user_id");
+	var school_year = $('#school_year').val();
+	
+}
+
 function get_allstudentkra() {
+	var user_id = localStorage.getItem("user_id");
 	$.ajax({
 		url: url,
 		type: "GET",
 		data: {
 			csrf_token: "{{ csrf_token() }}",
-			tag: "get_allstudentkra"
+			tag: "get_allstudentkra",
+			user_id:user_id
 		},
 		complete: function(response) {
 			// $('#tbody_data').html(response.responseText);

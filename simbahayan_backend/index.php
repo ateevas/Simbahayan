@@ -11,6 +11,9 @@ if(isset($_POST["tag"])) {	//POST
 }
 
 switch ($tag) {
+	case 'get_allstudentkra':
+		
+	break;
 	case 'delete_student':
 		$user_id=$_GET['user_id'];
 		$value="2";
