@@ -35,22 +35,22 @@
             <tr>
                 <th scope="row"></th>
                 <td>No. of Culture and Heritage Projects</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
 
             </tr>
         </tbody>
@@ -69,22 +69,22 @@
             <tr>
                 <th scope="row"></th>
                 <td> No. of Sports Development Projects</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
 
             </tr>
 
@@ -104,22 +104,22 @@
             <tr>
                 <th scope="row"></th>
                 <td> No. of Environmental Sustainability and Action Projects</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
 
             </tr>
 
@@ -138,22 +138,22 @@
             <tr>
                 <th scope="row"></th>
                 <td> No. of Family and Household Projects</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
+                <td><input id="" type="number" value="0"></td>
 
             </tr>
 

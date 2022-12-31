@@ -1,6 +1,6 @@
 <style type="text/css">
     body {
-        overflow: hidden !important;
+        overflow-x: hidden !important;
     }
 </style>
 <nav class="navbar bg-secondary">
