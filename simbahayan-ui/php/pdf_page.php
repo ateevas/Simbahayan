@@ -92,14 +92,14 @@
                         <td scope="row">f. Cultural Life, Expression and Rootedness for all (Culture and Heritage
                             Development
                         </td>
-                        <td id="cahds_total" class="align-middle text-center fw-bold"></td>
-                        <td id="cahdt_total" class="align-middle text-center fw-bold"></td>
+                        <td id="ceras_total" class="align-middle text-center fw-bold"></td>
+                        <td id="cerat_total" class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <td scope="row">g. Sports for all (Sports development)
                         </td>
-                        <td id="sds_total" class="align-middle text-center fw-bold"></td>
-                        <td id="sdt_total" class="align-middle text-center fw-bold"></td>
+                        <td id="sfas_total" class="align-middle text-center fw-bold"></td>
+                        <td id="sfat_total" class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <td scope="row">h. Environmental Justice for all (Environmental sustainability and action;
@@ -108,19 +108,20 @@
                             reduction and management
 
                         </td>
-                        <td id="drrms_total" class="align-middle text-center fw-bold"></td>
-                        <td id="drrmt_total" class="align-middle text-center fw-bold"></td>
+                        <td id="ejas_total" class="align-middle text-center fw-bold"></td>
+                        <td id="ejat_total" class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <td scope="row">i. Holistic Life for all (Family and household development)</td>
-                        <td id="fhds_total" class="align-middle text-center fw-bold"></td>
-                        <td id="fhdt_total" class="align-middle text-center fw-bold"></td>
+                        <td id="hlas_total" class="align-middle text-center fw-bold"></td>
+                        <td id="hlat_total" class="align-middle text-center fw-bold"></td>
 
                     </tr>
                     <!--TOTAL-->
                     <tr>
                         <td scope="row"></td>
                         <td id="fhds_total" class="align-middle text-center fw-bold">Total</td>
+                        
                         <td id="fhdt_total" class="align-middle text-center fw-bold"></td>
                         <td id="fhdt_total" class="align-middle text-center fw-bold"></td>
 

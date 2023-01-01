@@ -179,35 +179,7 @@
             </tr>
 
 
-            <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Education for all (Equitable and Inclusive Education)</th>
-                    <th scope="col"></th>
 
-
-                </tr>
-            </thead>
-        <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td> No. of Health and Wellness Development Projects</td>
-                <td><input id="efas_HWDP" type="number" value="0"></td>
-
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td> No. of Communities/ Institutions Served</td>
-                <td><input id="efas_CIS" type="number" value="0"></td>
-
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td>Status No. of Participants/ Members</td>
-                <td><input id="efas_PM" type="number" value="0"></td>
-
-            </tr>
-        </tbody>
     </table>
     <div class="d-flex flex-row-reverse bd-highlight">
         <a class="btn btn-dark" onclick="goto_kra1next()" role="button">Next</a>
@@ -269,13 +241,6 @@ function goto_kra1next() {
     var cls_PM = $('#cls_PM').val();
     var cls_arr = [cls_SPMEP, cls_CIS, cls_PM];
     localStorage.setItem('cls_arr', cls_arr);
-
-    //-- Education for All (Last Row) --//
-    var efas_HWDP = $('#efas_HWDP').val();
-    var efas_CIS = $('#efas_CIS').val();
-    var efas_PM = $('#efas_PM').val();
-    var efas_arr = [efas_HWDP, efas_CIS, efas_PM];
-    localStorage.setItem('efas_arr', efas_arr);
 
     window.location.href = "http://localhost/Simbahayan/student-official/php/kra1-next.php";
 }
