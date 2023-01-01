@@ -11,8 +11,93 @@ if(isset($_POST["tag"])) {	//POST
 }
 
 switch ($tag) {
+	case 'add_studentkra':
+		$user_id=$_GET['user_id'];
+		$school_year=$_GET['school_year'];
+		$college_id=$_GET['college_id'];
+		$query="INSERT INTO tbl_kra_submission SET user_id=?, school_year=?, college_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$user_id,$school_year,$college_id])) {
+			echo json_encode([
+				"status" => "inserted"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'save_edituserinfo':
+		$user_id=$_GET['user_id'];
+		$user_fname=$_GET['user_fname'];
+		$user_lname=$_GET['user_lname'];
+		$user_email=$_GET['user_email'];
+		$user_idnumber=$_GET['user_idnumber'];
+		$college_id=$_GET['college_id'];
+		$query="UPDATE tbl_users SET fname=?, lname=?, email=?, college=?, id_num=? WHERE id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$user_fname,$user_lname,$user_email,$college_id,$user_idnumber,$user_id])) {
+			echo json_encode([
+				"status" => "updated"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
 	case 'get_allstudentkra':
-		
+		$query="SELECT tbl_kra_submission.*, tbl_users.fname, tbl_users.lname FROM tbl_kra_submission LEFT JOIN tbl_users on tbl_users.id=tbl_kra_submission.user_id WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			if($stmt->rowCount() != 0) {
+				$datax=json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+				$datay=json_decode($datax, true);
+				$toecho="";
+				for ($i=0; $i < count($datay); $i++) {
+					$kra_status="";
+					switch ($datay[$i]['kra_status']) {
+						case '0':
+							$kra_status="<span class='badge bg-success'>Added</span>";
+						break;
+						case '1':
+							$kra_status="<span class='badge bg-success'>Submitted</span>";
+						break;
+						case '2':
+							$kra_status="<span class='badge bg-success'>Approved by Coordinator</span>";
+						break;
+						case '3':
+							$kra_status="<span class='badge bg-success'>Approved by Simbahayan</span>";
+						break;
+						default:
+							$kra_status="<span class='badge bg-warning'>unknown</span>";
+						break;
+					}
+					$toecho.="<tr>
+						<td valign='middle' style='text-transform: capitalize;'>".$datay[$i]['fname']. " " . $datay[$i]['lname']."</td>
+						<td valign='middle'>".$datay[$i]['school_year']."</td>
+						<td valign='middle'>".$kra_status."</td>
+						<td valign='middle'><button class='btn btn-light text-primary shadow-none' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false'>
+								<i class='fa-solid fa-ellipsis fa-fw'></i>
+							</button>
+							<ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
+								<li><a class='dropdown-item' onclick='manage_kra(this)' data-kra_id='".$datay[$i]['id']."' href='#'>Manage</a></li>
+							</ul>
+						</td>
+					</tr>";
+				}
+				echo $toecho;
+			} else {
+				$toecho="<tr>
+						<td style='text-transform: capitalize;' rowspan='6'>No data available</td>
+					</tr>";
+					echo $toecho;
+			}
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
 	break;
 	case 'delete_student':
 		$user_id=$_GET['user_id'];
@@ -109,11 +194,66 @@ switch ($tag) {
 				$datay=json_decode($datax, true);
 				$toecho="";
 				for ($i=0; $i < count($datay); $i++) {
+					$user_status="";
+					$user_value="";
+					$user_label="";
+					$verify_value="";
+					$verify_label="";
+					$verification_status="";
+					switch ($datay[$i]['verification_status']) {
+						case '0':
+							$verification_status="<span class='badge bg-warning'>Unverified</span>";
+							$verify_value="1";
+							$verify_label="Verify";
+						break;
+						case '1':
+							$verification_status="<span class='badge bg-success'>Verified</span>";
+							$verify_value="0";
+							$verify_label="Unverify";
+						break;
+						default:
+							$verification_status="<span class='badge bg-warning'>unknown</span>";
+						break;
+					}
+					switch ($datay[$i]['user_status']) {
+						case '0':
+							$user_status="<span class='badge bg-warning'>Inactive</span>";
+							$user_value="1";
+							$user_label="Active";
+						break;
+						case '1':
+							$user_status="<span class='badge bg-success'>Active</span>";
+							$user_value="0";
+							$user_label="Inactive";
+						break;
+						default:
+							$user_status="<span class='badge bg-warning'>unknown</span>";
+						break;
+					}
 					$toecho.="<tr>
-						<td style='text-transform: capitalize;'>".$datay[$i]['fname']. " " . $datay[$i]['lname']."</td>
-						<td>".$datay[$i]['college_name']."</td>
-						<td>".$datay[$i]['email']."</td>
-						<td>".$datay[$i]['contact']."</td>
+						<td valign='middle' style='text-transform: capitalize;'>".$datay[$i]['fname']. " " . $datay[$i]['lname']."</td>
+						<td valign='middle' style='text-transform: capitalize;'>".$datay[$i]['college_name']."</td>
+						<td valign='middle' style='text-transform: capitalize;'>".$datay[$i]['id_num']."</td>
+						<td valign='middle'>".$datay[$i]['email']."</td>
+						<td valign='middle'>".$verification_status."</td>
+						<td valign='middle'>".$user_status."</td>
+						<td valign='middle'>
+							<button class='btn btn-light text-primary btn-lg shadow-none' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false'>
+								<i class='fa-solid fa-ellipsis fa-fw'></i>
+							</button>
+							<ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
+								<li><a class='dropdown-item' onclick='verify_user(this)' data-user_id='".$datay[$i]['id']."' data-value='".$verify_value."' href='#'>".$verify_label."</a></li>
+								<li><a class='dropdown-item' onclick='status_change(this)' data-user_id='".$datay[$i]['id']."' data-value='".$user_value."' href='#'>".$user_label."</a></li>
+								<li><a class='dropdown-item' href='#' onclick='edit_userinfo(this)' 
+									data-user_id='".$datay[$i]['id']."'
+									data-user_fname='".$datay[$i]['fname']."'
+									data-user_lname='".$datay[$i]['lname']."'
+									data-user_email='".$datay[$i]['email']."'
+									data-college='".$datay[$i]['college']."'
+									data-idnumber='".$datay[$i]['id_num']."'
+								>Edit</a></li>
+							</ul>
+						</td>
 					</tr>";
 				}
 				echo $toecho;
@@ -297,6 +437,14 @@ switch ($tag) {
 							<ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
 								<li><a class='dropdown-item' onclick='verify_user(this)' data-user_id='".$datay[$i]['id']."' data-value='".$verify_value."' href='#'>".$verify_label."</a></li>
 								<li><a class='dropdown-item' onclick='status_change(this)' data-user_id='".$datay[$i]['id']."' data-value='".$user_value."' href='#'>".$user_label."</a></li>
+								<li><a class='dropdown-item' href='#' onclick='edit_userinfo(this)' 
+									data-user_id='".$datay[$i]['id']."'
+									data-user_fname='".$datay[$i]['fname']."'
+									data-user_lname='".$datay[$i]['lname']."'
+									data-user_email='".$datay[$i]['email']."'
+									data-college='".$datay[$i]['college']."'
+									data-idnumber='".$datay[$i]['id_num']."'
+								>Edit</a></li>
 							</ul>
 						</td>
 					</tr>";
@@ -768,9 +916,9 @@ switch ($tag) {
 		}
 	break;
 	case 'check_krasubmission':
-		$query="SELECT COALESCE(sum(tbl_kra_submission.id), 0) as kra_submit, COALESCE(sum(kra1.id), 0) as kra1, COALESCE(sum(kra2.id), 0) as kra2, COALESCE(sum(kra3.id), 0) as kra3 FROM kra1 LEFT JOIN kra2 ON kra2.user_id=kra1.user_id LEFT JOIN kra3 ON kra3.user_id=kra1.user_id LEFT JOIN tbl_kra_submission ON tbl_kra_submission.user_id=kra1.user_id WHERE kra1.user_id=? LIMIT 1";
+		$query="SELECT tbl_kra_submission.kra_status, COALESCE(sum(kra1.id), 0) as kra1, COALESCE(sum(kra2.id), 0) as kra2, COALESCE(sum(kra3.id), 0) as kra3 FROM tbl_kra_submission LEFT JOIN kra1 ON kra1.kra_sub_id=tbl_kra_submission.id LEFT JOIN kra2 ON kra2.kra_sub_id=tbl_kra_submission.id LEFT JOIN kra3 ON kra3.kra_sub_id=tbl_kra_submission.id WHERE tbl_kra_submission.id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_POST['user_id']])) {
+		if($stmt->execute([$_POST['kra_id']])) {
 			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 		} else {
 			echo json_encode([
@@ -779,15 +927,10 @@ switch ($tag) {
 		}
 	break;
 	case 'submit_allkra':
-		$query="INSERT INTO tbl_kra_submission SET 
-			kra_status=?,
-			user_id=?,
-			kra1_sub=?,
-			kra2_sub=?,
-			kra3_sub=?
-			";
+		$query="UPDATE tbl_kra_submission SET
+			kra_status=? WHERE id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute(["1",$_GET['user_id'],"1","1","1"])) {
+		if($stmt->execute(["1",$_GET['kra_id']])) {
 
 			$queryx="UPDATE kra1
 				INNER JOIN kra2 ON kra2.user_id = kra1.user_id
@@ -814,48 +957,18 @@ switch ($tag) {
 	break;
 	case 'save_kra3':
 		$query="INSERT INTO kra3 SET
+		kra_sub_id=?,
 		kra_status=?,
 		user_id=?,
-		pos_arr=?,
-		pot_arr=?,
-		gas_arr=?,
-		gat_arr=?,
-		ngos_arr=?,
-		ngot_arr=?,
-		beis_arr=?,
-		beit_arr=?,
-		lheis_arr=?,
-		lheit_arr=?,
-		iheis_arr=?,
-		iheit_arr=?,
-		cbos_arr=?,
-		cbot_arr=?,
-		pbos_arr=?,
-		pbot_arr=?,
-		tccs_arr=?,
-		tcct_arr=?"; 
+		nmoas_arr=?,
+		ncdaas_arr=?"; 
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute([
+			$_POST['kra_id'],
 			"0",
 			$_POST['user_id'],
-			$_POST['pos_arr'], 
-			$_POST['pot_arr'],
-			$_POST['gas_arr'],
-			$_POST['gat_arr'],
-			$_POST['ngos_arr'],
-			$_POST['ngot_arr'],
-			$_POST['beis_arr'],
-			$_POST['beit_arr'],
-			$_POST['lheis_arr'],
-			$_POST['lheit_arr'],
-			$_POST['iheis_arr'],
-			$_POST['iheit_arr'],
-			$_POST['cbos_arr'],
-			$_POST['cbot_arr'], 
-			$_POST['pbos_arr'],
-			$_POST['pbot_arr'], 
-			$_POST['tccs_arr'],
-			$_POST['tcct_arr'], 
+			$_POST['nmoas_arr'],
+			$_POST['ncdaas_arr']
 		])) {
 			echo json_encode([
 				"status" => "ok"
@@ -869,40 +982,22 @@ switch ($tag) {
 
 	case 'save_kra2':
 		$query="INSERT INTO kra2 SET
+			kra_sub_id=?,
 			kra_status=?,
 			user_id=?,
-			s_puidcd_arr=?,
-			t_puidcd_arr=?,
-			s_psaa_arr=?,
-			t_psaa_arr=?,
-			s_pucer_arr=?,
-			t_pucer_arr=?,
-			s_pul_arr=?,
-			t_pul_arr=?,
-			udcps_arr=?,
-			udcpt_arr=?,
-			fcs_arr=?,
-			fct_arr=?,
-			ps_arr=?,
-			pt_arr=?"; 
+			npus_arr=?,
+			nppus_arr=?,
+			nrpfcs_arr=?,
+			nps_arr=?"; 
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute([
+			$_POST['kra_id'],
 			"0",
 			$_POST['user_id'],
-			$_POST['s_puidcd_arr'], 
-			$_POST['t_puidcd_arr'],
-			$_POST['s_psaa_arr'],
-			$_POST['t_psaa_arr'],
-			$_POST['s_pucer_arr'],
-			$_POST['t_pucer_arr'],
-			$_POST['s_pul_arr'],
-			$_POST['t_pul_arr'],
-			$_POST['udcps_arr'],
-			$_POST['udcpt_arr'],
-			$_POST['fcs_arr'],
-			$_POST['fct_arr'],
-			$_POST['ps_arr'],
-			$_POST['pt_arr'], 
+			$_POST['npus_arr'], 
+			$_POST['nppus_arr'],
+			$_POST['nrpfcs_arr'],
+			$_POST['nps_arr']
 		])) {
 			echo json_encode([
 				"status" => "ok",
@@ -916,53 +1011,35 @@ switch ($tag) {
 
 	case 'save_kra1':
 		$query="INSERT INTO kra1 SET
+			kra_sub_id=?,
 			kra_status=?,
 			user_id=?,
 			hs_arr=?,
-			ht_arr=?,
 			es_arr=?,
-			et_arr=?,
 			ggs_arr=?,
-			ggt_arr=?,
 			ejs_arr=?,
-			ejt_arr=?,
 			cls_arr=?,
-			clt_arr=?,
-			cahds_arr=?,
-			cahdt_arr=?,
-			sds_arr=?,
-			sdt_arr=?,
-			drrms_arr=?,
-			drrmt_arr=?,
-			fhds_arr=?,
-			fhdt_arr=?,
-			cofs_arr=?,
-			coft_arr=?";
+			efas_arr=?,
+			ceras_arr=?,
+			sfas_arr=?,
+			ejas_arr=?,
+			hlas_arr=?";
 
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute([
+			$_POST['kra_id'],
 			"0",
 			$_POST['user_id'],
 			$_POST['hs_arr'],
-			$_POST['ht_arr'],
 			$_POST['es_arr'],
-			$_POST['et_arr'],
 			$_POST['ggs_arr'],
-			$_POST['ggt_arr'],
 			$_POST['ejs_arr'],
-			$_POST['ejt_arr'],
 			$_POST['cls_arr'],
-			$_POST['clt_arr'],
-			$_POST['cahds_arr'],
-			$_POST['cahdt_arr'],
-			$_POST['sds_arr'],
-			$_POST['sdt_arr'],
-			$_POST['drrms_arr'],
-			$_POST['drrmt_arr'],
-			$_POST['fhds_arr'],
-			$_POST['fhdt_arr'],
-			$_POST['cofs_arr'],
-			$_POST['coft_arr']
+			$_POST['efas_arr'],
+			$_POST['ceras_arr'],
+			$_POST['sfas_arr'],
+			$_POST['ejas_arr'],
+			$_POST['hlas_arr']
 		])) {
 			echo json_encode([
 				"status" => "ok",

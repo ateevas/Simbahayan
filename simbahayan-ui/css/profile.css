@@ -1,19 +1,12 @@
+@font-face {
+  font-family: 'Trajan Pro';
+  src: url('http://localhost/Simbahayan/simbahayan-ui/css/TrajanPro-Regular.ttf');
+}
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
-}
-
-.navbar a {
-  color: black;
-  font-size: 35px;
-  font-family: "Trajan Pro", sans-serif;
-  margin-left: 20px;
-  text-decoration: none;
-}
-.navbar span {
-  color: gold;
 }
 
 .welcome-container {

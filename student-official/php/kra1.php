@@ -209,37 +209,33 @@
             </tr>
         </tbody>
     </table>
-    <div class="button-container">
-        <div class="button-wrapper">
-            <button type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
-            <a class="btn btn-dark" href="kra1-next.php" role="button">Next</a>
-
-            <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">Are you sure you want to submit report?</div>
-                        <div class="modal-footer d-flex justify-content-between">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                            <button onclick="btnSubmit()" type="button" class="btn btn-warning">Yes</button>
-                        </div>
-                    </div>
+    <div class="d-flex flex-row-reverse bd-highlight">
+        <a class="btn btn-dark" onclick="goto_kra1next()" role="button">Next</a>
+    </div>
+    <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">Are you sure you want to submit report?</div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button onclick="btnSubmit()" type="button" class="btn btn-warning">Yes</button>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </body>
 
 </html>
 <script type="text/javascript">
-function btnNext() {                     //Not applied to any "onlcick"
+function goto_kra1next() {
+    //Not applied to any "onlcick"
 
     //-- Health for All --//
     var hs_HWDP = $('#hs_HWDP').val();

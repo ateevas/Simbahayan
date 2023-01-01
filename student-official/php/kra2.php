@@ -158,18 +158,11 @@
                 <td><input id="nps_INT" type="number" value="0"></td>
 
             </tr>
-
-
-
-
-
-
-
         </tbody>
     </table>
     <div class="button-container">
         <div class="button-wrapper">
-            <button type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
+            <button type="button" onclick="btnSave()" data-bs-target='#approval' data-bs-toggle='modal' class="btn btn-warning">Save</button>
 
             <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                 aria-hidden="true">
@@ -177,9 +170,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">Are you sure you want to submit report?</div>
                         <div class="modal-footer d-flex justify-content-between">
@@ -196,7 +187,7 @@
 
 </html>
 <script type="text/javascript">
-function btnNext() {  //-- Not attached to any "onlcick" --//
+function btnSave() {  //-- Not attached to any "onlcick" --//
 
 //-- Number of Projects Under the UCDP --//
 
@@ -232,15 +223,17 @@ function btnNext() {  //-- Not attached to any "onlcick" --//
     var nps_arr = new Array(nps_LOC, nps_INT);
     localStorage.setItem('nps_arr', nps_arr);
 
-
-    $.ajax({
+}
+function btnSubmit() {
+    let kra_id = localStorage.getItem('kra_selected_id');
+   $.ajax({
         url: url,
         type: "POST",
         data: {
             csrf_token: "{{ csrf_token() }}",
             tag: "save_kra2",
+            kra_id: kra_id,
             user_id: localStorage.getItem('user_id'),
-
             npus_arr: localStorage.getItem('npus_arr'),
             nppus_arr: localStorage.getItem('nppus_arr'),
             nrpfcs_arr: localStorage.getItem('nrpfcs_arr'),
@@ -255,7 +248,9 @@ function btnNext() {  //-- Not attached to any "onlcick" --//
                 alert("Unknown error occured. Please try again.")
             }
         }
-    })
-
+    })  
 }
+
+   
+
 </script>

@@ -154,16 +154,14 @@
     <div class="button-container">
         <div class="button-wrapper">
             <a class="btn btn-dark" href="kra1.php" role="button">Prev</a>
-            <button type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
+            <button type="button" onclick="btnSave()" data-bs-target='#approval' data-bs-toggle='modal' class="btn btn-warning">Save</button>
             <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">Are you sure you want to submit report?</div>
                         <div class="modal-footer d-flex justify-content-between">
@@ -212,27 +210,27 @@ function btnSave() {   //-- Not attached to any "onlcick" --//
     //array
     var hlas_arr = [hlas_NFHP, hlas_NCIS, hlas_NPM];
     localStorage.setItem('hlas_arr', hlas_arr);
-
-    $.ajax({
+}
+function btnSubmit() {
+    let kra_id = localStorage.getItem('kra_selected_id');
+     $.ajax({
         url: url,
         type: "POST",
         data: {
             csrf_token: "{{ csrf_token() }}",
             tag: "save_kra1",
             user_id: localStorage.getItem('user_id'),
-
             hs_arr: localStorage.getItem('hs_arr'),
             es_arr: localStorage.getItem('es_arr'),
             ggs_arr: localStorage.getItem('ggs_arr'),
             ejs_arr: localStorage.getItem('ejs_arr'),
             cls_arr: localStorage.getItem('cls_arr'),
-
             efas_arr: localStorage.getItem('efas_arr'),
             ceras_arr: localStorage.getItem('ceras_arr'),
             sfas_arr: localStorage.getItem('sfas_arr'),
             ejas_arr: localStorage.getItem('ejas_arr'),
-            hlas_arr: localStorage.getItem('hlas_arr')
-
+            hlas_arr: localStorage.getItem('hlas_arr'),
+            kra_id: kra_id
         },
         complete: function(response) {
             var data = JSON.parse(response.responseText);
@@ -244,8 +242,5 @@ function btnSave() {   //-- Not attached to any "onlcick" --//
             }
         }
     })
-
-
-
 }
 </script>

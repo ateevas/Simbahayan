@@ -30,7 +30,6 @@
                 <th scope="col">Number of MOA/MOU with various External Partner Groups:</th>
                 <th scope="col">Status</th>
 
-
             </tr>
         </thead>
         <tbody>
@@ -161,18 +160,14 @@
     </table>
     <div class="button-container">
         <div class="button-wrapper">
-            <button type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
-
-
+            <button type="button" onclick="btnSave()" data-bs-target='#approval' data-bs-toggle='modal' class="btn btn-warning">Save</button>
             <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">Are you sure you want to submit report?</div>
                         <div class="modal-footer d-flex justify-content-between">
@@ -189,10 +184,9 @@
 
 </html>
 <script type="text/javascript">
-function btnNext() { //-- Not attached to any "onlcick" --//
+function btnSave() { //-- Not attached to any "onlcick" --//
 
     //-- Number of MOA/MOU --//
-
     var nmoas_PO = $('#nmoas_PO').val();
     var nmoas_LGU = $('#nmoas_LGU').val();
     var nmoas_NGO = $('#nmoas_NGO').val();
@@ -219,15 +213,18 @@ function btnNext() { //-- Not attached to any "onlcick" --//
     var ncdaas_arr = new Array(ncdaas_PO, ncdaas_LGU, ncdaas_NGO, ncdaas_BEI, ncdaas_LHEI, ncdaas_IHEI, ncdaas_CBO, ncdaas_PBO);
     localStorage.setItem('ncdaas_arr', ncdaas_arr);
 
+}
 
+function btnSubmit() {
+    let kra_id = localStorage.getItem('kra_selected_id');
     $.ajax({
         url: url,
         type: "POST",
         data: {
             csrf_token: "{{ csrf_token() }}",
             tag: "save_kra3",
+            kra_id: kra_id,
             user_id: localStorage.getItem('user_id'),
-
             nmoas_arr: localStorage.getItem('nmoas_arr'),
             ncdaas_arr: localStorage.getItem('ncdaas_arr')
         },
@@ -241,6 +238,5 @@ function btnNext() { //-- Not attached to any "onlcick" --//
             }
         }
     })
-
 }
 </script>

@@ -1,3 +1,9 @@
+<link rel="stylesheet" href="http://localhost/Simbahayan/student-official/css/nav.css" />
+<style type="text/css">
+    body{
+        overflow-x: hidden !important;
+    }
+</style>
 <nav class="navbar bg-warning">
     <div class="container-fluid">
         <a class="navbar-brand" href="profile.php">
@@ -12,9 +18,6 @@
     </div>
 </nav>
 
-<link rel="stylesheet" href="http://localhost/Simbahayan/student-official/css/nav.css" />
-
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
@@ -26,17 +29,17 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item ">
-                    <a class=" nav-link mx-2 active" aria-current="page"
+                    <a class=" nav-link active" aria-current="page"
                         href="http://localhost/Simbahayan/simbahayan-ui/php/profile.php">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2" href="http://localhost/Simbahayan/simbahayan-ui/php/pending.php">
+                    <a class="nav-link" href="http://localhost/Simbahayan/simbahayan-ui/php/pending.php">
                         Annual Report Approval
                     </a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                <li class="nav-item dropstart">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Account
                     </a>
@@ -52,8 +55,8 @@
                                 href="http://localhost/Simbahayan/simbahayan-ui/php/changepass.php">Change
                                 Password</a>
                         </li>
-                        <li class="nav-item ">
-                            <a class=" nav-link mx-2 active" aria-current="page"
+                        <li>
+                            <a class="dropdown-item" aria-current="page"
                                 href="http://localhost/Simbahayan/simbahayan-ui/php/contact.php">Contact</a>
                         </li>
 

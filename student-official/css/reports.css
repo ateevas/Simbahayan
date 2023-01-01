@@ -62,34 +62,6 @@ hr {
   background-color: whitesmoke;
 }
 
-.table-context {
-  display: table;
-}
-
-table {
-  text-align: center;
-  width: 1500px;
-}
-
-table,
-th,
-td {
-  border: 0.5px solid black;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 10px;
-}
-
-tr:nth-child(even) {
-  background-color: #f6fdca;
-}
-
-tr:nth-child(odd) {
-  background-color: white;
-}
 .form-check input {
   background-color: white;
 }

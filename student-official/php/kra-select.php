@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<?php
-		include('../nav_master/nav.php');
+			include('../nav_master/nav.php');
 		?>
 		<div class="card-group m-5">
 			<div class="card">
@@ -85,6 +85,7 @@
 	check_krasubmission();
 	function check_krasubmission() {
 		let user_id = localStorage.getItem("user_id");
+		let kra_id = localStorage.getItem('kra_selected_id');
 		$.ajax({
 		  url: url,
 		  type: "POST",
@@ -92,8 +93,10 @@
 		    csrf_token: "{{ csrf_token() }}",
 		    tag: "check_krasubmission", 
 		    user_id: localStorage.getItem('user_id'),
+		    kra_id: kra_id
 		  },
 		  complete: function (response) {
+		  	console.log(response.responseText);
 		    var data = JSON.parse(response.responseText);
 
 		    if(data[0]['kra1'] != "0") {
@@ -119,7 +122,7 @@
 		    	$('.kra3badge').addClass("bg-warning");
 		    	$('.kra3badge').html("Not yet saved.");
 		    }
-		    if(data[0]['kra_submit'] == "0" && data[0]['kra1'] != "0" && data[0]['kra2'] != "0" && data[0]['kra3'] != "0") {
+		    if(data[0]['kra_status'] == "0" && data[0]['kra1'] != "0" && data[0]['kra2'] != "0" && data[0]['kra3'] != "0") {
 		    	$('#submit_button').removeClass("disabled");
 		    	$('#submit_button').removeAttr("disabled");
 		    	$('#submit_button').removeAttr("readonly");
@@ -129,19 +132,21 @@
 	}
 	function submit_allkra() {
 		let user_id = localStorage.getItem("user_id");
+		let kra_id = localStorage.getItem('kra_selected_id');
 		$.ajax({
 		  url: url,
 		  type: "GET",
 		  data: {
 		    csrf_token: "{{ csrf_token() }}",
 		    tag: "submit_allkra", 
-		    user_id: localStorage.getItem('user_id'),
+		    user_id: user_id,
+		    kra_id: kra_id,
 		  },
 		  complete: function (response) {
 		    var data = JSON.parse(response.responseText);
 		    if(data['status'] == "ok") {
 		    	alert('successfully updated!');
-		    	location.reload();
+		    	window.location.href = "http://localhost/Simbahayan/student-official/php/reports.php";
 		    } else {
 		    	alert('unknown error occured');
 		    	location.reload();

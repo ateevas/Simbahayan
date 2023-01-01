@@ -88,23 +88,11 @@
                                     <input class="form-control edit_form" id="contact" type="number"
                                         placeholder="Enter your phone number" value="555-123-4567" readonly />
                                 </div>
-                                <!-- Form Group (birthday)-->
-                                <div class="col-md-6">
-                                    <label class="small mb-1" for="bday">Birthday</label>
-                                    <input class="form-control edit_form" id="bday" type="date" name="birthday"
-                                        placeholder="Enter your birthday" readonly />
-                                </div>
-                            </div>
-                            <!-- Form Row-->
-                            <div class="row gx-3 mb-3">
-                                <!-- Form Group (Organiztion)-->
-                                <div class="col-md-6">
+                                 <div class="col-md-6">
                                     <label class="small mb-1" for="org">Organization</label>
                                     <input class="form-control edit_form" id="org" type="text"
                                         placeholder="Enter your Organization" value="" readonly />
                                 </div>
-                                <!-- Form Group (Position)-->
-
                             </div>
                             <!-- Save changes button-->
                             <button class="btn btn-warning" style="display: none;" id="save_edit"

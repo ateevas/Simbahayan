@@ -29,7 +29,7 @@
 					<th>Name</th>
 					<th>School Year</th>
 					<th>Status</th>
-					<th>Manage</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody id="tbody_data">
@@ -66,8 +66,24 @@ get_allstudentkra();
 
 function add_kra(){
 	var user_id = localStorage.getItem("user_id");
+	var college_id = localStorage.getItem("college_id");
 	var school_year = $('#school_year').val();
-	
+	$.ajax({
+		url: url,
+		type: "GET",
+		data: {
+			csrf_token: "{{ csrf_token() }}",
+			tag: "add_studentkra",
+			user_id:user_id,
+			school_year: school_year,
+			college_id: college_id
+		},
+		complete: function(response) {
+			console.log(response.responseText);
+			// $('#tbody_data').html(response.responseText);
+			// $('#tbl_student').dataTable();
+		}
+	})
 }
 
 function get_allstudentkra() {
@@ -81,14 +97,19 @@ function get_allstudentkra() {
 			user_id:user_id
 		},
 		complete: function(response) {
-			// $('#tbody_data').html(response.responseText);
+			$('#tbody_data').html(response.responseText);
 			$('#tbl_student').dataTable();
 		}
 	})
 }
 
+function manage_kra(obj) {
+	localStorage.setItem('kra_selected_id', $(obj).data('kra_id'));
+	window.location.href = "http://localhost/Simbahayan/student-official/php/kra-select.php";
+}
+
 // function goto_kra_select(obj) {
 // 	localStorage.setItem('selected_user_id', $(obj).data('user_id'));
-// 	window.location.href = "http://localhost/Simbahayan/student-official/php/kra-select.php";
+// 	
 // }
 </script>
