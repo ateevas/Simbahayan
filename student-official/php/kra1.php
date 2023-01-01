@@ -146,9 +146,6 @@
                 <td><input id="ejs_PM" type="number" value="0"></td>
 
             </tr>
-
-
-
             <thead>
                 <tr>
                     <th scope="col"></th>

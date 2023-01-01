@@ -120,10 +120,9 @@
                     <!--TOTAL-->
                     <tr>
                         <td scope="row"></td>
-                        <td id="fhds_total" class="align-middle text-center fw-bold">Total</td>
-                        
-                        <td id="fhdt_total" class="align-middle text-center fw-bold"></td>
-                        <td id="fhdt_total" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold">Total</td>
+                        <td id="ncdaps_total" class="align-middle text-center fw-bold"></td>
+                        <td id="ncdapt_total" class="align-middle text-center fw-bold"></td>
 
                     </tr>
 
@@ -143,25 +142,24 @@
                             <center>3</center>
                         </th>
                         <th>Number of communities/institutions served</th>
-                        <td id="uecofbb_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uecofbb_t" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <th scope="row">
 
                         <td scope="row">a. Under each project category </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <tr>
                         <th scope="row">
-
                         <td scope="row">a.1 Health for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncis_hfa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncis_hfa" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -170,8 +168,8 @@
 
                         <td scope="row">a.2 Education for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncis_efa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncis_efa" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -180,8 +178,8 @@
 
                         <td scope="row">a.3 Good Governance for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncis_gga" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncis_gga" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -190,8 +188,8 @@
 
                         <td scope="row">a.4 Economic Justice for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncis_eja" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncis_eja" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -200,8 +198,8 @@
 
                         <td scope="row">a.5 Christ's love for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncis_cla" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncis_cla" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -210,8 +208,8 @@
 
                         <td scope="row">a.6 Cultural life, Expression and Rootedness for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncis_cler" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncis_cler" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -220,8 +218,8 @@
 
                         <td scope="row">a.7 Sports for all</td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncis_sfa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncis_sfa" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -230,8 +228,8 @@
 
                         <td scope="row">a.8 Environmental Justice for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncis_ejfa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncis_ejfa" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -240,16 +238,16 @@
 
                         <td scope="row">a.9 Holistic Life for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncis_hlfa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncis_hlfa" class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <!--TOTAL-->
                     <tr>
                         <td scope="row"></td>
-                        <td id="fhds_total" class="align-middle text-center fw-bold">Total</td>
-                        <td id="fhdt_total" class="align-middle text-center fw-bold"></td>
-                        <td id="fhdt_total" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold">Total</td>
+                        <td id="s_ncis_total" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncis_total" class="align-middle text-center fw-bold"></td>
 
                     </tr>
 
@@ -259,14 +257,15 @@
                             </td>
                         <td scope="row">b. Under each community organization formed
                         </td>
-                        <td id="uecof_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uecof_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncis_uecof" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncis_uecof" class="align-middle text-center fw-bold"></td>
+
                     <tr>
                         <th scope="row">
                             <center>4</td>
-                        <th>Number of participants/members</th>
-                        <td id="uecof_ss" class="align-middle text-center fw-bold"></td>
-                        <td id="uecof_tt" class="align-middle text-center fw-bold"></td>
+                        <th>Number of participants/members</th> 
+                        <td class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <tr>
@@ -274,16 +273,16 @@
                         </td>
                         <td scope="row">a. Under each project category
                             </th>
-                        <td id="uapca_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapca_t" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <th scope="row">
 
                         <td scope="row">a.1 Health for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npm_hfa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npm_hfa" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -292,8 +291,8 @@
 
                         <td scope="row">a.2 Education for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npm_efa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npm_efa" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -302,8 +301,8 @@
 
                         <td scope="row">a.3 Good Governance for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npm_ggfa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npm_ggfa" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -312,8 +311,8 @@
 
                         <td scope="row">a.4 Economic Justice for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npm_ejfa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npm_ejfa" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -322,18 +321,16 @@
 
                         <td scope="row">a.5 Christ's love for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npm_clfa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npm_clfa" class="align-middle text-center fw-bold"></td>
                     </tr>
-
-
                     <tr>
                         <th scope="row">
 
                         <td scope="row">a.6 Cultural life, Expression and Rootedness for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npm_cler" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npm_cler" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -342,8 +339,8 @@
 
                         <td scope="row">a.7 Sports for all</td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npm_sfa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npm_sfa" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -352,8 +349,8 @@
 
                         <td scope="row">a.8 Environmental Justice for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npm_ejfa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npm_ejfa" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -362,16 +359,16 @@
 
                         <td scope="row">a.9 Holistic Life for all </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npm_hlfa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npm_hlfa" class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <!--TOTAL-->
                     <tr>
                         <td scope="row"></td>
-                        <td id="fhds_total" class="align-middle text-center fw-bold">Total</td>
-                        <td id="fhdt_total" class="align-middle text-center fw-bold"></td>
-                        <td id="fhdt_total" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold">Total</td>
+                        <td id="s_npm_total" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npm_total" class="align-middle text-center fw-bold"></td>
 
                     </tr>
 
@@ -379,8 +376,8 @@
                         <th scope="row"></th>
                         <td scope="row">b. Under each community organization formed
                         </td>
-                        <td id="uecofb_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uecofb_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npm_uecof" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npm_uecof" class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <td colspan="2" class="text-end fw-bold">Total: </td>
@@ -392,8 +389,9 @@
         </div>
     </div>
 
-    <!-- KRA 2 -->
 
+
+    <!-- KRA 2 -->
     <div class="table-container">
         <div class="table-wrapper">
             <table class="table table-sm table-bordered ">
@@ -411,39 +409,42 @@
                         <th>Number of projects under the University Community Development Program (UCDP), particularly
                             on the
                             following:</th>
-                        <td id="" class="align-middle text-center fw-bold"></td>
-                        <td id="" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
 
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">a. Institutional Development for Community Development
                         </td>
-                        <td id="s_puidcd_total" class="align-middle text-center fw-bold"></td>
-                        <td id="t_puidcd_total" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npua_idcd" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npua_idcd" class="align-middle text-center fw-bold"></td>
+                        
+                        
+
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">b. Social Awareness and Advocacy
                         </td>
-                        <td id="s_psaa_total" class="align-middle text-center fw-bold"></td>
-                        <td id="t_psaa_total" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npua_saa" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npua_saa" class="align-middle text-center fw-bold"></td>
                     </tr>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">c. Community-Engaged Research
                         </td>
-                        <td id="s_pucer_total" class="align-middle text-center fw-bold"></td>
-                        <td id="t_pucer_total" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npua_cer" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npua_cer" class="align-middle text-center fw-bold"></td>
                     </tr>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">d. Service-Learning
                         </td>
-                        <td id="s_pul_total" class="align-middle text-center fw-bold"></td>
-                        <td id="t_pul_total" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npua_sl" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npua_sl" class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <tr>
@@ -451,8 +452,8 @@
                         <th>Number of projects under the University Community Development Program (UCDP), particularly
                             on the
                             following:</th>
-                        <td id="" class="align-middle text-center fw-bold"></td>
-                        <td id="" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
+                        <td iclass="align-middle text-center fw-bold"></td>
 
                     </tr>
 
@@ -460,15 +461,15 @@
                         <th scope="row"></th>
                         <td scope="row">a. student organizations
                         </td>
-                        <td id="UDCPs_NSO" class="align-middle text-center fw-bold"></td>
-                        <td id="UDCPt_NSO" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npub_sgs" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npub_sgs" class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">b. students
                         </td>
-                        <td id="UDCPs_NStu" class="align-middle text-center fw-bold"></td>
-                        <td id="UDCPt_NStu" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npub_stu" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npub_stu" class="align-middle text-center fw-bold"></td>
                     </tr>
                     </tr>
                     <tr>
@@ -476,32 +477,32 @@
                             </th>
                         <td scope="row">c. faculty
                         </td>
-                        <td id="UDCPs_NFac" class="align-middle text-center fw-bold"></td>
-                        <td id="UDCPt_NFac" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npub_fal" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npub_fal" class="align-middle text-center fw-bold"></td>
                     </tr>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">d. administrators
                         </td>
-                        <td id="UDCPs_NAdmin" class="align-middle text-center fw-bold"></td>
-                        <td id="UDCPt_NAdmin" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npub_adm" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npub_adm" class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">e. support staff
                         </td>
-                        <td id="UDCPs_NSS" class="align-middle text-center fw-bold"></td>
-                        <td id="UDCPt_NSS" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npub_ssta" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npub_ssta" class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">f. alumni
                         </td>
-                        <td id="UDCPs_NAlumni" class="align-middle text-center fw-bold"></td>
-                        <td id="UDCPt_NAlumni" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npub_alum" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npub_alum" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -509,45 +510,45 @@
                         <th scope="row">7</th>
                         <th>Number of research presentations in fora/conferences
                         </th>
-                        <td id="" class="align-middle text-center fw-bold"></td>
-                        <td id="" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">a. local
                         </td>
-                        <td id="fcs_RPLFC" class="align-middle text-center fw-bold"></td>
-                        <td id="fcs_RPIFC" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npuc_local" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npuc_local" class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">b. international
                         </td>
-                        <td id="fct_RPLFC" class="align-middle text-center fw-bold"></td>
-                        <td id="fct_RPIFC" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npuc_int" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npuc_int" class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <th scope="row">8</th>
                         <th>Number of publications
                         </th>
-                        <td id="" class="align-middle text-center fw-bold"></td>
-                        <td id="" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">a. local
                         </td>
-                        <td id="ps_NLP" class="align-middle text-center fw-bold"></td>
-                        <td id="ps_IP" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npud_local" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npud_local" class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">b. international
                         </td>
-                        <td id="pt_NLP" class="align-middle text-center fw-bold"></td>
-                        <td id="pt_IP" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npud_int" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npud_int" class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <td colspan="2" class="text-end fw-bold">Total: </td>
@@ -566,7 +567,6 @@
 
 
     <!-- KRA 3 -->
-
     <div class="table-container">
         <div class="table-wrapper">
             <table class="table table-sm table-bordered ">
@@ -582,69 +582,69 @@
                     <tr>
                         <th scope="row">9</th>
                         <th>Number of MOA/MOU with various external partner groups:</th>
-                        <td id="" class="align-middle text-center fw-bold"></td>
-                        <td id="" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">a. People’s Organizations </td>
-                        <td id="POs_MM" class="align-middle text-center fw-bold"></td>
-                        <td id="POt_MM" class="align-middle text-center fw-bold"></td>
+                        <td id="s_nmw_po" class="align-middle text-center fw-bold"></td>
+                        <td id="t_nmw_po" class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">b. Government Agencies or LGUs</td>
-                        <td id="GAs_MM" class="align-middle text-center fw-bold"></td>
-                        <td id="GAt_MM" class="align-middle text-center fw-bold"></td>
+                        <td id="s_nmw_lgu" class="align-middle text-center fw-bold"></td>
+                        <td id="t_nmw_lgu" class="align-middle text-center fw-bold"></td>
                     </tr>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">c. Non- Government Organizations </td>
-                        <td id="NGOs_MM" class="align-middle text-center fw-bold"></td>
-                        <td id="NGOt_MM" class="align-middle text-center fw-bold"></td>
+                        <td id="s_nmw_ngo" class="align-middle text-center fw-bold"></td>
+                        <td id="t_nmw_ngo" class="align-middle text-center fw-bold"></td>
                     </tr>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">d. Basic Educational Institutions</td>
-                        <td id="BEIs_MM" class="align-middle text-center fw-bold"></td>
-                        <td id="BEIt_MM" class="align-middle text-center fw-bold"></td>
+                        <td id="s_nmw_bei" class="align-middle text-center fw-bold"></td>
+                        <td id="t_nmw_bei" class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">e. Local Higher Educational Institutions</td>
-                        <td id="LHEIs_MM" class="align-middle text-center fw-bold"></td>
-                        <td id="LHEIt_MM" class="align-middle text-center fw-bold"></td>
+                        <td id="s_nmw_lhei" class="align-middle text-center fw-bold"></td>
+                        <td id="t_nmw_lhei" class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">f. International Higher Educational Institutions</td>
-                        <td id="IHEIs_MM" class="align-middle text-center fw-bold"></td>
-                        <td id="IHEIt_MM" class="align-middle text-center fw-bold"></td>
+                        <td id="s_nmw_ihei" class="align-middle text-center fw-bold"></td>
+                        <td id="t_nmw_ihei" class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">g. Faith-based/Church-based Organizations </td>
-                        <td id="CBOs_MM" class="align-middle text-center fw-bold"></td>
-                        <td id="CBOt_MM" class="align-middle text-center fw-bold"></td>
+                        <td id="s_nmw_cbo" class="align-middle text-center fw-bold"></td>
+                        <td id="t_nmw_cbo" class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <tr>
                         <th scope="row"></th>
                         <td scope="row">h. Professional/Business Organizations
                         </td>
-                        <td id="PBOs_MM" class="align-middle text-center fw-bold"></td>
-                        <td id="PBOt_MM" class="align-middle text-center fw-bold"></td>
+                        <td id="s_nmw_pbo" class="align-middle text-center fw-bold"></td>
+                        <td id="t_nmw_pbo" class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <!--TOTAL-->
                     <tr>
                         <td scope="row"></td>
-                        <td id="fhds_total" class="align-middle text-center fw-bold">Total</td>
-                        <td id="fhdt_total" class="align-middle text-center fw-bold"></td>
-                        <td id="fhdt_total" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold">Total</td>
+                        <td id="s_nmw_total" class="align-middle text-center fw-bold"></td>
+                        <td id="t_nmw_total" class="align-middle text-center fw-bold"></td>
 
                     </tr>
 
@@ -653,16 +653,16 @@
                         <th>Number of community development and advocacy activities with each external partner
                             group
                         </th>
-                        <td id="kra310s" class="align-middle text-center fw-bold"></td>
-                        <td id="kra310t" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <th scope="row">
 
                         <td scope="row">a. People's Organizations </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncda_po" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncda_po" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -671,8 +671,8 @@
 
                         <td scope="row">b. Government Agencies or LGUs </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncda_lgu" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncda_lgu" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -681,8 +681,8 @@
 
                         <td scope="row">c. Non-Government Organizations </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncda_ngo" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncda_ngo" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -691,8 +691,8 @@
 
                         <td scope="row">d. Basic Educational Institutions </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncda_bei" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncda_bei" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -701,8 +701,8 @@
 
                         <td scope="row">e. Local Higher Educational Institutions </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncda_lhei" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncda_lhei" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -711,8 +711,8 @@
 
                         <td scope="row">f. International Higher Educational Institutions </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncda_ihei" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncda_ihei" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -721,8 +721,8 @@
 
                         <td scope="row">g. Faith-Based/Church-based Organizations</td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncda_cbo" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncda_cbo" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -731,24 +731,24 @@
 
                         <td scope="row">h. Professional/Business Organizations </td>
                         </th>
-                        <td id="uapc_s" class="align-middle text-center fw-bold"></td>
-                        <td id="uapc_t" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ncda_pbo" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncda_pbo" class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <!--TOTAL-->
                     <tr>
                         <td scope="row"></td>
-                        <td id="fhds_total" class="align-middle text-center fw-bold">Total</td>
-                        <td id="fhdt_total" class="align-middle text-center fw-bold"></td>
-                        <td id="fhdt_total" class="align-middle text-center fw-bold"></td>
+                        <td class="align-middle text-center fw-bold">Total</td>
+                        <td id="s_ncda_total" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ncda_total" class="align-middle text-center fw-bold"></td>
 
                     </tr>
 
                     <tr>
                         <th scope="row">11</th>
                         <th>Number of training/course offerings on Community Engagement and Organizing</th>
-                        <td id="TCCs_MM" class="align-middle text-center fw-bold"></td>
-                        <td id="TCCs_CDAA" class="align-middle text-center fw-bold"></td>
+                        <td id="s_tco_total" class="align-middle text-center fw-bold"></td>
+                        <td id="t_tco_total" class="align-middle text-center fw-bold"></td>
                     </tr>
 
                     <tr>
@@ -756,8 +756,8 @@
                         <th>Number of participants in training/course offerings on Community Engagement and
                             Organizing:
                         </th>
-                        <td id="TCCt_MM" class="align-middle text-center fw-bold"></td>
-                        <td id="TCCt_CDAA" class="align-middle text-center fw-bold"></td>
+                        <td id="s_ptco_total" class="align-middle text-center fw-bold"></td>
+                        <td id="t_ptco_total" class="align-middle text-center fw-bold"></td>
                     </tr>
                     <tr>
                         <td colspan="2" class="text-end fw-bold">Total: </td>
