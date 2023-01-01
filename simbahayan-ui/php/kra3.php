@@ -320,80 +320,159 @@ get_kra3datafromuserid();
 
 function get_kra3datafromuserid() {
     let user_id = localStorage.getItem('selected_user_id');
+    let college_id = localStorage.getItem('selected_college_id');
     $.ajax({
         url: url,
         type: "GET",
         data: {
             csrf_token: "{{ csrf_token() }}",
             tag: "get_kra3datafromuserid",
-            user_id: user_id
+            user_id: user_id,
+            college_id: college_id
         },
         complete: function(response) {
             var data = JSON.parse(response.responseText);
 
-            var nmoas_arr = data[0].nmoas_arr.split(",");
-            $('#nmoas_POS').val(nmoas_arr[0]);
-            $('#nmoas_LGU').val(nmoas_arr[1]);
-            $('#nmoas_NGO').val(nmoas_arr[2]);
-            $('#nmoas_BEI').val(nmoas_arr[3]);
-            $('#nmoas_LHEI').val(nmoas_arr[4]);
-            $('#nmoas_IHEI').val(nmoas_arr[5]);
-            $('#nmoas_CBO').val(nmoas_arr[6]);
-            $('#nmoas_PBO').val(nmoas_arr[7]);
 
-            let nmoat_arr = data[0].nmoat_arr;
-            if(nmoat_arr != "") {
-                let nmoat_arr = data[0].nmoat_arr.split(",");
-                $('#nmoat_POS').val(nmoas_arr[0]);
-                $('#nmoat_LGU').val(nmoas_arr[1]);
-                $('#nmoat_NGO').val(nmoas_arr[2]);
-                $('#nmoat_BEI').val(nmoas_arr[3]);
-                $('#nmoat_LHEI').val(nmoas_arr[4]);
-                $('#nmoat_IHEI').val(nmoas_arr[5]);
-                $('#nmoat_CBO').val(nmoas_arr[6]);
-                $('#nmoat_PBO').val(nmoas_arr[7]);
+            let nmoas_totalarr=[];
+            for(var key in data) {
+                var nmoas_arr = data[key].nmoas_arr.split(",").map(Number);
+                let nmoas_counter=[];
+                for (let index = 0; index < nmoas_arr.length; index++) {
+                    nmoas_counter.push(nmoas_arr[index]);
+                }
+                nmoas_totalarr.push(nmoas_counter);
             }
-            
+            let nmoas_final_arr = nmoas_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#nmoas_POS').val(nmoas_final_arr[0]);
+            $('#nmoas_LGU').val(nmoas_final_arr[1]);
+            $('#nmoas_NGO').val(nmoas_final_arr[2]);
+            $('#nmoas_BEI').val(nmoas_final_arr[3]);
+            $('#nmoas_LHEI').val(nmoas_final_arr[4]);
+            $('#nmoas_IHEI').val(nmoas_final_arr[5]);
+            $('#nmoas_CBO').val(nmoas_final_arr[6]);
+            $('#nmoas_PBO').val(nmoas_final_arr[7]);
+            console.log(nmoas_final_arr);
 
-            var ncdaas_arr = data[0].ncdaas_arr.split(",");
-            $('#ncdaas_POS').val(ncdaas_arr[0]);
-            $('#ncdaas_LGU').val(ncdaas_arr[1]);
-            $('#ncdaas_NGO').val(ncdaas_arr[2]);
-            $('#ncdaas_BEI').val(ncdaas_arr[3]);
-            $('#ncdaas_LHEI').val(ncdaas_arr[4]);
-            $('#ncdaas_IHEI').val(ncdaas_arr[5]);
-            $('#ncdaas_CBO').val(ncdaas_arr[6]);
-            $('#ncdaas_PBO').val(ncdaas_arr[7]);
-            let ncdaat_arr = data[0].ncdaat_arr;
-            if(ncdaat_arr != "") {
-                let ncdaat_arr = data[0].ncdaat_arr.split(",");
-                $('#ncdaat_POS').val(ncdaat_arr[0]);
-                $('#ncdaat_LGU').val(ncdaat_arr[1]);
-                $('#ncdaat_NGO').val(ncdaat_arr[2]);
-                $('#ncdaat_BEI').val(ncdaat_arr[3]);
-                $('#ncdaat_LHEI').val(ncdaat_arr[4]);
-                $('#ncdaat_IHEI').val(ncdaat_arr[5]);
-                $('#ncdaat_CBO').val(ncdaat_arr[6]);
-                $('#ncdaat_PBO').val(ncdaat_arr[7]);
-            }
-           
-            let arr_ntco_stat = data[0].arr_ntco_stat;
-            if(arr_ntco_stat != "") {
-                $('#ntco_stat').val(arr_ntco_stat);
-            }
-            let arr_ntco_targ = data[0].arr_ntco_targ;
-            if(arr_ntco_targ != "") {
-                $('#ntco_targ').val(arr_ntco_targ);
-            }
 
-            let arr_nptco_stat = data[0].arr_nptco_stat;
-            if(arr_nptco_stat != "") {
-                $('#nptco_stat').val(arr_nptco_stat);
+            let nmoat_totalarr=[];
+            for(var key in data) {
+                var nmoat_arr = data[key].nmoat_arr.split(",").map(Number);
+                let nmoat_counter=[];
+                for (let index = 0; index < nmoat_arr.length; index++) {
+                    nmoat_counter.push(nmoat_arr[index]);
+                }
+                nmoat_totalarr.push(nmoat_counter);
             }
-            let arr_nptco_targ = data[0].arr_nptco_targ;
-            if(arr_nptco_targ != "") {
-                $('#nptco_targ').val(arr_nptco_targ);
+            let nmoat_final_arr = nmoat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#nmoat_POS').val(nmoat_final_arr[0]);
+            $('#nmoat_LGU').val(nmoat_final_arr[1]);
+            $('#nmoat_NGO').val(nmoat_final_arr[2]);
+            $('#nmoat_BEI').val(nmoat_final_arr[3]);
+            $('#nmoat_LHEI').val(nmoat_final_arr[4]);
+            $('#nmoat_IHEI').val(nmoat_final_arr[5]);
+            $('#nmoat_CBO').val(nmoat_final_arr[6]);
+            $('#nmoat_PBO').val(nmoat_final_arr[7]);
+            console.log(nmoat_final_arr);
+
+
+            let ncdaas_totalarr=[];
+            for(var key in data) {
+                var ncdaas_arr = data[key].ncdaas_arr.split(",").map(Number);
+                let ncdaas_counter=[];
+                for (let index = 0; index < ncdaas_arr.length; index++) {
+                    ncdaas_counter.push(ncdaas_arr[index]);
+                }
+                ncdaas_totalarr.push(ncdaas_counter);
             }
+            let ncdaas_final_arr = ncdaas_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ncdaas_POS').val(ncdaas_final_arr[0]);
+            $('#ncdaas_LGU').val(ncdaas_final_arr[1]);
+            $('#ncdaas_NGO').val(ncdaas_final_arr[2]);
+            $('#ncdaas_BEI').val(ncdaas_final_arr[3]);
+            $('#ncdaas_LHEI').val(ncdaas_final_arr[4]);
+            $('#ncdaas_IHEI').val(ncdaas_final_arr[5]);
+            $('#ncdaas_CBO').val(ncdaas_final_arr[6]);
+            $('#ncdaas_PBO').val(ncdaas_final_arr[7]);
+            console.log(ncdaas_final_arr);
+
+
+
+            let ncdaat_totalarr=[];
+            for(var key in data) {
+                var ncdaat_arr = data[key].ncdaat_arr.split(",").map(Number);
+                let ncdaat_counter=[];
+                for (let index = 0; index < ncdaat_arr.length; index++) {
+                    ncdaat_counter.push(ncdaat_arr[index]);
+                }
+                ncdaat_totalarr.push(ncdaat_counter);
+            }
+            let ncdaat_final_arr = ncdaat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ncdaat_POS').val(ncdaat_final_arr[0]);
+            $('#ncdaat_LGU').val(ncdaat_final_arr[1]);
+            $('#ncdaat_NGO').val(ncdaat_final_arr[2]);
+            $('#ncdaat_BEI').val(ncdaat_final_arr[3]);
+            $('#ncdaat_LHEI').val(ncdaat_final_arr[4]);
+            $('#ncdaat_IHEI').val(ncdaat_final_arr[5]);
+            $('#ncdaat_CBO').val(ncdaat_final_arr[6]);
+            $('#ncdaat_PBO').val(ncdaat_final_arr[7]);
+            console.log(ncdaat_final_arr);
+
+            let ntcos_totalarr=[];
+            for(var key in data) {
+                var arr_ntco_stat = data[key].arr_ntco_stat.split(",").map(Number);
+                let ntcos_counter=[];
+                for (let index = 0; index < arr_ntco_stat.length; index++) {
+                    ntcos_counter.push(arr_ntco_stat[index]);
+                }
+                ntcos_totalarr.push(ntcos_counter);
+            }
+            let ntcos_final_arr = ntcos_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ntco_stat').val(ntcos_final_arr[0]);
+            console.log(ntcos_final_arr);
+
+
+
+            let ntcot_totalarr=[];
+            for(var key in data) {
+                var arr_ntco_targ = data[key].arr_ntco_targ.split(",").map(Number);
+                let ntcot_counter=[];
+                for (let index = 0; index < arr_ntco_targ.length; index++) {
+                    ntcot_counter.push(arr_ntco_targ[index]);
+                }
+                ntcot_totalarr.push(ntcot_counter);
+            }
+            let ntcot_final_arr = ntcot_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ntco_targ').val(ntcot_final_arr[0]);
+            console.log(ntcot_final_arr);
+
+            let nptcos_totalarr=[];
+            for(var key in data) {
+                var arr_nptco_stat = data[key].arr_nptco_stat.split(",").map(Number);
+                let nptcos_counter=[];
+                for (let index = 0; index < arr_nptco_stat.length; index++) {
+                    nptcos_counter.push(arr_nptco_stat[index]);
+                }
+                nptcos_totalarr.push(nptcos_counter);
+            }
+            let nptcos_final_arr = nptcos_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#nptco_stat').val(nptcos_final_arr[0]);
+            console.log(nptcos_final_arr);
+
+
+            let nptcot_totalarr=[];
+            for(var key in data) {
+                var arr_nptco_targ = data[key].arr_nptco_targ.split(",").map(Number);
+                let nptcot_counter=[];
+                for (let index = 0; index < arr_nptco_targ.length; index++) {
+                    nptcot_counter.push(arr_nptco_targ[index]);
+                }
+                nptcot_totalarr.push(nptcot_counter);
+            }
+            let nptcot_final_arr = nptcot_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#nptco_targ').val(nptcot_final_arr[0]);
+            console.log(nptcot_final_arr);
+
         }
     })
 }

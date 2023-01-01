@@ -310,64 +310,149 @@ get_kra1datafromuserid();
 
 function get_kra1datafromuserid() {
     let user_id = localStorage.getItem('selected_user_id');
+    let college_id = localStorage.getItem('selected_college_id');
     $.ajax({
         url: url,
         type: "GET",
         data: {
             csrf_token: "{{ csrf_token() }}",
             tag: "get_kra1datafromuserid",
-            user_id: user_id
+            user_id: user_id,
+            college_id: college_id
         },
         complete: function(response) {
             var data = JSON.parse(response.responseText);
             console.log(data);
-            var ceras_arr = data[0].ceras_arr.split(",");
-            $('#ceras_NCHP').val(ceras_arr[0]);
-            $('#ceras_NCIS').val(ceras_arr[1]);
-            $('#ceras_NPM').val(ceras_arr[2]);
-            let cerat_arr = data[0].cerat_arr;
-            if(cerat_arr != "") {
-                let cerat_arr = data[0].cerat_arr.split(",");
-                $('#cerat_NCHP').val(cerat_arr[0]);
-                $('#cerat_NCIS').val(cerat_arr[1]);
-                $('#cerat_NPM').val(cerat_arr[2]);
+            let ceras_totalarr=[];
+            for(var key in data) {
+                var ceras_arr = data[key].ceras_arr.split(",").map(Number);
+                let ceras_counter=[];
+                for (let index = 0; index < ceras_arr.length; index++) {
+                    ceras_counter.push(ceras_arr[index]);
+                }
+                ceras_totalarr.push(ceras_counter);
             }
-           
+            let ceras_final_arr = ceras_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ceras_NCHP').val(ceras_final_arr[0]);
+            $('#ceras_NCIS').val(ceras_final_arr[1]);
+            $('#ceras_NPM').val(ceras_final_arr[2]);
+            console.log(ceras_final_arr);
 
-            var sfas_arr = data[0].sfas_arr.split(",");
-            $('#sfas_NSDP').val(sfas_arr[0]);
-            $('#sfas_NCIS').val(sfas_arr[1]);
-            $('#sfas_NPM').val(sfas_arr[2]);
-            let sfat_arr = data[0].sfat_arr;
-            if(sfat_arr != "") {
-                let sfat_arr = data[0].sfat_arr.split(",");
-                $('#sfat_NSDP').val(sfat_arr[0]);
-                $('#sfat_NCIS').val(sfat_arr[1]);
-                $('#sfat_NPM').val(sfat_arr[2]);
+
+            let cerat_totalarr=[];
+            for(var key in data) {
+                var cerat_arr = data[key].cerat_arr.split(",").map(Number);
+                let cerat_counter=[];
+                for (let index = 0; index < cerat_arr.length; index++) {
+                    cerat_counter.push(cerat_arr[index]);
+                }
+                cerat_totalarr.push(cerat_counter);
             }
-            var ejas_arr = data[0].ejas_arr.split(",");
-            $('#ejas_NESAP').val(ejas_arr[0]);
-            $('#ejas_NCIS').val(ejas_arr[1]);
-            $('#ejas_NPM').val(ejas_arr[2]);
-            let ejat_arr = data[0].ejat_arr;
-            if(ejat_arr != "") {
-                let ejat_arr = data[0].ejat_arr.split(",");
-                $('#ejat_NESAP').val(ejat_arr[0]);
-                $('#ejat_NCIS').val(ejat_arr[1]);
-                $('#ejat_NPM').val(ejat_arr[2]);
+            let cerat_final_arr = cerat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#cerat_NCHP').val(cerat_final_arr[0]);
+            $('#cerat_NCIS').val(cerat_final_arr[1]);
+            $('#cerat_NPM').val(cerat_final_arr[2]);
+            console.log(cerat_final_arr);
+
+
+
+            let sfas_totalarr=[];
+            for(var key in data) {
+                var sfas_arr = data[key].sfas_arr.split(",").map(Number);
+                let sfas_counter=[];
+                for (let index = 0; index < sfas_arr.length; index++) {
+                    sfas_counter.push(sfas_arr[index]);
+                }
+                sfas_totalarr.push(sfas_counter);
             }
-            
-            var hlas_arr = data[0].hlas_arr.split(",");
-            $('#hlas_NFHP').val(hlas_arr[0]);
-            $('#hlas_NCIS').val(hlas_arr[1]);
-            $('#hlas_NPM').val(hlas_arr[2]);
-            let hlat_arr = data[0].hlat_arr;
-            if(hlat_arr != "") {
-                let hlat_arr = data[0].hlat_arr.split(",");
-                $('#hlat_NFHP').val(hlat_arr[0]);
-                $('#hlat_NCIS').val(hlat_arr[1]);
-                $('#hlat_NPM').val(hlat_arr[2]);
+            let sfas_final_arr = sfas_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#sfas_NSDP').val(sfas_final_arr[0]);
+            $('#sfas_NCIS').val(sfas_final_arr[1]);
+            $('#sfas_NPM').val(sfas_final_arr[2]);
+            console.log(sfas_final_arr);
+
+
+            let sfat_totalarr=[];
+            for(var key in data) {
+                var sfat_arr = data[key].sfat_arr.split(",").map(Number);
+                let sfat_counter=[];
+                for (let index = 0; index < sfat_arr.length; index++) {
+                    sfat_counter.push(sfat_arr[index]);
+                }
+                sfat_totalarr.push(sfat_counter);
+            }
+            let sfat_final_arr = sfat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#sfat_NSDP').val(sfat_final_arr[0]);
+            $('#sfat_NCIS').val(sfat_final_arr[1]);
+            $('#sfat_NPM').val(sfat_final_arr[2]);
+            console.log(sfat_final_arr);
+
+
+            let ejas_totalarr=[];
+            for(var key in data) {
+                var ejas_arr = data[key].ejas_arr.split(",").map(Number);
+                let ejas_counter=[];
+                for (let index = 0; index < ejas_arr.length; index++) {
+                    ejas_counter.push(ejas_arr[index]);
+                }
+                ejas_totalarr.push(ejas_counter);
+            }
+            let ejas_final_arr = ejas_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ejas_NESAP').val(ejas_final_arr[0]);
+            $('#ejas_NCIS').val(ejas_final_arr[1]);
+            $('#ejas_NPM').val(ejas_final_arr[2]);
+            console.log(ejas_final_arr);
+
+
+            let ejat_totalarr=[];
+            for(var key in data) {
+                var ejat_arr = data[key].ejat_arr.split(",").map(Number);
+                let ejat_counter=[];
+                for (let index = 0; index < ejat_arr.length; index++) {
+                    ejat_counter.push(ejat_arr[index]);
+                }
+                ejat_totalarr.push(ejat_counter);
+            }
+            let ejat_final_arr = ejat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ejat_NESAP').val(ejat_final_arr[0]);
+            $('#ejat_NCIS').val(ejat_final_arr[1]);
+            $('#ejat_NPM').val(ejat_final_arr[2]);
+            console.log(ejat_final_arr);
+
+
+            let hlas_totalarr=[];
+            for(var key in data) {
+                var hlas_arr = data[key].hlas_arr.split(",").map(Number);
+                let hlas_counter=[];
+                for (let index = 0; index < hlas_arr.length; index++) {
+                    hlas_counter.push(hlas_arr[index]);
+                }
+                hlas_totalarr.push(hlas_counter);
+            }
+            let hlas_final_arr = hlas_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#hlas_NFHP').val(hlas_final_arr[0]);
+            $('#hlas_NCIS').val(hlas_final_arr[1]);
+            $('#hlas_NPM').val(hlas_final_arr[2]);
+            console.log(hlas_final_arr);
+
+
+            let hlat_totalarr=[];
+            for(var key in data) {
+                var hlat_arr = data[key].hlat_arr.split(",").map(Number);
+                let hlat_counter=[];
+                for (let index = 0; index < hlat_arr.length; index++) {
+                    hlat_counter.push(hlat_arr[index]);
+                }
+                hlat_totalarr.push(hlat_counter);
+            }
+            let hlat_final_arr = hlat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#hlat_NFHP').val(hlat_final_arr[0]);
+            $('#hlat_NCIS').val(hlat_final_arr[1]);
+            $('#hlat_NPM').val(hlat_final_arr[2]);
+            console.log(hlat_final_arr);
+
         }
+
     })
 }
 </script>

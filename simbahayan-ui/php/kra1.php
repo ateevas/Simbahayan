@@ -105,8 +105,8 @@
                 <th scope="row"></th>
                 <td> No. of Leadership, Organizational Development, and Good Governance
                     Projects</td>
-                <td><input id="ggs_NLODGGP" type="number" value="0"></td>
-                <td><input id="ggt_NLODGGP" type="number" value="0"></td>
+                <td><input id="ggs_NHWDP" type="number" value="0"></td>
+                <td><input id="ggt_NHWDP" type="number" value="0"></td>
 
             </tr>
             <tr>
@@ -262,16 +262,16 @@ function save_kra1() {
 
     //-- Good governance for all --//
     //Status
-    var ggs_NLODGGP = $('#ggs_NLODGGP').val();
+    var ggs_NHWDP = $('#ggs_NHWDP').val();
     var ggs_NCIS = $('#ggs_NCIS').val();
     var ggs_NPM = $('#ggs_NPM').val();
     //Target
-    var ggt_NLODGGP = $('#ggt_NLODGGP').val();
+    var ggt_NHWDP = $('#ggt_NHWDP').val();
     var ggt_NCIS = $('#ggt_NCIS').val();
     var ggt_NPM = $('#ggt_NPM').val();
 
-    var ggs_arr = new Array(ggs_NLODGGP, ggs_NCIS, ggs_NPM);
-    var ggt_arr = [ggt_NLODGGP, ggt_NCIS, ggt_NPM];
+    var ggs_arr = new Array(ggs_NHWDP, ggs_NCIS, ggs_NPM);
+    var ggt_arr = [ggt_NHWDP, ggt_NCIS, ggt_NPM];
     localStorage.setItem('ggs_arr', ggs_arr);
     localStorage.setItem('ggt_arr', ggt_arr);
 
@@ -345,12 +345,10 @@ function edit_kra1() {
     $('#edit_btn').hide();
 }
 
-
 get_kra1datafromuserid();
 
 function get_kra1datafromuserid() {
     let college_id = localStorage.getItem('selected_college_id');
-    
     $.ajax({
         url: url,
         type: "GET",
@@ -362,7 +360,7 @@ function get_kra1datafromuserid() {
         complete: function(response) {
             console.log(response.responseText); 
             var data = JSON.parse(response.responseText);
-            //HS
+
             let hs1_totalarr=[];
             for(var key in data) {
                 var hs_arr = data[key].hs_arr.split(",").map(Number);
@@ -376,7 +374,7 @@ function get_kra1datafromuserid() {
             $('#hs_NHWDP').val(hs1_final_arr[0]);
             $('#hs_NCIS').val(hs1_final_arr[1]);
             $('#hs_NPM').val(hs1_final_arr[2]);
-            //HT
+
             let ht1_totalarr=[];
             for(var key in data) {
                 var ht_arr = data[key].ht_arr.split(",").map(Number);
@@ -419,41 +417,101 @@ function get_kra1datafromuserid() {
             $('#et_NCIS').val(et1_final_arr[1]);
             $('#et_NPM').val(et1_final_arr[2]);
 
-            var ggs_arr = data[0].ggs_arr.split(",");
-            $('#ggs_NLODGGP').val(ggs_arr[0]);
-            $('#ggs_NCIS').val(ggs_arr[1]);
-            $('#ggs_NPM').val(ggs_arr[2]);
-            let ggt_arr = data[0].ggt_arr;
-            if(ggt_arr != "") {
-                let ggt_arr = data[0].ggt_arr.split(",");
-                $('#ggt_NLODGGP').val(ggt_arr[0]);
-                $('#ggt_NCIS').val(ggt_arr[1]);
-                $('#ggt_NPM').val(ggt_arr[2]);
-            }
 
-            var ejs_arr = data[0].ejs_arr.split(",");
-            $('#ejs_NESEP').val(ejs_arr[0]);
-            $('#ejs_NCIS').val(ejs_arr[1]);
-            $('#ejs_NPM').val(ejs_arr[2]);
-            let ejt_arr = data[0].ejt_arr;
-            if(ejt_arr != "") {
-                let ejt_arr = data[0].ejt_arr.split(",");
-                $('#ejt_NESEP').val(ejt_arr[0]);
-                $('#ejt_NCIS').val(ejt_arr[1]);
-                $('#ejt_NPM').val(ejt_arr[2]);
+            let ggs_totalarr=[];
+            for(var key in data) {
+                var ggs_arr = data[key].ggs_arr.split(",").map(Number);
+                let ggs_counter=[];
+                for (let index = 0; index < ggs_arr.length; index++) {
+                    ggs_counter.push(ggs_arr[index]);
+                }
+                ggs_totalarr.push(ggs_counter);
             }
+            let ggs_final_arr = ggs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ggs_NHWDP').val(ggs_final_arr[0]);
+            $('#ggs_NCIS').val(ggs_final_arr[1]);
+            $('#ggs_NPM').val(ggs_final_arr[2]);
+            console.log(ggs_final_arr);
 
-            var cls_arr = data[0].cls_arr.split(",");
-            $('#cls_NSMEP').val(cls_arr[0]);
-            $('#cls_NCIS').val(cls_arr[1]);
-            $('#cls_NPM').val(cls_arr[2]);
-            let clt_arr = data[0].clt_arr;
-            if(clt_arr != "") {
-                let clt_arr = data[0].clt_arr.split(",");
-                $('#clt_NSMEP').val(clt_arr[0]);
-                $('#clt_NCIS').val(clt_arr[1]);
-                $('#clt_NPM').val(clt_arr[2]);
+            let ggt_totalarr=[];
+            for(var key in data) {
+                var ggt_arr = data[key].ggt_arr.split(",").map(Number);
+                let ggt_counter=[];
+                for (let index = 0; index < ggt_arr.length; index++) {
+                    ggt_counter.push(ggt_arr[index]);
+                }
+                ggt_totalarr.push(ggt_counter);
             }
+            let ggt_final_arr = ggt_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ggt_NHWDP').val(ggt_final_arr[0]);
+            $('#ggt_NCIS').val(ggt_final_arr[1]);
+            $('#ggt_NPM').val(ggt_final_arr[2]);
+
+
+
+            let ejs_totalarr=[];
+            for(var key in data) {
+                var ejs_arr = data[key].ejs_arr.split(",").map(Number);
+                let ejs_counter=[];
+                for (let index = 0; index < ejs_arr.length; index++) {
+                    ejs_counter.push(ejs_arr[index]);
+                }
+                ejs_totalarr.push(ejs_counter);
+            }
+            let ejs_final_arr = ejs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ejs_NESEP').val(ejs_final_arr[0]);
+            $('#ejs_NCIS').val(ejs_final_arr[1]);
+            $('#ejs_NPM').val(ejs_final_arr[2]);
+            console.log(ejs_final_arr);
+
+            let ejt_totalarr=[];
+            for(var key in data) {
+                var ejt_arr = data[key].ejt_arr.split(",").map(Number);
+                let ejt_counter=[];
+                for (let index = 0; index < ejt_arr.length; index++) {
+                    ejt_counter.push(ejt_arr[index]);
+                }
+                ejt_totalarr.push(ejt_counter);
+            }
+            let ejt_final_arr = ejt_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ejt_NESEP').val(ejt_final_arr[0]);
+            $('#ejt_NCIS').val(ejt_final_arr[1]);
+            $('#ejt_NPM').val(ejt_final_arr[2]);
+            console.log(ejt_final_arr);
+
+
+
+            let cls_totalarr=[];
+            for(var key in data) {
+                var cls_arr = data[key].cls_arr.split(",").map(Number);
+                let cls_counter=[];
+                for (let index = 0; index < cls_arr.length; index++) {
+                    cls_counter.push(cls_arr[index]);
+                }
+                cls_totalarr.push(cls_counter);
+            }
+            let cls_final_arr = cls_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#cls_NSMEP').val(cls_final_arr[0]);
+            $('#cls_NCIS').val(cls_final_arr[1]);
+            $('#cls_NPM').val(cls_final_arr[2]);
+            console.log(cls_final_arr);
+
+            let clt_totalarr=[];
+            for(var key in data) {
+                var clt_arr = data[key].clt_arr.split(",").map(Number);
+                let clt_counter=[];
+                for (let index = 0; index < clt_arr.length; index++) {
+                    clt_counter.push(clt_arr[index]);
+                }
+                clt_totalarr.push(clt_counter);
+            }
+            let clt_final_arr = clt_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#clt_NSMEP').val(clt_final_arr[0]);
+            $('#clt_NCIS').val(clt_final_arr[1]);
+            $('#clt_NPM').val(clt_final_arr[2]);
+            console.log(clt_final_arr);
+
+  
         }
     })
 }
