@@ -143,155 +143,40 @@
             </tr>
         </tbody>
     </table>
-
-    <div class="button-container">
-        <div class="button-wrapper">
-            <a class="btn btn-warning" id="edit_btn" onclick="edit_kra3()" href="#" role="button">Edit</a>
-            <button type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
-            <a class="btn btn-dark" href="kra1.php" role="button">Prev</a>
-
-            <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">Are you sure you want to submit report?</div>
-                        <div class="modal-footer d-flex justify-content-between">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                            <button onclick="btnSubmit()" type="button" class="btn btn-warning">Yes</button>
-                        </div>
+        <div class="d-flex flex-row-reverse bd-highlight w-50 mx-auto">
+            <button type="button" data-bs-target="#approval" data-bs-toggle="modal" class="btn btn-warning">Save</button>
+            <a class="btn btn-dark mx-3" href="kra1.php" role="button">Prev</a>
+        </div>
+        <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">Are you sure you want to submit report?</div>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        <button onclick="approve_kra1simbahayan()" type="button" class="btn btn-warning">Yes</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
 </body>
 
 </html>
 <script type="text/javascript">
-get_lock();
-
-function get_lock() {
-    if (localStorage.getItem('edit_lock') == "1") {
-        $('#edit_btn').addClass("disabled");
-        $('#edit_btn').attr("disabled", "disabled");
-        $('.approve').addClass("disabled");
-        $('.approve').attr("disabled", "disabled");
-    }
-}
-
-function save_kra1() {
-        //-- Cultural Life --//
-    //Status 
-    var ceras_NCHP = $('#ceras_NCHP').val();
-    var ceras_NCIS = $('#ceras_NCIS').val();
-    var ceras_NPM = $('#ceras_NPM').val();
-    //Target 
-    var cerat_NCHP = $('#cerat_NCHP').val();
-    var cerat_NCIS = $('#cerat_NCIS').val();
-    var cerat_NPM = $('#cerat_NPM').val();
-    //array
-    var ceras_arr = [ceras_NCHP, ceras_NCIS, ceras_NPM];
-    var cerat_arr = [cerat_NCHP, cerat_NCIS, cerat_NPM];
-    localStorage.setItem('ceras_arr', ceras_arr);
-    localStorage.setItem('cerat_arr', cerat_arr);
-
-    //-- Sports for all --//
-    //Status 
-    var sfas_NSDP = $('#sfas_NSDP').val();
-    var sfas_NCIS = $('#sfas_NCIS').val();
-    var sfas_NPM = $('#sfas_NPM').val();
-    //Target 
-    var sfat_NSDP = $('#sfat_NSDP').val();
-    var sfat_NCIS = $('#sfat_NCIS').val();
-    var sfat_NPM = $('#sfat_NPM').val();
-    //array
-    var sfas_arr = [sfas_NSDP, sfas_NCIS, sfas_NPM];
-    var sfat_arr = [sfat_NSDP, sfat_NCIS, sfat_NPM];
-    localStorage.setItem('sfas_arr', sfas_arr);
-    localStorage.setItem('sfat_arr', sfat_arr);
-
-    //-- Environmental Justice for all --//
-    //Status 
-    var ejas_NESAP = $('#ejas_NESAP').val();
-    var ejas_NCIS = $('#ejas_NCIS').val();
-    var ejas_NPM = $('#ejas_NPM').val();
-    //Target 
-    var ejat_NESAP = $('#ejat_NESAP').val();
-    var ejat_NCIS = $('#ejat_NCIS').val();
-    var ejat_NPM = $('#ejat_NPM').val();
-    //array
-    var ejas_arr = [ejas_NESAP, ejas_NCIS, ejas_NPM];
-    var ejat_arr = [ejat_NESAP, ejat_NCIS, ejat_NPM];
-    localStorage.setItem('ejas_arr', ejas_arr);
-    localStorage.setItem('ejat_arr', ejat_arr);
-
-    //-- Holistic Life for all --//
-    //Status 
-    var hlas_NFHP = $('#hlas_NFHP').val();
-    var hlas_NCIS = $('#hlas_NCIS').val();
-    var hlas_NPM = $('#hlas_NPM').val();
-    //Target 
-    var hlat_NFHP = $('#hlat_NFHP').val();
-    var hlat_NCIS = $('#hlat_NCIS').val();
-    var hlat_NPM = $('#hlat_NPM').val();
-    //array
-    var hlas_arr = [hlas_NFHP, hlas_NCIS, hlas_NPM];
-    var hlat_arr = [hlat_NFHP, hlat_NCIS, hlat_NPM];
-    localStorage.setItem('hlas_arr', hlas_arr);
-    localStorage.setItem('hlat_arr', hlat_arr);
-
-
-
-    let user_id = localStorage.getItem('selected_user_id');
-    $.ajax({
-        url: url,
-        type: "POST",
-        data: {
-            csrf_token: "{{ csrf_token() }}",
-            tag: "update2_kra1",
-            user_id: user_id,
-            ceras_arr: localStorage.getItem('ceras_arr'),
-            cerat_arr: localStorage.getItem('cerat_arr'),
-            sfas_arr: localStorage.getItem('sfas_arr'),
-            sfat_arr: localStorage.getItem('sfat_arr'),
-            ejas_arr: localStorage.getItem('ejas_arr'),
-            ejat_arr: localStorage.getItem('ejat_arr'),
-            hlas_arr: localStorage.getItem('hlas_arr'),
-            hlat_arr: localStorage.getItem('hlat_arr')
-        },
-        complete: function(response) {
-            var data = JSON.parse(response.responseText);
-            if (data['status'] == "ok") {
-                alert("successfully saved!");
-                location.reload();
-            } else {
-                alert("Unknown error occured. Please try again.")
-            }
-        }
-    })
-}
-
-function edit_kra1() {
-    $('.input_number').removeAttr('readonly');
-    $('#save_btn').show();
-    $('#edit_btn').hide();
-}
 function approve_kra1simbahayan() {
-    let user_id = localStorage.getItem('selected_user_id');
+    let college_id = localStorage.getItem('selected_college_id');
     $.ajax({
         url: url,
         type: "GET",
         data: {
             csrf_token: "{{ csrf_token() }}",
             tag: "approve_kra1simbahayan",
-            user_id: user_id
+            college_id: college_id
         },
         complete: function(response) {
             var data = JSON.parse(response.responseText);
@@ -306,9 +191,9 @@ function approve_kra1simbahayan() {
     })
 }
 
-get_kra1datafromuserid();
+get_kra1datafromuseridsimbahayan();
 
-function get_kra1datafromuserid() {
+function get_kra1datafromuseridsimbahayan() {
     let user_id = localStorage.getItem('selected_user_id');
     let college_id = localStorage.getItem('selected_college_id');
     $.ajax({
@@ -316,7 +201,7 @@ function get_kra1datafromuserid() {
         type: "GET",
         data: {
             csrf_token: "{{ csrf_token() }}",
-            tag: "get_kra1datafromuserid",
+            tag: "get_kra1datafromuseridsimbahayan",
             user_id: user_id,
             college_id: college_id
         },

@@ -57,8 +57,8 @@
 							<thead>
 								<tr>
 									<th scope="col">Report</th>
+									<th scope="col">Year</th>
 									<th scope="col">Date</th>
-									<th scope="col">Audit</th>
 								</tr>
 							</thead>
 							<tbody id="tbody_data">

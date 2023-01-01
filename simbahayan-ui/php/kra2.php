@@ -37,29 +37,29 @@
             <tr>
                 <th scope="row"></th>
                 <td>Institutional Development for Community Development</td>
-                <td><input id="npus_IDCD" type="number" value="0"></td>
-                <td><input id="nput_IDCD" type="number" value="0"></td>
+                <td><input readonly id="npus_IDCD" type="number" value="0"></td>
+                <td><input readonly id="nput_IDCD" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Social Awareness and Advocacy</td>
-                <td><input id="npus_SAA" type="number" value="0"></td>
-                <td><input id="nput_SAA" type="number" value="0"></td>
+                <td><input readonly id="npus_SAA" type="number" value="0"></td>
+                <td><input readonly id="nput_SAA" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Community-Engaged Research</td>
-                <td><input id="npus_CER" type="number" value="0"></td>
-                <td><input id="nput_CER" type="number" value="0"></td>
+                <td><input readonly id="npus_CER" type="number" value="0"></td>
+                <td><input readonly id="nput_CER" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Service-Learning</td>
-                <td><input id="npus_SL" type="number" value="0"></td>
-                <td><input id="nput_SL" type="number" value="0"></td>
+                <td><input readonly id="npus_SL" type="number" value="0"></td>
+                <td><input readonly id="nput_SL" type="number" value="0"></td>
 
             </tr>
         </tbody>
@@ -79,42 +79,42 @@
             <tr>
                 <th scope="row"></th>
                 <td> Student Organizations</td>
-                <td><input id="nppus_SORG" type="number" value="0"></td>
-                <td><input id="npput_SORG" type="number" value="0"></td>
+                <td><input readonly id="nppus_SORG" type="number" value="0"></td>
+                <td><input readonly id="npput_SORG" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Students</td>
-                <td><input id="nppus_STU" type="number" value="0"></td>
-                <td><input id="npput_STU" type="number" value="0"></td>
+                <td><input readonly id="nppus_STU" type="number" value="0"></td>
+                <td><input readonly id="npput_STU" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Faculty</td>
-                <td><input id="nppus_FAC" type="number" value="0"></td>
-                <td><input id="npput_FAC" type="number" value="0"></td>
+                <td><input readonly id="nppus_FAC" type="number" value="0"></td>
+                <td><input readonly id="npput_FAC" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Administrators</td>
-                <td><input id="nppus_ADM" type="number" value="0"></td>
-                <td><input id="npput_ADM" type="number" value="0"></td>
+                <td><input readonly id="nppus_ADM" type="number" value="0"></td>
+                <td><input readonly id="npput_ADM" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Support Staff</td>
-                <td><input id="nppus_SSTA" type="number" value="0"></td>
-                <td><input id="npput_SSTA" type="number" value="0"></td>
+                <td><input readonly id="nppus_SSTA" type="number" value="0"></td>
+                <td><input readonly id="npput_SSTA" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Alumni</td>
-                <td><input id="nppus_ALU" type="number" value="0"></td>
-                <td><input id="npput_ALU" type="number" value="0"></td>
+                <td><input readonly id="nppus_ALU" type="number" value="0"></td>
+                <td><input readonly id="npput_ALU" type="number" value="0"></td>
             </tr>
 
 
@@ -133,15 +133,15 @@
             <tr>
                 <th scope="row"></th>
                 <td>Local</td>
-                <td><input id="nrpfcs_LOC" type="number" value="0"></td>
-                <td><input id="nrpfct_LOC" type="number" value="0"></td>
+                <td><input readonly id="nrpfcs_LOC" type="number" value="0"></td>
+                <td><input readonly id="nrpfct_LOC" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>International</td>
-                <td><input id="nrpfcs_INT" type="number" value="0"></td>
-                <td><input id="nrpfct_INT" type="number" value="0"></td>
+                <td><input readonly id="nrpfcs_INT" type="number" value="0"></td>
+                <td><input readonly id="nrpfct_INT" type="number" value="0"></td>
 
             </tr>
 
@@ -156,29 +156,25 @@
             <tr>
                 <th scope="row"></th>
                 <td>Local</td>
-                <td><input id="nps_LOC" type="number" value="0"></td>
-                <td><input id="npt_LOC" type="number" value="0"></td>
+                <td><input readonly id="nps_LOC" type="number" value="0"></td>
+                <td><input readonly id="npt_LOC" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>International</td>
-                <td><input id="nps_INT" type="number" value="0"></td>
-                <td><input id="npt_INT" type="number" value="0"></td>
+                <td><input readonly id="nps_INT" type="number" value="0"></td>
+                <td><input readonly id="npt_INT" type="number" value="0"></td>
 
             </tr>
 
         </tbody>
     </table>
 
-
     <!-- Button trigger modal -->
     <div class="button-container">
         <div class="button-wrapper">
             <div class="button-wrapper">
-                <a class="btn btn-warning" id="edit_btn" onclick="edit_kra3()" href="#" role="button">Edit</a>
-                <a class="btn btn-warning" id="save_btn" style="display: none;" onclick="save_kra3()" href="#"
-                    role="button">Save</a>
                 <button type="button" class="btn btn-warning approve" data-bs-toggle="modal"
                     data-bs-target="#approval">Approve</button>
             </div>
@@ -195,7 +191,7 @@
                     <div class="modal-body">Approve the Annual Report? It cannot be undone</div>
                     <div class="modal-footer d-flex justify-content-between">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                        <button type="button" class="btn btn-warning" onclick="approve_kra3coordinator()">Yes</button>
+                        <button type="button" class="btn btn-warning" onclick="approve_kra2simbahayan()">Yes</button>
                     </div>
                 </div>
             </div>
@@ -204,193 +200,165 @@
 
 </html>
 <script type="text/javascript">
-get_kra2datafromuserid();
+get_kra2datafromuseridsimbahayan();
 
-get_lock();
-
-function get_lock() {
-    if (localStorage.getItem('edit_lock') == "1") {
-        $('#edit_btn').addClass("disabled");
-        $('#edit_btn').attr("disabled", "disabled");
-        $('.approve').addClass("disabled");
-        $('.approve').attr("disabled", "disabled");
-    }
-}
-get_kra2datafromuserid();
-
-function save_kra2() {
-
-    //-- Number of Projects Under UCDP --//
-    //Status
-    var npus_IDCD = $('#npus_IDCD').val(); 
-    var npus_SAA = $('#npus_SAA').val();
-    var npus_CER = $('#npus_CER').val(); 
-    var npus_SL = $('#npus_SL').val();
-    //Target
-    var nput_IDCD = $('#nput_IDCD').val(); 
-    var nput_SAA = $('#nput_SAA').val();
-    var nput_CER = $('#nput_CER').val(); 
-    var nput_SL = $('#nput_SL').val();
-    //array
-    var npus_arr = [npus_IDCD, npus_SAA, npus_CER, npus_SL];
-    var nput_arr = [nput_IDCD, nput_SAA, nput_CER, nput_SL];
-    localStorage.setItem('npus_arr', npus_arr);
-    localStorage.setItem('nput_arr', nput_arr);
-
-
-    //-- Number of Participants in the Projects Under the UCDP --//
-    //Status
-    var nppus_SORG = $('#nppus_SORG').val(); 
-    var nppus_STU = $('#nppus_STU').val();
-    var nppus_FAC = $('#nppus_FAC').val(); 
-    var nppus_ADM = $('#nppus_ADM').val();
-    var nppus_SSTA = $('#nppus_SSTA').val(); 
-    var nppus_ALU = $('#nppus_ALU').val();
-    //Target
-    var npput_SORG = $('#npput_SORG').val(); 
-    var npput_STU = $('#npput_STU').val();
-    var npput_FAC = $('#npput_FAC').val(); 
-    var npput_ADM = $('#npput_ADM').val();
-    var npput_SSTA = $('#npput_SSTA').val(); 
-    var npput_ALU = $('#npput_ALU').val();
-    //array
-    var nppus_arr = [nppus_SORG, nppus_STU, nppus_FAC, nppus_ADM, nppus_SSTA, nppus_ALU];
-    var npput_arr = [npput_SORG, npput_STU, npput_FAC, npput_ADM, npput_SSTA, npput_ALU];
-    localStorage.setItem('nppus_arr', nppus_arr);
-    localStorage.setItem('npput_arr', npput_arr);
-
-
-    //-- Number of Research Presentations in Fora/Conferences --//
-    //Status
-    var nrpfcs_LOC = $('#nrpfcs_LOC').val(); 
-    var nrpfcs_INT = $('#nrpfcs_INT').val();
-    //Target
-    var nrpfct_LOC = $('#nrpfct_LOC').val(); 
-    var nrpfct_INT = $('#nrpfct_INT').val();
-    //array
-    var nrpfcs_arr = [nrpfcs_LOC, nrpfcs_INT];
-    var nrpfct_arr = [nrpfct_LOC, nrpfct_INT];
-    localStorage.setItem('nrpfcs_arr', nrpfcs_arr);
-    localStorage.setItem('nrpfct_arr', nrpfct_arr);
-
-    //-- Number of Publications --//
-    //Status
-    var nps_LOC = $('#nps_LOC').val(); 
-    var nps_INT = $('#nps_INT').val();
-    //Target
-    var npt_LOC = $('#npt_LOC').val(); 
-    var npt_INT = $('#npt_INT').val();
-    //array
-    var nps_arr = [nps_LOC, nps_INT];
-    var npt_arr = [npt_LOC, npt_INT];
-    localStorage.setItem('nps_arr', nps_arr);
-    localStorage.setItem('npt_arr', npt_arr);
-
-
-    let user_id = localStorage.getItem('selected_user_id');
-    $.ajax({
-        url: url,
-        type: "POST",
-        data: {
-            csrf_token: "{{ csrf_token() }}",
-            tag: "update1_kra2",
-            user_id: user_id,
-            npus_arr: localStorage.getItem('npus_arr'),
-            nput_arr: localStorage.getItem('nput_arr'),
-            nppus_arr: localStorage.getItem('nppus_arr'),
-            npput_arr: localStorage.getItem('npput_arr'),
-            nrpfcs_arr: localStorage.getItem('nrpfcs_arr'),
-            nrpfct_arr: localStorage.getItem('nrpfct_arr'),
-            nps_arr: localStorage.getItem('nps_arr'),
-            npt_arr: localStorage.getItem('npt_arr')
-        },
-        complete: function(response) {
-            console.log(response.responseText);
-            var data = JSON.parse(response.responseText);
-            if (data['status'] == "ok") {
-                alert("successfully saved!");
-                location.reload();
-            } else {
-                alert("Unknown error occured. Please try again.")
-            }
-        }
-    })
-
-}
-
-function edit_kra2() {
-    $('.input_number').removeAttr('readonly');
-    $('#save_btn').show();
-    $('#edit_btn').hide();
-}
-
-function get_kra2datafromuserid() {
-    let user_id = localStorage.getItem('selected_user_id');
+function approve_kra2simbahayan() {
+    let college_id = localStorage.getItem('selected_college_id');
     $.ajax({
         url: url,
         type: "GET",
         data: {
             csrf_token: "{{ csrf_token() }}",
-            tag: "get_kra2datafromuserid",
-            user_id: user_id
+            tag: "approve_kra2simbahayan",
+            college_id: college_id
+        },
+        complete: function(response) {
+            var data = JSON.parse(response.responseText);
+            if (data['status'] == "updated") {
+                alert('successfully updated!');
+                window.location.href = "http://localhost/Simbahayan/simbahayan-ui/php/kra-select.php";
+            } else {
+                alert('unknown error occured');
+                location.reload();
+            }
+        }
+    })
+}
+
+function get_kra2datafromuseridsimbahayan() {
+    let user_id = localStorage.getItem('selected_user_id');
+    let college_id = localStorage.getItem('selected_college_id');
+    $.ajax({
+        url: url,
+        type: "GET",
+        data: {
+            csrf_token: "{{ csrf_token() }}",
+            tag: "get_kra2datafromuseridsimbahayan",
+            user_id: user_id,
+            college_id: college_id
         },
         complete: function(response) {
             var data = JSON.parse(response.responseText);
 
-           
-            var npus_arr = data[0].npus_arr.split(",");
-            $('#npus_IDCD').val(npus_arr[0]);
-            $('#npus_SAA').val(npus_arr[1]);
-            $('#npus_CER').val(npus_arr[2]);
-            $('#npus_SL').val(npus_arr[3]);
-            let nput_arr = data[0].nput_arr;
-            if(nput_arr != "") {
-                let nput_arr = data[0].nput_arr.split(",");
-                $('#nput_IDCD').val(nput_arr[0]);
-                $('#nput_SAA').val(nput_arr[1]);
-                $('#nput_CER').val(nput_arr[2]);
-                $('#nput_SL').val(nput_arr[3]);
+            let npus_totalarr=[];
+            for(var key in data) {
+                var npus_arr = data[key].npus_arr.split(",").map(Number);
+                let npus_counter=[];
+                for (let index = 0; index < npus_arr.length; index++) {
+                    npus_counter.push(npus_arr[index]);
+                }
+                npus_totalarr.push(npus_counter);
             }
-            
-            var nppus_arr = data[0].nppus_arr.split(",");
-            $('#nppus_SORG').val(nppus_arr[0]);
-            $('#nppus_STU').val(nppus_arr[1]);
-            $('#nppus_FAC').val(nppus_arr[2]);
-            $('#nppus_ADM').val(nppus_arr[3]);
-            $('#nppus_SSTA').val(nppus_arr[4]);
-            $('#nppus_ALU').val(nppus_arr[5]);
+            let npus_final_arr = npus_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#npus_IDCD').val(npus_final_arr[0]);
+            $('#npus_SAA').val(npus_final_arr[1]);
+            $('#npus_CER').val(npus_final_arr[2]);
+            $('#npus_SL').val(npus_final_arr[3]);
 
-            let npput_arr = data[0].npput_arr;
-            if(npput_arr != "") {
-                let npput_arr = data[0].npput_arr.split(",");
-                $('#npput_SORG').val(npput_arr[0]);
-                $('#npput_STU').val(npput_arr[1]);
-                $('#npput_FAC').val(npput_arr[2]);
-                $('#npput_ADM').val(npput_arr[3]);
-                $('#npput_SSTA').val(npput_arr[4]);
-                $('#npput_ALU').val(npput_arr[5]);
+            let nput_totalarr=[];
+            for(var key in data) {
+                var nput_arr = data[key].nput_arr.split(",").map(Number);
+                let nput_counter=[];
+                for (let index = 0; index < nput_arr.length; index++) {
+                    nput_counter.push(nput_arr[index]);
+                }
+                nput_totalarr.push(nput_counter);
             }
-            
+            let nput_final_arr = nput_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#nput_IDCD').val(nput_final_arr[0]);
+            $('#nput_SAA').val(nput_final_arr[1]);
+            $('#nput_CER').val(nput_final_arr[2]);
+            $('#nput_SL').val(nput_final_arr[3]);
 
-            var nrpfcs = data[0].nrpfcs_arr.split(",");
-            $('#nrpfcs_LOC').val(nrpfcs[0]);
-            $('#nrpfcs_INT').val(nrpfcs[1]);
-            let nrpfct_arr = data[0].nrpfct_arr;
-            if(nrpfct_arr != "") {
-                let nrpfct_arr = data[0].nrpfct_arr.split(",");
-                $('#nrpfct_LOC').val(nrpfct_arr[0]);
-                $('#nrpfct_INT').val(nrpfct_arr[1]);
+
+            let nppus_totalarr=[];
+            for(var key in data) {
+                var nppus_arr = data[key].nppus_arr.split(",").map(Number);
+                let nppus_counter=[];
+                for (let index = 0; index < nppus_arr.length; index++) {
+                    nppus_counter.push(nppus_arr[index]);
+                }
+                nppus_totalarr.push(nppus_counter);
             }
-           
+            let nppus_final_arr = nppus_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#nppus_SORG').val(nppus_final_arr[0]);
+            $('#nppus_STU').val(nppus_final_arr[1]);
+            $('#nppus_FAC').val(nppus_final_arr[2]);
+            $('#nppus_ADM').val(nppus_final_arr[3]);
+            $('#nppus_SSTA').val(nppus_final_arr[4]);
+            $('#nppus_ALU').val(nppus_final_arr[5]);
 
-            var nps_arr = data[0].nps_arr.split(",");
-            $('#nps_LOC').val(nps_arr[0]);
-            $('#nps_INT').val(nps_arr[1]);
-            let npt_arr = data[0].npt_arr;
-            if(npt_arr != "") {
-                let npt_arr = data[0].npt_arr.split(",");
-                $('#npt_LOC').val(npt_arr[0]);
-                $('#npt_INT').val(npt_arr[1]);
+
+            let npput_totalarr=[];
+            for(var key in data) {
+                var npput_arr = data[key].npput_arr.split(",").map(Number);
+                let npput_counter=[];
+                for (let index = 0; index < npput_arr.length; index++) {
+                    npput_counter.push(npput_arr[index]);
+                }
+                npput_totalarr.push(npput_counter);
+            }
+            let npput_final_arr = npput_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#npput_SORG').val(npput_final_arr[0]);
+            $('#npput_STU').val(npput_final_arr[1]);
+            $('#npput_FAC').val(npput_final_arr[2]);
+            $('#npput_ADM').val(npput_final_arr[3]);
+            $('#npput_SSTA').val(npput_final_arr[4]);
+            $('#npput_ALU').val(npput_final_arr[5]);
+
+
+            let nrpfcs_totalarr=[];
+            for(var key in data) {
+                var nrpfcs_arr = data[key].nrpfcs_arr.split(",").map(Number);
+                let nrpfcs_counter=[];
+                for (let index = 0; index < nrpfcs_arr.length; index++) {
+                    nrpfcs_counter.push(nrpfcs_arr[index]);
+                }
+                nrpfcs_totalarr.push(nrpfcs_counter);
+            }
+            let nrpfcs_final_arr = nrpfcs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#nrpfcs_LOC').val(nrpfcs_final_arr[0]);
+            $('#nrpfcs_INT').val(nrpfcs_final_arr[1]);
+
+
+            let nrpfct_totalarr=[];
+            for(var key in data) {
+                var nrpfct_arr = data[key].nrpfct_arr.split(",").map(Number);
+                let nrpfct_counter=[];
+                for (let index = 0; index < nrpfct_arr.length; index++) {
+                    nrpfct_counter.push(nrpfct_arr[index]);
+                }
+                nrpfct_totalarr.push(nrpfct_counter);
+            }
+            let nrpfct_final_arr = nrpfct_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#nrpfct_LOC').val(nrpfct_final_arr[0]);
+            $('#nrpfct_INT').val(nrpfct_final_arr[1]);
+
+            let nps_totalarr=[];
+            for(var key in data) {
+                var nps_arr = data[key].nps_arr.split(",").map(Number);
+                let nps_counter=[];
+                for (let index = 0; index < nps_arr.length; index++) {
+                    nps_counter.push(nps_arr[index]);
+                }
+                nps_totalarr.push(nps_counter);
+            }
+            let nps_final_arr = nps_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#nps_LOC').val(nps_final_arr[0]);
+            $('#nps_INT').val(nps_final_arr[1]);
+
+            let npt_totalarr=[];
+            for(var key in data) {
+                var npt_arr = data[key].npt_arr.split(",").map(Number);
+                let npt_counter=[];
+                for (let index = 0; index < npt_arr.length; index++) {
+                    npt_counter.push(npt_arr[index]);
+                }
+                npt_totalarr.push(npt_counter);
+            }
+            let npt_final_arr = npt_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#npt_LOC').val(npt_final_arr[0]);
+            $('#npt_INT').val(npt_final_arr[1]);
         }
     })
 }

@@ -111,31 +111,25 @@
                                     localStorage.setItem('college_id', res['college']);
                                     localStorage.setItem('password', res['password']);
                                     switch (res['user_role']) {
-                                        case 1: //student
-                                            window.location.href =
-                                                "http://localhost/Simbahayan/student-official/php/profile.php";
-                                            break;
                                         case 2: //cd
                                             window.location.href =
                                                 "http://localhost/Simbahayan/coordinator/php/profile.php";
-                                            break;
-                                        case 3: //staff;
-                                            window.location.href =
-                                                "http://localhost/Simbahayan/simbahayan-ui/php/profile.php";
-                                            break;
+                                        break;
                                         case 4: //admin;
                                             window.location.href =
                                                 "http://localhost/Simbahayan/admin/php/admin.php";
-                                            break;
+                                        break;
+                                        case default: //unknown;
+                                            alert("email or password is incorrect");
+                                        break;
                                     }
-
-                                    break;
+                                break;
                                 case 'error_1': // mali password
                                     alert("email or password is incorrect");
-                                    break;
+                                break;
                                 case 'error_2': // both mali
                                     alert("email or password is incorrect");
-                                    break;
+                                break;
                             }
                         },
                     });

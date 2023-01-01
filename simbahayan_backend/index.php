@@ -81,7 +81,7 @@ switch ($tag) {
 								<i class='fa-solid fa-ellipsis fa-fw'></i>
 							</button>
 							<ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
-								<li><a class='dropdown-item' onclick='manage_kra(this)' data-kra_id='".$datay[$i]['id']."' href='#'>Manage</a></li>
+								<li><a class='dropdown-item' onclick='manage_kra(this)' data-kra_id='".$datay[$i]['id']."' data-college_id='".$datay[$i]['college_id']."' href='#'>Manage</a></li>
 							</ul>
 						</td>
 					</tr>";
@@ -310,7 +310,7 @@ switch ($tag) {
 		}
 	break;
 	case 'get_finalapproved':
-		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_colleges.college_acronym, tbl_users.id_num, tbl_users.organization, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college";
+		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_colleges.college_acronym, tbl_users.id_num, tbl_users.organization, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college GROUP BY tbl_kra_submission.college_id";
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute()) {
 			if($stmt->rowCount() != 0) {
@@ -318,17 +318,6 @@ switch ($tag) {
 				$datay=json_decode($datax, true);
 				$toecho="";
 				for ($i=0; $i < count($datay); $i++) {
-					$simb_name="";
-					$qx="SELECT * FROM tbl_users WHERE id=?";
-					$stmtx=$pdo->prepare($qx);
-					if($stmtx->execute([$datay[$i]['simb_id']])) {
-						$row=$stmtx->fetch(PDO::FETCH_ASSOC);
-						$simb_name=$row['fname'] . " " . $row['lname'];
-					} else {
-						echo json_encode([
-							"status" => "error2"
-						]);
-					}
 					$status="";
 					switch ($datay[$i]['kra_status']) {
 						case '1':
@@ -342,9 +331,9 @@ switch ($tag) {
 						break;
 					}
 					$toecho.="<tr>
-						<td style='text-transform: capitalize;'><button class='btn btn-link' data-user_id='".$datay[$i]['user_id']."' onclick='generate_pdf(this)'>".$datay[$i]['college_acronym']."_".$datay[$i]['lname'].".pdf</button></td>
+						<td style='text-transform: capitalize;'><button class='btn btn-link' data-user_id='".$datay[$i]['user_id']."' onclick='generate_pdf(this)'>".$datay[$i]['college_acronym']."_AnnualReport.pdf</button></td>
+						<td>".$datay[$i]['school_year']."</td>
 						<td>".date('F d, Y h:i a', strtotime($datay[$i]['date_submitted']))."</td>
-						<td>".$simb_name."</td>
 					</tr>";
 				}
 				echo $toecho;
@@ -467,9 +456,9 @@ switch ($tag) {
 		}
 	break;
 	case 'approve_kra3simbahayan':
-		$query="UPDATE tbl_kra_submission SET kra3_sub='3' WHERE user_id=?";
+		$query="UPDATE tbl_kra_submission SET kra3_sub='3' WHERE college_id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['user_id']])) {
+		if($stmt->execute([$_GET['college_id']])) {
 			echo json_encode([
 				"status" => "updated"
 			]);
@@ -480,9 +469,9 @@ switch ($tag) {
 		}
 	break;
 	case 'approve_kra2simbahayan':
-		$query="UPDATE tbl_kra_submission SET kra2_sub='3' WHERE user_id=?";
+		$query="UPDATE tbl_kra_submission SET kra2_sub='3' WHERE college_id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['user_id']])) {
+		if($stmt->execute([$_GET['college_id']])) {
 			echo json_encode([
 				"status" => "updated"
 			]);
@@ -493,9 +482,9 @@ switch ($tag) {
 		}
 	break;
 	case 'approve_kra1simbahayan':
-		$query="UPDATE tbl_kra_submission SET kra1_sub='3' WHERE user_id=?";
+		$query="UPDATE tbl_kra_submission SET kra1_sub='3' WHERE college_id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['user_id']])) {
+		if($stmt->execute([$_GET['college_id']])) {
 			echo json_encode([
 				"status" => "updated"
 			]);
@@ -506,9 +495,9 @@ switch ($tag) {
 		}
 	break;
 	case 'submit_reportsimbahayan':
-		$query="UPDATE tbl_kra_submission SET kra_status='3', simb_id=? WHERE user_id=?";
+		$query="UPDATE tbl_kra_submission SET kra_status='3', simb_id=? WHERE college_id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['my_id'],$_GET['user_id']])) {
+		if($stmt->execute([$_GET['my_id'],$_GET['college_id']])) {
 			echo json_encode([
 				"status" => "ok"
 			]);
@@ -544,17 +533,6 @@ switch ($tag) {
 			]);
 		}
 	break;
-	case 'get_kra3datafromuserid':
-		$query="SELECT * FROM kra3 WHERE user_id=?";
-		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['user_id']])) {
-			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
-		} else {
-			echo json_encode([
-				"status" => "error"
-			]);
-		}
-	break;
 	case 'approve_kra2coordinator':
 		$query="UPDATE tbl_kra_submission SET kra2_sub='2' WHERE user_id=? AND id=?";
 		$stmt=$pdo->prepare($query);
@@ -568,10 +546,23 @@ switch ($tag) {
 			]);
 		}
 	break;
-	case 'get_kra2datafromuserid':
-		$query="SELECT * FROM kra2 WHERE user_id=?";
+	case 'disapprove_report':
+		$query="UPDATE tbl_kra_submission SET kra_status='1', kra1_sub='1', kra2_sub='1', kra3_sub='1', remarks=? WHERE college_id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['user_id']])) {
+		if($stmt->execute([$_GET['remarks'],$_GET['college_id']])) {
+			echo json_encode([
+				"status" => "updated"
+			]);
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'check_simbahayansubmission':
+		$query="SELECT * FROM tbl_kra_submission WHERE college_id=? GROUP BY college_id";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['college_id']])) {
 			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 		} else {
 			echo json_encode([
@@ -604,6 +595,39 @@ switch ($tag) {
 		}
 	break;
 	case 'get_kra1datafromuserid':
+		$query="SELECT * FROM kra1 WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'get_kra2datafromuserid':
+		$query="SELECT * FROM kra2 WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'get_kra3datafromuserid':
+		$query="SELECT * FROM kra3 WHERE user_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['user_id']])) {
+			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'get_kra1datafromuseridsimbahayan':
 		$query="SELECT * FROM kra1 WHERE college_id=?";
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute([$_GET['college_id']])) {
@@ -614,8 +638,30 @@ switch ($tag) {
 			]);
 		}
 	break;
+	case 'get_kra2datafromuseridsimbahayan':
+		$query="SELECT * FROM kra2 WHERE college_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['college_id']])) {
+			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'get_kra3datafromuseridsimbahayan':
+		$query="SELECT * FROM kra3 WHERE college_id=?";
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([$_GET['college_id']])) {
+			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
 	case 'get_allsubmittedkrasimbahayan':
-		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_users.id_num, tbl_users.organization, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college GROUP BY tbl_kra_submission.college_id";
+		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_users.id_num, tbl_users.organization, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college WHERE kra_status='2' GROUP BY tbl_kra_submission.college_id";
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute()) {
 			if($stmt->rowCount() != 0) {
@@ -896,6 +942,7 @@ switch ($tag) {
 						<td valign='middle'>".$datay[$i]['email']."</td>
 						<td valign='middle'>".date('F d, Y h:i a', strtotime($datay[$i]['date_submitted']))."</td>
 						<td valign='middle'>".$status."</td>
+						<td valign='middle'>".$datay[$i]['remarks']."</td>
 						<td valign='middle'><button class='btn btn-link' data-kra_id='".$datay[$i]['id']."' data-user_id='".$datay[$i]['user_id']."' onclick='goto_kra_select(this)'>View</button></td>
 					</tr>";
 				}
@@ -957,6 +1004,7 @@ switch ($tag) {
 		$query="INSERT INTO kra3 SET
 		kra_sub_id=?,
 		kra_status=?,
+		college_id=?,
 		user_id=?,
 		nmoas_arr=?,
 		ncdaas_arr=?"; 
@@ -964,6 +1012,7 @@ switch ($tag) {
 		if($stmt->execute([
 			$_POST['kra_id'],
 			"0",
+			$_POST['college_id'],
 			$_POST['user_id'],
 			$_POST['nmoas_arr'],
 			$_POST['ncdaas_arr']
@@ -982,6 +1031,7 @@ switch ($tag) {
 		$query="INSERT INTO kra2 SET
 			kra_sub_id=?,
 			kra_status=?,
+			college_id=?,
 			user_id=?,
 			npus_arr=?,
 			nppus_arr=?,
@@ -991,6 +1041,7 @@ switch ($tag) {
 		if($stmt->execute([
 			$_POST['kra_id'],
 			"0",
+			$_POST['college_id'],
 			$_POST['user_id'],
 			$_POST['npus_arr'], 
 			$_POST['nppus_arr'],
@@ -1011,6 +1062,7 @@ switch ($tag) {
 		$query="INSERT INTO kra1 SET
 			kra_sub_id=?,
 			kra_status=?,
+			college_id=?,
 			user_id=?,
 			hs_arr=?,
 			es_arr=?,
@@ -1027,6 +1079,7 @@ switch ($tag) {
 		if($stmt->execute([
 			$_POST['kra_id'],
 			"0",
+			$_POST['college_id'],
 			$_POST['user_id'],
 			$_POST['hs_arr'],
 			$_POST['es_arr'],
@@ -1105,6 +1158,57 @@ switch ($tag) {
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute([$user_id])) {
 			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+		} else {
+			echo json_encode([
+				"status" => "error"
+			]);
+		}
+	break;
+	case 'register_cd':
+		$fname= $_POST['fname'];
+		$lname= $_POST['lname'];
+		$email= $_POST['email'];
+		$bday= $_POST['bday'];
+		$gender= $_POST['gender'];
+		$college= $_POST['college'];
+		$id_num= $_POST['id_num'];
+		$contact= $_POST['contact'];
+		$org= $_POST['org'];
+		$position= $_POST['position'];
+		$password= $_POST['password'];
+
+		$query="INSERT INTO tbl_users SET
+			user_role=?,
+			fname=?,
+			lname=?,
+			email=?,
+			bday=?,
+			gender=?,
+			college=?,
+			id_num=?,
+			contact=?,
+			organization=?,
+			position=?,
+			password=?";
+
+		$stmt=$pdo->prepare($query);
+		if($stmt->execute([
+			"2",
+			$fname,
+			$lname,
+			$email,	
+			$bday,
+			$gender,
+			$college,
+			$id_num,
+			$contact,
+			$org,
+			$position,
+			$password
+		])) {
+			echo json_encode([
+				"status" => "ok",
+			]);
 		} else {
 			echo json_encode([
 				"status" => "error"

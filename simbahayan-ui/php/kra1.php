@@ -184,177 +184,24 @@
             </tr>
     </table>
 
-    <div class="button-container">
-        <div class="button-wrapper">
-            <a class="btn btn-warning" id="edit_btn" onclick="edit_kra3()" href="#" role="button">Edit</a>
-            <button type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
-            <a class="btn btn-dark" href="kra1-next.php" role="button">Next</a>
-
-            <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">Are you sure you want to submit report?</div>
-                        <div class="modal-footer d-flex justify-content-between">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                            <button onclick="btnSubmit()" type="button" class="btn btn-warning">Yes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="d-flex flex-row-reverse bd-highlight w-50 mx-auto">
+        <a class="btn btn-dark" href="kra1-next.php" role="button">Next</a>
     </div>
 </body>
 
 </html>
 <script type="text/javascript">
-get_lock();
 
-function get_lock() {
-    if (localStorage.getItem('edit_lock') == "1") {
-        $('#edit_btn').addClass("disabled");
-        $('#edit_btn').attr("disabled", "disabled");
-        $('.approve').addClass("disabled");
-        $('.approve').attr("disabled", "disabled");
-    }
-}
+get_kra1datafromuseridsimbahayan();
 
-function save_kra1() {
- //-- Health for All --//
-    //Status
-    var hs_NHWDP = $('#hs_NHWDP').val();
-    var hs_NCIS = $('#hs_NCIS').val();
-    var hs_NPM = $('#hs_NPM').val();
-    //Target
-    var ht_NHWDP = $('#ht_NHWDP').val();
-    var ht_NCIS = $('#ht_NCIS').val();
-    var ht_NPM = $('#ht_NPM').val();
-
-    var hs_arr = new Array(hs_NHWDP, hs_NCIS, hs_NPM);
-    var ht_arr = [ht_NHWDP, ht_NCIS, ht_NPM];
-    localStorage.setItem('hs_arr', hs_arr);
-    localStorage.setItem('ht_arr', ht_arr);
-
-
-    //-- Education for all --//
-    //Status
-    var es_NEIEP = $('#es_NEIEP').val();
-    var es_NCIS = $('#es_NCIS').val();
-    var es_NPM = $('#es_NPM').val();
-    //Target
-    var et_NEIEP = $('#et_NEIEP').val();
-    var et_NCIS = $('#et_NCIS').val();
-    var et_NPM = $('#et_NPM').val();
-
-
-    var es_arr = new Array(es_NEIEP, es_NCIS, es_NPM);
-    var et_arr = [et_NEIEP, et_NCIS, et_NPM];
-    localStorage.setItem('es_arr', es_arr);
-    localStorage.setItem('et_arr', et_arr);
-
-
-    //-- Good governance for all --//
-    //Status
-    var ggs_NHWDP = $('#ggs_NHWDP').val();
-    var ggs_NCIS = $('#ggs_NCIS').val();
-    var ggs_NPM = $('#ggs_NPM').val();
-    //Target
-    var ggt_NHWDP = $('#ggt_NHWDP').val();
-    var ggt_NCIS = $('#ggt_NCIS').val();
-    var ggt_NPM = $('#ggt_NPM').val();
-
-    var ggs_arr = new Array(ggs_NHWDP, ggs_NCIS, ggs_NPM);
-    var ggt_arr = [ggt_NHWDP, ggt_NCIS, ggt_NPM];
-    localStorage.setItem('ggs_arr', ggs_arr);
-    localStorage.setItem('ggt_arr', ggt_arr);
-
-
-    //-- Economic justice for all --//
-    //Status
-    var ejs_NESEP = $('#ejs_NESEP').val();
-    var ejs_NCIS = $('#ejs_NCIS').val();
-    var ejs_NPM = $('#ejs_NPM').val();
-    //Target
-    var ejt_NESEP = $('#ejt_NESEP').val();
-    var ejt_NCIS = $('#ejt_NCIS').val();
-    var ejt_NPM = $('#ejt_NPM').val();
-
-    var ejs_arr = new Array(ejs_NESEP, ejs_NCIS, ejs_NPM);
-    var ejt_arr = [ejt_NESEP, ejt_NCIS, ejt_NPM];
-    localStorage.setItem('ejs_arr', ejs_arr);
-    localStorage.setItem('ejt_arr', ejt_arr);
-
-    //-- Christ's love for all --//
-    //Status
-    var cls_NSMEP = $('#cls_NSMEP').val();
-    var cls_NCIS = $('#cls_NCIS').val();
-    var cls_NPM = $('#cls_NPM').val();
-    //Target
-    var clt_NSMEP = $('#clt_NSMEP').val();
-    var clt_NCIS = $('#clt_NCIS').val();
-    var clt_NPM = $('#clt_NPM').val();
-
-    var cls_arr = new Array(cls_NSMEP, cls_NCIS, cls_NPM);
-    var clt_arr = [clt_NSMEP, clt_NCIS, clt_NPM];
-    localStorage.setItem('cls_arr', cls_arr);
-    localStorage.setItem('clt_arr', clt_arr);
-
-
-    let user_id = localStorage.getItem('selected_user_id');
-    $.ajax({
-        url: url,
-        type: "POST",
-        data: {
-            csrf_token: "{{ csrf_token() }}",
-            tag: "update1_kra1",
-            user_id: user_id,
-
-            hs_arr: localStorage.getItem('hs_arr'),
-            ht_arr: localStorage.getItem('ht_arr'),
-            es_arr: localStorage.getItem('es_arr'),
-            et_arr: localStorage.getItem('et_arr'),
-            ggs_arr: localStorage.getItem('ggs_arr'),
-            ggt_arr: localStorage.getItem('ggt_arr'),
-            ejs_arr: localStorage.getItem('ejs_arr'),
-            ejt_arr: localStorage.getItem('ejt_arr'),
-            cls_arr: localStorage.getItem('cls_arr'),
-            clt_arr: localStorage.getItem('clt_arr')
-        },
-        complete: function(response) {
-            var data = JSON.parse(response.responseText);
-            if (data['status'] == "ok") {
-                alert("successfully saved!");
-                location.reload();
-            } else {
-                alert("Unknown error occured. Please try again.")
-            }
-        }
-    })
-}
-
-function edit_kra1() {
-    $('.input_number').removeAttr('readonly');
-    $('#save_btn').show();
-    $('#edit_btn').hide();
-}
-
-get_kra1datafromuserid();
-
-function get_kra1datafromuserid() {
+function get_kra1datafromuseridsimbahayan() {
     let college_id = localStorage.getItem('selected_college_id');
     $.ajax({
         url: url,
         type: "GET",
         data: {
             csrf_token: "{{ csrf_token() }}",
-            tag: "get_kra1datafromuserid",
+            tag: "get_kra1datafromuseridsimbahayan",
             college_id: college_id
         },
         complete: function(response) {

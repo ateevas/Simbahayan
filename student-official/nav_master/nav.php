@@ -38,7 +38,7 @@ body {
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Account
                     </a>
@@ -51,8 +51,7 @@ body {
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a data-bs-toggle="modal" href="#logout_modal" class="nav-link mb-0 text-dark">Logout</a>
-
+                    <a data-bs-toggle="modal" href="#logout_modal" class="nav-link mb-0">Logout</a>
                 </li>
 
             </ul>

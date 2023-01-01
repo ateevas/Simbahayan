@@ -50,7 +50,8 @@
 			</div>
 		</div>
 		<div class="d-flex flex-row-reverse bd-highlight mt-3">
-			<button type="button" data-bs-toggle="modal" data-bs-target="#approval" id="submit_button" class="btn btn-warning disabled" disabled="disabled" readonly="true" >Approve</button>
+			<button type="button" data-bs-toggle="modal" data-bs-target="#disapprove_modal" id="disapprove_button" class="btn btn-warning" readonly="true" >Disapprove</button>	
+			<button type="button" data-bs-toggle="modal" data-bs-target="#approval" id="submit_button" class="btn btn-warning disabled mx-3" disabled="disabled" readonly="true" >Approve</button>
 		</div>
 		<!-- Modal -->
 		<div
@@ -75,13 +76,60 @@
 				</div>
 			</div>
 		</div>
+		<!-- Disapprove Modal -->
+		<div class="modal fade" id="disapprove_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Disapprove Report</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="mb-3">
+							<label>Remarks</label>
+							<textarea placeholder="Type message here." id="remarks" class="form-control"></textarea>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-danger" onclick="disapprove_report()">Disapprove</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
 <script type="text/javascript">
-	check_coordinatorsubmission();
+	check_simbahayansubmission();
+	function disapprove_report() {
+		let remarks = $('#remarks').val();
+		let college_id = localStorage.getItem("selected_college_id");
+		$.ajax({
+			url: url,
+			type: "GET",
+			data: {
+				csrf_token: "{{ csrf_token() }}",
+				tag: "disapprove_report", 
+				college_id: college_id,
+				remarks:remarks
+			},
+			complete: function (response) {
+				console.log(response.responseText);
+				var data = JSON.parse(response.responseText);
+				if(data['status'] == "updated") {
+					alert('report_disapproved!');
+					window.location.href="http://localhost/Simbahayan/simbahayan-ui/php/pending.php";
+				} else {
+					alert('unknown error occured');
+					location.reload();
+				}
+			}
+		})
+	}
 	function submit_reportsimbahayan() {
 		let my_id = localStorage.getItem("user_id");
 		let user_id = localStorage.getItem("selected_user_id");
+		let college_id = localStorage.getItem("selected_college_id");
 		$.ajax({
 			url: url,
 			type: "GET",
@@ -90,8 +138,10 @@
 				tag: "submit_reportsimbahayan", 
 				my_id: my_id,
 				user_id: user_id,
+				college_id: college_id
 			},
 			complete: function (response) {
+				console.log(response.responseText);
 				var data = JSON.parse(response.responseText);
 				if(data['status'] == "ok") {
 					alert('successfully updated!');
@@ -103,24 +153,24 @@
 			}
 		})
 	}
-	function check_coordinatorsubmission() {
-		let user_id = localStorage.getItem("selected_user_id");
+	function check_simbahayansubmission() {
+		let college_id = localStorage.getItem("selected_college_id");
 		$.ajax({
 			url: url,
 			type: "GET",
 			data: {
 				csrf_token: "{{ csrf_token() }}",
-				tag: "check_coordinatorsubmission", 
-				user_id: user_id,
+				tag: "check_simbahayansubmission", 
+				college_id: college_id,
 			},
 			complete: function (response) {
 				var data = JSON.parse(response.responseText);
 				switch (data[0]['kra1_sub']) {
-					case '2':
+					case 2:
 						$('.kra1badge').addClass("bg-success");
 						$('.kra1badge').html("Coordinator Approved");
 					break;
-					case '3':
+					case 3:
 						$('.kra1badge').addClass("bg-success");
 						$('.kra1badge').html("Simbahayan Approved");
 					break;
@@ -131,11 +181,11 @@
 				}
 
 				switch (data[0]['kra2_sub']) {
-					case '2':
+					case 2:
 						$('.kra2badge').addClass("bg-success");
 						$('.kra2badge').html("Coordinator Approved");
 					break;
-					case '3':
+					case 3:
 						$('.kra2badge').addClass("bg-success");
 						$('.kra2badge').html("Simbahayan Approved");
 					break;
@@ -146,11 +196,11 @@
 				}
 
 				switch (data[0]['kra3_sub']) {
-					case '2':
+					case 2:
 						$('.kra3badge').addClass("bg-success");
 						$('.kra3badge').html("Coordinator Approved");
 					break;
-					case '3':
+					case 3:
 						$('.kra3badge').addClass("bg-success");
 						$('.kra3badge').html("Simbahayan Approved");
 					break;
@@ -164,13 +214,6 @@
 					$('#submit_button').removeClass("disabled");
 					$('#submit_button').removeAttr("disabled");
 					$('#submit_button').removeAttr("readonly");
-				}
-				if(data[0]['kra_status'] == "3") {
-					localStorage.setItem("approve_lock", "1");
-					localStorage.setItem("edit_lock", "1");
-				} else {
-					localStorage.setItem("approve_lock", "0");
-					localStorage.setItem("edit_lock", "0");
 				}
 			}
 		})

@@ -122,18 +122,13 @@
                                                 }
                                             }                                   
                                         break;
-                                        case 2: //cd
-                                            window.location.href =
-                                                "http://localhost/Simbahayan/coordinator/php/profile.php";
-                                            break;
-                                        case 3: //staff;
-                                            window.location.href =
-                                                "http://localhost/Simbahayan/simbahayan-ui/php/profile.php";
-                                            break;
                                         case 4: //admin;
                                             window.location.href =
                                                 "http://localhost/Simbahayan/admin/php/admin.php";
-                                            break;
+                                        break;
+                                        case default: //unknown;
+                                            alert("email or password is incorrect");
+                                        break;
                                     }
 
                                     break;

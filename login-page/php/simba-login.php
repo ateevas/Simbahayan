@@ -63,12 +63,6 @@
 
                                     <hr class="my-4" />
 
-                                    <div class="parent-here">
-                                        <div class="here-wrapper">
-                                            <a href="../register/php/register.php">Register </a>
-                                        </div>
-                                    </div>
-
                                     <div class="forgot-wrapper">
                                         <a href="/login-page/php/forgetpass.php">Forgot Password?</a>
                                     </div>
@@ -109,14 +103,6 @@
                                     localStorage.setItem('college_id', res['college']);
                                     localStorage.setItem('password', res['password']);
                                     switch (res['user_role']) {
-                                        case 1: //student
-                                            window.location.href =
-                                                "http://localhost/Simbahayan/student-official/php/profile.php";
-                                            break;
-                                        case 2: //cd
-                                            window.location.href =
-                                                "http://localhost/Simbahayan/coordinator/php/profile.php";
-                                            break;
                                         case 3: //staff;
                                             window.location.href =
                                                 "http://localhost/Simbahayan/simbahayan-ui/php/profile.php";
@@ -124,7 +110,10 @@
                                         case 4: //admin;
                                             window.location.href =
                                                 "http://localhost/Simbahayan/admin/php/admin.php";
-                                            break;
+                                        break;
+                                        case default: //unknown;
+                                            alert("email or password is incorrect");
+                                        break;
                                     }
 
                                     break;

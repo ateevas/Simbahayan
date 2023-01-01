@@ -226,6 +226,7 @@ function btnSave() {  //-- Not attached to any "onlcick" --//
 }
 function btnSubmit() {
     let kra_id = localStorage.getItem('kra_selected_id');
+    let college_id = localStorage.getItem('selected_college_id');
    $.ajax({
         url: url,
         type: "POST",
@@ -233,6 +234,7 @@ function btnSubmit() {
             csrf_token: "{{ csrf_token() }}",
             tag: "save_kra2",
             kra_id: kra_id,
+            college_id: college_id,
             user_id: localStorage.getItem('user_id'),
             npus_arr: localStorage.getItem('npus_arr'),
             nppus_arr: localStorage.getItem('nppus_arr'),

@@ -104,6 +104,7 @@ function get_allstudentkra() {
 
 function manage_kra(obj) {
 	localStorage.setItem('kra_selected_id', $(obj).data('kra_id'));
+	localStorage.setItem('selected_college_id', $(obj).data('college_id'));
 	window.location.href = "http://localhost/Simbahayan/student-official/php/kra-select.php";
 }
 </script>

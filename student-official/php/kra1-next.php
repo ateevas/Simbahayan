@@ -213,6 +213,7 @@ function btnSave() {   //-- Not attached to any "onlcick" --//
 }
 function btnSubmit() {
     let kra_id = localStorage.getItem('kra_selected_id');
+    let college_id = localStorage.getItem('selected_college_id');
      $.ajax({
         url: url,
         type: "POST",
@@ -230,7 +231,8 @@ function btnSubmit() {
             sfas_arr: localStorage.getItem('sfas_arr'),
             ejas_arr: localStorage.getItem('ejas_arr'),
             hlas_arr: localStorage.getItem('hlas_arr'),
-            kra_id: kra_id
+            kra_id: kra_id,
+            college_id: college_id
         },
         complete: function(response) {
             var data = JSON.parse(response.responseText);

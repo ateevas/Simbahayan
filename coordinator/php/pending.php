@@ -34,6 +34,7 @@
           <th>Email</th>
           <th>Date</th>
           <th>Status</th>
+          <th>Remarks</th>
           <th>Manage</th>
         </tr>
       </thead>
