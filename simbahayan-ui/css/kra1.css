@@ -16,16 +16,7 @@ body {
   padding-bottom: 50px;
 }
 
-.navbar a {
-  color: black;
-  font-size: 35px;
-  font-family: "Trajan Pro", sans-serif;
-  margin-left: 20px;
-  text-decoration: none;
-}
-.navbar span {
-  color: gold;
-}
+
 
 /*navigation bar*/
 

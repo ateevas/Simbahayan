@@ -43,14 +43,16 @@
   </body>
 </html>
 <script type="text/javascript">
-  get_allsubmittedkra();
+get_allsubmittedkra();
 function get_allsubmittedkra() {
+  let college_id=localStorage.getItem('college_id');
   $.ajax({
       url: url,
       type: "GET",
       data: {
         csrf_token: "{{ csrf_token() }}",
-        tag: "get_allsubmittedkra"
+        tag: "get_allsubmittedkra",
+        college_id:college_id
       },
       complete: function (response) {
         $('#tbody_data').html(response.responseText);

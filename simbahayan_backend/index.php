@@ -89,9 +89,12 @@ switch ($tag) {
 				echo $toecho;
 			} else {
 				$toecho="<tr>
-						<td style='text-transform: capitalize;' rowspan='6'>No data available</td>
+						<td style='text-transform: capitalize;'>No data available</td>
+						<td style='text-transform: capitalize;'></td>
+						<td style='text-transform: capitalize;'></td>
+						<td style='text-transform: capitalize;'></td>
 					</tr>";
-					echo $toecho;
+				echo $toecho;
 			}
 		} else {
 			echo json_encode([
@@ -601,9 +604,9 @@ switch ($tag) {
 		}
 	break;
 	case 'get_kra1datafromuserid':
-		$query="SELECT * FROM kra1 WHERE user_id=?";
+		$query="SELECT * FROM kra1 WHERE college_id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['user_id']])) {
+		if($stmt->execute([$_GET['college_id']])) {
 			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 		} else {
 			echo json_encode([
@@ -612,7 +615,7 @@ switch ($tag) {
 		}
 	break;
 	case 'get_allsubmittedkrasimbahayan':
-		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_users.id_num, tbl_users.organization, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college";
+		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_users.id_num, tbl_users.organization, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college GROUP BY tbl_kra_submission.college_id";
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute()) {
 			if($stmt->rowCount() != 0) {
@@ -647,15 +650,10 @@ switch ($tag) {
 						break;
 					}
 					$toecho.="<tr>
-						<td style='text-transform: capitalize;'>".$datay[$i]['fname']. " " . $datay[$i]['lname']."</td>
-						<td style='text-transform: capitalize;'>".$coor_name."</td>
-						<td style='text-transform: capitalize;'>".$datay[$i]['organization']."</td>
-						<td>".$datay[$i]['college_name']."</td>
-						<td>".$datay[$i]['id_num']."</td>
-						<td>".$datay[$i]['email']."</td>
-						<td>".date('F d, Y h:i a', strtotime($datay[$i]['date_submitted']))."</td>
-						<td>".$status."</td>
-						<td><button class='btn btn-link' data-kra_id='".$datay[$i]['id']."' data-user_id='".$datay[$i]['user_id']."' onclick='goto_kra_select(this)'>View</button></td>
+						<td valign='middle' >".$datay[$i]['college_name']."</td>
+						<td valign='middle' >".date('F d, Y h:i a', strtotime($datay[$i]['date_submitted']))."</td>
+						<td valign='middle' >".$status."</td>
+						<td valign='middle' ><button class='btn btn-link' data-kra_id='".$datay[$i]['id']."' data-college_id='".$datay[$i]['college_id']."' data-user_id='".$datay[$i]['user_id']."' onclick='goto_kra_select(this)'>View</button></td>
 					</tr>";
 				}
 				echo $toecho;
@@ -868,9 +866,9 @@ switch ($tag) {
 		}
 	break;
 	case 'get_allsubmittedkra':
-		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_users.id_num, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college";
+		$query="SELECT tbl_kra_submission.*, tbl_colleges.college_name, tbl_users.id_num, tbl_users.fname, tbl_users.lname, tbl_users.email FROM tbl_kra_submission INNER JOIN tbl_users ON tbl_users.id=tbl_kra_submission.user_id INNER JOIN tbl_colleges ON tbl_colleges.id=tbl_users.college WHERE tbl_kra_submission.college_id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute()) {
+		if($stmt->execute([$_GET['college_id']])) {
 			if($stmt->rowCount() != 0) {
 				$datax=json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 				$datay=json_decode($datax, true);
@@ -892,13 +890,13 @@ switch ($tag) {
 						break;
 					}
 					$toecho.="<tr>
-						<td style='text-transform: capitalize;'>".$datay[$i]['fname']. " " . $datay[$i]['lname']."</td>
-						<td>".$datay[$i]['college_name']."</td>
-						<td>".$datay[$i]['id_num']."</td>
-						<td>".$datay[$i]['email']."</td>
-						<td>".date('F d, Y h:i a', strtotime($datay[$i]['date_submitted']))."</td>
-						<td>".$status."</td>
-						<td><button class='btn btn-link' data-kra_id='".$datay[$i]['id']."' data-user_id='".$datay[$i]['user_id']."' onclick='goto_kra_select(this)'>View</button></td>
+						<td valign='middle' style='text-transform: capitalize;'>".$datay[$i]['fname']. " " . $datay[$i]['lname']."</td>
+						<td valign='middle'>".$datay[$i]['college_name']."</td>
+						<td valign='middle'>".$datay[$i]['id_num']."</td>
+						<td valign='middle'>".$datay[$i]['email']."</td>
+						<td valign='middle'>".date('F d, Y h:i a', strtotime($datay[$i]['date_submitted']))."</td>
+						<td valign='middle'>".$status."</td>
+						<td valign='middle'><button class='btn btn-link' data-kra_id='".$datay[$i]['id']."' data-user_id='".$datay[$i]['user_id']."' onclick='goto_kra_select(this)'>View</button></td>
 					</tr>";
 				}
 				echo $toecho;

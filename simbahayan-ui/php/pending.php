@@ -26,15 +26,10 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th>Name</th>
-					<th>Approved by</th>
-          <th>Organization</th>
 					<th>College</th>
-					<th>ID number</th>
-					<th>Email</th>
 					<th>Date</th>
 					<th>Status</th>
-					<th>Manage</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody id="tbody_data">
@@ -58,7 +53,9 @@ function get_allsubmittedkrasimbahayan() {
 	 })
 }
 function goto_kra_select(obj){
-	 localStorage.setItem('selected_user_id', $(obj).data('user_id'));
-	 window.location.href="http://localhost/Simbahayan/simbahayan-ui/php/kra-select.php";
+	localStorage.setItem('selected_user_id', $(obj).data('user_id'));
+	localStorage.setItem('selected_kra_id', $(obj).data('kra_id'));
+	localStorage.setItem('selected_college_id', $(obj).data('college_id'));
+	window.location.href="http://localhost/Simbahayan/simbahayan-ui/php/kra-select.php";
 }
 </script>

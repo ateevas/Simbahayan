@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="http://localhost/Simbahayan/student-official/css/nav.css" />
 <style type="text/css">
     body{
         overflow-x: hidden !important;
@@ -57,14 +56,11 @@
                             <a class="dropdown-item" aria-current="page"
                                 href="http://localhost/Simbahayan/simbahayan-ui/php/contact.php">Contact</a>
                         </li>
-
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a data-bs-toggle="modal" href="#logout_modal" class="nav-link mb-0 text-dark">Logout</a>
-
+                    <a data-bs-toggle="modal" href="#logout_modal" class="nav-link">Logout</a>
                 </li>
-
             </ul>
         </div>
     </div>

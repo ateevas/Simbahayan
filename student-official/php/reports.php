@@ -79,9 +79,8 @@ function add_kra(){
 			college_id: college_id
 		},
 		complete: function(response) {
-			console.log(response.responseText);
-			// $('#tbody_data').html(response.responseText);
-			// $('#tbl_student').dataTable();
+			$('#tbody_data').html(response.responseText);
+			$('#tbl_student').dataTable();
 		}
 	})
 }

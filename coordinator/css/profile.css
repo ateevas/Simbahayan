@@ -5,16 +5,7 @@
   text-decoration: none;
 }
 
-.navbar a {
-  color: black;
-  font-size: 35px;
-  font-family: "Trajan Pro", sans-serif;
-  margin-left: 20px;
-  text-decoration: none;
-}
-.navbar span {
-  color: gold;
-}
+
 
 .welcome-container {
   margin-left: 20px;

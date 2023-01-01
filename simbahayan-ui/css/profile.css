@@ -8,24 +8,6 @@
   list-style: none;
   text-decoration: none;
 }
-<<<<<<< HEAD
-=======
-.background {
-  height: auto;
-  background-color: white;
-}
-.navbar a {
-  color: black;
-  font-size: 35px;
-  font-family: "Trajan Pro", sans-serif;
-  margin-left: 20px;
-  text-decoration: none;
-}
-.navbar span {
-  color: gold;
-}
->>>>>>> 5953f998f197fc1205dd990b8cc2d0e45fae9654
-
 .welcome-container {
   margin-left: 20px;
 }

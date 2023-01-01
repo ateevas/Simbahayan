@@ -349,43 +349,75 @@ function edit_kra1() {
 get_kra1datafromuserid();
 
 function get_kra1datafromuserid() {
-    let user_id = localStorage.getItem('selected_user_id');
+    let college_id = localStorage.getItem('selected_college_id');
+    
     $.ajax({
         url: url,
         type: "GET",
         data: {
             csrf_token: "{{ csrf_token() }}",
             tag: "get_kra1datafromuserid",
-            user_id: user_id
+            college_id: college_id
         },
         complete: function(response) {
             console.log(response.responseText); 
             var data = JSON.parse(response.responseText);
-
-            var hs_arr = data[0].hs_arr.split(",");
-            $('#hs_NHWDP').val(hs_arr[0]);
-            $('#hs_NCIS').val(hs_arr[1]);
-            $('#hs_NPM').val(hs_arr[2]);
-            let ht_arr = data[0].ht_arr;
-            if(ht_arr != "") {
-                let ht_arr = data[0].ht_arr.split(",");
-                $('#ht_NHWDP').val(ht_arr[0]);
-                $('#ht_NCIS').val(ht_arr[1]);
-                $('#ht_NPM').val(ht_arr[2]);
+            //HS
+            let hs1_totalarr=[];
+            for(var key in data) {
+                var hs_arr = data[key].hs_arr.split(",").map(Number);
+                let hs_counter=[];
+                for (let index = 0; index < hs_arr.length; index++) {
+                    hs_counter.push(hs_arr[index]);
+                }
+                hs1_totalarr.push(hs_counter);
             }
-           
-
-            var es_arr = data[0].es_arr.split(",");
-            $('#es_NEIEP').val(es_arr[0]);
-            $('#es_NCIS').val(es_arr[1]);
-            $('#es_NPM').val(es_arr[2]);
-            let et_arr = data[0].et_arr;
-            if(et_arr != "") {
-                let et_arr = data[0].et_arr.split(",");
-                $('#et_NEIEP').val(et_arr[0]);
-                $('#et_NCIS').val(et_arr[1]);
-                $('#et_NPM').val(et_arr[2]);
+            let hs1_final_arr = hs1_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#hs_NHWDP').val(hs1_final_arr[0]);
+            $('#hs_NCIS').val(hs1_final_arr[1]);
+            $('#hs_NPM').val(hs1_final_arr[2]);
+            //HT
+            let ht1_totalarr=[];
+            for(var key in data) {
+                var ht_arr = data[key].ht_arr.split(",").map(Number);
+                let ht_counter=[];
+                for (let index = 0; index < ht_arr.length; index++) {
+                    ht_counter.push(ht_arr[index]);
+                }
+                ht1_totalarr.push(ht_counter);
             }
+            let ht1_final_arr = ht1_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ht_NHWDP').val(ht1_final_arr[0]);
+            $('#ht_NCIS').val(ht1_final_arr[1]);
+            $('#ht_NPM').val(ht1_final_arr[2]);
+            //ES
+            let es1_totalarr=[];
+            for(var key in data) {
+                var es_arr = data[key].es_arr.split(",").map(Number);
+                let es_counter=[];
+                for (let index = 0; index < es_arr.length; index++) {
+                    es_counter.push(es_arr[index]);
+                }
+                es1_totalarr.push(es_counter);
+            }
+            let es1_final_arr = es1_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#es_NEIEP').val(es1_final_arr[0]);
+            $('#es_NCIS').val(es1_final_arr[1]);
+            $('#es_NPM').val(es1_final_arr[2]);
+            //ET
+            let et1_totalarr=[];
+            for(var key in data) {
+                var et_arr = data[key].et_arr.split(",").map(Number);
+                let et_counter=[];
+                for (let index = 0; index < et_arr.length; index++) {
+                    et_counter.push(et_arr[index]);
+                }
+                et1_totalarr.push(et_counter);
+            }
+            let et1_final_arr = et1_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#et_NEIEP').val(et1_final_arr[0]);
+            $('#et_NCIS').val(et1_final_arr[1]);
+            $('#et_NPM').val(et1_final_arr[2]);
 
             var ggs_arr = data[0].ggs_arr.split(",");
             $('#ggs_NLODGGP').val(ggs_arr[0]);
@@ -421,6 +453,7 @@ function get_kra1datafromuserid() {
                 $('#clt_NSMEP').val(clt_arr[0]);
                 $('#clt_NCIS').val(clt_arr[1]);
                 $('#clt_NPM').val(clt_arr[2]);
+            }
         }
     })
 }
