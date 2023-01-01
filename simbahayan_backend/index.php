@@ -205,7 +205,7 @@ switch ($tag) {
 					$verification_status="";
 					switch ($datay[$i]['verification_status']) {
 						case '0':
-							$verification_status="<span class='badge bg-warning'>Unverified</span>";
+							$verification_status="<span class='badge bg-danger'>Unverified</span>";
 							$verify_value="1";
 							$verify_label="Verify";
 						break;
@@ -220,7 +220,7 @@ switch ($tag) {
 					}
 					switch ($datay[$i]['user_status']) {
 						case '0':
-							$user_status="<span class='badge bg-warning'>Inactive</span>";
+							$user_status="<span class='badge bg-danger'>Inactive</span>";
 							$user_value="1";
 							$user_label="Active";
 						break;
@@ -382,7 +382,7 @@ switch ($tag) {
 					$verification_status="";
 					switch ($datay[$i]['verification_status']) {
 						case '0':
-							$verification_status="<span class='badge bg-warning'>Unverified</span>";
+							$verification_status="<span class='badge bg-danger'>Unverified</span>";
 							$verify_value="1";
 							$verify_label="Verify";
 						break;
@@ -397,7 +397,7 @@ switch ($tag) {
 					}
 					switch ($datay[$i]['user_status']) {
 						case '0':
-							$user_status="<span class='badge bg-warning'>Inactive</span>";
+							$user_status="<span class='badge bg-danger'>Inactive</span>";
 							$user_value="1";
 							$user_label="Active";
 						break;
@@ -850,7 +850,11 @@ switch ($tag) {
 			ejas_arr=?,
 			ejat_arr=?,
 			hlas_arr=?,
-			hlat_arr=? WHERE user_id=? AND kra_sub_id=?";
+			hlat_arr=?,
+			cofs_arr=?,
+			coft_arr=?
+			
+			WHERE user_id=? AND kra_sub_id=?";
 
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute([
@@ -862,6 +866,8 @@ switch ($tag) {
 			$_POST['ejat_arr'],
 			$_POST['hlas_arr'],
 			$_POST['hlat_arr'],
+			$_POST['cofs_arr'],
+			$_POST['coft_arr'],
 			$_POST['user_id'],
 			$_POST['kra_id']
 		])) {
@@ -1073,7 +1079,8 @@ switch ($tag) {
 			ceras_arr=?,
 			sfas_arr=?,
 			ejas_arr=?,
-			hlas_arr=?";
+			hlas_arr=?,
+			cofs_arr=?";
 
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute([
@@ -1090,7 +1097,8 @@ switch ($tag) {
 			$_POST['ceras_arr'],
 			$_POST['sfas_arr'],
 			$_POST['ejas_arr'],
-			$_POST['hlas_arr']
+			$_POST['hlas_arr'],
+			$_POST['cofs_arr']
 		])) {
 			echo json_encode([
 				"status" => "ok",

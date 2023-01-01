@@ -111,7 +111,7 @@
                                             window.location.href =
                                                 "http://localhost/Simbahayan/admin/php/admin.php";
                                         break;
-                                        case default: //unknown;
+                                        default: //unknown;
                                             alert("email or password is incorrect");
                                         break;
                                     }

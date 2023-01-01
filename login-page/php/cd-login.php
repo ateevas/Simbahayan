@@ -111,15 +111,47 @@
                                     localStorage.setItem('college_id', res['college']);
                                     localStorage.setItem('password', res['password']);
                                     switch (res['user_role']) {
-                                        case 2: //cd
-                                            window.location.href =
-                                                "http://localhost/Simbahayan/coordinator/php/profile.php";
+                                        case 2: //cd   
+                                            if(res['user_verification'] == "0") {
+                                                swal({
+                                                    title: "Oh snap...",
+                                                    text: "The account is not verified yet. Please contact the Simbahayan to verify your account.",
+                                                    type: "error",
+                                                    showCancelButton: false,
+                                                    confirmButtonColor: "#d9534f",
+                                                    confirmButtonText: "Ok",
+                                                    closeOnConfirm: false,
+                                                    html: false
+                                                    }, function(){
+                                                        location.reload();
+                                                    }
+                                                );
+                                            } else {
+                                                if(res['user_status'] == "0") {
+                                                    swal({
+                                                            title: "Oh snap...",
+                                                            text: "The account has set to inactive state. Please contact the Simbahayan to update your account.",
+                                                            type: "error",
+                                                            showCancelButton: false,
+                                                            confirmButtonColor: "#d9534f",
+                                                            confirmButtonText: "Ok",
+                                                            closeOnConfirm: false,
+                                                            html: false
+                                                        }, function(){
+                                                            location.reload();
+                                                        }
+                                                    );
+                                                } else {
+                                                    window.location.href =
+                                                    "http://localhost/Simbahayan/coordinator/php/profile.php";
+                                                }
+                                            }   
                                         break;
                                         case 4: //admin;
                                             window.location.href =
                                                 "http://localhost/Simbahayan/admin/php/admin.php";
                                         break;
-                                        case default: //unknown;
+                                        default: //unknown;
                                             alert("email or password is incorrect");
                                         break;
                                     }

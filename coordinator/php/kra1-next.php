@@ -165,8 +165,6 @@
                 <th scope="col"></th>
                 <th scope="col"> Community Organization Formed</th>
                 <th scope="col"></th>
-
-
             </tr>
         </thead>
         <tbody>
@@ -174,27 +172,25 @@
                 <th scope="row"></th>
                 <td>No. of Community Organization Formed
                 </td>
-                <td><input readonly id="hlas_NFHP" type="number" value="0"></td>
-                <td><input readonly id="hlat_NFHP" type="number" value="0"></td>
+                <td><input readonly id="cofs_cof" type="number" value="0"></td>
+                <td><input readonly id="coft_cof" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>No. of Communities/ Institutions Served under each Community Organization Formed
                 </td>
-                <td><input readonly id="hlas_NCIS" type="number" value="0"></td>
-                <td><input readonly id="hlat_NCIS" type="number" value="0"></td>
+                <td><input readonly id="cofs_nciscof" type="number" value="0"></td>
+                <td><input readonly id="coft_nciscof" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>
                     No. of Participants/ Members under each Community Organization Formed</td>
-                <td><input readonly id="hlas_NPM" type="number" value="0"></td>
-                <td><input readonly id="hlat_NPM" type="number" value="0"></td>
-
+                <td><input readonly id="cofs_npmcof" type="number" value="0"></td>
+                <td><input readonly id="coft_npmcof" type="number" value="0"></td>
             </tr>
-
         </tbody>
     </table>
 
@@ -307,6 +303,22 @@ function btnSave() {
     localStorage.setItem('hlas_arr', hlas_arr);
     localStorage.setItem('hlat_arr', hlat_arr);
 
+
+    //-- Organization Formed --//
+    //Status 
+    var cofs_cof = $('#cofs_cof').val();
+    var cofs_nciscof = $('#cofs_nciscof').val();
+    var cofs_npmcof = $('#cofs_npmcof').val();
+    //Target 
+    var coft_cof = $('#coft_cof').val();
+    var coft_nciscof = $('#coft_nciscof').val();
+    var coft_npmcof = $('#coft_npmcof').val();
+    //array
+    var cofs_arr = [cofs_cof,cofs_nciscof,cofs_npmcof];
+    var coft_arr = [coft_cof,coft_nciscof,coft_npmcof];
+    localStorage.setItem('cofs_arr', cofs_arr);
+    localStorage.setItem('coft_arr', coft_arr);
+
     let user_id = localStorage.getItem('selected_user_id');
     let kra_id = localStorage.getItem('selected_kra_id');
     $.ajax({
@@ -324,8 +336,9 @@ function btnSave() {
             ejas_arr: localStorage.getItem('ejas_arr'),
             ejat_arr: localStorage.getItem('ejat_arr'),
             hlas_arr: localStorage.getItem('hlas_arr'),
-            hlat_arr: localStorage.getItem('hlat_arr')
-
+            hlat_arr: localStorage.getItem('hlat_arr'),
+            cofs_arr: localStorage.getItem('cofs_arr'),
+            coft_arr: localStorage.getItem('coft_arr')
         },
         complete: function(response) {
             var data = JSON.parse(response.responseText);
@@ -437,6 +450,19 @@ function get_kra1datafromuserid() {
                 $('#hlat_NFHP').val(hlat_arr[0]);
                 $('#hlat_NCIS').val(hlat_arr[1]);
                 $('#hlat_NPM').val(hlat_arr[2]);
+            }
+
+
+            var cofs_arr = data[0].cofs_arr.split(",");
+            $('#cofs_cof').val(cofs_arr[0]);
+            $('#cofs_nciscof').val(cofs_arr[1]);
+            $('#cofs_npmcof').val(cofs_arr[2]);
+            let coft_arr = data[0].coft_arr;
+            if (coft_arr != "") {
+                let coft_arr = data[0].coft_arr.split(",");
+                $('#coft_cof').val(coft_arr[0]);
+                $('#coft_nciscof').val(coft_arr[1]);
+                $('#coft_npmcof').val(coft_arr[2]);
             }
         }
     })

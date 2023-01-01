@@ -149,6 +149,28 @@
             </tr>
 
         </tbody>
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col"> Community Organization Formed</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>No. of Communities/ Institutions Served under each Community Organization Formed
+                </td>
+                <td><input readonly id="cofs_nciscof" type="number" value="0"></td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>
+                    No. of Participants/ Members under each Community Organization Formed</td>
+                <td><input readonly id="cofs_npmcof" type="number" value="0"></td>
+            </tr>
+
+        </tbody>
     </table>
 
     <div class="button-container">
@@ -210,6 +232,13 @@ function btnSave() {   //-- Not attached to any "onlcick" --//
     //array
     var hlas_arr = [hlas_NFHP, hlas_NCIS, hlas_NPM];
     localStorage.setItem('hlas_arr', hlas_arr);
+
+    //-- Organization Formed --//
+    var cofs_nciscof = $('#cofs_nciscof').val();
+    var cofs_npmcof = $('#cofs_npmcof').val();
+    //array
+    var cofs_arr = [cofs_nciscof, cofs_npmcof];
+    localStorage.setItem('cofs_arr', cofs_arr);
 }
 function btnSubmit() {
     let kra_id = localStorage.getItem('kra_selected_id');
@@ -231,6 +260,7 @@ function btnSubmit() {
             sfas_arr: localStorage.getItem('sfas_arr'),
             ejas_arr: localStorage.getItem('ejas_arr'),
             hlas_arr: localStorage.getItem('hlas_arr'),
+            cofs_arr: localStorage.getItem('cofs_arr'),
             kra_id: kra_id,
             college_id: college_id
         },

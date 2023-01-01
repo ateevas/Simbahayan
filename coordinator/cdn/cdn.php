@@ -24,4 +24,4 @@ var url = "http://localhost/Simbahayan/simbahayan_backend/index.php"
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
-<link rel="stylesheet" href="http://localhost/Simbahayan/coordinator/css/nav.css" />
+<link rel="stylesheet" href="http://localhost/Simbahayan/student-official/css/nav.css" />
