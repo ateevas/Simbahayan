@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body style="background-image: url('http://localhost/Simbahayan/login-page/pictures/30.png'); background-size: cover;">
     <div class="background-image">
 
         <?php 
@@ -32,10 +32,7 @@
                 </div>
             </div>
 
-
-            <section class="background vh-100" id="background"
-                style="background-image: url('http://localhost/Simbahayan/login-page/pictures/30.png'); background-size: cover;">
-                <div class="container py-5 h-100">
+                <div class="container mt-5 py-5 h-100">
                     <div class="row d-flex justify-content-center align-items-center mt-3 h-100">
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                             <div class="card shadow-2-strong" style="border-radius: 1rem">
@@ -79,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
