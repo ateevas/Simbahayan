@@ -606,9 +606,9 @@ switch ($tag) {
 		}
 	break;
 	case 'get_kra2datafromuserid':
-		$query="SELECT * FROM kra2 WHERE user_id=?";
+		$query="SELECT * FROM kra2 WHERE college_id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['user_id']])) {
+		if($stmt->execute([$_GET['college_id']])) {
 			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 		} else {
 			echo json_encode([
@@ -617,9 +617,9 @@ switch ($tag) {
 		}
 	break;
 	case 'get_kra3datafromuserid':
-		$query="SELECT * FROM kra3 WHERE user_id=?";
+		$query="SELECT * FROM kra3 WHERE college_id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['user_id']])) {
+		if($stmt->execute([$_GET['college_id']])) {
 			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 		} else {
 			echo json_encode([
