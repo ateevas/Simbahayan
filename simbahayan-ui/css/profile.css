@@ -8,6 +8,23 @@
   list-style: none;
   text-decoration: none;
 }
+<<<<<<< HEAD
+=======
+.background {
+  height: auto;
+  background-color: white;
+}
+.navbar a {
+  color: black;
+  font-size: 35px;
+  font-family: "Trajan Pro", sans-serif;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.navbar span {
+  color: gold;
+}
+>>>>>>> 5953f998f197fc1205dd990b8cc2d0e45fae9654
 
 .welcome-container {
   margin-left: 20px;
@@ -29,15 +46,30 @@
 .welcome-context p {
   font-size: 25px;
 }
-.carousel-item img {
-  width: auto;
-  height: 500px;
-  max-height: 500px;
+.contents {
+  display: flex;
+  flex-direction: row-reverse;
 }
-.navigation-container {
+#img {
+  height: 300px;
+  width: 600px;
+  border: 5px black;
+}
+.bar {
+  margin-top: 80px;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+}
+.bar-context {
+  color: black;
+  font-family: "Trajan Pro", sans-serif;
   display: flex;
   justify-content: center;
 }
-.navigation {
-  width: 50%;
+.carousel-inner {
+  height: 600px;
+}
+.carousel-item img {
+  height: 1000px;
 }
