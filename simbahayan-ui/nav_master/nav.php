@@ -90,6 +90,6 @@ body {
 <script type="text/javascript">
 function clear_all() {
     localStorage.clear();
-    window.location.href = "http://localhost/Simbahayan/login-page/php/login.php";
+    window.location.href = "http://localhost/Simbahayan/login-page/php/simba-login.php";
 }
 </script>

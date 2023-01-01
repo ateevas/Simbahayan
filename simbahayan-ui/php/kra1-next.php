@@ -143,14 +143,11 @@
             </tr>
         </tbody>
 
-
         <thead>
             <tr>
                 <th scope="col"></th>
                 <th scope="col"> Community Organization Formed</th>
                 <th scope="col"></th>
-
-
             </tr>
         </thead>
         <tbody>
@@ -158,27 +155,25 @@
                 <th scope="row"></th>
                 <td>No. of Community Organization Formed
                 </td>
-                <td><input readonly id="hlas_NFHP" type="number" value="0"></td>
-                <td><input readonly id="hlat_NFHP" type="number" value="0"></td>
+                <td><input readonly id="cofs_cof" type="number" value="0"></td>
+                <td><input readonly id="coft_cof" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>No. of Communities/ Institutions Served under each Community Organization Formed
                 </td>
-                <td><input readonly id="hlas_NCIS" type="number" value="0"></td>
-                <td><input readonly id="hlat_NCIS" type="number" value="0"></td>
+                <td><input readonly id="cofs_nciscof" type="number" value="0"></td>
+                <td><input readonly id="coft_nciscof" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>
                     No. of Participants/ Members under each Community Organization Formed</td>
-                <td><input readonly id="hlas_NPM" type="number" value="0"></td>
-                <td><input readonly id="hlat_NPM" type="number" value="0"></td>
-
+                <td><input readonly id="cofs_npmcof" type="number" value="0"></td>
+                <td><input readonly id="coft_npmcof" type="number" value="0"></td>
             </tr>
-
         </tbody>
     </table>
     <div class="d-flex flex-row-reverse bd-highlight w-50 mx-auto">
@@ -372,6 +367,38 @@ function get_kra1datafromuseridsimbahayan() {
             $('#hlat_NFHP').val(hlat_final_arr[0]);
             $('#hlat_NCIS').val(hlat_final_arr[1]);
             $('#hlat_NPM').val(hlat_final_arr[2]);
+            console.log(hlat_final_arr);
+
+
+            let cofs_totalarr = [];
+            for (var key in data) {
+                var cofs_arr = data[key].cofs_arr.split(",").map(Number);
+                let cofs_counter = [];
+                for (let index = 0; index < cofs_arr.length; index++) {
+                    cofs_counter.push(cofs_arr[index]);
+                }
+                cofs_totalarr.push(cofs_counter);
+            }
+            let cofs_final_arr = cofs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#cofs_cof').val(cofs_final_arr[0]);
+            $('#cofs_nciscof').val(cofs_final_arr[1]);
+            $('#cofs_npmcof').val(cofs_final_arr[2]);
+            console.log(hlat_final_arr);
+
+
+            let coft_totalarr = [];
+            for (var key in data) {
+                var coft_arr = data[key].coft_arr.split(",").map(Number);
+                let coft_counter = [];
+                for (let index = 0; index < coft_arr.length; index++) {
+                    coft_counter.push(coft_arr[index]);
+                }
+                coft_totalarr.push(coft_counter);
+            }
+            let coft_final_arr = coft_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#coft_cof').val(coft_final_arr[0]);
+            $('#coft_nciscof').val(coft_final_arr[1]);
+            $('#coft_npmcof').val(coft_final_arr[2]);
             console.log(hlat_final_arr);
 
         }

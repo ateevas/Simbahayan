@@ -20,24 +20,15 @@
                     <p class="navbar-specialtext1 mb-0" id="ust">University of Santo Tomas</p>
                     <p class="navbar-specialtext2 mb-0 h1" id="simbahayan">Simbahayan</p>
                     <p class="navbar-specialtext1 mb-0" id="comdev">Community Development Office</p>
-
                 </div>
-
-
             </div>
-
-
-            <div class="logo">
-
+            <div class="logo ms-auto">
                 <a class=" navbar-brand" href="#">
                     <img src="http://localhost/Simbahayan/login-page/pictures/white.png" alt="" width="120" height="70"
                         class="d-inline-block">
                 </a>
-
-
             </div>
         </div>
-
     </div>
 
     </div>
