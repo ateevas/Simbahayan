@@ -142,27 +142,65 @@
                 <td><input id="hlat_NPM" type="number" value="0"></td>
             </tr>
         </tbody>
+
+
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col"> Community Organization Formed</th>
+                <th scope="col"></th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>No. of Community Organization Formed
+                </td>
+                <td><input readonly id="hlas_NFHP" type="number" value="0"></td>
+                <td><input readonly id="hlat_NFHP" type="number" value="0"></td>
+
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>No. of Communities/ Institutions Served under each Community Organization Formed
+                </td>
+                <td><input readonly id="hlas_NCIS" type="number" value="0"></td>
+                <td><input readonly id="hlat_NCIS" type="number" value="0"></td>
+
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>
+                    No. of Participants/ Members under each Community Organization Formed</td>
+                <td><input readonly id="hlas_NPM" type="number" value="0"></td>
+                <td><input readonly id="hlat_NPM" type="number" value="0"></td>
+
+            </tr>
+
+        </tbody>
     </table>
-        <div class="d-flex flex-row-reverse bd-highlight w-50 mx-auto">
-            <button type="button" data-bs-target="#approval" data-bs-toggle="modal" class="btn btn-warning">Save</button>
-            <a class="btn btn-dark mx-3" href="kra1.php" role="button">Prev</a>
-        </div>
-        <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">Are you sure you want to submit report?</div>
-                    <div class="modal-footer d-flex justify-content-between">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                        <button onclick="approve_kra1simbahayan()" type="button" class="btn btn-warning">Yes</button>
-                    </div>
+    <div class="d-flex flex-row-reverse bd-highlight w-50 mx-auto">
+        <button type="button" data-bs-target="#approval" data-bs-toggle="modal" class="btn btn-warning">Save</button>
+        <a class="btn btn-dark mx-3" href="kra1.php" role="button">Prev</a>
+    </div>
+    <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">Are you sure you want to submit report?</div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button onclick="approve_kra1simbahayan()" type="button" class="btn btn-warning">Yes</button>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 
@@ -208,10 +246,10 @@ function get_kra1datafromuseridsimbahayan() {
         complete: function(response) {
             var data = JSON.parse(response.responseText);
             console.log(data);
-            let ceras_totalarr=[];
-            for(var key in data) {
+            let ceras_totalarr = [];
+            for (var key in data) {
                 var ceras_arr = data[key].ceras_arr.split(",").map(Number);
-                let ceras_counter=[];
+                let ceras_counter = [];
                 for (let index = 0; index < ceras_arr.length; index++) {
                     ceras_counter.push(ceras_arr[index]);
                 }
@@ -224,10 +262,10 @@ function get_kra1datafromuseridsimbahayan() {
             console.log(ceras_final_arr);
 
 
-            let cerat_totalarr=[];
-            for(var key in data) {
+            let cerat_totalarr = [];
+            for (var key in data) {
                 var cerat_arr = data[key].cerat_arr.split(",").map(Number);
-                let cerat_counter=[];
+                let cerat_counter = [];
                 for (let index = 0; index < cerat_arr.length; index++) {
                     cerat_counter.push(cerat_arr[index]);
                 }
@@ -241,10 +279,10 @@ function get_kra1datafromuseridsimbahayan() {
 
 
 
-            let sfas_totalarr=[];
-            for(var key in data) {
+            let sfas_totalarr = [];
+            for (var key in data) {
                 var sfas_arr = data[key].sfas_arr.split(",").map(Number);
-                let sfas_counter=[];
+                let sfas_counter = [];
                 for (let index = 0; index < sfas_arr.length; index++) {
                     sfas_counter.push(sfas_arr[index]);
                 }
@@ -257,10 +295,10 @@ function get_kra1datafromuseridsimbahayan() {
             console.log(sfas_final_arr);
 
 
-            let sfat_totalarr=[];
-            for(var key in data) {
+            let sfat_totalarr = [];
+            for (var key in data) {
                 var sfat_arr = data[key].sfat_arr.split(",").map(Number);
-                let sfat_counter=[];
+                let sfat_counter = [];
                 for (let index = 0; index < sfat_arr.length; index++) {
                     sfat_counter.push(sfat_arr[index]);
                 }
@@ -273,10 +311,10 @@ function get_kra1datafromuseridsimbahayan() {
             console.log(sfat_final_arr);
 
 
-            let ejas_totalarr=[];
-            for(var key in data) {
+            let ejas_totalarr = [];
+            for (var key in data) {
                 var ejas_arr = data[key].ejas_arr.split(",").map(Number);
-                let ejas_counter=[];
+                let ejas_counter = [];
                 for (let index = 0; index < ejas_arr.length; index++) {
                     ejas_counter.push(ejas_arr[index]);
                 }
@@ -289,10 +327,10 @@ function get_kra1datafromuseridsimbahayan() {
             console.log(ejas_final_arr);
 
 
-            let ejat_totalarr=[];
-            for(var key in data) {
+            let ejat_totalarr = [];
+            for (var key in data) {
                 var ejat_arr = data[key].ejat_arr.split(",").map(Number);
-                let ejat_counter=[];
+                let ejat_counter = [];
                 for (let index = 0; index < ejat_arr.length; index++) {
                     ejat_counter.push(ejat_arr[index]);
                 }
@@ -305,10 +343,10 @@ function get_kra1datafromuseridsimbahayan() {
             console.log(ejat_final_arr);
 
 
-            let hlas_totalarr=[];
-            for(var key in data) {
+            let hlas_totalarr = [];
+            for (var key in data) {
                 var hlas_arr = data[key].hlas_arr.split(",").map(Number);
-                let hlas_counter=[];
+                let hlas_counter = [];
                 for (let index = 0; index < hlas_arr.length; index++) {
                     hlas_counter.push(hlas_arr[index]);
                 }
@@ -321,10 +359,10 @@ function get_kra1datafromuseridsimbahayan() {
             console.log(hlas_final_arr);
 
 
-            let hlat_totalarr=[];
-            for(var key in data) {
+            let hlat_totalarr = [];
+            for (var key in data) {
                 var hlat_arr = data[key].hlat_arr.split(",").map(Number);
-                let hlat_counter=[];
+                let hlat_counter = [];
                 for (let index = 0; index < hlat_arr.length; index++) {
                     hlat_counter.push(hlat_arr[index]);
                 }

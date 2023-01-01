@@ -158,12 +158,51 @@
             </tr>
 
         </tbody>
+
+
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col"> Community Organization Formed</th>
+                <th scope="col"></th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>No. of Community Organization Formed
+                </td>
+                <td><input readonly id="hlas_NFHP" type="number" value="0"></td>
+                <td><input readonly id="hlat_NFHP" type="number" value="0"></td>
+
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>No. of Communities/ Institutions Served under each Community Organization Formed
+                </td>
+                <td><input readonly id="hlas_NCIS" type="number" value="0"></td>
+                <td><input readonly id="hlat_NCIS" type="number" value="0"></td>
+
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>
+                    No. of Participants/ Members under each Community Organization Formed</td>
+                <td><input readonly id="hlas_NPM" type="number" value="0"></td>
+                <td><input readonly id="hlat_NPM" type="number" value="0"></td>
+
+            </tr>
+
+        </tbody>
     </table>
 
     <div class="button-container">
         <div class="button-wrapper">
             <a class="btn btn-warning" id="edit_btn" onclick="edit_kra1()" href="#" role="button">Edit</a>
-            <button style="display: none" id="save_btn" type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
+            <button style="display: none" id="save_btn" type="button" onclick="btnSave()"
+                class="btn btn-warning">Save</button>
             <a class="btn btn-dark" href="#approval" data-bs-toggle="modal" role="button">Next</a>
 
             <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -177,7 +216,8 @@
                         <div class="modal-body">Are you sure you want to submit report?</div>
                         <div class="modal-footer d-flex justify-content-between">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                            <button onclick="approve_kra1coordinator()" type="button" class="btn btn-warning">Yes</button>
+                            <button onclick="approve_kra1coordinator()" type="button"
+                                class="btn btn-warning">Yes</button>
                         </div>
                     </div>
                 </div>
@@ -354,45 +394,45 @@ function get_kra1datafromuserid() {
             $('#ceras_NCIS').val(ceras_arr[1]);
             $('#ceras_NPM').val(ceras_arr[2]);
             let cerat_arr = data[0].cerat_arr;
-            if(cerat_arr != "") {
+            if (cerat_arr != "") {
                 let cerat_arr = data[0].cerat_arr.split(",");
                 $('#cerat_NCHP').val(cerat_arr[0]);
                 $('#cerat_NCIS').val(cerat_arr[1]);
                 $('#cerat_NPM').val(cerat_arr[2]);
             }
-           
+
 
             var sfas_arr = data[0].sfas_arr.split(",");
             $('#sfas_NSDP').val(sfas_arr[0]);
             $('#sfas_NCIS').val(sfas_arr[1]);
             $('#sfas_NPM').val(sfas_arr[2]);
             let sfat_arr = data[0].sfat_arr;
-            if(sfat_arr != "") {
+            if (sfat_arr != "") {
                 let sfat_arr = data[0].sfat_arr.split(",");
                 $('#sfat_NSDP').val(sfat_arr[0]);
                 $('#sfat_NCIS').val(sfat_arr[1]);
                 $('#sfat_NPM').val(sfat_arr[2]);
             }
-            
+
 
             var ejas_arr = data[0].ejas_arr.split(",");
             $('#ejas_NESAP').val(ejas_arr[0]);
             $('#ejas_NCIS').val(ejas_arr[1]);
             $('#ejas_NPM').val(ejas_arr[2]);
             let ejat_arr = data[0].ejat_arr;
-            if(ejat_arr != "") {
+            if (ejat_arr != "") {
                 let ejat_arr = data[0].ejat_arr.split(",");
                 $('#ejat_NESAP').val(ejat_arr[0]);
                 $('#ejat_NCIS').val(ejat_arr[1]);
                 $('#ejat_NPM').val(ejat_arr[2]);
             }
-            
+
             var hlas_arr = data[0].hlas_arr.split(",");
             $('#hlas_NFHP').val(hlas_arr[0]);
             $('#hlas_NCIS').val(hlas_arr[1]);
             $('#hlas_NPM').val(hlas_arr[2]);
             let hlat_arr = data[0].hlat_arr;
-            if(hlat_arr != "") {
+            if (hlat_arr != "") {
                 let hlat_arr = data[0].hlat_arr.split(",");
                 $('#hlat_NFHP').val(hlat_arr[0]);
                 $('#hlat_NCIS').val(hlat_arr[1]);
