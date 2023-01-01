@@ -780,28 +780,56 @@ get_kra1datafromuserid();
 
 function get_kra1datafromuserid() {
     let user_id = localStorage.getItem('final_pdf_id');
+    let college_id = localStorage.getItem('final_college_id');
     $.ajax({
         url: url,
         type: "GET",
         data: {
             csrf_token: "{{ csrf_token() }}",
             tag: "get_kra1datafromuserid",
-            user_id: user_id
+            user_id: user_id,
+            college_id: college_id
         },
         complete: function(response) {
             var data = JSON.parse(response.responseText)
+            console.log(response.responseText);
 
-            var hs_arr = data[0].hs_arr.split(",");
-            var hs_total = parseInt(hs_arr[0]);
-            $('#hs_total').html(hs_total);
+            let hs_totalarr=[];
+            for(var key in data) {
+                var hs_arr = data[key].hs_arr.split(",").map(Number);
+                let hs_counter=[];
+                for (let index = 0; index < hs_arr.length; index++) {
+                    hs_counter.push(hs_arr[index]);
+                }
+                hs_totalarr.push(hs_counter);
+            }
+            let hs_final_arr = hs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#hs_total').html(hs_final_arr[0]);
 
-            var ht_arr = data[0].ht_arr.split(",");
-            var ht_total = parseInt(ht_arr[0])
-            $('#ht_total').html(ht_total);
+            let ht_totalarr=[];
+            for(var key in data) {
+                var ht_arr = data[key].ht_arr.split(",").map(Number);
+                let ht_counter=[];
+                for (let index = 0; index < ht_arr.length; index++) {
+                    ht_counter.push(ht_arr[index]);
+                }
+                ht_totalarr.push(ht_counter);
+            }
+            let ht_final_arr = ht_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ht_total').html(ht_final_arr[0]);
 
-            var es_arr = data[0].es_arr.split(",");
-            var es_total = parseInt(es_arr[0])
-            $('#es_total').html(es_total);
+
+            let es_totalarr=[];
+            for(var key in data) {
+                var es_arr = data[key].es_arr.split(",").map(Number);
+                let es_counter=[];
+                for (let index = 0; index < es_arr.length; index++) {
+                    es_counter.push(es_arr[index]);
+                }
+                es_totalarr.push(es_counter);
+            }
+            let es_final_arr = es_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#es_total').html(es_final_arr[0]);
 
             var et_arr = data[0].et_arr.split(",");
             var et_total = parseInt(et_arr[0])
