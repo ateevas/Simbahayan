@@ -331,6 +331,7 @@ function btnSave() {
             tag: "update1_kra1",
             user_id: user_id,
             kra_id: kra_id,
+
             hs_arr: localStorage.getItem('hs_arr'),
             ht_arr: localStorage.getItem('ht_arr'),
             es_arr: localStorage.getItem('es_arr'),
@@ -374,8 +375,9 @@ function get_kra1datafromuserid() {
         },
         complete: function(response) {
 
-            console.log(response.responseText);                                                                                     
+            console.log(response.responseText);                                                    
             var data = JSON.parse(response.responseText);
+            
             var hs_arr = data[0].hs_arr.split(",");
             $('#hs_NHWDP').val(hs_arr[0]);
             $('#hs_NCIS').val(hs_arr[1]);

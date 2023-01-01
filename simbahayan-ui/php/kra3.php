@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,7 +10,6 @@
 			include('../cdn/cdn.php');
 		?>
 </head>
-
 <body>
     <?php
 			include('../nav_master/nav.php');
@@ -26,158 +24,136 @@
                 <th scope="col"></th>
                 <th scope="col">Number of MOA/MOU with various External Partner Groups:</th>
                 <th scope="col">Status</th>
-
-
+                <th scope="col">Target</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th scope="row"></th>
                 <td> People's Organizations</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="nmoas_POS" type="number" value="0"></td>
+                <td><input id="nmoat_POS" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Government Agencies or LGUs</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="nmoas_LGU" type="number" value="0"></td>
+                <td><input id="nmoat_LGU" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Non-Government Organizations</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="nmoas_NGO" type="number" value="0"></td>
+                <td><input id="nmoat_NGO" type="number" value="0"></td>
             </tr>
-
-
             <tr>
                 <th scope="row"></th>
                 <td> Basic Educational Institutions</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="nmoas_BEI" type="number" value="0"></td>
+                <td><input id="nmoat_BEI" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Local Higher Educational Institutions</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="nmoas_LHEI" type="number" value="0"></td>
+                <td><input id="nmoat_LHEI" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>International Higher Educational Institutions</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="nmoas_IHEI" type="number" value="0"></td>
+                <td><input id="nmoat_IHEI" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Faith-Based/Church-Based Organization</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="nmoas_CBO" type="number" value="0"></td>
+                <td><input id="nmoat_CBO" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Professional/Business Organizations</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="nmoas_PBO" type="number" value="0"></td>
+                <td><input id="nmoat_PBO" type="number" value="0"></td>
             </tr>
         </tbody>
-
-
         <thead>
             <tr>
                 <th scope="col"></th>
                 <th scope="col">Number of Community Development and Advocacy Activities with each External Partner Group
                 </th>
                 <th scope="col"></th>
-
-
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th scope="row"></th>
                 <td> People's Organizations</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="ncdaas_POS" type="number" value="0"></td>
+                <td><input id="ncdaat_POS" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>Government Agencies or LGUs</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="ncdaas_LGU" type="number" value="0"></td>
+                <td><input id="ncdaat_LGU" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Non-Government Organizations</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="ncdaas_NGO" type="number" value="0"></td>
+                <td><input id="ncdaat_NGO" type="number" value="0"></td>
             </tr>
-
-
             <tr>
                 <th scope="row"></th>
                 <td> Basic Educational Institutions</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="ncdaas_BEI" type="number" value="0"></td>
+                <td><input id="ncdaat_BEI" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Local Higher Educational Institutions</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="ncdaas_LHEI" type="number" value="0"></td>
+                <td><input id="ncdaat_LHEI" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>International Higher Educational Institutions</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="ncdaas_IHEI" type="number" value="0"></td>
+                <td><input id="ncdaat_IHEI" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Faith-Based/Church-Based Organization</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="ncdaas_CBO" type="number" value="0"></td>
+                <td><input id="ncdaat_CBO" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Professional/Business Organizations</td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="ncdaas_PBO" type="number" value="0"></td>
+                <td><input id="ncdaat_PBO" type="number" value="0"></td>
             </tr>
-
-
             <br>
-
             <thead>
                 <tr>
                     <th scope="col"></th>
                     <th scope="col" id="training">Number of Training/Course Offerings on Commnunity Engagement and
                         Organizing</th>
-                    <td scope="col"><input type="number" value="0"></td>
-
-
+                    <td scope="col"><input id="ntco_stat" type="number" value="0"></td>
+                    <td scope="col"><input id="ntco_targ" type="number" value="0"></td>
                 </tr>
             </thead>
-
-
-
             <thead>
                 <tr>
                     <th scope="col"></th>
                     <th scope="col" id="training">Number of Participants in Training/Course offereings on Community
                         Engagement and
                         Organizing</th>
-                    <td scope="col"><input type="number" value="0"></td>
-
-
+                    <td scope="col"><input id="nptco_stat" type="number" value="0"></td>
+                    <td scope="col"><input id="nptco_targ" type="number" value="0"></td>
                 </tr>
             </thead>
-
-
-
-
-
         </tbody>
     </table>
 
@@ -227,66 +203,83 @@ function get_lock() {
 get_kra3datafromuserid();
 
 function save_kra3() {
-    var POs_MM = $("#POs_MM").val();
-    var POs_CDAA = $("#POs_CDAA").val();
-    var POt_MM = $("#POt_MM").val();
-    var POt_CDAA = $("#POt_CDAA").val();
-
+     //-- Number of MOA/MOU --//
+    //Status
+    var nmoas_POS = $("#nmoas_POS").val();
+    var nmoas_LGU = $("#nmoas_LGU").val();
+    var nmoas_NGO = $("#nmoas_NGO").val();
+    var nmoas_BEI = $("#nmoas_BEI").val();
+    var nmoas_LHEI = $("#nmoas_LHEI").val();
+    var nmoas_IHEI = $("#nmoas_IHEI").val();
+    var nmoas_CBO = $("#nmoas_CBO").val();
+    var nmoas_PBO = $("#nmoas_PBO").val();
+    //Target
+    var nmoat_POS = $("#nmoat_POS").val();
+    var nmoat_LGU = $("#nmoat_LGU").val();
+    var nmoat_NGO = $("#nmoat_NGO").val();
+    var nmoat_BEI = $("#nmoat_BEI").val();
+    var nmoat_LHEI = $("#nmoat_LHEI").val();
+    var nmoat_IHEI = $("#nmoat_IHEI").val();
+    var nmoat_CBO = $("#nmoat_CBO").val();
+    var nmoat_PBO = $("#nmoat_PBO").val();
     //array
-    var pos_arr = [POs_MM, POs_CDAA];
-    var pot_arr = [POt_MM, POt_CDAA];
-
-    localStorage.setItem('pos_arr', pos_arr);
-    localStorage.setItem('pot_arr', pot_arr);
-
-
-    var pos_arr = [POs_MM, POs_CDAA];
-    var pot_arr = [POt_MM, POt_CDAA];
+    var nmoas_arr = [nmoas_POS, nmoas_LGU, nmoas_NGO, nmoas_BEI, nmoas_LHEI, nmoas_IHEI, nmoas_CBO, nmoas_PBO];
+    var nmoat_arr = [nmoat_POS, nmoat_LGU, nmoat_NGO, nmoat_BEI, nmoat_LHEI, nmoat_IHEI, nmoat_CBO, nmoat_PBO];
+    localStorage.setItem('nmoas_arr', nmoas_arr);
+    localStorage.setItem('nmoat_arr', nmoat_arr);
 
 
-    // SETTING IT TO LOCAL STORAGE
-    localStorage.setItem("pos_arr", pos_arr);
-    localStorage.setItem("pot_arr", pot_arr);
-
-
-    var GAs_MM = $("#GAs_MM").val();
-    var GAs_CDAA = $("#GAs_CDAA").val();
-    var GAt_MM = $("#GAt_MM").val();
-    var GAt_CDAA = $("#GAt_CDAA").val();
-
+    //-- Number of Community Development and Advocacy Activities --//
+    //Status
+    var ncdaas_POS = $("#ncdaas_POS").val();
+    var ncdaas_LGU = $("#ncdaas_LGU").val();
+    var ncdaas_NGO = $("#ncdaas_NGO").val();
+    var ncdaas_BEI = $("#ncdaas_BEI").val();
+    var ncdaas_LHEI = $("#ncdaas_LHEI").val();
+    var ncdaas_IHEI = $("#ncdaas_IHEI").val();
+    var ncdaas_CBO = $("#ncdaas_CBO").val();
+    var ncdaas_PBO = $("#ncdaas_PBO").val();
+    //Target
+    var ncdaat_POS = $("#ncdaat_POS").val();
+    var ncdaat_LGU = $("#ncdaat_LGU").val();
+    var ncdaat_NGO = $("#ncdaat_NGO").val();
+    var ncdaat_BEI = $("#ncdaat_BEI").val();
+    var ncdaat_LHEI = $("#ncdaat_LHEI").val();
+    var ncdaat_IHEI = $("#ncdaat_IHEI").val();
+    var ncdaat_CBO = $("#ncdaat_CBO").val();
+    var ncdaat_PBO = $("#ncdaat_PBO").val();
     //array
-    var gas_arr = [GAs_MM, GAs_CDAA];
-    var gat_arr = [GAt_MM, GAt_CDAA];
-    localStorage.setItem('gas_arr', gas_arr);
-    localStorage.setItem('gat_arr', gat_arr);
+    var ncdaas_arr = [ncdaas_POS, ncdaas_LGU, ncdaas_NGO, ncdaas_BEI, ncdaas_LHEI, ncdaas_IHEI, ncdaas_CBO, ncdaas_PBO];
+    var ncdaat_arr = [ncdaat_POS, ncdaat_LGU, ncdaat_NGO, ncdaat_BEI, ncdaat_LHEI, ncdaat_IHEI, ncdaat_CBO, ncdaat_PBO];
+    localStorage.setItem('ncdaas_arr', ncdaas_arr);
+    localStorage.setItem('ncdaat_arr', ncdaat_arr);
 
 
-
-    var NGOs_MM = $("#NGOs_MM").val();
-    var NGOs_CDAA = $("#NGOs_CDAA").val();
-    var NGOt_MM = $("#NGOt_MM").val();
-    var NGOt_CDAA = $("#NGOt_CDAA").val();
-
+    //-- Number of Training/Course Offerings --//
+    //Status
+    var ntco_stat = $("#ntco_stat").val();
+    //Target
+    var ntco_targ = $("#ntco_targ").val();
     //array
-    var ngos_arr = [NGOs_MM, NGOs_CDAA];
-    var ngot_arr = [NGOt_MM, NGOt_CDAA];
-    localStorage.setItem('ngos_arr', ngos_arr);
-    localStorage.setItem('ngot_arr', ngot_arr);
+    var arr_ntco_stat = [ntco_stat];
+    var arr_ntco_targ = [ntco_targ];
+    localStorage.setItem('arr_ntco_stat', arr_ntco_stat);
+    localStorage.setItem('arr_ntco_targ', arr_ntco_targ);
 
 
-    var BEIs_MM = $("#BEIs_MM").val();
-    var BEIs_CDAA = $("#BEIs_CDAA").val();
-    var BEIt_MM = $("#BEIt_MM").val();
-    var BEIt_CDAA = $("#BEIt_CDAA").val();
-
+    //-- Number of Participants in Training/Course offereings --//
+    //Status
+    var nptco_stat = $("#nptco_stat").val();
+    //Target
+    var nptco_targ = $("#nptco_targ").val();
     //array
-    var beis_arr = [BEIs_MM, BEIs_CDAA];
-    var beit_arr = [BEIt_MM, BEIt_CDAA];
-    localStorage.setItem('beis_arr', beis_arr);
-    localStorage.setItem('beit_arr', beit_arr);
+    var arr_nptco_stat = [nptco_stat];
+    var arr_nptco_targ = [nptco_targ];
+    localStorage.setItem('arr_nptco_stat', arr_nptco_stat);
+    localStorage.setItem('arr_nptco_targ', arr_nptco_targ);
+
 
     let user_id = localStorage.getItem('selected_user_id');
-
     $.ajax({
         url: url,
         type: "POST",
@@ -294,14 +287,15 @@ function save_kra3() {
             csrf_token: "{{ csrf_token() }}",
             tag: "update1_kra3",
             user_id: user_id,
-            pos_arr: localStorage.getItem('pos_arr'),
-            pot_arr: localStorage.getItem('pot_arr'),
-            gas_arr: localStorage.getItem('gas_arr'),
-            gat_arr: localStorage.getItem('gat_arr'),
-            ngos_arr: localStorage.getItem('ngos_arr'),
-            ngot_arr: localStorage.getItem('ngot_arr'),
-            beis_arr: localStorage.getItem('beis_arr'),
-            beit_arr: localStorage.getItem('beit_arr')
+            nmoas_arr: localStorage.getItem('nmoas_arr'),
+            nmoat_arr: localStorage.getItem('nmoat_arr'),
+            ncdaas_arr: localStorage.getItem('ncdaas_arr'),
+            ncdaat_arr: localStorage.getItem('ncdaat_arr'),
+            arr_ntco_stat: localStorage.getItem('arr_ntco_stat'),
+            arr_ntco_targ: localStorage.getItem('arr_ntco_targ'),
+            arr_nptco_stat: localStorage.getItem('arr_nptco_stat'),
+            arr_nptco_targ: localStorage.getItem('arr_nptco_targ')
+
         },
         complete: function(response) {
             console.log(response.responseText);
@@ -336,30 +330,70 @@ function get_kra3datafromuserid() {
         },
         complete: function(response) {
             var data = JSON.parse(response.responseText);
-            var pos_arr = data[0].pos_arr.split(",");
-            $('#POs_MM').val(pos_arr[0]);
-            $('#POs_CDAA').val(pos_arr[1]);
-            var pot_arr = data[0].pot_arr.split(",");
-            $('#POt_MM').val(pot_arr[0]);
-            $('#POt_CDAA').val(pot_arr[1]);
-            var gas_arr = data[0].gas_arr.split(",");
-            $('#GAs_MM').val(gas_arr[0]);
-            $('#GAs_CDAA').val(gas_arr[1]);
-            var gat_arr = data[0].gat_arr.split(",");
-            $('#GAt_MM').val(gat_arr[0]);
-            $('#GAt_CDAA').val(gat_arr[1]);
-            var ngos_arr = data[0].ngos_arr.split(",");
-            $('#NGOs_MM').val(ngos_arr[0]);
-            $('#NGOs_CDAA').val(ngos_arr[1]);
-            var ngot_arr = data[0].ngot_arr.split(",");
-            $('#NGOt_MM').val(ngot_arr[0]);
-            $('#NGOt_CDAA').val(ngot_arr[1]);
-            var beis_arr = data[0].beis_arr.split(",");
-            $('#BEIs_MM').val(beis_arr[0]);
-            $('#BEIs_CDAA').val(beis_arr[1]);
-            var beit_arr = data[0].beit_arr.split(",");
-            $('#BEIt_MM').val(beit_arr[0]);
-            $('#BEIt_CDAA').val(beit_arr[1]);
+
+            var nmoas_arr = data[0].nmoas_arr.split(",");
+            $('#nmoas_POS').val(nmoas_arr[0]);
+            $('#nmoas_LGU').val(nmoas_arr[1]);
+            $('#nmoas_NGO').val(nmoas_arr[2]);
+            $('#nmoas_BEI').val(nmoas_arr[3]);
+            $('#nmoas_LHEI').val(nmoas_arr[4]);
+            $('#nmoas_IHEI').val(nmoas_arr[5]);
+            $('#nmoas_CBO').val(nmoas_arr[6]);
+            $('#nmoas_PBO').val(nmoas_arr[7]);
+
+            let nmoat_arr = data[0].nmoat_arr;
+            if(nmoat_arr != "") {
+                let nmoat_arr = data[0].nmoat_arr.split(",");
+                $('#nmoat_POS').val(nmoas_arr[0]);
+                $('#nmoat_LGU').val(nmoas_arr[1]);
+                $('#nmoat_NGO').val(nmoas_arr[2]);
+                $('#nmoat_BEI').val(nmoas_arr[3]);
+                $('#nmoat_LHEI').val(nmoas_arr[4]);
+                $('#nmoat_IHEI').val(nmoas_arr[5]);
+                $('#nmoat_CBO').val(nmoas_arr[6]);
+                $('#nmoat_PBO').val(nmoas_arr[7]);
+            }
+            
+
+            var ncdaas_arr = data[0].ncdaas_arr.split(",");
+            $('#ncdaas_POS').val(ncdaas_arr[0]);
+            $('#ncdaas_LGU').val(ncdaas_arr[1]);
+            $('#ncdaas_NGO').val(ncdaas_arr[2]);
+            $('#ncdaas_BEI').val(ncdaas_arr[3]);
+            $('#ncdaas_LHEI').val(ncdaas_arr[4]);
+            $('#ncdaas_IHEI').val(ncdaas_arr[5]);
+            $('#ncdaas_CBO').val(ncdaas_arr[6]);
+            $('#ncdaas_PBO').val(ncdaas_arr[7]);
+            let ncdaat_arr = data[0].ncdaat_arr;
+            if(ncdaat_arr != "") {
+                let ncdaat_arr = data[0].ncdaat_arr.split(",");
+                $('#ncdaat_POS').val(ncdaat_arr[0]);
+                $('#ncdaat_LGU').val(ncdaat_arr[1]);
+                $('#ncdaat_NGO').val(ncdaat_arr[2]);
+                $('#ncdaat_BEI').val(ncdaat_arr[3]);
+                $('#ncdaat_LHEI').val(ncdaat_arr[4]);
+                $('#ncdaat_IHEI').val(ncdaat_arr[5]);
+                $('#ncdaat_CBO').val(ncdaat_arr[6]);
+                $('#ncdaat_PBO').val(ncdaat_arr[7]);
+            }
+           
+            let arr_ntco_stat = data[0].arr_ntco_stat;
+            if(arr_ntco_stat != "") {
+                $('#ntco_stat').val(arr_ntco_stat);
+            }
+            let arr_ntco_targ = data[0].arr_ntco_targ;
+            if(arr_ntco_targ != "") {
+                $('#ntco_targ').val(arr_ntco_targ);
+            }
+
+            let arr_nptco_stat = data[0].arr_nptco_stat;
+            if(arr_nptco_stat != "") {
+                $('#nptco_stat').val(arr_nptco_stat);
+            }
+            let arr_nptco_targ = data[0].arr_nptco_targ;
+            if(arr_nptco_targ != "") {
+                $('#nptco_targ').val(arr_nptco_targ);
+            }
         }
     })
 }

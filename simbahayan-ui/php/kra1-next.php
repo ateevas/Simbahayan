@@ -35,27 +35,24 @@
             <tr>
                 <th scope="row"></th>
                 <td>No. of Culture and Heritage Projects</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ceras_NCHP" type="number" value="0"></td>
+                <td><input id="cerat_NCHP" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ceras_NCIS" type="number" value="0"></td>
+                <td><input id="cerat_NCIS" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="ceras_NPM" type="number" value="0"></td>
+                <td><input id="cerat_NPM" type="number" value="0"></td>
             </tr>
         </tbody>
-
-
         <thead>
             <tr>
                 <th scope="col"></th>
@@ -69,26 +66,23 @@
             <tr>
                 <th scope="row"></th>
                 <td> No. of Sports Development Projects</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="sfas_NSDP" type="number" value="0"></td>
+                <td><input id="sfat_NSDP" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="sfas_NCIS" type="number" value="0"></td>
+                <td><input id="sfat_NCIS" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="sfas_NPM" type="number" value="0"></td>
+                <td><input id="sfat_NPM" type="number" value="0"></td>
             </tr>
-
-
             <thead>
                 <tr>
                     <th scope="col"></th>
@@ -96,67 +90,57 @@
                         Risk Reduction and
                         Management)</th>
                     <th scope="col"></th>
-
-
                 </tr>
             </thead>
         <tbody>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Environmental Sustainability and Action Projects</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ejas_NESAP" type="number" value="0"></td>
+                <td><input id="ejat_NESAP" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="ejas_NCIS" type="number" value="0"></td>
+                <td><input id="ejat_NCIS" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="ejas_NPM" type="number" value="0"></td>
+                <td><input id="ejat_NPM" type="number" value="0"></td>
             </tr>
-
-
-
             <thead>
                 <tr>
                     <th scope="col"></th>
                     <th scope="col"> Holistic Life for all (Family and Household Development)</th>
                     <th scope="col"></th>
-
-
                 </tr>
             </thead>
         <tbody>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Family and Household Projects</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="hlas_NFHP" type="number" value="0"></td>
+                <td><input id="hlat_NFHP" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
+                <td><input id="hlas_NCIS" type="number" value="0"></td>
+                <td><input id="hlat_NCIS" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input type="number" value="0"></td>
-                <td><input type="number" value="0"></td>
-
+                <td><input id="hlas_NPM" type="number" value="0"></td>
+                <td><input id="hlat_NPM" type="number" value="0"></td>
             </tr>
-
         </tbody>
     </table>
 
@@ -203,67 +187,67 @@ function get_lock() {
 }
 
 function save_kra1() {
-    //Status in Cultural Life
-    var cahds_CHP = $('#cahds_CHP').val();
-    var cahds_CIS = $('#cahds_CIS').val();
-    var cahds_PM = $('#cahds_PM').val();
-    //Target in Cultural Life
-    var cahdt_CHP = $('#cahdt_CHP').val();
-    var cahdt_CIS = $('#cahdt_CIS').val();
-    var cahdt_PM = $('#cahdt_PM').val();
+        //-- Cultural Life --//
+    //Status 
+    var ceras_NCHP = $('#ceras_NCHP').val();
+    var ceras_NCIS = $('#ceras_NCIS').val();
+    var ceras_NPM = $('#ceras_NPM').val();
+    //Target 
+    var cerat_NCHP = $('#cerat_NCHP').val();
+    var cerat_NCIS = $('#cerat_NCIS').val();
+    var cerat_NPM = $('#cerat_NPM').val();
     //array
-    var cahds_arr = [cahds_CHP, cahds_CIS, cahds_PM];
-    var cahdt_arr = [cahdt_CHP, cahdt_CIS, cahdt_PM];
-    localStorage.setItem('cahds_arr', cahds_arr);
-    localStorage.setItem('cahdt_arr', cahdt_arr);
-    //Status & Target in Sports for all
-    var sds_SDP = $('#sds_SDP').val();
-    var sds_CIS = $('#sds_CIS').val();
-    var sds_PM = $('#sds_PM').val();
-    var sdt_SDP = $('#sdt_SDP').val();
-    var sdt_CIS = $('#sdt_CIS').val();
-    var sdt_PM = $('#sdt_PM').val();
+    var ceras_arr = [ceras_NCHP, ceras_NCIS, ceras_NPM];
+    var cerat_arr = [cerat_NCHP, cerat_NCIS, cerat_NPM];
+    localStorage.setItem('ceras_arr', ceras_arr);
+    localStorage.setItem('cerat_arr', cerat_arr);
+
+    //-- Sports for all --//
+    //Status 
+    var sfas_NSDP = $('#sfas_NSDP').val();
+    var sfas_NCIS = $('#sfas_NCIS').val();
+    var sfas_NPM = $('#sfas_NPM').val();
+    //Target 
+    var sfat_NSDP = $('#sfat_NSDP').val();
+    var sfat_NCIS = $('#sfat_NCIS').val();
+    var sfat_NPM = $('#sfat_NPM').val();
     //array
-    var sds_arr = [sds_SDP, sds_CIS, sds_PM];
-    var sdt_arr = [sdt_SDP, sdt_CIS, sdt_PM];
-    localStorage.setItem('sds_arr', sds_arr);
-    localStorage.setItem('sdt_arr', sdt_arr);
-    //Status & Target in Environmental Justice
-    var drrms_ESAP = $('#drrms_ESAP').val();
-    var drrms_CIS = $('#drrms_CIS').val();
-    var drrms_PM = $('#drrms_PM').val();
-    var drrmt_SAP = $('#drrmt_SAP').val();
-    var drrmt_CIS = $('#drrmt_CIS').val();
-    var drrmt_PM = $('#drrmt_PM').val();
+    var sfas_arr = [sfas_NSDP, sfas_NCIS, sfas_NPM];
+    var sfat_arr = [sfat_NSDP, sfat_NCIS, sfat_NPM];
+    localStorage.setItem('sfas_arr', sfas_arr);
+    localStorage.setItem('sfat_arr', sfat_arr);
+
+    //-- Environmental Justice for all --//
+    //Status 
+    var ejas_NESAP = $('#ejas_NESAP').val();
+    var ejas_NCIS = $('#ejas_NCIS').val();
+    var ejas_NPM = $('#ejas_NPM').val();
+    //Target 
+    var ejat_NESAP = $('#ejat_NESAP').val();
+    var ejat_NCIS = $('#ejat_NCIS').val();
+    var ejat_NPM = $('#ejat_NPM').val();
     //array
-    var drrms_arr = [drrms_ESAP, drrms_CIS, drrms_PM];
-    var drrmt_arr = [drrmt_SAP, drrmt_CIS, drrmt_PM];
-    localStorage.setItem('drrms_arr', drrms_arr);
-    localStorage.setItem('drrmt_arr', drrmt_arr);
-    //Status & Target in Holistic Life
-    var fhds_FHP = $('#fhds_FHP').val();
-    var fhds_CIS = $('#fhds_CIS').val();
-    var fhds_PM = $('#fhds_PM').val();
-    var fhdt_FHP = $('#fhdt_FHP').val();
-    var fhdt_CIS = $('#fhdt_CIS').val();
-    var fhdt_PM = $('#fhdt_PM').val();
+    var ejas_arr = [ejas_NESAP, ejas_NCIS, ejas_NPM];
+    var ejat_arr = [ejat_NESAP, ejat_NCIS, ejat_NPM];
+    localStorage.setItem('ejas_arr', ejas_arr);
+    localStorage.setItem('ejat_arr', ejat_arr);
+
+    //-- Holistic Life for all --//
+    //Status 
+    var hlas_NFHP = $('#hlas_NFHP').val();
+    var hlas_NCIS = $('#hlas_NCIS').val();
+    var hlas_NPM = $('#hlas_NPM').val();
+    //Target 
+    var hlat_NFHP = $('#hlat_NFHP').val();
+    var hlat_NCIS = $('#hlat_NCIS').val();
+    var hlat_NPM = $('#hlat_NPM').val();
     //array
-    var fhds_arr = [fhds_FHP, fhds_CIS, fhds_PM];
-    var fhdt_arr = [fhdt_FHP, fhdt_CIS, fhdt_PM];
-    localStorage.setItem('fhds_arr', fhds_arr);
-    localStorage.setItem('fhdt_arr', fhdt_arr);
-    //Status & Target in Community Organization
-    var cofs_COF = $('#cofs_COF').val();
-    var cofs_CISCOF = $('#cofs_CISCOF').val();
-    var cofs_PMCOF = $('#cofs_PMCOF').val();
-    var coft_COF = $('#coft_COF').val();
-    var coft_CISCOF = $('#coft_CISCOF').val();
-    var coft_PMCOF = $('#coft_PMCOF').val();
-    //array
-    var cofs_arr = [cofs_COF, cofs_CISCOF, cofs_PMCOF];
-    var coft_arr = [coft_COF, coft_CISCOF, coft_PMCOF];
-    localStorage.setItem('cofs_arr', cofs_arr);
-    localStorage.setItem('coft_arr', coft_arr);
+    var hlas_arr = [hlas_NFHP, hlas_NCIS, hlas_NPM];
+    var hlat_arr = [hlat_NFHP, hlat_NCIS, hlat_NPM];
+    localStorage.setItem('hlas_arr', hlas_arr);
+    localStorage.setItem('hlat_arr', hlat_arr);
+
+
 
     let user_id = localStorage.getItem('selected_user_id');
     $.ajax({
@@ -273,16 +257,14 @@ function save_kra1() {
             csrf_token: "{{ csrf_token() }}",
             tag: "update2_kra1",
             user_id: user_id,
-            cahds_arr: localStorage.getItem('cahds_arr'),
-            cahdt_arr: localStorage.getItem('cahdt_arr'),
-            sds_arr: localStorage.getItem('sds_arr'),
-            sdt_arr: localStorage.getItem('sdt_arr'),
-            drrms_arr: localStorage.getItem('drrms_arr'),
-            drrmt_arr: localStorage.getItem('drrmt_arr'),
-            fhds_arr: localStorage.getItem('fhds_arr'),
-            fhdt_arr: localStorage.getItem('fhdt_arr'),
-            cofs_arr: localStorage.getItem('cofs_arr'),
-            coft_arr: localStorage.getItem('coft_arr')
+            ceras_arr: localStorage.getItem('ceras_arr'),
+            cerat_arr: localStorage.getItem('cerat_arr'),
+            sfas_arr: localStorage.getItem('sfas_arr'),
+            sfat_arr: localStorage.getItem('sfat_arr'),
+            ejas_arr: localStorage.getItem('ejas_arr'),
+            ejat_arr: localStorage.getItem('ejat_arr'),
+            hlas_arr: localStorage.getItem('hlas_arr'),
+            hlat_arr: localStorage.getItem('hlat_arr')
         },
         complete: function(response) {
             var data = JSON.parse(response.responseText);
@@ -294,8 +276,6 @@ function save_kra1() {
             }
         }
     })
-
-
 }
 
 function edit_kra1() {
@@ -303,7 +283,6 @@ function edit_kra1() {
     $('#save_btn').show();
     $('#edit_btn').hide();
 }
-
 function approve_kra1simbahayan() {
     let user_id = localStorage.getItem('selected_user_id');
     $.ajax({
@@ -342,46 +321,52 @@ function get_kra1datafromuserid() {
         complete: function(response) {
             var data = JSON.parse(response.responseText);
             console.log(data);
-            var cahds_arr = data[0].cahds_arr.split(",");
-            $('#cahds_CHP').val(cahds_arr[0]);
-            $('#cahds_CIS').val(cahds_arr[1]);
-            $('#cahds_PM').val(cahds_arr[2]);
-            var cahdt_arr = data[0].cahdt_arr.split(",");
-            $('#cahdt_CHP').val(cahdt_arr[0]);
-            $('#cahdt_CIS').val(cahdt_arr[1]);
-            $('#cahdt_PM').val(cahdt_arr[2]);
-            var sds_arr = data[0].sds_arr.split(",");
-            $('#sds_SDP').val(sds_arr[0]);
-            $('#sds_CIS').val(sds_arr[1]);
-            $('#sds_PM').val(sds_arr[2]);
-            var sdt_arr = data[0].sdt_arr.split(",");
-            $('#sdt_SDP').val(sdt_arr[0]);
-            $('#sdt_CIS').val(sdt_arr[1]);
-            $('#sdt_PM').val(sdt_arr[2]);
-            var drrms_arr = data[0].drrms_arr.split(",");
-            $('#drrms_ESAP').val(drrms_arr[0]);
-            $('#drrms_CIS').val(drrms_arr[1]);
-            $('#drrms_PM').val(drrms_arr[2]);
-            var drrmt_arr = data[0].drrmt_arr.split(",");
-            $('#drrmt_SAP').val(drrmt_arr[0]);
-            $('#drrmt_CIS').val(drrmt_arr[1]);
-            $('#drrmt_PM').val(drrmt_arr[2]);
-            var fhds_arr = data[0].fhds_arr.split(",");
-            $('#fhds_FHP').val(fhds_arr[0]);
-            $('#fhds_CIS').val(fhds_arr[1]);
-            $('#fhds_PM').val(fhds_arr[2]);
-            var fhdt_arr = data[0].fhdt_arr.split(",");
-            $('#fhdt_FHP').val(fhdt_arr[0]);
-            $('#fhdt_CIS').val(fhdt_arr[1]);
-            $('#fhdt_PM').val(fhdt_arr[2]);
-            var cofs_arr = data[0].cofs_arr.split(",");
-            $('#cofs_COF').val(cofs_arr[0]);
-            $('#cofs_CISCOF').val(cofs_arr[1]);
-            $('#cofs_PMCOF').val(cofs_arr[2]);
-            var coft_arr = data[0].coft_arr.split(",");
-            $('#coft_COF').val(coft_arr[0]);
-            $('#coft_CISCOF').val(coft_arr[1]);
-            $('#coft_PMCOF').val(coft_arr[2]);
+            var ceras_arr = data[0].ceras_arr.split(",");
+            $('#ceras_NCHP').val(ceras_arr[0]);
+            $('#ceras_NCIS').val(ceras_arr[1]);
+            $('#ceras_NPM').val(ceras_arr[2]);
+            let cerat_arr = data[0].cerat_arr;
+            if(cerat_arr != "") {
+                let cerat_arr = data[0].cerat_arr.split(",");
+                $('#cerat_NCHP').val(cerat_arr[0]);
+                $('#cerat_NCIS').val(cerat_arr[1]);
+                $('#cerat_NPM').val(cerat_arr[2]);
+            }
+           
+
+            var sfas_arr = data[0].sfas_arr.split(",");
+            $('#sfas_NSDP').val(sfas_arr[0]);
+            $('#sfas_NCIS').val(sfas_arr[1]);
+            $('#sfas_NPM').val(sfas_arr[2]);
+            let sfat_arr = data[0].sfat_arr;
+            if(sfat_arr != "") {
+                let sfat_arr = data[0].sfat_arr.split(",");
+                $('#sfat_NSDP').val(sfat_arr[0]);
+                $('#sfat_NCIS').val(sfat_arr[1]);
+                $('#sfat_NPM').val(sfat_arr[2]);
+            }
+            var ejas_arr = data[0].ejas_arr.split(",");
+            $('#ejas_NESAP').val(ejas_arr[0]);
+            $('#ejas_NCIS').val(ejas_arr[1]);
+            $('#ejas_NPM').val(ejas_arr[2]);
+            let ejat_arr = data[0].ejat_arr;
+            if(ejat_arr != "") {
+                let ejat_arr = data[0].ejat_arr.split(",");
+                $('#ejat_NESAP').val(ejat_arr[0]);
+                $('#ejat_NCIS').val(ejat_arr[1]);
+                $('#ejat_NPM').val(ejat_arr[2]);
+            }
+            
+            var hlas_arr = data[0].hlas_arr.split(",");
+            $('#hlas_NFHP').val(hlas_arr[0]);
+            $('#hlas_NCIS').val(hlas_arr[1]);
+            $('#hlas_NPM').val(hlas_arr[2]);
+            let hlat_arr = data[0].hlat_arr;
+            if(hlat_arr != "") {
+                let hlat_arr = data[0].hlat_arr.split(",");
+                $('#hlat_NFHP').val(hlat_arr[0]);
+                $('#hlat_NCIS').val(hlat_arr[1]);
+                $('#hlat_NPM').val(hlat_arr[2]);
         }
     })
 }
