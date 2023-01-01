@@ -1,7 +1,7 @@
 <style type="text/css">
-    body{
-        overflow-x: hidden !important;
-    }
+body {
+    overflow-x: hidden !important;
+}
 </style>
 <nav class="navbar bg-warning">
     <div class="container-fluid">
@@ -52,11 +52,14 @@
                                 href="http://localhost/Simbahayan/simbahayan-ui/php/changepass.php">Change
                                 Password</a>
                         </li>
-                        <li>
-                            <a class="dropdown-item" aria-current="page"
-                                href="http://localhost/Simbahayan/simbahayan-ui/php/contact.php">Contact</a>
-                        </li>
+
                     </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost/Simbahayan/simbahayan-ui/php/contact.php">
+                        Contact
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a data-bs-toggle="modal" href="#logout_modal" class="nav-link">Logout</a>

@@ -1,18 +1,15 @@
 <style type="text/css">
-    body {
-        overflow-x: hidden !important;
+body {
+    overflow-x: hidden !important;
 
-    }
+}
 </style>
 <nav class="navbar bg-warning">
     <div class="container-fluid">
         <a class="navbar-brand" href="profile.php">
             <img src="../pictures/ustlogo.png" alt="Logo" width="70" height="70"
                 class="d-inline-block align-text-middle" />
-
-
             <span style="color: black;">Simbahayan Portal</span>
-
         </a>
         <img src="../pictures/white.png" alt="Logo" width="120" height="70" class="d-inline-block align-text-middle" />
     </div>
