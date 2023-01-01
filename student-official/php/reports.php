@@ -107,9 +107,4 @@ function manage_kra(obj) {
 	localStorage.setItem('kra_selected_id', $(obj).data('kra_id'));
 	window.location.href = "http://localhost/Simbahayan/student-official/php/kra-select.php";
 }
-
-// function goto_kra_select(obj) {
-// 	localStorage.setItem('selected_user_id', $(obj).data('user_id'));
-// 	
-// }
 </script>

@@ -41,22 +41,22 @@
             <tr>
                 <th scope="row"></th>
                 <td> No. of Health and Wellness Development Projects</td>
-                <td><input id="hwds_NHWDP" type="number" value="0"></td>
-                <td><input id="hwdt_NHWDP" type="number" value="0"></td>
+                <td><input readonly id="hs_NHWDP" type="number" value="0"></td>
+                <td><input readonly id="ht_NHWDP" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input id="hwds_NCIS" type="number" value="0"></td>
-                <td><input id="hwdt_NCIS" type="number" value="0"></td>
+                <td><input readonly id="hs_NCIS" type="number" value="0"></td>
+                <td><input readonly id="ht_NCIS" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input id="hwds_NPM" type="number" value="0"></td>
-                <td><input id="hwdt_NPM" type="number" value="0"></td>
+                <td><input readonly id="hs_NPM" type="number" value="0"></td>
+                <td><input readonly id="ht_NPM" type="number" value="0"></td>
 
             </tr>
         </tbody>
@@ -75,22 +75,22 @@
             <tr>
                 <th scope="row"></th>
                 <td> No. of Equitable and Inclusive Education Projects</td>
-                <td><input id="eies_NEIEP" type="number" value="0"></td>
-                <td><input id="eiet_NEIEP" type="number" value="0"></td>
+                <td><input readonly id="es_NEIEP" type="number" value="0"></td>
+                <td><input readonly id="et_NEIEP" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input id="eies_NCIS" type="number" value="0"></td>
-                <td><input id="eiet_NCIS" type="number" value="0"></td>
+                <td><input readonly id="es_NCIS" type="number" value="0"></td>
+                <td><input readonly id="et_NCIS" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input id="eies_NPM" type="number" value="0"></td>
-                <td><input id="eiet_NPM" type="number" value="0"></td>
+                <td><input readonly id="es_NPM" type="number" value="0"></td>
+                <td><input readonly id="et_NPM" type="number" value="0"></td>
 
             </tr>
 
@@ -110,22 +110,22 @@
                 <th scope="row"></th>
                 <td> No. of Leadership, Organizational Development, and Good Governance
                     Projects</td>
-                <td><input id="ggas_NLODGGP" type="number" value="0"></td>
-                <td><input id="ggat_NLODGGP" type="number" value="0"></td>
+                <td><input readonly id="ggs_NLODGGP" type="number" value="0"></td>
+                <td><input readonly id="ggt_NLODGGP" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input id="ggas_NCIS" type="number" value="0"></td>
-                <td><input id="ggat_NCIS" type="number" value="0"></td>
+                <td><input readonly id="ggs_NCIS" type="number" value="0"></td>
+                <td><input readonly id="ggt_NCIS" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input id="ggas_NPM" type="number" value="0"></td>
-                <td><input id="ggat_NPM" type="number" value="0"></td>
+                <td><input readonly id="ggs_NPM" type="number" value="0"></td>
+                <td><input readonly id="ggt_NPM" type="number" value="0"></td>
 
             </tr>
 
@@ -144,22 +144,22 @@
             <tr>
                 <th scope="row"></th>
                 <td> No. of Employability and Social Enterprise Projects</td>
-                <td><input id="ejas_NESEP" type="number" value="0"></td>
-                <td><input id="ejat_NESEP" type="number" value="0"></td>
+                <td><input readonly id="ejs_NESEP" type="number" value="0"></td>
+                <td><input readonly id="ejt_NESEP" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input id="ejas_NCIS" type="number" value="0"></td>
-                <td><input id="ejat_NCIS" type="number" value="0"></td>
+                <td><input readonly id="ejs_NCIS" type="number" value="0"></td>
+                <td><input readonly id="ejt_NCIS" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input id="ejas_NPM" type="number" value="0"></td>
-                <td><input id="ejat_NPM" type="number" value="0"></td>
+                <td><input readonly id="ejs_NPM" type="number" value="0"></td>
+                <td><input readonly id="ejt_NPM" type="number" value="0"></td>
 
             </tr>
 
@@ -178,30 +178,30 @@
             <tr>
                 <th scope="row"></th>
                 <td> No. of Socio-Pastoral Ministry and Evangelization Projects</td>
-                <td><input id="clas_NSMEP" type="number" value="0"></td>
-                <td><input id="clat_NSMEP" type="number" value="0"></td>
+                <td><input readonly id="cls_NSMEP" type="number" value="0"></td>
+                <td><input readonly id="clt_NSMEP" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Communities/ Institutions Served</td>
-                <td><input id="clas_NCIS" type="number" value="0"></td>
-                <td><input id="clat_NCIS" type="number" value="0"></td>
+                <td><input readonly id="cls_NCIS" type="number" value="0"></td>
+                <td><input readonly id="clt_NCIS" type="number" value="0"></td>
 
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> No. of Participants/ Members</td>
-                <td><input id="clas_NPM" type="number" value="0"></td>
-                <td><input id="clat_NPM" type="number" value="0"></td>
+                <td><input readonly id="cls_NPM" type="number" value="0"></td>
+                <td><input readonly id="clt_NPM" type="number" value="0"></td>
 
             </tr>
         </tbody>
     </table>
     <div class="button-container">
         <div class="button-wrapper">
-            <a class="btn btn-warning" id="edit_btn" onclick="edit_kra3()" href="#" role="button">Edit</a>
-            <button type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
+            <a class="btn btn-warning" id="edit_btn" onclick="edit_kra1()" href="#" role="button">Edit</a>
+            <button style="display: none" id="save_btn" type="button" onclick="btnSave()" class="btn btn-warning">Save</button>
             <a class="btn btn-dark" href="kra1-next.php" role="button">Next</a>
 
             <div class="modal fade" id="approval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -210,9 +210,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLongTitle">Community Development Report</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">Are you sure you want to submit report?</div>
                         <div class="modal-footer d-flex justify-content-between">
@@ -242,88 +240,89 @@ function get_lock() {
     }
 }
 
-function save_kra1() {
+function btnSave() {
     //-- Health for All --//
     //Status
-    var hwds_NHWDP = $('#hwds_NHWDP').val();
-    var hwds_NCIS = $('#hwds_NCIS').val();
-    var hwds_NPM = $('#hwds_NPM').val();
+    var hs_NHWDP = $('#hs_NHWDP').val();
+    var hs_NCIS = $('#hs_NCIS').val();
+    var hs_NPM = $('#hs_NPM').val();
     //Target
-    var hwdt_NHWDP = $('#hwdt_NHWDP').val();
-    var hwdt_NCIS = $('#hwdt_NCIS').val();
-    var hwdt_NPM = $('#hwdt_NPM').val();
+    var ht_NHWDP = $('#ht_NHWDP').val();
+    var ht_NCIS = $('#ht_NCIS').val();
+    var ht_NPM = $('#ht_NPM').val();
 
-    var hwds_arr = new Array(hwds_NHWDP, hwds_NCIS, hwds_NPM);
-    var hwdt_arr = [hwdt_NHWDP, hwdt_NCIS, hwdt_NPM];
-    localStorage.setItem('hwds_arr', hwds_arr);
-    localStorage.setItem('hwdt_arr', hwdt_arr);
+    var hs_arr = new Array(hs_NHWDP, hs_NCIS, hs_NPM);
+    var ht_arr = [ht_NHWDP, ht_NCIS, ht_NPM];
+    localStorage.setItem('hs_arr', hs_arr);
+    localStorage.setItem('ht_arr', ht_arr);
 
 
     //-- Education for all --//
     //Status
-    var eies_NEIEP = $('#eies_NEIEP').val();
-    var eies_NCIS = $('#eies_NCIS').val();
-    var eies_NPM = $('#eies_NPM').val();
+    var es_NEIEP = $('#es_NEIEP').val();
+    var es_NCIS = $('#es_NCIS').val();
+    var es_NPM = $('#es_NPM').val();
     //Target
-    var eiet_NEIEP = $('#eiet_NEIEP').val();
-    var eiet_NCIS = $('#eiet_NCIS').val();
-    var eiet_NPM = $('#eiet_NPM').val();
+    var et_NEIEP = $('#et_NEIEP').val();
+    var et_NCIS = $('#et_NCIS').val();
+    var et_NPM = $('#et_NPM').val();
 
 
-    var eies_arr = new Array(eies_NEIEP, eies_NCIS, eies_NPM);
-    var eiet_arr = [eiet_NEIEP, eiet_NCIS, eiet_NPM];
-    localStorage.setItem('eies_arr', eies_arr);
-    localStorage.setItem('eiet_arr', eiet_arr);
+    var es_arr = new Array(es_NEIEP, es_NCIS, es_NPM);
+    var et_arr = [et_NEIEP, et_NCIS, et_NPM];
+    localStorage.setItem('es_arr', es_arr);
+    localStorage.setItem('et_arr', et_arr);
 
 
     //-- Good governance for all --//
     //Status
-    var ggas_NLODGGP = $('#ggas_NLODGGP').val();
-    var ggas_NCIS = $('#ggas_NCIS').val();
-    var ggas_NPM = $('#ggas_NPM').val();
+    var ggs_NLODGGP = $('#ggs_NLODGGP').val();
+    var ggs_NCIS = $('#ggs_NCIS').val();
+    var ggs_NPM = $('#ggs_NPM').val();
     //Target
-    var ggat_NLODGGP = $('#ggat_NLODGGP').val();
-    var ggat_NCIS = $('#ggat_NCIS').val();
-    var ggat_NPM = $('#ggat_NPM').val();
+    var ggt_NLODGGP = $('#ggt_NLODGGP').val();
+    var ggt_NCIS = $('#ggt_NCIS').val();
+    var ggt_NPM = $('#ggt_NPM').val();
 
-    var ggas_arr = new Array(ggas_NLODGGP, ggas_NCIS, ggas_NPM);
-    var ggat_arr = [ggat_NLODGGP, ggat_NCIS, ggat_NPM];
-    localStorage.setItem('ggas_arr', ggas_arr);
-    localStorage.setItem('ggat_arr', ggat_arr);
+    var ggs_arr = new Array(ggs_NLODGGP, ggs_NCIS, ggs_NPM);
+    var ggt_arr = [ggt_NLODGGP, ggt_NCIS, ggt_NPM];
+    localStorage.setItem('ggs_arr', ggs_arr);
+    localStorage.setItem('ggt_arr', ggt_arr);
 
 
     //-- Economic justice for all --//
     //Status
-    var ejas_NESEP = $('#ejas_NESEP').val();
-    var ejas_NCIS = $('#ejas_NCIS').val();
-    var ejas_NPM = $('#ejas_NPM').val();
+    var ejs_NESEP = $('#ejs_NESEP').val();
+    var ejs_NCIS = $('#ejs_NCIS').val();
+    var ejs_NPM = $('#ejs_NPM').val();
     //Target
-    var ejat_NESEP = $('#ejat_NESEP').val();
-    var ejat_NCIS = $('#ejat_NCIS').val();
-    var ejat_NPM = $('#ejat_NPM').val();
+    var ejt_NESEP = $('#ejt_NESEP').val();
+    var ejt_NCIS = $('#ejt_NCIS').val();
+    var ejt_NPM = $('#ejt_NPM').val();
 
-    var ejas_arr = new Array(ejas_NESEP, ejas_NCIS, ejas_NPM);
-    var ejat_arr = [ejat_NESEP, ejat_NCIS, ejat_NPM];
-    localStorage.setItem('ejas_arr', ejas_arr);
-    localStorage.setItem('ejat_arr', ejat_arr);
+    var ejs_arr = new Array(ejs_NESEP, ejs_NCIS, ejs_NPM);
+    var ejt_arr = [ejt_NESEP, ejt_NCIS, ejt_NPM];
+    localStorage.setItem('ejs_arr', ejs_arr);
+    localStorage.setItem('ejt_arr', ejt_arr);
 
     //-- Christ's love for all --//
     //Status
-    var clas_NSMEP = $('#clas_NSMEP').val();
-    var clas_NCIS = $('#clas_NCIS').val();
-    var clas_NPM = $('#clas_NPM').val();
+    var cls_NSMEP = $('#cls_NSMEP').val();
+    var cls_NCIS = $('#cls_NCIS').val();
+    var cls_NPM = $('#cls_NPM').val();
     //Target
-    var clat_NSMEP = $('#clat_NSMEP').val();
-    var clat_NCIS = $('#clat_NCIS').val();
-    var clat_NPM = $('#clat_NPM').val();
+    var clt_NSMEP = $('#clt_NSMEP').val();
+    var clt_NCIS = $('#clt_NCIS').val();
+    var clt_NPM = $('#clt_NPM').val();
 
-    var clas_arr = new Array(clas_NSMEP, clas_NCIS, clas_NPM);
-    var clat_arr = [clat_NSMEP, clat_NCIS, clat_NPM];
-    localStorage.setItem('clas_arr', clas_arr);
-    localStorage.setItem('clat_arr', clat_arr);
+    var cls_arr = new Array(cls_NSMEP, cls_NCIS, cls_NPM);
+    var clt_arr = [clt_NSMEP, clt_NCIS, clt_NPM];
+    localStorage.setItem('cls_arr', cls_arr);
+    localStorage.setItem('clt_arr', clt_arr);
 
 
     let user_id = localStorage.getItem('selected_user_id');
+    let kra_id = localStorage.getItem('selected_kra_id');
     $.ajax({
         url: url,
         type: "POST",
@@ -331,17 +330,17 @@ function save_kra1() {
             csrf_token: "{{ csrf_token() }}",
             tag: "update1_kra1",
             user_id: user_id,
-
-            hwds_arr: localStorage.getItem('hwds_arr'),
-            hwdt_arr: localStorage.getItem('hwdt_arr'),
-            eies_arr: localStorage.getItem('eies_arr'),
-            eiet_arr: localStorage.getItem('eiet_arr'),
-            ggas_arr: localStorage.getItem('ggas_arr'),
-            ggat_arr: localStorage.getItem('ggat_arr'),
-            ejas_arr: localStorage.getItem('ejas_arr'),
-            ejat_arr: localStorage.getItem('ejat_arr'),
-            clas_arr: localStorage.getItem('clas_arr'),
-            clat_arr: localStorage.getItem('clat_arr')
+            kra_id: kra_id,
+            hs_arr: localStorage.getItem('hs_arr'),
+            ht_arr: localStorage.getItem('ht_arr'),
+            es_arr: localStorage.getItem('es_arr'),
+            et_arr: localStorage.getItem('et_arr'),
+            ggs_arr: localStorage.getItem('ggs_arr'),
+            ggt_arr: localStorage.getItem('ggt_arr'),
+            ejs_arr: localStorage.getItem('ejs_arr'),
+            ejt_arr: localStorage.getItem('ejt_arr'),
+            cls_arr: localStorage.getItem('cls_arr'),
+            clt_arr: localStorage.getItem('clt_arr')
         },
         complete: function(response) {
             var data = JSON.parse(response.responseText);
@@ -357,7 +356,7 @@ function save_kra1() {
 }
 
 function edit_kra1() {
-    $('.input_number').removeAttr('readonly');
+    $('input').removeAttr('readonly');
     $('#save_btn').show();
     $('#edit_btn').hide();
 }
@@ -374,52 +373,69 @@ function get_kra1datafromuserid() {
             user_id: user_id
         },
         complete: function(response) {
+
+            console.log(response.responseText);                                                                                     
             var data = JSON.parse(response.responseText);
-            var hwds_arr = data[0].hwds_arr.split(",");
-            $('#hwds_NHWDP').val(hwds_arr[0]);
-            $('#hwds_NCIS').val(hwds_arr[1]);
-            $('#hwds_NPM').val(hwds_arr[2]);
-            var hwdt_arr = data[0].hwdt_arr.split(",");
-            $('#hwdt_NHWDP').val(hwdt_arr[0]);
-            $('#hwdt_NCIS').val(hwdt_arr[1]);
-            $('#hwdt_NPM').val(hwdt_arr[2]);
+            var hs_arr = data[0].hs_arr.split(",");
+            $('#hs_NHWDP').val(hs_arr[0]);
+            $('#hs_NCIS').val(hs_arr[1]);
+            $('#hs_NPM').val(hs_arr[2]);
+            let ht_arr = data[0].ht_arr;
+            if(ht_arr != "") {
+                let ht_arr = data[0].ht_arr.split(",");
+                $('#ht_NHWDP').val(ht_arr[0]);
+                $('#ht_NCIS').val(ht_arr[1]);
+                $('#ht_NPM').val(ht_arr[2]);
+            }
+           
 
-            var eies_arr = data[0].eies_arr.split(",");
-            $('#eies_NEIEP').val(eies_arr[0]);
-            $('#eies_NCIS').val(eies_arr[1]);
-            $('#eies_NPM').val(eies_arr[2]);
-            var eiet_arr = data[0].eiet_arr.split(",");
-            $('#eiet_NEIEP').val(eiet_arr[0]);
-            $('#eiet_NCIS').val(eiet_arr[1]);
-            $('#eiet_NPM').val(eiet_arr[2]);
+            var es_arr = data[0].es_arr.split(",");
+            $('#es_NEIEP').val(es_arr[0]);
+            $('#es_NCIS').val(es_arr[1]);
+            $('#es_NPM').val(es_arr[2]);
+            let et_arr = data[0].et_arr;
+            if(et_arr != "") {
+                let et_arr = data[0].et_arr.split(",");
+                $('#et_NEIEP').val(et_arr[0]);
+                $('#et_NCIS').val(et_arr[1]);
+                $('#et_NPM').val(et_arr[2]);
+            }
 
-            var ggas_arr = data[0].ggas_arr.split(",");
-            $('#ggas_NLODGGP').val(ggas_arr[0]);
-            $('#ggas_NCIS').val(ggas_arr[1]);
-            $('#ggas_NPM').val(ggas_arr[2]);
-            var ggat_arr = data[0].ggat_arr.split(",");
-            $('#ggat_NLODGGP').val(ggat_arr[0]);
-            $('#ggat_NCIS').val(ggat_arr[1]);
-            $('#ggat_NPM').val(ggat_arr[2]);
+            var ggs_arr = data[0].ggs_arr.split(",");
+            $('#ggs_NLODGGP').val(ggs_arr[0]);
+            $('#ggs_NCIS').val(ggs_arr[1]);
+            $('#ggs_NPM').val(ggs_arr[2]);
+            let ggt_arr = data[0].ggt_arr;
+            if(ggt_arr != "") {
+                let ggt_arr = data[0].ggt_arr.split(",");
+                $('#ggt_NLODGGP').val(ggt_arr[0]);
+                $('#ggt_NCIS').val(ggt_arr[1]);
+                $('#ggt_NPM').val(ggt_arr[2]);
+            }
 
-            var ejas_arr = data[0].ejas_arr.split(",");
-            $('#ejas_NESEP').val(ejas_arr[0]);
-            $('#ejas_NCIS').val(ejas_arr[1]);
-            $('#ejas_NPM').val(ejas_arr[2]);
-            var ejat_arr = data[0].ejat_arr.split(",");
-            $('#ejat_NESEP').val(ejat_arr[0]);
-            $('#ejat_NCIS').val(ejat_arr[1]);
-            $('#ejat_NPM').val(ejat_arr[2]);
+            var ejs_arr = data[0].ejs_arr.split(",");
+            $('#ejs_NESEP').val(ejs_arr[0]);
+            $('#ejs_NCIS').val(ejs_arr[1]);
+            $('#ejs_NPM').val(ejs_arr[2]);
+            let ejt_arr = data[0].ejt_arr;
+            if(ejt_arr != "") {
+                let ejt_arr = data[0].ejt_arr.split(",");
+                $('#ejt_NESEP').val(ejt_arr[0]);
+                $('#ejt_NCIS').val(ejt_arr[1]);
+                $('#ejt_NPM').val(ejt_arr[2]);
+            }
 
-            var clas_arr = data[0].clas_arr.split(",");
-            $('#clas_NSMEP').val(clas_arr[0]);
-            $('#clas_NCIS').val(clas_arr[1]);
-            $('#clas_NPM').val(clas_arr[2]);
-            var clat_arr = data[0].clat_arr.split(",");
-            $('#clat_NSMEP').val(clat_arr[0]);
-            $('#clat_NCIS').val(clat_arr[1]);
-            $('#clat_NPM').val(clat_arr[2]);
-
+            var cls_arr = data[0].cls_arr.split(",");
+            $('#cls_NSMEP').val(cls_arr[0]);
+            $('#cls_NCIS').val(cls_arr[1]);
+            $('#cls_NPM').val(cls_arr[2]);
+            let clt_arr = data[0].clt_arr;
+            if(clt_arr != "") {
+                let clt_arr = data[0].clt_arr.split(",");
+                $('#clt_NSMEP').val(clt_arr[0]);
+                $('#clt_NCIS').val(clt_arr[1]);
+                $('#clt_NPM').val(clt_arr[2]);
+            }
         }
     })
 }

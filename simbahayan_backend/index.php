@@ -529,9 +529,9 @@ switch ($tag) {
 		}
 	break;
 	case 'approve_kra3coordinator':
-		$query="UPDATE tbl_kra_submission SET kra3_sub='2' WHERE user_id=?";
+		$query="UPDATE tbl_kra_submission SET kra3_sub='2' WHERE user_id=? AND id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['user_id']])) {
+		if($stmt->execute([$_GET['user_id'],$_GET['kra_id']])) {
 			echo json_encode([
 				"status" => "updated"
 			]);
@@ -553,9 +553,9 @@ switch ($tag) {
 		}
 	break;
 	case 'approve_kra2coordinator':
-		$query="UPDATE tbl_kra_submission SET kra2_sub='2' WHERE user_id=?";
+		$query="UPDATE tbl_kra_submission SET kra2_sub='2' WHERE user_id=? AND id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['user_id']])) {
+		if($stmt->execute([$_GET['user_id'],$_GET['kra_id']])) {
 			echo json_encode([
 				"status" => "updated"
 			]);
@@ -577,9 +577,9 @@ switch ($tag) {
 		}
 	break;
 	case 'check_coordinatorsubmission':
-		$query="SELECT * FROM tbl_kra_submission WHERE user_id=?";
+		$query="SELECT * FROM tbl_kra_submission WHERE id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['user_id']])) {
+		if($stmt->execute([$_GET['kra_id']])) {
 			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 		} else {
 			echo json_encode([
@@ -588,9 +588,9 @@ switch ($tag) {
 		}
 	break;
 	case 'approve_kra1coordinator':
-		$query="UPDATE tbl_kra_submission SET kra1_sub='2' WHERE user_id=?";
+		$query="UPDATE tbl_kra_submission SET kra1_sub='2' WHERE user_id=? AND id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['user_id']])) {
+		if($stmt->execute([$_GET['user_id'],$_GET['kra_id']])) {
 			echo json_encode([
 				"status" => "updated"
 			]);
@@ -655,7 +655,7 @@ switch ($tag) {
 						<td>".$datay[$i]['email']."</td>
 						<td>".date('F d, Y h:i a', strtotime($datay[$i]['date_submitted']))."</td>
 						<td>".$status."</td>
-						<td><button class='btn btn-link' data-user_id='".$datay[$i]['user_id']."' onclick='goto_kra_select(this)'>View</button></td>
+						<td><button class='btn btn-link' data-kra_id='".$datay[$i]['id']."' data-user_id='".$datay[$i]['user_id']."' onclick='goto_kra_select(this)'>View</button></td>
 					</tr>";
 				}
 				echo $toecho;
@@ -708,25 +708,26 @@ switch ($tag) {
 	break;
 	case 'update1_kra3':
 		$query="UPDATE kra3 SET
-			pos_arr=?,
-			pot_arr=?,
-			gas_arr=?,
-			gat_arr=?,
-			ngos_arr=?,
-			ngot_arr=?,
-			beis_arr=?,
-			beit_arr=? WHERE user_id=?"; 
+			nmoas_arr=?,
+			nmoat_arr=?,
+			ncdaas_arr=?,
+			ncdaat_arr=?,
+			arr_ntco_stat=?,
+			arr_ntco_targ=?,
+			arr_nptco_stat=?,
+			arr_nptco_targ=? WHERE user_id=? AND kra_sub_id=?"; 
 			$stmt=$pdo->prepare($query);
 			if($stmt->execute([
-				$_POST['pos_arr'], 
-				$_POST['pot_arr'],
-				$_POST['gas_arr'],
-				$_POST['gat_arr'],
-				$_POST['ngos_arr'],
-				$_POST['ngot_arr'],
-				$_POST['beis_arr'],
-				$_POST['beit_arr'],
-				$_POST['user_id']
+				$_POST['nmoas_arr'], 
+				$_POST['nmoat_arr'],
+				$_POST['ncdaas_arr'],
+				$_POST['ncdaat_arr'],
+				$_POST['arr_ntco_stat'],
+				$_POST['arr_ntco_targ'],
+				$_POST['arr_nptco_stat'],
+				$_POST['arr_nptco_targ'],
+				$_POST['user_id'],
+				$_POST['kra_id']
 			])) {
 				echo json_encode([
 					"status" => "ok"
@@ -766,25 +767,26 @@ switch ($tag) {
 	break;
 	case 'update1_kra2':
 		$query="UPDATE kra2 SET
-			s_puidcd_arr=?,
-			t_puidcd_arr=?,
-			s_psaa_arr=?,
-			t_psaa_arr=?,
-			s_pucer_arr=?,
-			t_pucer_arr=?,
-			s_pul_arr=?,
-			t_pul_arr=? WHERE user_id=?"; 
+			npus_arr=?,
+			nput_arr=?,
+			nppus_arr=?,
+			npput_arr=?,
+			nrpfcs_arr=?,
+			nrpfct_arr=?,
+			nps_arr=?,
+			npt_arr=? WHERE user_id=? AND kra_sub_id=?"; 
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute([
-			$_POST['s_puidcd_arr'], 
-			$_POST['t_puidcd_arr'],
-			$_POST['s_psaa_arr'],
-			$_POST['t_psaa_arr'],
-			$_POST['s_pucer_arr'],
-			$_POST['t_pucer_arr'],
-			$_POST['s_pul_arr'],
-			$_POST['t_pul_arr'],
-			$_POST['user_id']
+			$_POST['npus_arr'], 
+			$_POST['nput_arr'],
+			$_POST['nppus_arr'],
+			$_POST['npput_arr'],
+			$_POST['nrpfcs_arr'],
+			$_POST['nrpfct_arr'],
+			$_POST['nps_arr'],
+			$_POST['npt_arr'],
+			$_POST['user_id'],
+			$_POST['kra_id'],
 		])) {
 			echo json_encode([
 				"status" => "ok",
@@ -797,30 +799,27 @@ switch ($tag) {
 	break;
 	case 'update2_kra1':
 		$query="UPDATE kra1 SET
-			cahds_arr=?,
-			cahdt_arr=?,
-			sds_arr=?,
-			sdt_arr=?,
-			drrms_arr=?,
-			drrmt_arr=?,
-			fhds_arr=?,
-			fhdt_arr=?,
-			cofs_arr=?,
-			coft_arr=? WHERE user_id=?";
+			ceras_arr=?,
+			cerat_arr=?,
+			sfas_arr=?,
+			sfat_arr=?,
+			ejas_arr=?,
+			ejat_arr=?,
+			hlas_arr=?,
+			hlat_arr=? WHERE user_id=? AND kra_sub_id=?";
 
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute([
-			$_POST['cahds_arr'],
-			$_POST['cahdt_arr'],
-			$_POST['sds_arr'],
-			$_POST['sdt_arr'],
-			$_POST['drrms_arr'],
-			$_POST['drrmt_arr'],
-			$_POST['fhds_arr'],
-			$_POST['fhdt_arr'],
-			$_POST['cofs_arr'],
-			$_POST['coft_arr'],
-			$_POST['user_id']
+			$_POST['ceras_arr'],
+			$_POST['cerat_arr'],
+			$_POST['sfas_arr'],
+			$_POST['sfat_arr'],
+			$_POST['ejas_arr'],
+			$_POST['ejat_arr'],
+			$_POST['hlas_arr'],
+			$_POST['hlat_arr'],
+			$_POST['user_id'],
+			$_POST['kra_id']
 		])) {
 			echo json_encode([
 				"status" => "ok",
@@ -842,7 +841,7 @@ switch ($tag) {
 			ejs_arr=?,
 			ejt_arr=?,
 			cls_arr=?,
-			clt_arr=? WHERE user_id=?";
+			clt_arr=? WHERE user_id=? AND kra_sub_id=?";
 
 		$stmt=$pdo->prepare($query);
 		if($stmt->execute([
@@ -856,7 +855,8 @@ switch ($tag) {
 			$_POST['ejt_arr'],
 			$_POST['cls_arr'],
 			$_POST['clt_arr'],
-			$_POST['user_id']
+			$_POST['user_id'],
+			$_POST['kra_id']
 		])) {
 			echo json_encode([
 				"status" => "ok",
@@ -898,7 +898,7 @@ switch ($tag) {
 						<td>".$datay[$i]['email']."</td>
 						<td>".date('F d, Y h:i a', strtotime($datay[$i]['date_submitted']))."</td>
 						<td>".$status."</td>
-						<td><button class='btn btn-link' data-user_id='".$datay[$i]['user_id']."' onclick='goto_kra_select(this)'>View</button></td>
+						<td><button class='btn btn-link' data-kra_id='".$datay[$i]['id']."' data-user_id='".$datay[$i]['user_id']."' onclick='goto_kra_select(this)'>View</button></td>
 					</tr>";
 				}
 				echo $toecho;

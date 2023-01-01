@@ -9,8 +9,6 @@
         <a class="navbar-brand" href="profile.php">
             <img src="../pictures/ustlogo.png" alt="Logo" width="70" height="70"
                 class="d-inline-block align-text-middle" />
-
-
             <span style="color: black;">Simbahayan Portal</span>
 
         </a>
@@ -63,7 +61,8 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2" href="#">Logout</a>
+                    <a data-bs-toggle="modal" href="#logout_modal" class="nav-link mb-0 text-dark">Logout</a>
+
                 </li>
 
             </ul>

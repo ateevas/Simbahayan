@@ -54,8 +54,8 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                     <a data-bs-toggle="modal" href="#logout_modal" class="nav-link"
-                    style="text-decoration: none; box-shadow: none;">Logout</a>
+                    <a data-bs-toggle="modal" href="#logout_modal" class="nav-link mb-0 text-dark">Logout</a>
+
                 </li>
 
             </ul>

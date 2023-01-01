@@ -79,7 +79,7 @@
 </html>
 <script type="text/javascript">
 	check_coordinatorsubmission();
-		function submit_report() {
+	function submit_report() {
 		let my_id = localStorage.getItem("user_id");
 		let user_id = localStorage.getItem("selected_user_id");
 		$.ajax({
@@ -105,22 +105,24 @@
 	}
 	function check_coordinatorsubmission() {
 		let user_id = localStorage.getItem("selected_user_id");
+		let kra_id = localStorage.getItem("selected_kra_id");
 		$.ajax({
 			url: url,
 			type: "GET",
 			data: {
 				csrf_token: "{{ csrf_token() }}",
 				tag: "check_coordinatorsubmission", 
-				user_id: user_id,
+				kra_id: kra_id,
 			},
 			complete: function (response) {
+				console.log(response.responseText);
 				var data = JSON.parse(response.responseText);
 				switch (data[0]['kra1_sub']) {
-					case '2':
+					case 2:
 						$('.kra1badge').addClass("bg-success");
 						$('.kra1badge').html("Coordinator Approved");
 					break;
-					case '3':
+					case 3:
 						$('.kra1badge').addClass("bg-success");
 						$('.kra1badge').html("Simbahayan Approved");
 					break;
@@ -131,11 +133,11 @@
 				}
 
 				switch (data[0]['kra2_sub']) {
-					case '2':
+					case 2:
 						$('.kra2badge').addClass("bg-success");
 						$('.kra2badge').html("Coordinator Approved");
 					break;
-					case '3':
+					case 3:
 						$('.kra2badge').addClass("bg-success");
 						$('.kra2badge').html("Simbahayan Approved");
 					break;
@@ -146,11 +148,11 @@
 				}
 
 				switch (data[0]['kra3_sub']) {
-					case '2':
+					case 2:
 						$('.kra3badge').addClass("bg-success");
 						$('.kra3badge').html("Coordinator Approved");
 					break;
-					case '3':
+					case 3:
 						$('.kra3badge').addClass("bg-success");
 						$('.kra3badge').html("Simbahayan Approved");
 					break;
@@ -160,17 +162,10 @@
 					break;
 				}
 
-				if(data[0]['kra_status'] == "1" && data[0]['kra1_sub'] == "2" && data[0]['kra2_sub'] == "2" && data[0]['kra3_sub'] == "2") {
+				if(data[0]['kra1_sub'] == "2" && data[0]['kra2_sub'] == "2" && data[0]['kra3_sub'] == "2") {
 					$('#submit_button').removeClass("disabled");
 			    	$('#submit_button').removeAttr("disabled");
 			    	$('#submit_button').removeAttr("readonly");
-				}
-				if(data[0]['kra_status'] == "2") {
-					localStorage.setItem("approve_lock", "1");
-					localStorage.setItem("edit_lock", "1");
-				} else {
-					localStorage.setItem("approve_lock", "0");
-					localStorage.setItem("edit_lock", "0");
 				}
 			}
 		})

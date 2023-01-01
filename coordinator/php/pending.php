@@ -59,6 +59,7 @@ function get_allsubmittedkra() {
 }
 function goto_kra_select(obj){
     localStorage.setItem('selected_user_id', $(obj).data('user_id'));
+    localStorage.setItem('selected_kra_id', $(obj).data('kra_id'));
     window.location.href="http://localhost/Simbahayan/coordinator/php/kra-select.php";
 }
 </script>

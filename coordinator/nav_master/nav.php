@@ -56,11 +56,10 @@
                 </ul>
             </li>
             <li class="nav-item active">
-                <a class="nav-link  text-dark" href="contact.php">Contact <span class="sr-only"></span></a>
+                <a class="nav-link text-dark" href="contact.php">Contact <span class="sr-only"></span></a>
             </li>
-            <li class="nav-item active">
-                <button data-bs-toggle="modal" data-bs-target="#logout_modal" class="btn btn-link text-dark"
-                    style="text-decoration: none; box-shadow: none;">Logout</button>
+            <li class="nav-item">
+                <a data-bs-toggle="modal" href="#logout_modal" class="nav-link mb-0 text-dark">Logout</a>
             </li>
         </ul>
     </div>
