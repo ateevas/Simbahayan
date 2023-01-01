@@ -447,7 +447,11 @@
                         <td id="s_npua_sl" class="align-middle text-center fw-bold"></td>
                         <td id="t_npua_sl" class="align-middle text-center fw-bold"></td>
                     </tr>
-
+                    <tr>
+                        <td colspan="2" class="text-center fw-bold">Total: </td>
+                        <td id="s_npua_total" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npua_total" class="align-middle text-center fw-bold"></td>
+                    </tr>
                     <tr>
                         <th scope="row">6</th>
                         <th>Number of projects under the University Community Development Program (UCDP), particularly
@@ -455,7 +459,6 @@
                             following:</th>
                         <td class="align-middle text-center fw-bold"></td>
                         <td iclass="align-middle text-center fw-bold"></td>
-
                     </tr>
 
                     <tr>
@@ -506,6 +509,11 @@
                         <td id="t_npub_alum" class="align-middle text-center fw-bold"></td>
                     </tr>
 
+                    <tr>
+                        <td colspan="2" class="text-center fw-bold">Total: </td>
+                        <td id="s_npub_total" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npub_total" class="align-middle text-center fw-bold"></td>
+                    </tr>
 
                     <tr>
                         <th scope="row">7</th>
@@ -514,6 +522,7 @@
                         <td class="align-middle text-center fw-bold"></td>
                         <td class="align-middle text-center fw-bold"></td>
                     </tr>
+                    
 
                     <tr>
                         <th scope="row"></th>
@@ -529,6 +538,14 @@
                         <td id="s_npuc_int" class="align-middle text-center fw-bold"></td>
                         <td id="t_npuc_int" class="align-middle text-center fw-bold"></td>
                     </tr>
+
+                    <tr>
+                        <td colspan="2" class="text-center fw-bold">Total: </td>
+                        <td id="s_npuc_total" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npuc_total" class="align-middle text-center fw-bold"></td>
+                    </tr>
+
+
                     <tr>
                         <th scope="row">8</th>
                         <th>Number of publications
@@ -551,10 +568,11 @@
                         <td id="s_npud_int" class="align-middle text-center fw-bold"></td>
                         <td id="t_npud_int" class="align-middle text-center fw-bold"></td>
                     </tr>
+
                     <tr>
-                        <td colspan="2" class="text-end fw-bold">Total: </td>
-                        <td id="final_kra2status" class="align-middle text-center fw-bold"></td>
-                        <td id="final_kra2target" class="align-middle text-center fw-bold"></td>
+                        <td colspan="2" class="text-center fw-bold">Total: </td>
+                        <td id="s_npud_total" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npud_total" class="align-middle text-center fw-bold"></td>
                     </tr>
                 </tbody>
             </table>
@@ -759,11 +777,6 @@
                         </th>
                         <td id="s_ptco_total" class="align-middle text-center fw-bold"></td>
                         <td id="t_ptco_total" class="align-middle text-center fw-bold"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="text-end fw-bold">Total: </td>
-                        <td id="final_kra3status" class="align-middle text-center fw-bold"></td>
-                        <td id="final_kra3target" class="align-middle text-center fw-bold"></td>
                     </tr>
                 </tbody>
             </table>
@@ -1698,6 +1711,7 @@ function get_kra1datafromuserid() {
         }
     })
 }
+<<<<<<< HEAD
 
 
 // -------------------------------------------------------------------------------------------------
@@ -1707,102 +1721,158 @@ function get_kra1datafromuserid() {
 
 
 
+=======
+get_kra2datafromuserid();
+>>>>>>> b6b5109da662180839e220ff61ca0911d7a38058
 function get_kra2datafromuserid() {
     let user_id = localStorage.getItem('final_pdf_id');
+    let college_id = localStorage.getItem('final_college_id');
     $.ajax({
         url: url,
         type: "GET",
         data: {
             csrf_token: "{{ csrf_token() }}",
             tag: "get_kra2datafromuserid",
-            user_id: user_id
+            user_id: user_id,
+            college_id: college_id
         },
         complete: function(response) {
             var data = JSON.parse(response.responseText);
             console.log(data)
 
-            var s_puidcd_arr = data[0].s_puidcd_arr.split(",");
-            var s_puidcd_total = parseInt(s_puidcd_arr[0]);
-            $('#s_puidcd_total').html(s_puidcd_total);
 
-            var t_puidcd_arr = data[0].t_puidcd_arr.split(",");
-            var t_puidcd_total = parseInt(t_puidcd_arr[0]);
-            $('#t_puidcd_total').html(t_puidcd_total);
+            let npus_totalarr=[];
+            for(var key in data) {
+                var npus_arr = data[key].npus_arr.split(",").map(Number);
+                let npus_counter=[];
+                for (let index = 0; index < npus_arr.length; index++) {
+                    npus_counter.push(npus_arr[index]);
+                }
+                npus_totalarr.push(npus_counter);
+            }
+            let npus_final_arr = npus_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npua_idcd').html(npus_final_arr[0]);
+            $('#s_npua_saa').html(npus_final_arr[1]);
+            $('#s_npua_cer').html(npus_final_arr[2]);
+            $('#s_npua_sl').html(npus_final_arr[3]);
 
-            var s_psaa_arr = data[0].s_psaa_arr.split(",");
-            var s_psaa_total = parseInt(s_psaa_arr[0]);
-            $('#s_psaa_total').html(s_psaa_total);
-
-            var t_psaa_arr = data[0].t_psaa_arr.split(",");
-            var t_psaa_total = parseInt(t_psaa_arr[0]);
-            $('#t_psaa_total').html(t_psaa_total);
-
-            var s_pucer_arr = data[0].s_pucer_arr.split(",");
-            var s_pucer_total = parseInt(s_pucer_arr[0]);
-            $('#s_pucer_total').html(s_pucer_total);
-
-            var t_pucer_arr = data[0].t_pucer_arr.split(",");
-            var t_pucer_total = parseInt(t_pucer_arr[0]);
-            $('#t_pucer_total').html(t_pucer_total);
-
-            var s_pul_arr = data[0].s_pul_arr.split(",");
-            var s_pul_total = parseInt(s_pul_arr[0]);
-            $('#s_pul_total').html(s_pul_total);
-
-            var t_pul_arr = data[0].t_pul_arr.split(",");
-            var t_pul_total = parseInt(t_pul_arr[0]);
-            $('#t_pul_total').html(t_pul_total);
-
-            var udcps_arr = data[0].udcps_arr.split(",");
-            $("#UDCPs_NSO").html(udcps_arr[0]);
-            $("#UDCPs_NStu").html(udcps_arr[1]);
-            $("#UDCPs_NFac").html(udcps_arr[2]);
-            $("#UDCPs_NAdmin").html(udcps_arr[3]);
-            $("#UDCPs_NSS").html(udcps_arr[4]);
-            $("#UDCPs_NAlumni").html(udcps_arr[5]);
-            var udcps_total = parseInt(udcps_arr[0]) + parseInt(udcps_arr[1]) + parseInt(udcps_arr[2]) +
-                parseInt(udcps_arr[3]) + parseInt(udcps_arr[4]) + parseInt(udcps_arr[5]);
+            let nput_totalarr=[];
+            for(var key in data) {
+                var nput_arr = data[key].nput_arr.split(",").map(Number);
+                let nput_counter=[];
+                for (let index = 0; index < nput_arr.length; index++) {
+                    nput_counter.push(nput_arr[index]);
+                }
+                nput_totalarr.push(nput_counter);
+            }
+            let nput_final_arr = nput_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npua_idcd').html(nput_final_arr[0]);
+            $('#t_npua_saa').html(nput_final_arr[1]);
+            $('#t_npua_cer').html(nput_final_arr[2]);
+            $('#t_npua_sl').html(nput_final_arr[3]);
 
 
-            var udcpt_arr = data[0].udcpt_arr.split(",");
-            $("#UDCPt_NSO").html(udcpt_arr[0]);
-            $("#UDCPt_NStu").html(udcpt_arr[1]);
-            $("#UDCPt_NFac").html(udcpt_arr[2]);
-            $("#UDCPt_NAdmin").html(udcpt_arr[3]);
-            $("#UDCPt_NSS").html(udcpt_arr[4]);
-            $("#UDCPt_NAlumni").html(udcpt_arr[5]);
-            var udcpt_total = parseInt(udcpt_arr[0]) + parseInt(udcpt_arr[1]) + parseInt(udcpt_arr[2]) +
-                parseInt(udcpt_arr[3]) + parseInt(udcpt_arr[4]) + parseInt(udcpt_arr[5]);
+            let nppus_totalarr=[];
+            for(var key in data) {
+                var nppus_arr = data[key].nppus_arr.split(",").map(Number);
+                let nppus_counter=[];
+                for (let index = 0; index < nppus_arr.length; index++) {
+                    nppus_counter.push(nppus_arr[index]);
+                }
+                nppus_totalarr.push(nppus_counter);
+            }
+            let nppus_final_arr = nppus_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npub_sgs').html(nppus_final_arr[0]);
+            $('#s_npub_stu').html(nppus_final_arr[1]);
+            $('#s_npub_fal').html(nppus_final_arr[2]);
+            $('#s_npub_adm').html(nppus_final_arr[3]);
+            $('#s_npub_ssta').html(nppus_final_arr[4]);
+            $('#s_npub_alum').html(nppus_final_arr[5]);
+
+            let npput_totalarr=[];
+            for(var key in data) {
+                var npput_arr = data[key].npput_arr.split(",").map(Number);
+                let npput_counter=[];
+                for (let index = 0; index < npput_arr.length; index++) {
+                    npput_counter.push(npput_arr[index]);
+                }
+                npput_totalarr.push(npput_counter);
+            }
+            let npput_final_arr = npput_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npub_sgs').html(npput_final_arr[0]);
+            $('#t_npub_stu').html(npput_final_arr[1]);
+            $('#t_npub_fal').html(npput_final_arr[2]);
+            $('#t_npub_adm').html(npput_final_arr[3]);
+            $('#t_npub_ssta').html(npput_final_arr[4]);
+            $('#t_npub_alum').html(npput_final_arr[5]);
+
+            let nrpfcs_totalarr=[];
+            for(var key in data) {
+                var nrpfcs_arr = data[key].nrpfcs_arr.split(",").map(Number);
+                let nrpfcs_counter=[];
+                for (let index = 0; index < nrpfcs_arr.length; index++) {
+                    nrpfcs_counter.push(nrpfcs_arr[index]);
+                }
+                nrpfcs_totalarr.push(nrpfcs_counter);
+            }
+            let nrpfcs_final_arr = nrpfcs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npuc_local').html(nrpfcs_final_arr[0]);
+            $('#s_npuc_int').html(nrpfcs_final_arr[1]);
 
 
-            var fcs_arr = data[0].fcs_arr.split(",");
-            $("#fcs_RPLFC").html(fcs_arr[0]);
-            $("#fcs_RPIFC").html(fcs_arr[1]);
-            var fcs_total = parseInt(fcs_arr[0]) + parseInt(fcs_arr[1]);
-
-            var fct_arr = data[0].fct_arr.split(",");
-            $("#fct_RPLFC").html(fct_arr[0]);
-            $("#fct_RPIFC").html(fct_arr[1]);
-            var fct_total = parseInt(fct_arr[0]) + parseInt(fct_arr[1]);
-
-            var ps_arr = data[0].ps_arr.split(",");
-            $("#ps_NLP").html(ps_arr[0]);
-            $("#ps_IP").html(ps_arr[1]);
-            var ps_total = parseInt(ps_arr[0]) + parseInt(ps_arr[1]);
-
-            var pt_arr = data[0].pt_arr.split(",");
-            $("#pt_NLP").html(pt_arr[0]);
-            $("#pt_IP").html(pt_arr[1]);
-            var pt_total = parseInt(pt_arr[0]) + parseInt(pt_arr[1]);
+            let nrpfct_totalarr=[];
+            for(var key in data) {
+                var nrpfct_arr = data[key].nrpfct_arr.split(",").map(Number);
+                let nrpfct_counter=[];
+                for (let index = 0; index < nrpfct_arr.length; index++) {
+                    nrpfct_counter.push(nrpfct_arr[index]);
+                }
+                nrpfct_totalarr.push(nrpfct_counter);
+            }
+            let nrpfct_final_arr = nrpfct_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npuc_local').html(nrpfct_final_arr[0]);
+            $('#t_npuc_int').html(nrpfct_final_arr[1]);
 
 
-            var final_kra2status = s_puidcd_total + s_psaa_total + s_pucer_total + s_pul_total +
-                udcps_total + fcs_total + ps_total;
-            $('#final_kra2status').html(final_kra2status);
+            let nps_totalarr=[];
+            for(var key in data) {
+                var nps_arr = data[key].nps_arr.split(",").map(Number);
+                let nps_counter=[];
+                for (let index = 0; index < nps_arr.length; index++) {
+                    nps_counter.push(nps_arr[index]);
+                }
+                nps_totalarr.push(nps_counter);
+            }
+            let nps_final_arr = nps_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npud_local').html(nps_final_arr[0]);
+            $('#s_npud_int').html(nps_final_arr[1]);
 
-            var final_kra2target = t_puidcd_total + t_psaa_total + t_pucer_total + t_pul_total +
-                udcpt_total + fct_total + pt_total;
-            $('#final_kra2target').html(final_kra2target);
+
+            let npt_totalarr=[];
+            for(var key in data) {
+                var npt_arr = data[key].npt_arr.split(",").map(Number);
+                let npt_counter=[];
+                for (let index = 0; index < npt_arr.length; index++) {
+                    npt_counter.push(npt_arr[index]);
+                }
+                npt_totalarr.push(npt_counter);
+            }
+            let npt_final_arr = npt_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npud_local').html(npt_final_arr[0]);
+            $('#t_npud_int').html(npt_final_arr[1]);
+
+            $('#s_npud_total').html(nps_final_arr[0]+nps_final_arr[1]);
+            $('#t_npud_total').html(npt_final_arr[0]+npt_final_arr[1]);
+
+            $('#s_npuc_total').html(nrpfcs_final_arr[0]+nrpfcs_final_arr[1]);
+            $('#t_npuc_total').html(nrpfct_final_arr[0]+nrpfct_final_arr[1]);
+
+            $('#s_npub_total').html(nppus_final_arr[0]+nppus_final_arr[1]+nppus_final_arr[2]+nppus_final_arr[3]+nppus_final_arr[4]+nppus_final_arr[5]);
+            $('#t_npub_total').html(npput_final_arr[0]+npput_final_arr[1]+npput_final_arr[2]+npput_final_arr[3]+npput_final_arr[4]+npput_final_arr[5]);
+
+            $('#s_npua_total').html(npus_final_arr[0]+npus_final_arr[1]+npus_final_arr[2]+npus_final_arr[3]);
+            $('#t_npua_total').html(nput_final_arr[0]+nput_final_arr[1]+nput_final_arr[2]+nput_final_arr[3]);
+
 
             get_kra3datafromuserid();
 
@@ -1810,121 +1880,167 @@ function get_kra2datafromuserid() {
     })
 }
 
+
+get_kra3datafromuserid();
+
 function get_kra3datafromuserid() {
     let user_id = localStorage.getItem('final_pdf_id');
+    let college_id = localStorage.getItem('final_college_id');
     $.ajax({
         url: url,
         type: "GET",
         data: {
             csrf_token: "{{ csrf_token() }}",
             tag: "get_kra3datafromuserid",
-            user_id: user_id
+            user_id: user_id,
+            college_id: college_id
         },
         complete: function(response) {
+            console.log(response.responseText);
             var data = JSON.parse(response.responseText);
-            var pos_arr = data[0].pos_arr.split(",");
-            $('#POs_MM').html(pos_arr[0]);
-            $('#POs_CDAA').html(pos_arr[1]);
-            var pos_total = parseInt(pos_arr[0]) + parseInt(pos_arr[1]);
+
+            // $('#s_nmw_po').html();
+            // $('#t_nmw_po').html();
+
+            // nmoas_arr
+            // nmoat_arr
+
+            let nmoas_totalarr=[];
+            for(var key in data) {
+                var nmoas_arr = data[key].nmoas_arr.split(",").map(Number);
+                let nmoas_counter=[];
+                for (let index = 0; index < nmoas_arr.length; index++) {
+                    nmoas_counter.push(nmoas_arr[index]);
+                }
+                nmoas_totalarr.push(nmoas_counter);
+            }
+            let nmoas_final_arr = nmoas_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_nmw_po').html(nmoas_final_arr[0]);
+            $('#s_nmw_lgu').html(nmoas_final_arr[1]);
+            $('#s_nmw_ngo').html(nmoas_final_arr[2]);
+            $('#s_nmw_bei').html(nmoas_final_arr[3]);
+            $('#s_nmw_lhei').html(nmoas_final_arr[4]);
+            $('#s_nmw_ihei').html(nmoas_final_arr[5]);
+            $('#s_nmw_cbo').html(nmoas_final_arr[6]);
+            $('#s_nmw_pbo').html(nmoas_final_arr[7]);
+
+            let nmoat_totalarr=[];
+            for(var key in data) {
+                var nmoat_arr = data[key].nmoat_arr.split(",").map(Number);
+                let nmoat_counter=[];
+                for (let index = 0; index < nmoat_arr.length; index++) {
+                    nmoat_counter.push(nmoat_arr[index]);
+                }
+                nmoat_totalarr.push(nmoat_counter);
+            }
+            let nmoat_final_arr = nmoat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_nmw_po').html(nmoat_final_arr[0]);
+            $('#t_nmw_lgu').html(nmoat_final_arr[1]);
+            $('#t_nmw_ngo').html(nmoat_final_arr[2]);
+            $('#t_nmw_bei').html(nmoat_final_arr[3]);
+            $('#t_nmw_lhei').html(nmoat_final_arr[4]);
+            $('#t_nmw_ihei').html(nmoat_final_arr[5]);
+            $('#t_nmw_cbo').html(nmoat_final_arr[6]);
+            $('#t_nmw_pbo').html(nmoat_final_arr[7]);
+
+
+            let ncdaas_totalarr=[];
+            for(var key in data) {
+                var ncdaas_arr = data[key].ncdaas_arr.split(",").map(Number);
+                let ncdaas_counter=[];
+                for (let index = 0; index < ncdaas_arr.length; index++) {
+                    ncdaas_counter.push(ncdaas_arr[index]);
+                }
+                ncdaas_totalarr.push(ncdaas_counter);
+            }
+            let ncdaas_final_arr = ncdaas_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_ncda_po').html(ncdaas_final_arr[0]);
+            $('#t_ncda_lgu').html(ncdaas_final_arr[1]);
+            $('#t_ncda_ngo').html(ncdaas_final_arr[2]);
+            $('#t_ncda_bei').html(ncdaas_final_arr[3]);
+            $('#t_ncda_lhei').html(ncdaas_final_arr[4]);
+            $('#t_ncda_ihei').html(ncdaas_final_arr[5]);
+            $('#t_ncda_cbo').html(ncdaas_final_arr[6]);
+            $('#t_ncda_pbo').html(ncdaas_final_arr[7]);
 
 
 
+            let ncdaat_totalarr=[];
+            for(var key in data) {
+                var ncdaat_arr = data[key].ncdaat_arr.split(",").map(Number);
+                let ncdaat_counter=[];
+                for (let index = 0; index < ncdaat_arr.length; index++) {
+                    ncdaat_counter.push(ncdaat_arr[index]);
+                }
+                ncdaat_totalarr.push(ncdaat_counter);
+            }
+            let ncdaat_final_arr = ncdaat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_ncda_po').html(ncdaat_final_arr[0]);
+            $('#s_ncda_lgu').html(ncdaat_final_arr[1]);
+            $('#s_ncda_ngo').html(ncdaat_final_arr[2]);
+            $('#s_ncda_bei').html(ncdaat_final_arr[3]);
+            $('#s_ncda_lhei').html(ncdaat_final_arr[4]);
+            $('#s_ncda_ihei').html(ncdaat_final_arr[5]);
+            $('#s_ncda_cbo').html(ncdaat_final_arr[6]);
+            $('#s_ncda_pbo').html(ncdaat_final_arr[7]);
+
+            
+
+            let arr_ntco_stat_totalarr=[];
+            for(var key in data) {
+                var arr_ntco_stat_arr = data[key].arr_ntco_stat.split(",").map(Number);
+                let arr_ntco_stat_counter=[];
+                for (let index = 0; index < arr_ntco_stat_arr.length; index++) {
+                    arr_ntco_stat_counter.push(arr_ntco_stat_arr[index]);
+                }
+                arr_ntco_stat_totalarr.push(arr_ntco_stat_counter);
+            }
+            let arr_ntco_stat_final_arr = arr_ntco_stat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_tco_total').html(arr_ntco_stat_final_arr[0]);
+
+            let arr_ntco_targ_totalarr=[];
+            for(var key in data) {
+                var arr_ntco_targ_arr = data[key].arr_ntco_targ.split(",").map(Number);
+                let arr_ntco_targ_counter=[];
+                for (let index = 0; index < arr_ntco_targ_arr.length; index++) {
+                    arr_ntco_targ_counter.push(arr_ntco_targ_arr[index]);
+                }
+                arr_ntco_targ_totalarr.push(arr_ntco_targ_counter);
+            }
+            let arr_ntco_targ_final_arr = arr_ntco_targ_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_tco_total').html(arr_ntco_targ_final_arr[0]);
 
 
+            let arr_nptco_stat_totalarr=[];
+            for(var key in data) {
+                var arr_nptco_stat_arr = data[key].arr_nptco_stat.split(",").map(Number);
+                let arr_nptco_stat_counter=[];
+                for (let index = 0; index < arr_nptco_stat_arr.length; index++) {
+                    arr_nptco_stat_counter.push(arr_nptco_stat_arr[index]);
+                }
+                arr_nptco_stat_totalarr.push(arr_nptco_stat_counter);
+            }
+            let arr_nptco_stat_final_arr = arr_nptco_stat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_ptco_total').html(arr_nptco_stat_final_arr[0]);
 
-            var pot_arr = data[0].pot_arr.split(",");
-            $('#POt_MM').html(pot_arr[0]);
-            $('#POt_CDAA').html(pot_arr[1]);
-            var pot_total = parseInt(pot_arr[0]) + parseInt(pot_arr[1]);
+            let arr_nptco_targ_totalarr=[];
+            for(var key in data) {
+                var arr_nptco_targ_arr = data[key].arr_nptco_targ.split(",").map(Number);
+                let arr_nptco_targ_counter=[];
+                for (let index = 0; index < arr_nptco_targ_arr.length; index++) {
+                    arr_nptco_targ_counter.push(arr_nptco_targ_arr[index]);
+                }
+                arr_nptco_targ_totalarr.push(arr_nptco_targ_counter);
+            }
+            let arr_nptco_targ_final_arr = arr_nptco_targ_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_ptco_total').html(arr_nptco_targ_final_arr[0]);
 
-
-
-            var gas_arr = data[0].gas_arr.split(",");
-            $('#GAs_MM').html(gas_arr[0]);
-            $('#GAs_CDAA').html(gas_arr[1]);
-            var gas_total = parseInt(gas_arr[0]) + parseInt(gas_arr[1]);
-
-
-            var gat_arr = data[0].gat_arr.split(",");
-            $('#GAt_MM').html(gat_arr[0]);
-            $('#GAt_CDAA').html(gat_arr[1]);
-            var gat_total = parseInt(gat_arr[0]) + parseInt(gat_arr[1]);
-
-            var ngos_arr = data[0].ngos_arr.split(",");
-            $('#NGOs_MM').html(ngos_arr[0]);
-            $('#NGOs_CDAA').html(ngos_arr[1]);
-            var ngos_total = parseInt(ngos_arr[0]) + parseInt(ngos_arr[1]);
-
-
-
-            var ngot_arr = data[0].ngot_arr.split(",");
-            $('#NGOt_MM').html(ngot_arr[0]);
-            $('#NGOt_CDAA').html(ngot_arr[1]);
-            var beis_arr = data[0].beis_arr.split(",");
-            $('#BEIs_MM').html(beis_arr[0]);
-            $('#BEIs_CDAA').html(beis_arr[1]);
-            var beit_arr = data[0].beit_arr.split(",");
-            $('#BEIt_MM').html(beit_arr[0]);
-            $('#BEIt_CDAA').html(beit_arr[1]);
-
-            var lheis_arr = data[0].lheis_arr.split(",");
-            $("#LHEIs_MM").html(lheis_arr[0]);
-            $("#LHEIs_CDAA").html(lheis_arr[1]);
-            var lheit_arr = data[0].lheit_arr.split(",");
-            $("#LHEIt_MM").html(lheit_arr[0]);
-            $("#LHEIt_CDAA").html(lheit_arr[1]);
-            var iheis_arr = data[0].iheis_arr.split(",");
-            $("#IHEIs_MM").html(iheis_arr[0]);
-            $("#IHEIs_CDAA").html(iheis_arr[1]);
-            var iheit_arr = data[0].iheit_arr.split(",");
-            $("#IHEIt_MM").html(iheit_arr[0]);
-            $("#IHEIt_CDAA").html(iheit_arr[1]);
-            var cbos_arr = data[0].cbos_arr.split(",");
-            $("#CBOs_MM").html(cbos_arr[0]);
-            $("#CBOs_CDAA").html(cbos_arr[1]);
-            var cbot_arr = data[0].cbot_arr.split(",");
-            $("#CBOt_MM").html(cbot_arr[0]);
-            $("#CBOt_CDAA").html(cbot_arr[1]);
-            var pbos_arr = data[0].pbos_arr.split(",");
-            $("#PBOs_MM").html(pbos_arr[0]);
-            $("#PBOs_CDAA").html(pbos_arr[1]);
-            var pbot_arr = data[0].pbot_arr.split(",");
-            $("#PBOt_MM").html(pbot_arr[0]);
-            $("#PBOt_CDAA").html(pbot_arr[1]);
-            var tccs_arr = data[0].tccs_arr.split(",");
-            $("#TCCs_MM").html(tccs_arr[0]);
-            $("#TCCs_CDAA").html(tccs_arr[1]);
-            var tcct_arr = data[0].tcct_arr.split(",");
-            $("#TCCt_MM").html(tcct_arr[0]);
-            $("#TCCt_CDAA").html(tcct_arr[1]);
-
-
-            var kra311s = parseInt(tccs_arr[0]) + parseInt(tccs_arr[1]);
-            var kra311t = parseInt(tcct_arr[0]) + parseInt(tcct_arr[1]);
-
-
-            var final_kra310s = parseInt(pos_arr[0]) + parseInt(gas_arr[0]) + parseInt(ngos_arr[0]) +
-                parseInt(beis_arr[0]) + parseInt(lheis_arr[0]) + parseInt(iheis_arr[0]) + parseInt(cbos_arr[
-                    0]) + parseInt(pbos_arr[0]);
-            $('#kra310s').html(final_kra310s);
-
-            var final_kra310t = parseInt(pot_arr[0]) + parseInt(gat_arr[0]) + parseInt(ngot_arr[0]) +
-                parseInt(beit_arr[0]) + parseInt(iheit_arr[0]) + parseInt(iheit_arr[0]) + parseInt(cbot_arr[
-                    0]) + parseInt(pbot_arr[0]);
-            $('#kra310t').html(final_kra310t);
-
-            var final_kra311s = parseInt(pos_arr[1]) + parseInt(gas_arr[1]) + parseInt(ngos_arr[1]) +
-                parseInt(beis_arr[1]) + parseInt(lheis_arr[1]) + parseInt(iheis_arr[1]) + parseInt(cbos_arr[
-                    1]) + parseInt(pbos_arr[1]);
-            var final_kra311t = parseInt(pos_arr[1]) + parseInt(gas_arr[1]) + parseInt(ngos_arr[1]) +
-                parseInt(beis_arr[1]) + parseInt(lheis_arr[1]) + parseInt(iheis_arr[1]) + parseInt(cbos_arr[
-                    1]) + parseInt(pbos_arr[1]);
-
-            var final_kra3status = kra311s + final_kra310s + final_kra311s;
-            $('#final_kra3status').html(final_kra3status);
-
-            var final_kra3target = kra311t + final_kra310t + final_kra311t;
-            $('#final_kra3target').html(final_kra3target);
+            $('#s_nmw_total').html(nmoas_final_arr[0]+nmoas_final_arr[1]+nmoas_final_arr[2]+nmoas_final_arr[3]+nmoas_final_arr[4]+nmoas_final_arr[5]+nmoas_final_arr[6]+nmoas_final_arr[7]);
+            $('#t_nmw_total').html(nmoat_final_arr[0]+nmoat_final_arr[1]+nmoat_final_arr[2]+nmoat_final_arr[3]+nmoat_final_arr[4]+nmoat_final_arr[5]+nmoat_final_arr[6]+nmoat_final_arr[7]);
+            
+            $('#s_ncda_total').html(ncdaas_final_arr[0]+ncdaas_final_arr[1]+ncdaas_final_arr[2]+ncdaas_final_arr[3]+ncdaas_final_arr[4]+ncdaas_final_arr[5]+ncdaas_final_arr[6]+ncdaas_final_arr[7]);
+            $('#t_ncda_total').html(ncdaat_final_arr[0]+ncdaat_final_arr[1]+ncdaat_final_arr[2]+ncdaat_final_arr[3]+ncdaat_final_arr[4]+ncdaat_final_arr[5]+ncdaat_final_arr[6]+ncdaat_final_arr[7]);
+            
             // window.print();
         }
     })
