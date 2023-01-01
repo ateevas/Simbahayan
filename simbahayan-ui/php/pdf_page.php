@@ -10,31 +10,28 @@
     <title>KRAs and KPIs</title>
     <?php
         include('../cdn/cdn.php');
-        ?>
+    ?>
 </head>
 
 <body>
 
-    <div class="logo">
+    <div class="d-flex justify-content-between">
         <img src="http://localhost/Simbahayan/simbahayan-ui/pictures/ustlogo.png" alt="" width="60" height="60"
-            class="d-inline-block align-text-top">
-        <img src="http://localhost/Simbahayan/simbahayan-ui/pictures/white.png" alt="" width="100" height="60"
-            class="d-inline-block align-text-top">
-    </div>
-    <div class="title-container">
-
-        <div class="title-wrapper">
-            <h2>University of Santo Tomas
-                <p>Simbahayan Community Development Office </p>
-                <p>Key Results Area - Key Performance Indicator (KRA/KPI) Monitoring Report
-                </p>
-            </h2>
-
-        </div>
+            class="d-inline-block align-text-top m-2">
+            <div class="title-wrapper">
+                <h2>University of Santo Tomas
+                    <p>Simbahayan Community Development Office </p>
+                    <p>Key Results Area - Key Performance Indicator (KRA/KPI) Monitoring Report
+                    </p>
+                </h2>
+                <p class='acad_year'>Academic Year: <span class="ayear"></span></p>
+                <p class='acad_year'><span class="college_name"></span></p>
+            </div>
+            <img src="http://localhost/Simbahayan/simbahayan-ui/pictures/white.png" alt="" width="100" height="60"
+            class="d-inline-block align-text-top m-2">
     </div>
 
-    <div class="table-container">
-        <div class="table-wrapper">
+    <div class="container-fluid mx-auto mt-5">
             <!-- KRA 1 -->
             <table class="table table-sm table-bordered ">
                 <thead>
@@ -192,7 +189,6 @@
                         <td id="t_ncis_eja" class="align-middle text-center fw-bold"></td>
                     </tr>
 
-
                     <tr>
                         <th scope="row">
 
@@ -259,7 +255,31 @@
                         </td>
                         <td id="s_ncis_uecof" class="align-middle text-center fw-bold"></td>
                         <td id="t_ncis_uecof" class="align-middle text-center fw-bold"></td>
-
+                    </tr>
+                </table>
+                <div class="page_footer container" style="display: none;">
+                    <div class="row g-2">
+                        <div class="col-6 text-start">
+                            Date Generated: <?php echo date('F d, Y'); ?>
+                        </div>
+                        <div class="col-6 text-end">
+                            Page: 1
+                        </div>
+                    </div>
+                </div>
+            <table class="table table-sm table-bordered pagebreak">
+                <thead>
+                    <tr>
+                        <th scope="col" id="kra" rowspan="11">
+                            <center>KRA 1</center>
+                        </th>
+                        <th scope="col">Self-reliant, interdependent, and empowered partner communities and institutions
+                        </th>
+                        <th scope="col">Status Total</th>
+                        <th scope="col">Target Total</th>
+                    </tr>
+                </thead>
+                <tbody class="thead-gold">
                     <tr>
                         <th scope="row">
                             <center>4</td>
@@ -379,22 +399,33 @@
                         <td id="s_npm_uecof" class="align-middle text-center fw-bold"></td>
                         <td id="t_npm_uecof" class="align-middle text-center fw-bold"></td>
                     </tr>
-                    <tr>
-                        <td colspan="2" class="text-end fw-bold">Total: </td>
-                        <td id="final_kra1status" class="align-middle text-center fw-bold"></td>
-                        <td id="final_kra1target" class="align-middle text-center fw-bold"></td>
-                    </tr>
                 </tbody>
             </table>
+    </div>
+
+
+    <div class="page_footer container mt-5" style="display: none;">
+        <div class="row g-2">
+            <div class="col-6 text-start">
+                Date Generated: <?php echo date('F d, Y'); ?>
+            </div>
+            <div class="col-6 text-end">
+                Page: 2
+            </div>
         </div>
     </div>
 
+    <script>
+        var acad_year=parseInt(localStorage.getItem("final_schoolyear"));
+        var acad_year2=parseInt(localStorage.getItem("final_schoolyear")) + 1;
+        $('.college_name').html(localStorage.getItem("final_college_name"));
+        $('.ayear').html(acad_year + " - " + acad_year2);
+    </script>
 <!-------------------------------------------------------------------------------------------------------------------->
 
 
     <!-- KRA 2 -->
-    <div class="table-container">
-        <div class="table-wrapper">
+    <div class="container-fluid mx-auto mt-5 pagebreak">
             <table class="table table-sm table-bordered ">
                 <thead class="thead-light">
                     <tr>
@@ -577,17 +608,24 @@
                 </tbody>
             </table>
         </div>
-    </div>
 
-
+        <div class="page_footer container mt-5" style="display: none;">
+            <div class="row g-2">
+                <div class="col-6 text-start">
+                    Date Generated: <?php echo date('F d, Y'); ?>
+                </div>
+                <div class="col-6 text-end">
+                    Page: 3
+                </div>
+            </div>
+        </div>
 
 
 
 
 
     <!-- KRA 3 -->
-    <div class="table-container">
-        <div class="table-wrapper">
+        <div class="container-fluid mx-auto mt-5 pagebreak">
             <table class="table table-sm table-bordered ">
                 <thead class="thead-light">
                     <tr>
@@ -780,12 +818,22 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
     </div>
+    <div class="page_footer container mt-5" style="display: none;">
+            <div class="row g-2">
+                <div class="col-6 text-start">
+                    Date Generated: <?php echo date('F d, Y'); ?>
+                </div>
+                <div class="col-6 text-end">
+                    Page: 4
+                </div>
+            </div>
+        </div>
     <div class="container text-end">
         <a id="button1" class="btn btn-lg btn-warning" href="dashboard.php">Go back to Dashboard</a>
         <button id="button2" class="btn btn-lg btn-warning" onclick=" window.print(); ">Print</button>
     </div>
+    <div class="page-number"></div>
 </body>
 
 </html>
@@ -808,9 +856,6 @@ function get_kra1datafromuserid() {
             var data = JSON.parse(response.responseText)
             console.log(response.responseText);
 
-
-
-
             let hs_totalarr=[];
             for(var key in data) {
                 var hs_arr = data[key].hs_arr.split(",").map(Number);
@@ -822,9 +867,11 @@ function get_kra1datafromuserid() {
             }
             let hs_final_arr = hs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#hs_total').html(hs_final_arr[0]);
+            $('#s_ncis_hfa').html(hs_final_arr[1]);
+            $('#s_npm_hfa').html(hs_final_arr[2]);
+            
 
-
-
+            
 
             let ht_totalarr=[];
             for(var key in data) {
@@ -837,7 +884,10 @@ function get_kra1datafromuserid() {
             }
             let ht_final_arr = ht_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#ht_total').html(ht_final_arr[0]);
+            $('#t_ncis_hfa').html(ht_final_arr[1]);
+            $('#t_npm_hfa').html(ht_final_arr[2]);
 
+            
 
             let es_totalarr=[];
             for(var key in data) {
@@ -850,10 +900,10 @@ function get_kra1datafromuserid() {
             }
             let es_final_arr = es_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#es_total').html(es_final_arr[0]);
+            $('#s_ncis_efa').html(es_final_arr[1]);
+            $('#s_npm_efa').html(es_final_arr[2]);
 
-
-
-
+            
 
             let et_totalarr=[];
             for(var key in data) {
@@ -866,7 +916,10 @@ function get_kra1datafromuserid() {
             }
             let et_final_arr = et_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#et_total').html(et_final_arr[0]);
+            $('#t_ncis_efa').html(et_final_arr[1]);
+            $('#t_npm_efa').html(et_final_arr[2]);
 
+            
 
             let ggs_totalarr=[];
             for(var key in data) {
@@ -879,7 +932,10 @@ function get_kra1datafromuserid() {
             }
             let ggs_final_arr = ggs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#ggs_total').html(ggs_final_arr[0]);
+            $('#s_ncis_gga').html(ggs_final_arr[1]);
+            $('#s_npm_ggfa').html(ggs_final_arr[2]);
 
+            
 
             let ggt_totalarr=[];
             for(var key in data) {
@@ -892,7 +948,8 @@ function get_kra1datafromuserid() {
             }
             let ggt_final_arr = ggt_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#ggt_total').html(ggt_final_arr[0]);
-
+            $('#t_ncis_gga').html(ggt_final_arr[1]);
+            $('#t_npm_ggfa').html(ggt_final_arr[2]);
 
             let ejs_totalarr=[];
             for(var key in data) {
@@ -905,8 +962,10 @@ function get_kra1datafromuserid() {
             }
             let ejs_final_arr = ejs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#ejs_total').html(ejs_final_arr[0]);
+            $('#s_ncis_eja').html(ejs_final_arr[1]);
+            $('#s_npm_eja').html(ejs_final_arr[2]);
 
-
+            
 
             let ejt_totalarr=[];
             for(var key in data) {
@@ -919,8 +978,8 @@ function get_kra1datafromuserid() {
             }
             let ejt_final_arr = ejt_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#ejt_total').html(ejt_final_arr[0]);
-
-
+            $('#t_ncis_eja').html(ejt_final_arr[1]);
+            $('#t_npm_eja').html(ejt_final_arr[2]);
 
 
             let cls_totalarr=[];
@@ -934,8 +993,10 @@ function get_kra1datafromuserid() {
             }
             let cls_final_arr = cls_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#cls_total').html(cls_final_arr[0]);
+            $('#s_ncis_cla').html(cls_final_arr[1]);
+            $('#s_npm_clfa').html(cls_final_arr[2]);
 
-
+            
 
             let clt_totalarr=[];
             for(var key in data) {
@@ -948,6 +1009,8 @@ function get_kra1datafromuserid() {
             }
             let clt_final_arr = clt_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#clt_total').html(clt_final_arr[0]);
+            $('#t_ncis_cla').html(clt_final_arr[1]);
+            $('#t_npm_clfa').html(clt_final_arr[2]);
 
 
             let ceras_totalarr=[];
@@ -961,6 +1024,9 @@ function get_kra1datafromuserid() {
             }
             let ceras_final_arr = ceras_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#ceras_total').html(ceras_final_arr[0]);
+            $('#s_ncis_cler').html(ceras_final_arr[1]);
+            $('#s_npm_cler').html(ceras_final_arr[2]);
+
 
 
 
@@ -975,7 +1041,8 @@ function get_kra1datafromuserid() {
             }
             let cerat_final_arr = cerat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#cerat_total').html(cerat_final_arr[0]);
-
+            $('#t_ncis_cler').html(cerat_final_arr[1]);
+            $('#t_npm_cler').html(cerat_final_arr[2]);
 
             let sfas_totalarr=[];
             for(var key in data) {
@@ -988,7 +1055,8 @@ function get_kra1datafromuserid() {
             }
             let sfas_final_arr = sfas_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#sfas_total').html(sfas_final_arr[0]);
-
+            $('#s_ncis_sfa').html(sfas_final_arr[1]);
+            $('#s_npm_sfa').html(sfas_final_arr[2]);
 
             let sfat_totalarr=[];
             for(var key in data) {
@@ -1001,8 +1069,8 @@ function get_kra1datafromuserid() {
             }
             let sfat_final_arr = sfat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#sfat_total').html(sfat_final_arr[0]);
-
-
+            $('#t_ncis_sfa').html(sfat_final_arr[1]);
+            $('#t_npm_sfa').html(sfat_final_arr[2]);
 
 
             let ejas_totalarr=[];
@@ -1016,6 +1084,8 @@ function get_kra1datafromuserid() {
             }
             let ejas_final_arr = ejas_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#ejas_total').html(ejas_final_arr[0]);
+            $('#s_ncis_ejfa').html(ejas_final_arr[1]);
+            $('#s_npm_ejfa').html(ejas_final_arr[2]);
 
 
             let ejat_totalarr=[];
@@ -1029,8 +1099,8 @@ function get_kra1datafromuserid() {
             }
             let ejat_final_arr = ejat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#ejat_total').html(ejat_final_arr[0]);
-
-
+            $('#t_ncis_ejfa').html(ejat_final_arr[1]);
+            $('#t_npm_ejfa').html(ejat_final_arr[2]);
 
 
 
@@ -1045,7 +1115,8 @@ function get_kra1datafromuserid() {
             }
             let hlas_final_arr = hlas_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#hlas_total').html(hlas_final_arr[0]);
-
+            $('#s_ncis_hlfa').html(hlas_final_arr[1]);
+            $('#s_npm_hlfa').html(hlas_final_arr[2]);
 
 
 
@@ -1060,19 +1131,35 @@ function get_kra1datafromuserid() {
             }
             let hlat_final_arr = hlat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#hlat_total').html(hlat_final_arr[0]);
+            $('#t_ncis_hlfa').html(hlat_final_arr[1]);
+            $('#t_npm_hlfa').html(hlat_final_arr[2]);
+
+
+
+            
+            $('#ncdaps_total').html(hs_final_arr[0]+es_final_arr[0]+ggs_final_arr[0]+ejs_final_arr[0]+cls_final_arr[0]+ceras_final_arr[0]+sfas_final_arr[0]+ejas_final_arr[0]+hlas_final_arr[0])
+            $('#ncdapt_total').html(ht_final_arr[0]+et_final_arr[0]+ggt_final_arr[0]+ejt_final_arr[0]+clt_final_arr[0]+cerat_final_arr[0]+sfat_final_arr[0]+ejat_final_arr[0]+hlat_final_arr[0])
+
+            $('#s_ncis_total').html(hs_final_arr[1]+es_final_arr[1]+ggs_final_arr[1]+ejs_final_arr[1]+cls_final_arr[1]+ceras_final_arr[1]+sfas_final_arr[1]+ejas_final_arr[1]+hlas_final_arr[1])
+            $('#t_ncis_total').html(ht_final_arr[1]+et_final_arr[1]+ggt_final_arr[1]+ejt_final_arr[1]+clt_final_arr[1]+cerat_final_arr[1]+sfat_final_arr[1]+ejat_final_arr[1]+hlat_final_arr[1])
+
+            $('#s_npm_total').html(hs_final_arr[2]+es_final_arr[2]+ggs_final_arr[2]+ejs_final_arr[2]+cls_final_arr[2]+ceras_final_arr[2]+sfas_final_arr[2]+ejas_final_arr[2]+hlas_final_arr[2])
+            $('#t_npm_total').html(ht_final_arr[2]+et_final_arr[2]+ggt_final_arr[2]+ejt_final_arr[2]+clt_final_arr[2]+cerat_final_arr[2]+sfat_final_arr[2]+ejat_final_arr[2]+hlat_final_arr[2])
 
 
           let cofs_totalarr=[];
-            for(var key in data) {
-                var cofs_arr = data[key].cofs_arr.split(",").map(Number);
-                let cofs_counter=[];
-                for (let index = 0; index < cofs_arr.length; index++) {
-                    cofs_counter.push(cofs_arr[index]);
-                }
-                cofs_totalarr.push(cofs_counter);
+        for(var key in data) {
+            var cofs_arr = data[key].cofs_arr.split(",").map(Number);
+            let cofs_counter=[];
+            for (let index = 0; index < cofs_arr.length; index++) {
+                cofs_counter.push(cofs_arr[index]);
             }
-            let cofs_final_arr = cofs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#cofs_total').html(cofs_final_arr[0]);
+            cofs_totalarr.push(cofs_counter);
+        }
+        let cofs_final_arr = cofs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+        $('#cofs_total').html(cofs_final_arr[0]);
+        $('#s_ncis_uecof').html(cofs_final_arr[1]);
+        $('#s_npm_uecof').html(cofs_final_arr[2]);
 
           let coft_totalarr=[];
             for(var key in data) {
@@ -1085,645 +1172,12 @@ function get_kra1datafromuserid() {
             }
             let coft_final_arr = coft_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#coft_total').html(coft_final_arr[0]);
-
-          let sncis_hfa_totalarr=[];
-            for(var key in data) {
-                var sncis_hfa_arr = data[key].sncis_hfa_arr.split(",").map(Number);
-                let sncis_hfa_counter=[];
-                for (let index = 0; index < sncis_hfa_arr.length; index++) {
-                    sncis_hfa_counter.push(sncis_hfa_arr[index]);
-                }
-                sncis_hfa_totalarr.push(sncis_hfa_counter);
-            }
-            let sncis_hfa_final_arr = sncis_hfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_ncis_hfa').html(sncis_hfa_final_arr[0]);
-
-
-
-          let tncis_hfa_totalarr=[];
-            for(var key in data) {
-                var tncis_hfa_arr = data[key].tncis_hfa_arr.split(",").map(Number);
-                let tncis_hfa_counter=[];
-                for (let index = 0; index < tncis_hfa_arr.length; index++) {
-                    tncis_hfa_counter.push(tncis_hfa_arr[index]);
-                }
-                tncis_hfa_totalarr.push(tncis_hfa_counter);
-            }
-            let tncis_hfa_final_arr = tncis_hfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_ncis_hfa').html(tncis_hfa_final_arr[0]);
-
-          let sncis_efa_totalarr=[];
-            for(var key in data) {
-                var sncis_efa_arr = data[key].sncis_efa_arr.split(",").map(Number);
-                let sncis_efa_counter=[];
-                for (let index = 0; index < sncis_efa_arr.length; index++) {
-                    sncis_efa_counter.push(sncis_efa_arr[index]);
-                }
-                sncis_efa_totalarr.push(sncis_efa_counter);
-            }
-            let sncis_efa_final_arr = sncis_efa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_ncis_efa').html(sncis_efa_final_arr[0]);
-
-
-
-        let tncis_efa_totalarr=[];
-            for(var key in data) {
-                var tncis_efa_arr = data[key].tncis_efa_arr.split(",").map(Number);
-                let tncis_efa_counter=[];
-                for (let index = 0; index < tncis_efa_arr.length; index++) {
-                    tncis_efa_counter.push(tncis_efa_arr[index]);
-                }
-                tncis_efa_totalarr.push(tncis_efa_counter);
-            }
-            let tncis_efa_final_arr = tncis_efa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_ncis_efa').html(tncis_efa_final_arr[0]);
-
-
-       let sncis_gga_totalarr=[];
-            for(var key in data) {
-                var sncis_gga_arr = data[key].sncis_gga_arr.split(",").map(Number);
-                let sncis_gga_counter=[];
-                for (let index = 0; index < sncis_gga_arr.length; index++) {
-                    sncis_gga_counter.push(sncis_gga_arr[index]);
-                }
-                sncis_gga_totalarr.push(sncis_gga_counter);
-            }
-            let sncis_gga_final_arr = sncis_gga_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_ncis_gga').html(sncis_gga_final_arr[0]);
-
-       let tncis_gga_totalarr=[];
-            for(var key in data) {
-                var tncis_gga_arr = data[key].tncis_gga_arr.split(",").map(Number);
-                let tncis_gga_counter=[];
-                for (let index = 0; index < tncis_gga_arr.length; index++) {
-                    tncis_gga_counter.push(tncis_gga_arr[index]);
-                }
-                tncis_gga_totalarr.push(tncis_gga_counter);
-            }
-            let tncis_gga_final_arr = tncis_gga_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_ncis_gga').html(tncis_gga_final_arr[0]);
-
-
-       let sncis_eja_totalarr=[];
-            for(var key in data) {
-                var sncis_eja_arr = data[key].sncis_eja_arr.split(",").map(Number);
-                let sncis_eja_counter=[];
-                for (let index = 0; index < sncis_eja_arr.length; index++) {
-                    sncis_eja_counter.push(sncis_eja_arr[index]);
-                }
-                sncis_eja_totalarr.push(sncis_eja_counter);
-            }
-            let sncis_eja_final_arr = sncis_eja_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_ncis_eja').html(sncis_eja_final_arr[0]);
-
-       let tncis_eja_totalarr=[];
-            for(var key in data) {
-                var tncis_eja_arr = data[key].tncis_eja_arr.split(",").map(Number);
-                let tncis_eja_counter=[];
-                for (let index = 0; index < tncis_eja_arr.length; index++) {
-                    tncis_eja_counter.push(tncis_eja_arr[index]);
-                }
-                tncis_eja_totalarr.push(tncis_eja_counter);
-            }
-            let tncis_eja_final_arr = tncis_eja_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_ncis_eja').html(tncis_eja_final_arr[0]);
-
-
-       let sncis_cla_totalarr=[];
-            for(var key in data) {
-                var sncis_cla_arr = data[key].sncis_cla_arr.split(",").map(Number);
-                let sncis_cla_counter=[];
-                for (let index = 0; index < sncis_cla_arr.length; index++) {
-                    sncis_cla_counter.push(sncis_cla_arr[index]);
-                }
-                sncis_cla_totalarr.push(sncis_cla_counter);
-            }
-            let sncis_cla_final_arr = sncis_cla_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_ncis_cla').html(sncis_cla_final_arr[0]);
-
-
-       let tncis_cla_totalarr=[];
-            for(var key in data) {
-                var tncis_cla_arr = data[key].tncis_cla_arr.split(",").map(Number);
-                let tncis_cla_counter=[];
-                for (let index = 0; index < tncis_cla_arr.length; index++) {
-                    tncis_cla_counter.push(tncis_cla_arr[index]);
-                }
-                tncis_cla_totalarr.push(tncis_cla_counter);
-            }
-            let tncis_cla_final_arr = tncis_cla_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_ncis_cla').html(tncis_cla_final_arr[0]);
-
-
-
-
-
-
-
-
-
-       let sncis_cler_totalarr=[];
-            for(var key in data) {
-                var sncis_cler_arr = data[key].sncis_cler_arr.split(",").map(Number);
-                let sncis_cler_counter=[];
-                for (let index = 0; index < sncis_cler_arr.length; index++) {
-                    sncis_cler_counter.push(sncis_cler_arr[index]);
-                }
-                sncis_cler_totalarr.push(sncis_cler_counter);
-            }
-            let sncis_cler_final_arr = sncis_cler_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_ncis_cler').html(sncis_cler_final_arr[0]);
-
-
-
-
-       let tncis_cler_totalarr=[];
-            for(var key in data) {
-                var tncis_cler_arr = data[key].tncis_cler_arr.split(",").map(Number);
-                let tncis_cler_counter=[];
-                for (let index = 0; index < tncis_cler_arr.length; index++) {
-                    tncis_cler_counter.push(tncis_cler_arr[index]);
-                }
-                tncis_cler_totalarr.push(tncis_cler_counter);
-            }
-            let tncis_cler_final_arr = tncis_cler_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_ncis_cler').html(tncis_cler_final_arr[0]);
-
-
-
-       let sncis_sfa_totalarr=[];
-            for(var key in data) {
-                var sncis_sfa_arr = data[key].sncis_sfa_arr.split(",").map(Number);
-                let sncis_sfa_counter=[];
-                for (let index = 0; index < sncis_sfa_arr.length; index++) {
-                    sncis_sfa_counter.push(sncis_sfa_arr[index]);
-                }
-                sncis_sfa_totalarr.push(sncis_sfa_counter);
-            }
-            let sncis_sfa_final_arr = sncis_sfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_ncis_sfa').html(sncis_sfa_final_arr[0]);
-
-
-       let tncis_sfa_totalarr=[];
-            for(var key in data) {
-                var tncis_sfa_arr = data[key].tncis_sfa_arr.split(",").map(Number);
-                let tncis_sfa_counter=[];
-                for (let index = 0; index < tncis_sfa_arr.length; index++) {
-                    tncis_sfa_counter.push(tncis_sfa_arr[index]);
-                }
-                tncis_sfa_totalarr.push(tncis_sfa_counter);
-            }
-            let tncis_sfa_final_arr = tncis_sfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_ncis_sfa').html(tncis_sfa_final_arr[0]);
-
-
-       let sncis_ejfa_totalarr=[];
-            for(var key in data) {
-                var sncis_ejfa_arr = data[key].sncis_ejfa_arr.split(",").map(Number);
-                let sncis_ejfa_counter=[];
-                for (let index = 0; index < sncis_ejfa_arr.length; index++) {
-                    sncis_ejfa_counter.push(sncis_ejfa_arr[index]);
-                }
-                sncis_ejfa_totalarr.push(sncis_ejfa_counter);
-            }
-            let sncis_ejfa_final_arr = sncis_ejfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_ncis_ejfa').html(sncis_ejfa_final_arr[0]);
-
-       let tncis_ejfa_totalarr=[];
-            for(var key in data) {
-                var tncis_ejfa_arr = data[key].tncis_ejfa_arr.split(",").map(Number);
-                let tncis_ejfa_counter=[];
-                for (let index = 0; index < tncis_ejfa_arr.length; index++) {
-                    tncis_ejfa_counter.push(tncis_ejfa_arr[index]);
-                }
-                tncis_ejfa_totalarr.push(tncis_ejfa_counter);
-            }
-            let tncis_ejfa_final_arr = tncis_ejfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_ncis_ejfa').html(tncis_ejfa_final_arr[0]);
-
-       let sncis_hlfa_totalarr=[];
-            for(var key in data) {
-                var sncis_hlfa_arr = data[key].sncis_hlfa_arr.split(",").map(Number);
-                let sncis_hlfa_counter=[];
-                for (let index = 0; index < sncis_hlfa_arr.length; index++) {
-                    sncis_hlfa_counter.push(sncis_hlfa_arr[index]);
-                }
-                sncis_hlfa_totalarr.push(sncis_hlfa_counter);
-            }
-            let sncis_hlfa_final_arr = sncis_hlfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_ncis_hlfa').html(sncis_hlfa_final_arr[0]);
-
-
-
-       let tncis_hlfa_totalarr=[];
-            for(var key in data) {
-                var tncis_hlfa_arr = data[key].tncis_hlfa_arr.split(",").map(Number);
-                let tncis_hlfa_counter=[];
-                for (let index = 0; index < tncis_hlfa_arr.length; index++) {
-                    tncis_hlfa_counter.push(tncis_hlfa_arr[index]);
-                }
-                tncis_hlfa_totalarr.push(tncis_hlfa_counter);
-            }
-            let tncis_hlfa_final_arr = tncis_hlfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_ncis_hlfa').html(tncis_hlfa_final_arr[0]);
-
-
-
-
-
-
-        let sncis_uecof_totalarr=[];
-            for(var key in data) {
-                var sncis_uecof_arr = data[key].sncis_uecof_arr.split(",").map(Number);
-                let sncis_uecof_counter=[];
-                for (let index = 0; index < sncis_uecof_arr.length; index++) {
-                    sncis_uecof_counter.push(sncis_uecof_arr[index]);
-                }
-                sncis_uecof_totalarr.push(sncis_uecof_counter);
-            }
-            let sncis_uecof_final_arr = sncis_uecof_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_ncis_uecof').html(sncis_uecof_final_arr[0]);
-
-
-
-
-
-
-
-
-
-       let tncis_uecof_totalarr=[];
-            for(var key in data) {
-                var tncis_uecof_arr = data[key].tncis_uecof_arr.split(",").map(Number);
-                let tncis_uecof_counter=[];
-                for (let index = 0; index < tncis_uecof_arr.length; index++) {
-                    tncis_uecof_counter.push(tncis_uecof_arr[index]);
-                }
-                tncis_uecof_totalarr.push(tncis_uecof_counter);
-            }
-            let tncis_uecof_final_arr = tncis_uecof_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_ncis_uecof').html(tncis_uecof_final_arr[0]);
-
-
-       let snpm_hfa_totalarr=[];
-            for(var key in data) {
-                var snpm_hfa_arr = data[key].snpm_hfa_arr.split(",").map(Number);
-                let snpm_hfa_counter=[];
-                for (let index = 0; index < snpm_hfa_arr.length; index++) {
-                    snpm_hfa_counter.push(snpm_hfa_arr[index]);
-                }
-                snpm_hfa_totalarr.push(snpm_hfa_counter);
-            }
-            let snpm_hfa_final_arr = snpm_hfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_npm_hfa').html(snpm_hfa_final_arr[0]);
-
-
-
-
-
-      let tnpm_hfa_totalarr=[];
-            for(var key in data) {
-                var tnpm_hfa_arr = data[key].tnpm_hfa_arr.split(",").map(Number);
-                let tnpm_hfa_counter=[];
-                for (let index = 0; index < tnpm_hfa_arr.length; index++) {
-                    tnpm_hfa_counter.push(tnpm_hfa_arr[index]);
-                }
-                tnpm_hfa_totalarr.push(tnpm_hfa_counter);
-            }
-            let tnpm_hfa_final_arr = tnpm_hfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_npm_hfa').html(tnpm_hfa_final_arr[0]);
-
-
-
-      let snpm_efa_totalarr=[];
-            for(var key in data) {
-                var snpm_efa_arr = data[key].snpm_efa_arr.split(",").map(Number);
-                let snpm_efa_counter=[];
-                for (let index = 0; index < snpm_efa_arr.length; index++) {
-                    snpm_efa_counter.push(snpm_efa_arr[index]);
-                }
-                snpm_efa_totalarr.push(snpm_efa_counter);
-            }
-            let snpm_efa_final_arr = snpm_efa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_npm_efa').html(snpm_efa_final_arr[0]);
-
-
-
-
-
-
-
-
-      let tnpm_efa_totalarr=[];
-            for(var key in data) {
-                var tnpm_efa_arr = data[key].tnpm_efa_arr.split(",").map(Number);
-                let tnpm_efa_counter=[];
-                for (let index = 0; index < tnpm_efa_arr.length; index++) {
-                    tnpm_efa_counter.push(tnpm_efa_arr[index]);
-                }
-                tnpm_efa_totalarr.push(tnpm_efa_counter);
-            }
-            let tnpm_efa_final_arr = tnpm_efa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_npm_efa').html(tnpm_efa_final_arr[0]);
-
-
-
-      let snpm_ggfa_totalarr=[];
-            for(var key in data) {
-                var snpm_ggfa_arr = data[key].snpm_ggfa_arr.split(",").map(Number);
-                let snpm_ggfa_counter=[];
-                for (let index = 0; index < snpm_ggfa_arr.length; index++) {
-                    snpm_ggfa_counter.push(snpm_ggfa_arr[index]);
-                }
-                snpm_ggfa_totalarr.push(snpm_ggfa_counter);
-            }
-            let snpm_ggfa_final_arr = snpm_ggfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_npm_ggfa').html(snpm_ggfa_final_arr[0]);
-
-
-      let tnpm_ggfa_totalarr=[];
-            for(var key in data) {
-                var tnpm_ggfa_arr = data[key].tnpm_ggfa_arr.split(",").map(Number);
-                let tnpm_ggfa_counter=[];
-                for (let index = 0; index < tnpm_ggfa_arr.length; index++) {
-                    tnpm_ggfa_counter.push(tnpm_ggfa_arr[index]);
-                }
-                tnpm_ggfa_totalarr.push(tnpm_ggfa_counter);
-            }
-            let tnpm_ggfa_final_arr = tnpm_ggfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_npm_ggfa').html(tnpm_ggfa_final_arr[0]);
-
-
-      let snpm_ejfa_totalarr=[];
-            for(var key in data) {
-                var snpm_ejfa_arr = data[key].snpm_ejfa_arr.split(",").map(Number);
-                let snpm_ejfa_counter=[];
-                for (let index = 0; index < snpm_ejfa_arr.length; index++) {
-                    snpm_ejfa_counter.push(snpm_ejfa_arr[index]);
-                }
-                snpm_ejfa_totalarr.push(snpm_ejfa_counter);
-            }
-            let snpm_ejfa_final_arr = snpm_ejfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_npm_ejfa').html(snpm_ejfa_final_arr[0]);
-
-
-
-
-
-      let tnpm_ejfa_totalarr=[];
-            for(var key in data) {
-                var tnpm_ejfa_arr = data[key].tnpm_ejfa_arr.split(",").map(Number);
-                let tnpm_ejfa_counter=[];
-                for (let index = 0; index < tnpm_ejfa_arr.length; index++) {
-                    tnpm_ejfa_counter.push(tnpm_ejfa_arr[index]);
-                }
-                tnpm_ejfa_totalarr.push(tnpm_ejfa_counter);
-            }
-            let tnpm_ejfa_final_arr = tnpm_ejfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_npm_ejfa').html(tnpm_ejfa_final_arr[0]);
-
-
-
-      let snpm_clfa_totalarr=[];
-            for(var key in data) {
-                var snpm_clfa_arr = data[key].snpm_clfa_arr.split(",").map(Number);
-                let snpm_clfa_counter=[];
-                for (let index = 0; index < snpm_clfa_arr.length; index++) {
-                    snpm_clfa_counter.push(snpm_clfa_arr[index]);
-                }
-                snpm_clfa_totalarr.push(snpm_clfa_counter);
-            }
-            let snpm_clfa_final_arr = snpm_clfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_npm_clfa').html(snpm_clfa_final_arr[0]);
-
-
-
-
-
-  
-      let tnpm_clfa_totalarr=[];
-            for(var key in data) {
-                var tnpm_clfa_arr = data[key].tnpm_clfa_arr.split(",").map(Number);
-                let tnpm_clfa_counter=[];
-                for (let index = 0; index < tnpm_clfa_arr.length; index++) {
-                    tnpm_clfa_counter.push(tnpm_clfa_arr[index]);
-                }
-                tnpm_clfa_totalarr.push(tnpm_clfa_counter);
-            }
-            let tnpm_clfa_final_arr = tnpm_clfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_npm_clfa').html(tnpm_clfa_final_arr[0]);
-
-
-
-
-
-
-  
-      let snpm_cler_totalarr=[];
-            for(var key in data) {
-                var snpm_cler_arr = data[key].snpm_cler_arr.split(",").map(Number);
-                let snpm_cler_counter=[];
-                for (let index = 0; index < snpm_cler_arr.length; index++) {
-                    snpm_cler_counter.push(snpm_cler_arr[index]);
-                }
-                snpm_cler_totalarr.push(snpm_cler_counter);
-            }
-            let snpm_cler_final_arr = snpm_cler_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_npm_cler').html(snpm_cler_final_arr[0]);
-
-
-
-
-
-
-
-      let tnpm_cler_totalarr=[];
-            for(var key in data) {
-                var tnpm_cler_arr = data[key].tnpm_cler_arr.split(",").map(Number);
-                let tnpm_cler_counter=[];
-                for (let index = 0; index < tnpm_cler_arr.length; index++) {
-                    tnpm_cler_counter.push(tnpm_cler_arr[index]);
-                }
-                tnpm_cler_totalarr.push(tnpm_cler_counter);
-            }
-            let tnpm_cler_final_arr = tnpm_cler_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_npm_cler').html(tnpm_cler_final_arr[0]);
-
-
-
-
-
-
-
-      let snpm_sfa_totalarr=[];
-            for(var key in data) {
-                var snpm_sfa_arr = data[key].snpm_sfa_arr.split(",").map(Number);
-                let snpm_sfa_counter=[];
-                for (let index = 0; index < snpm_sfa_arr.length; index++) {
-                    snpm_sfa_counter.push(snpm_sfa_arr[index]);
-                }
-                snpm_sfa_totalarr.push(snpm_sfa_counter);
-            }
-            let snpm_sfa_final_arr = snpm_sfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_npm_sfa').html(snpm_sfa_final_arr[0]);
-
-
-
-
-
-      let tnpm_sfa_totalarr=[];
-            for(var key in data) {
-                var tnpm_sfa_arr = data[key].tnpm_sfa_arr.split(",").map(Number);
-                let tnpm_sfa_counter=[];
-                for (let index = 0; index < tnpm_sfa_arr.length; index++) {
-                    tnpm_sfa_counter.push(tnpm_sfa_arr[index]);
-                }
-                tnpm_sfa_totalarr.push(tnpm_sfa_counter);
-            }
-            let tnpm_sfa_final_arr = tnpm_sfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_npm_sfa').html(tnpm_sfa_final_arr[0]);
-
-
-
-
-
-
-      let snpm_eja_totalarr=[];
-            for(var key in data) {
-                var snpm_eja_arr = data[key].snpm_eja_arr.split(",").map(Number);
-                let snpm_eja_counter=[];
-                for (let index = 0; index < snpm_eja_arr.length; index++) {
-                    snpm_eja_counter.push(snpm_eja_arr[index]);
-                }
-                snpm_eja_totalarr.push(snpm_eja_counter);
-            }
-            let snpm_eja_final_arr = snpm_eja_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_npm_eja').html(snpm_eja_final_arr[0]);
-
-
-
-
-
-      let tnpm_eja_totalarr=[];
-            for(var key in data) {
-                var tnpm_eja_arr = data[key].tnpm_eja_arr.split(",").map(Number);
-                let tnpm_eja_counter=[];
-                for (let index = 0; index < tnpm_eja_arr.length; index++) {
-                    tnpm_eja_counter.push(tnpm_eja_arr[index]);
-                }
-                tnpm_eja_totalarr.push(tnpm_eja_counter);
-            }
-            let tnpm_eja_final_arr = tnpm_eja_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_npm_eja').html(tnpm_eja_final_arr[0]);
-
-
-
-
-      let snpm_hlfa_totalarr=[];
-            for(var key in data) {
-                var snpm_hlfa_arr = data[key].snpm_hlfa_arr.split(",").map(Number);
-                let snpm_hlfa_counter=[];
-                for (let index = 0; index < snpm_hlfa_arr.length; index++) {
-                    snpm_hlfa_counter.push(snpm_hlfa_arr[index]);
-                }
-                snpm_hlfa_totalarr.push(snpm_hlfa_counter);
-            }
-            let snpm_hlfa_final_arr = snpm_hlfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_npm_hlfa').html(snpm_hlfa_final_arr[0]);
-
-
-
-
-
-
-
-
-      let tnpm_hlfa_totalarr=[];
-            for(var key in data) {
-                var tnpm_hlfa_arr = data[key].tnpm_hlfa_arr.split(",").map(Number);
-                let tnpm_hlfa_counter=[];
-                for (let index = 0; index < tnpm_hlfa_arr.length; index++) {
-                    tnpm_hlfa_counter.push(tnpm_hlfa_arr[index]);
-                }
-                tnpm_hlfa_totalarr.push(tnpm_hlfa_counter);
-            }
-            let tnpm_hlfa_final_arr = tnpm_hlfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_npm_hlfa').html(tnpm_hlfa_final_arr[0]);
-
-
-
-      let snpm_uecof_totalarr=[];
-            for(var key in data) {
-                var snpm_uecof_arr = data[key].snpm_uecof_arr.split(",").map(Number);
-                let snpm_uecof_counter=[];
-                for (let index = 0; index < snpm_uecof_arr.length; index++) {
-                    snpm_uecof_counter.push(snpm_uecof_arr[index]);
-                }
-                snpm_uecof_totalarr.push(snpm_uecof_counter);
-            }
-            let snpm_uecof_final_arr = snpm_uecof_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#s_npm_uecof').html(snpm_uecof_final_arr[0]);
-
-
-
-      let tnpm_uecof_totalarr=[];
-            for(var key in data) {
-                var tnpm_uecof_arr = data[key].tnpm_uecof_arr.split(",").map(Number);
-                let tnpm_uecof_counter=[];
-                for (let index = 0; index < tnpm_uecof_arr.length; index++) {
-                    tnpm_uecof_counter.push(tnpm_uecof_arr[index]);
-                }
-                tnpm_uecof_totalarr.push(tnpm_uecof_counter);
-            }
-            let tnpm_uecof_final_arr = tnpm_uecof_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#t_npm_uecof').html(tnpm_uecof_final_arr[0]);
-
-
-
-
-      let final_kra1status_totalarr=[];
-            for(var key in data) {
-                var final_kra1status_arr = data[key].final_kra1status_arr.split(",").map(Number);
-                let final_kra1status_counter=[];
-                for (let index = 0; index < final_kra1status_arr.length; index++) {
-                    final_kra1status_counter.push(final_kra1status_arr[index]);
-                }
-                final_kra1status_totalarr.push(final_kra1status_counter);
-            }
-            let final_kra1status_final_arr = final_kra1status_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#final_kra1status').html(final_kra1status_final_arr[0]);
-
-
-
-
-      let final_kra1target_totalarr=[];
-            for(var key in data) {
-                var final_kra1target_arr = data[key].final_kra1target_arr.split(",").map(Number);
-                let final_kra1target_counter=[];
-                for (let index = 0; index < final_kra1target_arr.length; index++) {
-                    final_kra1target_counter.push(final_kra1target_arr[index]);
-                }
-                final_kra1target_totalarr.push(final_kra1target_counter);
-            }
-            let final_kra1target_final_arr = final_kra1target_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
-            $('#final_kra1target').html(final_kra1target_final_arr[0]);
+            $('#t_ncis_uecof').html(coft_final_arr[1]);
+            $('#t_npm_uecof').html(coft_final_arr[2]);
             get_kra2datafromuserid();
         }
     })
 }
-<<<<<<< HEAD
-
-
-// -------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-=======
-get_kra2datafromuserid();
->>>>>>> b6b5109da662180839e220ff61ca0911d7a38058
 function get_kra2datafromuserid() {
     let user_id = localStorage.getItem('final_pdf_id');
     let college_id = localStorage.getItem('final_college_id');

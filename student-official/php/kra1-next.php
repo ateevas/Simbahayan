@@ -161,13 +161,13 @@
                 <th scope="row"></th>
                 <td>No. of Communities/ Institutions Served under each Community Organization Formed
                 </td>
-                <td><input readonly id="cofs_nciscof" type="number" value="0"></td>
+                <td><input id="cofs_nciscof" type="number" value="0"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td>
                     No. of Participants/ Members under each Community Organization Formed</td>
-                <td><input readonly id="cofs_npmcof" type="number" value="0"></td>
+                <td><input id="cofs_npmcof" type="number" value="0"></td>
             </tr>
 
         </tbody>

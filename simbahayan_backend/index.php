@@ -331,7 +331,7 @@ switch ($tag) {
 						break;
 					}
 					$toecho.="<tr>
-						<td style='text-transform: capitalize;'><button class='btn btn-link' data-college_id='".$datay[$i]['college_id']."' data-user_id='".$datay[$i]['user_id']."' onclick='generate_pdf(this)'>".$datay[$i]['college_acronym']."_AnnualReport.pdf</button></td>
+						<td style='text-transform: capitalize;'><button class='btn btn-link' data-school_year='".$datay[$i]['school_year']."' data-college_name='".$datay[$i]['college_name']."' data-college_id='".$datay[$i]['college_id']."' data-user_id='".$datay[$i]['user_id']."' onclick='generate_pdf(this)'>".$datay[$i]['college_acronym']."_AnnualReport.pdf</button></td>
 						<td>".$datay[$i]['school_year']."</td>
 						<td>".date('F d, Y h:i a', strtotime($datay[$i]['date_submitted']))."</td>
 					</tr>";
@@ -595,9 +595,9 @@ switch ($tag) {
 		}
 	break;
 	case 'get_kra1datafromuserid':
-		$query="SELECT * FROM kra1 WHERE college_id=?";
+		$query="SELECT * FROM kra1 WHERE user_id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['college_id']])) {
+		if($stmt->execute([$_GET['user_id']])) {
 			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 		} else {
 			echo json_encode([
@@ -606,9 +606,9 @@ switch ($tag) {
 		}
 	break;
 	case 'get_kra2datafromuserid':
-		$query="SELECT * FROM kra2 WHERE college_id=?";
+		$query="SELECT * FROM kra2 WHERE user_id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['college_id']])) {
+		if($stmt->execute([$_GET['user_id']])) {
 			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 		} else {
 			echo json_encode([
@@ -617,9 +617,9 @@ switch ($tag) {
 		}
 	break;
 	case 'get_kra3datafromuserid':
-		$query="SELECT * FROM kra3 WHERE college_id=?";
+		$query="SELECT * FROM kra3 WHERE user_id=?";
 		$stmt=$pdo->prepare($query);
-		if($stmt->execute([$_GET['college_id']])) {
+		if($stmt->execute([$_GET['user_id']])) {
 			echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 		} else {
 			echo json_encode([

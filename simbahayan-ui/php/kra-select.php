@@ -68,7 +68,7 @@
 						<h5 class="modal-title" id="exampleModalLongTitle">Annual Report</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
-					<div class="modal-body">Are you sure you want to approve this report? (this action cannot be undone, it will count the number of kra's & kpi's)</div>
+					<div class="modal-body">Are you sure you want to approve this report?</div>
 					<div class="modal-footer d-flex justify-content-between">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
 						<button type="button" class="btn btn-warning" onclick="submit_reportsimbahayan()">Yes</button>

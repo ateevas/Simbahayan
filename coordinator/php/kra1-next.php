@@ -196,6 +196,7 @@
 
     <div class="button-container">
         <div class="button-wrapper">
+             <a class="btn btn-dark" href="kra1.php" role="button">Prev</a>
             <a class="btn btn-warning" id="edit_btn" onclick="edit_kra1()" href="#" role="button">Edit</a>
             <button style="display: none" id="save_btn" type="button" onclick="btnSave()"
                 class="btn btn-warning">Save</button>

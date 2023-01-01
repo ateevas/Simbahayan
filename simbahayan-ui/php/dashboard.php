@@ -75,6 +75,9 @@
 	function generate_pdf(obj) {
 		localStorage.setItem('final_pdf_id', $(obj).data('user_id'));
 		localStorage.setItem('final_college_id', $(obj).data('college_id'));
+		localStorage.setItem('final_schoolyear', $(obj).data('school_year'));
+		localStorage.setItem('final_college_name', $(obj).data('college_name'));
+		
 		window.location.href="http://localhost/Simbahayan/simbahayan-ui/php/pdf_page.php";
 	}
 	function get_finalapproved() {
