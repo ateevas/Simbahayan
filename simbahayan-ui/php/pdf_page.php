@@ -311,8 +311,8 @@
 
                         <td scope="row">a.4 Economic Justice for all </td>
                         </th>
-                        <td id="s_npm_ejfa" class="align-middle text-center fw-bold"></td>
-                        <td id="t_npm_ejfa" class="align-middle text-center fw-bold"></td>
+                        <td id="s_npm_eja" class="align-middle text-center fw-bold"></td>
+                        <td id="t_npm_eja" class="align-middle text-center fw-bold"></td>
                     </tr>
 
 
@@ -389,6 +389,7 @@
         </div>
     </div>
 
+<!-------------------------------------------------------------------------------------------------------------------->
 
 
     <!-- KRA 2 -->
@@ -794,6 +795,9 @@ function get_kra1datafromuserid() {
             var data = JSON.parse(response.responseText)
             console.log(response.responseText);
 
+
+
+
             let hs_totalarr=[];
             for(var key in data) {
                 var hs_arr = data[key].hs_arr.split(",").map(Number);
@@ -805,6 +809,9 @@ function get_kra1datafromuserid() {
             }
             let hs_final_arr = hs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#hs_total').html(hs_final_arr[0]);
+
+
+
 
             let ht_totalarr=[];
             for(var key in data) {
@@ -831,137 +838,874 @@ function get_kra1datafromuserid() {
             let es_final_arr = es_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
             $('#es_total').html(es_final_arr[0]);
 
-            var et_arr = data[0].et_arr.split(",");
-            var et_total = parseInt(et_arr[0])
-            $('#et_total').html(et_total);
-
-            var ggs_arr = data[0].ggs_arr.split(",");
-            var ggs_total = parseInt(ggs_arr[0]);
-            $('#ggs_total').html(ggs_total);
-
-            var ggt_arr = data[0].ggt_arr.split(",");
-            var ggt_total = parseInt(ggt_arr[0]);
-            $('#ggt_total').html(ggt_total);
-
-            var ejs_arr = data[0].ejs_arr.split(",");
-            var ejs_total = parseInt(ejs_arr[0]);
-            $('#ejs_total').html(ejs_total);
-
-            var ejt_arr = data[0].ejt_arr.split(",");
-            var ejt_total = parseInt(ejt_arr[0]);
-            $('#ejt_total').html(ejt_total);
-
-            var cls_arr = data[0].cls_arr.split(",");
-            var cls_total = parseInt(cls_arr[0]);
-            $('#cls_total').html(cls_total);
-
-            var clt_arr = data[0].clt_arr.split(",");
-            var clt_total = parseInt(clt_arr[0]);
-            $('#clt_total').html(clt_total);
-
-            var fhds_arr = data[0].fhds_arr.split(",");
-            var fhds_total = parseInt(fhds_arr[0]);
-            $('#fhds_total').html(fhds_total);
-
-            var fhdt_arr = data[0].fhdt_arr.split(",");
-            var fhdt_total = parseInt(fhdt_arr[0]);
-            $('#fhdt_total').html(fhdt_total);
-
-            var cahds_arr = data[0].cahds_arr.split(",");
-            var cahds_total = parseInt(cahds_arr[0]);
-            $('#cahds_total').html(cahds_total);
-
-            var cahdt_arr = data[0].cahdt_arr.split(",");
-            var cahdt_total = parseInt(cahdt_arr[0]);
-            $('#cahdt_total').html(cahdt_total);
-
-            var sds_arr = data[0].sds_arr.split(",");
-            var sds_total = parseInt(sds_arr[0]);
-            $('#sds_total').html(sds_total);
-
-            var sdt_arr = data[0].sdt_arr.split(",");
-            var sdt_total = parseInt(sdt_arr[0]);
-            $('#sdt_total').html(sdt_total);
-
-            var drrms_arr = data[0].drrms_arr.split(",");
-            var drrms_total = parseInt(drrms_arr[0]);
-            $('#drrms_total').html(drrms_total);
-
-            var drrmt_arr = data[0].drrmt_arr.split(",");
-            var drrmt_total = parseInt(drrmt_arr[0]);
-            $('#drrmt_total').html(drrmt_total);
-
-            var cofs_arr = data[0].cofs_arr.split(",");
-            var cofs_total = parseInt(cofs_arr[0]);
-            $('#cofs_total').html(cofs_total);
-
-            var coft_arr = data[0].coft_arr.split(",");
-            var coft_total = parseInt(coft_arr[0]);
-            $('#coft_total').html(coft_total);
-
-            var kra1_epc1 = parseInt(hs_arr[0]) + parseInt(es_arr[0]) + parseInt(ggs_arr[0]) + parseInt(
-                    ejs_arr[0]) + parseInt(cls_arr[0]) + parseInt(fhds_arr[0]) + parseInt(cahds_arr[0]) +
-                parseInt(sds_arr[0]) + parseInt(drrms_arr[0]);
-            var kra1_epc2 = parseInt(ht_arr[0]) + parseInt(et_arr[0]) + parseInt(ggt_arr[0]) + parseInt(
-                    ejt_arr[0]) + parseInt(clt_arr[0]) + parseInt(fhdt_arr[0]) + parseInt(cahdt_arr[0]) +
-                parseInt(sdt_arr[0]) + parseInt(drrmt_arr[0]);
-
-            $('#uapc_s').html(kra1_epc1);
-            $('#uapc_t').html(kra1_epc2);
-
-
-            var kra1_epc3 = parseInt(cofs_arr[0]);
-            var kra1_epc4 = parseInt(coft_arr[0]);
-            $('#uecof_s').html(kra1_epc3);
-            $('#uecof_t').html(kra1_epc4);
-
-
-            var kra1_epc5 = parseInt(hs_arr[1]) + parseInt(es_arr[1]) + parseInt(ggs_arr[1]) + parseInt(
-                    ejs_arr[1]) + parseInt(cls_arr[1]) + parseInt(fhds_arr[1]) + parseInt(cahds_arr[1]) +
-                parseInt(sds_arr[1]) + parseInt(drrms_arr[1]);
-            var kra1_epc6 = parseInt(ht_arr[1]) + parseInt(et_arr[1]) + parseInt(ggt_arr[1]) + parseInt(
-                    ejt_arr[1]) + parseInt(clt_arr[1]) + parseInt(fhdt_arr[1]) + parseInt(cahdt_arr[1]) +
-                parseInt(sdt_arr[1]) + parseInt(drrmt_arr[1]);
-
-            $('#uapca_s').html(kra1_epc5);
-            $('#uapca_t').html(kra1_epc6);
 
 
 
-            var kra1_epc11 = parseInt(hs_arr[2]) + parseInt(es_arr[2]) + parseInt(ggs_arr[2]) + parseInt(
-                    ejs_arr[2]) + parseInt(cls_arr[2]) + parseInt(fhds_arr[2]) + parseInt(cahds_arr[2]) +
-                parseInt(sds_arr[2]) + parseInt(drrms_arr[2]);
-            var kra1_epc12 = parseInt(ht_arr[2]) + parseInt(et_arr[2]) + parseInt(ggt_arr[2]) + parseInt(
-                    ejt_arr[2]) + parseInt(clt_arr[2]) + parseInt(fhdt_arr[2]) + parseInt(cahdt_arr[2]) +
-                parseInt(sdt_arr[2]) + parseInt(drrmt_arr[2]);
-            $('#uecof_ss').html(kra1_epc11);
-            $('#uecof_tt').html(kra1_epc12);
 
-            var kra1_epc7 = parseInt(cofs_arr[2]);
-            var kra1_epc8 = parseInt(coft_arr[2]);
-            $('#uecofb_s').html(parseInt(cofs_arr[2]));
-            $('#uecofb_t').html(parseInt(coft_arr[2]));
-
-
-            var kra1_epc9 = parseInt(cofs_arr[1]);
-            var kra1_epc10 = parseInt(coft_arr[1]);
-            $('#uecofbb_s').html(parseInt(cofs_arr[1]));
-            $('#uecofbb_t').html(parseInt(coft_arr[1]));
+            let et_totalarr=[];
+            for(var key in data) {
+                var et_arr = data[key].et_arr.split(",").map(Number);
+                let et_counter=[];
+                for (let index = 0; index < et_arr.length; index++) {
+                    et_counter.push(et_arr[index]);
+                }
+                et_totalarr.push(et_counter);
+            }
+            let et_final_arr = et_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#et_total').html(et_final_arr[0]);
 
 
-            var final_kra1status = hs_total + es_total + ggs_total + ejs_total + cls_total + fhds_total +
-                cahds_total + sds_total + drrms_total + kra1_epc1 + kra1_epc3 + kra1_epc5 + kra1_epc7 +
-                kra1_epc9 + kra1_epc11;
-            $('#final_kra1status').html(final_kra1status);
+            let ggs_totalarr=[];
+            for(var key in data) {
+                var ggs_arr = data[key].ggs_arr.split(",").map(Number);
+                let ggs_counter=[];
+                for (let index = 0; index < ggs_arr.length; index++) {
+                    ggs_counter.push(ggs_arr[index]);
+                }
+                ggs_totalarr.push(ggs_counter);
+            }
+            let ggs_final_arr = ggs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ggs_total').html(ggs_final_arr[0]);
 
-            var final_kra1target = ht_total + et_total + ggt_total + ejt_total + clt_total + fhdt_total +
-                cahdt_total + sdt_total + drrmt_total + kra1_epc2 + kra1_epc4 + kra1_epc6 + kra1_epc8 +
-                kra1_epc10 + kra1_epc12;
-            $('#final_kra1target').html(final_kra1target);
+
+            let ggt_totalarr=[];
+            for(var key in data) {
+                var ggt_arr = data[key].ggt_arr.split(",").map(Number);
+                let ggt_counter=[];
+                for (let index = 0; index < ggt_arr.length; index++) {
+                    ggt_counter.push(ggt_arr[index]);
+                }
+                ggt_totalarr.push(ggt_counter);
+            }
+            let ggt_final_arr = ggt_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ggt_total').html(ggt_final_arr[0]);
+
+
+            let ejs_totalarr=[];
+            for(var key in data) {
+                var ejs_arr = data[key].ejs_arr.split(",").map(Number);
+                let ejs_counter=[];
+                for (let index = 0; index < ejs_arr.length; index++) {
+                    ejs_counter.push(ejs_arr[index]);
+                }
+                ejs_totalarr.push(ejs_counter);
+            }
+            let ejs_final_arr = ejs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ejs_total').html(ejs_final_arr[0]);
+
+
+
+            let ejt_totalarr=[];
+            for(var key in data) {
+                var ejt_arr = data[key].ejt_arr.split(",").map(Number);
+                let ejt_counter=[];
+                for (let index = 0; index < ejt_arr.length; index++) {
+                    ejt_counter.push(ejt_arr[index]);
+                }
+                ejt_totalarr.push(ejt_counter);
+            }
+            let ejt_final_arr = ejt_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ejt_total').html(ejt_final_arr[0]);
+
+
+
+
+            let cls_totalarr=[];
+            for(var key in data) {
+                var cls_arr = data[key].cls_arr.split(",").map(Number);
+                let cls_counter=[];
+                for (let index = 0; index < cls_arr.length; index++) {
+                    cls_counter.push(cls_arr[index]);
+                }
+                cls_totalarr.push(cls_counter);
+            }
+            let cls_final_arr = cls_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#cls_total').html(cls_final_arr[0]);
+
+
+
+            let clt_totalarr=[];
+            for(var key in data) {
+                var clt_arr = data[key].clt_arr.split(",").map(Number);
+                let clt_counter=[];
+                for (let index = 0; index < clt_arr.length; index++) {
+                    clt_counter.push(clt_arr[index]);
+                }
+                clt_totalarr.push(clt_counter);
+            }
+            let clt_final_arr = clt_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#clt_total').html(clt_final_arr[0]);
+
+
+            let ceras_totalarr=[];
+            for(var key in data) {
+                var ceras_arr = data[key].ceras_arr.split(",").map(Number);
+                let ceras_counter=[];
+                for (let index = 0; index < ceras_arr.length; index++) {
+                    ceras_counter.push(ceras_arr[index]);
+                }
+                ceras_totalarr.push(ceras_counter);
+            }
+            let ceras_final_arr = ceras_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ceras_total').html(ceras_final_arr[0]);
+
+
+
+            let cerat_totalarr=[];
+            for(var key in data) {
+                var cerat_arr = data[key].cerat_arr.split(",").map(Number);
+                let cerat_counter=[];
+                for (let index = 0; index < cerat_arr.length; index++) {
+                    cerat_counter.push(cerat_arr[index]);
+                }
+                cerat_totalarr.push(cerat_counter);
+            }
+            let cerat_final_arr = cerat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#cerat_total').html(cerat_final_arr[0]);
+
+
+            let sfas_totalarr=[];
+            for(var key in data) {
+                var sfas_arr = data[key].sfas_arr.split(",").map(Number);
+                let sfas_counter=[];
+                for (let index = 0; index < sfas_arr.length; index++) {
+                    sfas_counter.push(sfas_arr[index]);
+                }
+                sfas_totalarr.push(sfas_counter);
+            }
+            let sfas_final_arr = sfas_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#sfas_total').html(sfas_final_arr[0]);
+
+
+            let sfat_totalarr=[];
+            for(var key in data) {
+                var sfat_arr = data[key].sfat_arr.split(",").map(Number);
+                let sfat_counter=[];
+                for (let index = 0; index < sfat_arr.length; index++) {
+                    sfat_counter.push(sfat_arr[index]);
+                }
+                sfat_totalarr.push(sfat_counter);
+            }
+            let sfat_final_arr = sfat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#sfat_total').html(sfat_final_arr[0]);
+
+
+
+
+            let ejas_totalarr=[];
+            for(var key in data) {
+                var ejas_arr = data[key].ejas_arr.split(",").map(Number);
+                let ejas_counter=[];
+                for (let index = 0; index < ejas_arr.length; index++) {
+                    ejas_counter.push(ejas_arr[index]);
+                }
+                ejas_totalarr.push(ejas_counter);
+            }
+            let ejas_final_arr = ejas_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ejas_total').html(ejas_final_arr[0]);
+
+
+            let ejat_totalarr=[];
+            for(var key in data) {
+                var ejat_arr = data[key].ejat_arr.split(",").map(Number);
+                let ejat_counter=[];
+                for (let index = 0; index < ejat_arr.length; index++) {
+                    ejat_counter.push(ejat_arr[index]);
+                }
+                ejat_totalarr.push(ejat_counter);
+            }
+            let ejat_final_arr = ejat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#ejat_total').html(ejat_final_arr[0]);
+
+
+
+
+
+            let hlas_totalarr=[];
+            for(var key in data) {
+                var hlas_arr = data[key].hlas_arr.split(",").map(Number);
+                let hlas_counter=[];
+                for (let index = 0; index < hlas_arr.length; index++) {
+                    hlas_counter.push(hlas_arr[index]);
+                }
+                hlas_totalarr.push(hlas_counter);
+            }
+            let hlas_final_arr = hlas_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#hlas_total').html(hlas_final_arr[0]);
+
+
+
+
+            let hlat_totalarr=[];
+            for(var key in data) {
+                var hlat_arr = data[key].hlat_arr.split(",").map(Number);
+                let hlat_counter=[];
+                for (let index = 0; index < hlat_arr.length; index++) {
+                    hlat_counter.push(hlat_arr[index]);
+                }
+                hlat_totalarr.push(hlat_counter);
+            }
+            let hlat_final_arr = hlat_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#hlat_total').html(hlat_final_arr[0]);
+
+
+          let cofs_totalarr=[];
+            for(var key in data) {
+                var cofs_arr = data[key].cofs_arr.split(",").map(Number);
+                let cofs_counter=[];
+                for (let index = 0; index < cofs_arr.length; index++) {
+                    cofs_counter.push(cofs_arr[index]);
+                }
+                cofs_totalarr.push(cofs_counter);
+            }
+            let cofs_final_arr = cofs_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#cofs_total').html(cofs_final_arr[0]);
+
+          let coft_totalarr=[];
+            for(var key in data) {
+                var coft_arr = data[key].coft_arr.split(",").map(Number);
+                let coft_counter=[];
+                for (let index = 0; index < coft_arr.length; index++) {
+                    coft_counter.push(coft_arr[index]);
+                }
+                coft_totalarr.push(coft_counter);
+            }
+            let coft_final_arr = coft_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#coft_total').html(coft_final_arr[0]);
+
+          let sncis_hfa_totalarr=[];
+            for(var key in data) {
+                var sncis_hfa_arr = data[key].sncis_hfa_arr.split(",").map(Number);
+                let sncis_hfa_counter=[];
+                for (let index = 0; index < sncis_hfa_arr.length; index++) {
+                    sncis_hfa_counter.push(sncis_hfa_arr[index]);
+                }
+                sncis_hfa_totalarr.push(sncis_hfa_counter);
+            }
+            let sncis_hfa_final_arr = sncis_hfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_ncis_hfa').html(sncis_hfa_final_arr[0]);
+
+
+
+          let tncis_hfa_totalarr=[];
+            for(var key in data) {
+                var tncis_hfa_arr = data[key].tncis_hfa_arr.split(",").map(Number);
+                let tncis_hfa_counter=[];
+                for (let index = 0; index < tncis_hfa_arr.length; index++) {
+                    tncis_hfa_counter.push(tncis_hfa_arr[index]);
+                }
+                tncis_hfa_totalarr.push(tncis_hfa_counter);
+            }
+            let tncis_hfa_final_arr = tncis_hfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_ncis_hfa').html(tncis_hfa_final_arr[0]);
+
+          let sncis_efa_totalarr=[];
+            for(var key in data) {
+                var sncis_efa_arr = data[key].sncis_efa_arr.split(",").map(Number);
+                let sncis_efa_counter=[];
+                for (let index = 0; index < sncis_efa_arr.length; index++) {
+                    sncis_efa_counter.push(sncis_efa_arr[index]);
+                }
+                sncis_efa_totalarr.push(sncis_efa_counter);
+            }
+            let sncis_efa_final_arr = sncis_efa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_ncis_efa').html(sncis_efa_final_arr[0]);
+
+
+
+        let tncis_efa_totalarr=[];
+            for(var key in data) {
+                var tncis_efa_arr = data[key].tncis_efa_arr.split(",").map(Number);
+                let tncis_efa_counter=[];
+                for (let index = 0; index < tncis_efa_arr.length; index++) {
+                    tncis_efa_counter.push(tncis_efa_arr[index]);
+                }
+                tncis_efa_totalarr.push(tncis_efa_counter);
+            }
+            let tncis_efa_final_arr = tncis_efa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_ncis_efa').html(tncis_efa_final_arr[0]);
+
+
+       let sncis_gga_totalarr=[];
+            for(var key in data) {
+                var sncis_gga_arr = data[key].sncis_gga_arr.split(",").map(Number);
+                let sncis_gga_counter=[];
+                for (let index = 0; index < sncis_gga_arr.length; index++) {
+                    sncis_gga_counter.push(sncis_gga_arr[index]);
+                }
+                sncis_gga_totalarr.push(sncis_gga_counter);
+            }
+            let sncis_gga_final_arr = sncis_gga_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_ncis_gga').html(sncis_gga_final_arr[0]);
+
+       let tncis_gga_totalarr=[];
+            for(var key in data) {
+                var tncis_gga_arr = data[key].tncis_gga_arr.split(",").map(Number);
+                let tncis_gga_counter=[];
+                for (let index = 0; index < tncis_gga_arr.length; index++) {
+                    tncis_gga_counter.push(tncis_gga_arr[index]);
+                }
+                tncis_gga_totalarr.push(tncis_gga_counter);
+            }
+            let tncis_gga_final_arr = tncis_gga_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_ncis_gga').html(tncis_gga_final_arr[0]);
+
+
+       let sncis_eja_totalarr=[];
+            for(var key in data) {
+                var sncis_eja_arr = data[key].sncis_eja_arr.split(",").map(Number);
+                let sncis_eja_counter=[];
+                for (let index = 0; index < sncis_eja_arr.length; index++) {
+                    sncis_eja_counter.push(sncis_eja_arr[index]);
+                }
+                sncis_eja_totalarr.push(sncis_eja_counter);
+            }
+            let sncis_eja_final_arr = sncis_eja_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_ncis_eja').html(sncis_eja_final_arr[0]);
+
+       let tncis_eja_totalarr=[];
+            for(var key in data) {
+                var tncis_eja_arr = data[key].tncis_eja_arr.split(",").map(Number);
+                let tncis_eja_counter=[];
+                for (let index = 0; index < tncis_eja_arr.length; index++) {
+                    tncis_eja_counter.push(tncis_eja_arr[index]);
+                }
+                tncis_eja_totalarr.push(tncis_eja_counter);
+            }
+            let tncis_eja_final_arr = tncis_eja_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_ncis_eja').html(tncis_eja_final_arr[0]);
+
+
+       let sncis_cla_totalarr=[];
+            for(var key in data) {
+                var sncis_cla_arr = data[key].sncis_cla_arr.split(",").map(Number);
+                let sncis_cla_counter=[];
+                for (let index = 0; index < sncis_cla_arr.length; index++) {
+                    sncis_cla_counter.push(sncis_cla_arr[index]);
+                }
+                sncis_cla_totalarr.push(sncis_cla_counter);
+            }
+            let sncis_cla_final_arr = sncis_cla_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_ncis_cla').html(sncis_cla_final_arr[0]);
+
+
+       let tncis_cla_totalarr=[];
+            for(var key in data) {
+                var tncis_cla_arr = data[key].tncis_cla_arr.split(",").map(Number);
+                let tncis_cla_counter=[];
+                for (let index = 0; index < tncis_cla_arr.length; index++) {
+                    tncis_cla_counter.push(tncis_cla_arr[index]);
+                }
+                tncis_cla_totalarr.push(tncis_cla_counter);
+            }
+            let tncis_cla_final_arr = tncis_cla_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_ncis_cla').html(tncis_cla_final_arr[0]);
+
+
+
+
+
+
+
+
+
+       let sncis_cler_totalarr=[];
+            for(var key in data) {
+                var sncis_cler_arr = data[key].sncis_cler_arr.split(",").map(Number);
+                let sncis_cler_counter=[];
+                for (let index = 0; index < sncis_cler_arr.length; index++) {
+                    sncis_cler_counter.push(sncis_cler_arr[index]);
+                }
+                sncis_cler_totalarr.push(sncis_cler_counter);
+            }
+            let sncis_cler_final_arr = sncis_cler_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_ncis_cler').html(sncis_cler_final_arr[0]);
+
+
+
+
+       let tncis_cler_totalarr=[];
+            for(var key in data) {
+                var tncis_cler_arr = data[key].tncis_cler_arr.split(",").map(Number);
+                let tncis_cler_counter=[];
+                for (let index = 0; index < tncis_cler_arr.length; index++) {
+                    tncis_cler_counter.push(tncis_cler_arr[index]);
+                }
+                tncis_cler_totalarr.push(tncis_cler_counter);
+            }
+            let tncis_cler_final_arr = tncis_cler_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_ncis_cler').html(tncis_cler_final_arr[0]);
+
+
+
+       let sncis_sfa_totalarr=[];
+            for(var key in data) {
+                var sncis_sfa_arr = data[key].sncis_sfa_arr.split(",").map(Number);
+                let sncis_sfa_counter=[];
+                for (let index = 0; index < sncis_sfa_arr.length; index++) {
+                    sncis_sfa_counter.push(sncis_sfa_arr[index]);
+                }
+                sncis_sfa_totalarr.push(sncis_sfa_counter);
+            }
+            let sncis_sfa_final_arr = sncis_sfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_ncis_sfa').html(sncis_sfa_final_arr[0]);
+
+
+       let tncis_sfa_totalarr=[];
+            for(var key in data) {
+                var tncis_sfa_arr = data[key].tncis_sfa_arr.split(",").map(Number);
+                let tncis_sfa_counter=[];
+                for (let index = 0; index < tncis_sfa_arr.length; index++) {
+                    tncis_sfa_counter.push(tncis_sfa_arr[index]);
+                }
+                tncis_sfa_totalarr.push(tncis_sfa_counter);
+            }
+            let tncis_sfa_final_arr = tncis_sfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_ncis_sfa').html(tncis_sfa_final_arr[0]);
+
+
+       let sncis_ejfa_totalarr=[];
+            for(var key in data) {
+                var sncis_ejfa_arr = data[key].sncis_ejfa_arr.split(",").map(Number);
+                let sncis_ejfa_counter=[];
+                for (let index = 0; index < sncis_ejfa_arr.length; index++) {
+                    sncis_ejfa_counter.push(sncis_ejfa_arr[index]);
+                }
+                sncis_ejfa_totalarr.push(sncis_ejfa_counter);
+            }
+            let sncis_ejfa_final_arr = sncis_ejfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_ncis_ejfa').html(sncis_ejfa_final_arr[0]);
+
+       let tncis_ejfa_totalarr=[];
+            for(var key in data) {
+                var tncis_ejfa_arr = data[key].tncis_ejfa_arr.split(",").map(Number);
+                let tncis_ejfa_counter=[];
+                for (let index = 0; index < tncis_ejfa_arr.length; index++) {
+                    tncis_ejfa_counter.push(tncis_ejfa_arr[index]);
+                }
+                tncis_ejfa_totalarr.push(tncis_ejfa_counter);
+            }
+            let tncis_ejfa_final_arr = tncis_ejfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_ncis_ejfa').html(tncis_ejfa_final_arr[0]);
+
+       let sncis_hlfa_totalarr=[];
+            for(var key in data) {
+                var sncis_hlfa_arr = data[key].sncis_hlfa_arr.split(",").map(Number);
+                let sncis_hlfa_counter=[];
+                for (let index = 0; index < sncis_hlfa_arr.length; index++) {
+                    sncis_hlfa_counter.push(sncis_hlfa_arr[index]);
+                }
+                sncis_hlfa_totalarr.push(sncis_hlfa_counter);
+            }
+            let sncis_hlfa_final_arr = sncis_hlfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_ncis_hlfa').html(sncis_hlfa_final_arr[0]);
+
+
+
+       let tncis_hlfa_totalarr=[];
+            for(var key in data) {
+                var tncis_hlfa_arr = data[key].tncis_hlfa_arr.split(",").map(Number);
+                let tncis_hlfa_counter=[];
+                for (let index = 0; index < tncis_hlfa_arr.length; index++) {
+                    tncis_hlfa_counter.push(tncis_hlfa_arr[index]);
+                }
+                tncis_hlfa_totalarr.push(tncis_hlfa_counter);
+            }
+            let tncis_hlfa_final_arr = tncis_hlfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_ncis_hlfa').html(tncis_hlfa_final_arr[0]);
+
+
+
+
+
+
+        let sncis_uecof_totalarr=[];
+            for(var key in data) {
+                var sncis_uecof_arr = data[key].sncis_uecof_arr.split(",").map(Number);
+                let sncis_uecof_counter=[];
+                for (let index = 0; index < sncis_uecof_arr.length; index++) {
+                    sncis_uecof_counter.push(sncis_uecof_arr[index]);
+                }
+                sncis_uecof_totalarr.push(sncis_uecof_counter);
+            }
+            let sncis_uecof_final_arr = sncis_uecof_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_ncis_uecof').html(sncis_uecof_final_arr[0]);
+
+
+
+
+
+
+
+
+
+       let tncis_uecof_totalarr=[];
+            for(var key in data) {
+                var tncis_uecof_arr = data[key].tncis_uecof_arr.split(",").map(Number);
+                let tncis_uecof_counter=[];
+                for (let index = 0; index < tncis_uecof_arr.length; index++) {
+                    tncis_uecof_counter.push(tncis_uecof_arr[index]);
+                }
+                tncis_uecof_totalarr.push(tncis_uecof_counter);
+            }
+            let tncis_uecof_final_arr = tncis_uecof_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_ncis_uecof').html(tncis_uecof_final_arr[0]);
+
+
+       let snpm_hfa_totalarr=[];
+            for(var key in data) {
+                var snpm_hfa_arr = data[key].snpm_hfa_arr.split(",").map(Number);
+                let snpm_hfa_counter=[];
+                for (let index = 0; index < snpm_hfa_arr.length; index++) {
+                    snpm_hfa_counter.push(snpm_hfa_arr[index]);
+                }
+                snpm_hfa_totalarr.push(snpm_hfa_counter);
+            }
+            let snpm_hfa_final_arr = snpm_hfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npm_hfa').html(snpm_hfa_final_arr[0]);
+
+
+
+
+
+      let tnpm_hfa_totalarr=[];
+            for(var key in data) {
+                var tnpm_hfa_arr = data[key].tnpm_hfa_arr.split(",").map(Number);
+                let tnpm_hfa_counter=[];
+                for (let index = 0; index < tnpm_hfa_arr.length; index++) {
+                    tnpm_hfa_counter.push(tnpm_hfa_arr[index]);
+                }
+                tnpm_hfa_totalarr.push(tnpm_hfa_counter);
+            }
+            let tnpm_hfa_final_arr = tnpm_hfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npm_hfa').html(tnpm_hfa_final_arr[0]);
+
+
+
+      let snpm_efa_totalarr=[];
+            for(var key in data) {
+                var snpm_efa_arr = data[key].snpm_efa_arr.split(",").map(Number);
+                let snpm_efa_counter=[];
+                for (let index = 0; index < snpm_efa_arr.length; index++) {
+                    snpm_efa_counter.push(snpm_efa_arr[index]);
+                }
+                snpm_efa_totalarr.push(snpm_efa_counter);
+            }
+            let snpm_efa_final_arr = snpm_efa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npm_efa').html(snpm_efa_final_arr[0]);
+
+
+
+
+
+
+
+
+      let tnpm_efa_totalarr=[];
+            for(var key in data) {
+                var tnpm_efa_arr = data[key].tnpm_efa_arr.split(",").map(Number);
+                let tnpm_efa_counter=[];
+                for (let index = 0; index < tnpm_efa_arr.length; index++) {
+                    tnpm_efa_counter.push(tnpm_efa_arr[index]);
+                }
+                tnpm_efa_totalarr.push(tnpm_efa_counter);
+            }
+            let tnpm_efa_final_arr = tnpm_efa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npm_efa').html(tnpm_efa_final_arr[0]);
+
+
+
+      let snpm_ggfa_totalarr=[];
+            for(var key in data) {
+                var snpm_ggfa_arr = data[key].snpm_ggfa_arr.split(",").map(Number);
+                let snpm_ggfa_counter=[];
+                for (let index = 0; index < snpm_ggfa_arr.length; index++) {
+                    snpm_ggfa_counter.push(snpm_ggfa_arr[index]);
+                }
+                snpm_ggfa_totalarr.push(snpm_ggfa_counter);
+            }
+            let snpm_ggfa_final_arr = snpm_ggfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npm_ggfa').html(snpm_ggfa_final_arr[0]);
+
+
+      let tnpm_ggfa_totalarr=[];
+            for(var key in data) {
+                var tnpm_ggfa_arr = data[key].tnpm_ggfa_arr.split(",").map(Number);
+                let tnpm_ggfa_counter=[];
+                for (let index = 0; index < tnpm_ggfa_arr.length; index++) {
+                    tnpm_ggfa_counter.push(tnpm_ggfa_arr[index]);
+                }
+                tnpm_ggfa_totalarr.push(tnpm_ggfa_counter);
+            }
+            let tnpm_ggfa_final_arr = tnpm_ggfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npm_ggfa').html(tnpm_ggfa_final_arr[0]);
+
+
+      let snpm_ejfa_totalarr=[];
+            for(var key in data) {
+                var snpm_ejfa_arr = data[key].snpm_ejfa_arr.split(",").map(Number);
+                let snpm_ejfa_counter=[];
+                for (let index = 0; index < snpm_ejfa_arr.length; index++) {
+                    snpm_ejfa_counter.push(snpm_ejfa_arr[index]);
+                }
+                snpm_ejfa_totalarr.push(snpm_ejfa_counter);
+            }
+            let snpm_ejfa_final_arr = snpm_ejfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npm_ejfa').html(snpm_ejfa_final_arr[0]);
+
+
+
+
+
+      let tnpm_ejfa_totalarr=[];
+            for(var key in data) {
+                var tnpm_ejfa_arr = data[key].tnpm_ejfa_arr.split(",").map(Number);
+                let tnpm_ejfa_counter=[];
+                for (let index = 0; index < tnpm_ejfa_arr.length; index++) {
+                    tnpm_ejfa_counter.push(tnpm_ejfa_arr[index]);
+                }
+                tnpm_ejfa_totalarr.push(tnpm_ejfa_counter);
+            }
+            let tnpm_ejfa_final_arr = tnpm_ejfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npm_ejfa').html(tnpm_ejfa_final_arr[0]);
+
+
+
+      let snpm_clfa_totalarr=[];
+            for(var key in data) {
+                var snpm_clfa_arr = data[key].snpm_clfa_arr.split(",").map(Number);
+                let snpm_clfa_counter=[];
+                for (let index = 0; index < snpm_clfa_arr.length; index++) {
+                    snpm_clfa_counter.push(snpm_clfa_arr[index]);
+                }
+                snpm_clfa_totalarr.push(snpm_clfa_counter);
+            }
+            let snpm_clfa_final_arr = snpm_clfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npm_clfa').html(snpm_clfa_final_arr[0]);
+
+
+
+
+
+  
+      let tnpm_clfa_totalarr=[];
+            for(var key in data) {
+                var tnpm_clfa_arr = data[key].tnpm_clfa_arr.split(",").map(Number);
+                let tnpm_clfa_counter=[];
+                for (let index = 0; index < tnpm_clfa_arr.length; index++) {
+                    tnpm_clfa_counter.push(tnpm_clfa_arr[index]);
+                }
+                tnpm_clfa_totalarr.push(tnpm_clfa_counter);
+            }
+            let tnpm_clfa_final_arr = tnpm_clfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npm_clfa').html(tnpm_clfa_final_arr[0]);
+
+
+
+
+
+
+  
+      let snpm_cler_totalarr=[];
+            for(var key in data) {
+                var snpm_cler_arr = data[key].snpm_cler_arr.split(",").map(Number);
+                let snpm_cler_counter=[];
+                for (let index = 0; index < snpm_cler_arr.length; index++) {
+                    snpm_cler_counter.push(snpm_cler_arr[index]);
+                }
+                snpm_cler_totalarr.push(snpm_cler_counter);
+            }
+            let snpm_cler_final_arr = snpm_cler_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npm_cler').html(snpm_cler_final_arr[0]);
+
+
+
+
+
+
+
+      let tnpm_cler_totalarr=[];
+            for(var key in data) {
+                var tnpm_cler_arr = data[key].tnpm_cler_arr.split(",").map(Number);
+                let tnpm_cler_counter=[];
+                for (let index = 0; index < tnpm_cler_arr.length; index++) {
+                    tnpm_cler_counter.push(tnpm_cler_arr[index]);
+                }
+                tnpm_cler_totalarr.push(tnpm_cler_counter);
+            }
+            let tnpm_cler_final_arr = tnpm_cler_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npm_cler').html(tnpm_cler_final_arr[0]);
+
+
+
+
+
+
+
+      let snpm_sfa_totalarr=[];
+            for(var key in data) {
+                var snpm_sfa_arr = data[key].snpm_sfa_arr.split(",").map(Number);
+                let snpm_sfa_counter=[];
+                for (let index = 0; index < snpm_sfa_arr.length; index++) {
+                    snpm_sfa_counter.push(snpm_sfa_arr[index]);
+                }
+                snpm_sfa_totalarr.push(snpm_sfa_counter);
+            }
+            let snpm_sfa_final_arr = snpm_sfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npm_sfa').html(snpm_sfa_final_arr[0]);
+
+
+
+
+
+      let tnpm_sfa_totalarr=[];
+            for(var key in data) {
+                var tnpm_sfa_arr = data[key].tnpm_sfa_arr.split(",").map(Number);
+                let tnpm_sfa_counter=[];
+                for (let index = 0; index < tnpm_sfa_arr.length; index++) {
+                    tnpm_sfa_counter.push(tnpm_sfa_arr[index]);
+                }
+                tnpm_sfa_totalarr.push(tnpm_sfa_counter);
+            }
+            let tnpm_sfa_final_arr = tnpm_sfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npm_sfa').html(tnpm_sfa_final_arr[0]);
+
+
+
+
+
+
+      let snpm_eja_totalarr=[];
+            for(var key in data) {
+                var snpm_eja_arr = data[key].snpm_eja_arr.split(",").map(Number);
+                let snpm_eja_counter=[];
+                for (let index = 0; index < snpm_eja_arr.length; index++) {
+                    snpm_eja_counter.push(snpm_eja_arr[index]);
+                }
+                snpm_eja_totalarr.push(snpm_eja_counter);
+            }
+            let snpm_eja_final_arr = snpm_eja_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npm_eja').html(snpm_eja_final_arr[0]);
+
+
+
+
+
+      let tnpm_eja_totalarr=[];
+            for(var key in data) {
+                var tnpm_eja_arr = data[key].tnpm_eja_arr.split(",").map(Number);
+                let tnpm_eja_counter=[];
+                for (let index = 0; index < tnpm_eja_arr.length; index++) {
+                    tnpm_eja_counter.push(tnpm_eja_arr[index]);
+                }
+                tnpm_eja_totalarr.push(tnpm_eja_counter);
+            }
+            let tnpm_eja_final_arr = tnpm_eja_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npm_eja').html(tnpm_eja_final_arr[0]);
+
+
+
+
+      let snpm_hlfa_totalarr=[];
+            for(var key in data) {
+                var snpm_hlfa_arr = data[key].snpm_hlfa_arr.split(",").map(Number);
+                let snpm_hlfa_counter=[];
+                for (let index = 0; index < snpm_hlfa_arr.length; index++) {
+                    snpm_hlfa_counter.push(snpm_hlfa_arr[index]);
+                }
+                snpm_hlfa_totalarr.push(snpm_hlfa_counter);
+            }
+            let snpm_hlfa_final_arr = snpm_hlfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npm_hlfa').html(snpm_hlfa_final_arr[0]);
+
+
+
+
+
+
+
+
+      let tnpm_hlfa_totalarr=[];
+            for(var key in data) {
+                var tnpm_hlfa_arr = data[key].tnpm_hlfa_arr.split(",").map(Number);
+                let tnpm_hlfa_counter=[];
+                for (let index = 0; index < tnpm_hlfa_arr.length; index++) {
+                    tnpm_hlfa_counter.push(tnpm_hlfa_arr[index]);
+                }
+                tnpm_hlfa_totalarr.push(tnpm_hlfa_counter);
+            }
+            let tnpm_hlfa_final_arr = tnpm_hlfa_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npm_hlfa').html(tnpm_hlfa_final_arr[0]);
+
+
+
+      let snpm_uecof_totalarr=[];
+            for(var key in data) {
+                var snpm_uecof_arr = data[key].snpm_uecof_arr.split(",").map(Number);
+                let snpm_uecof_counter=[];
+                for (let index = 0; index < snpm_uecof_arr.length; index++) {
+                    snpm_uecof_counter.push(snpm_uecof_arr[index]);
+                }
+                snpm_uecof_totalarr.push(snpm_uecof_counter);
+            }
+            let snpm_uecof_final_arr = snpm_uecof_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#s_npm_uecof').html(snpm_uecof_final_arr[0]);
+
+
+
+      let tnpm_uecof_totalarr=[];
+            for(var key in data) {
+                var tnpm_uecof_arr = data[key].tnpm_uecof_arr.split(",").map(Number);
+                let tnpm_uecof_counter=[];
+                for (let index = 0; index < tnpm_uecof_arr.length; index++) {
+                    tnpm_uecof_counter.push(tnpm_uecof_arr[index]);
+                }
+                tnpm_uecof_totalarr.push(tnpm_uecof_counter);
+            }
+            let tnpm_uecof_final_arr = tnpm_uecof_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#t_npm_uecof').html(tnpm_uecof_final_arr[0]);
+
+
+
+
+      let final_kra1status_totalarr=[];
+            for(var key in data) {
+                var final_kra1status_arr = data[key].final_kra1status_arr.split(",").map(Number);
+                let final_kra1status_counter=[];
+                for (let index = 0; index < final_kra1status_arr.length; index++) {
+                    final_kra1status_counter.push(final_kra1status_arr[index]);
+                }
+                final_kra1status_totalarr.push(final_kra1status_counter);
+            }
+            let final_kra1status_final_arr = final_kra1status_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#final_kra1status').html(final_kra1status_final_arr[0]);
+
+
+
+
+      let final_kra1target_totalarr=[];
+            for(var key in data) {
+                var final_kra1target_arr = data[key].final_kra1target_arr.split(",").map(Number);
+                let final_kra1target_counter=[];
+                for (let index = 0; index < final_kra1target_arr.length; index++) {
+                    final_kra1target_counter.push(final_kra1target_arr[index]);
+                }
+                final_kra1target_totalarr.push(final_kra1target_counter);
+            }
+            let final_kra1target_final_arr = final_kra1target_totalarr.reduce((a, b) => a.map((c, i) => c + b[i]));
+            $('#final_kra1target').html(final_kra1target_final_arr[0]);
             get_kra2datafromuserid();
         }
     })
 }
+
+
+// -------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 function get_kra2datafromuserid() {
     let user_id = localStorage.getItem('final_pdf_id');
